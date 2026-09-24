@@ -1,0 +1,29 @@
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-semibold text-[#111111];
+    }
+
+    h1 {
+        @apply text-[74px] leading-[1.2] max-2xl:text-[64px] max-md:text-[32px];
+    }
+
+    h2 {
+        @apply text-[42px] leading-[1.2] max-2xl:text-[38px] max-md:text-3xl;
+    }
+
+    h3 {
+        @apply text-4xl leading-[1.2] max-2xl:text-[32px] max-md:text-[28px];
+    }
+
+    h4 {
+        @apply text-3xl leading-[1.2] max-2xl:text-[28px] max-md:text-2xl;
+    }
+
+    h5 {
+        @apply text-2xl max-md:text-[20px];
+    }
+}

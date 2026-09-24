@@ -1,0 +1,9 @@
+@layer components {
+    .text-rotator {
+        @apply relative block overflow-hidden [perspective:600px];
+    }
+
+    .text-rotator-item {
+        @apply absolute inset-x-0 top-0 whitespace-nowrap opacity-0 will-change-[transform,opacity];
+    }
+}

@@ -1,0 +1,9 @@
+@layer components {
+    .page-container {
+        @apply mx-auto w-full max-w-380 px-6;
+    }
+
+    .page-container-narrow {
+        @apply mx-auto w-full max-w-7xl px-6;
+    }
+}

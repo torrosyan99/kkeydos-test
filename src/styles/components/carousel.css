@@ -1,0 +1,24 @@
+@layer components {
+    .carousel-button {
+        @apply grid size-10 cursor-pointer place-items-center;
+        @apply rounded-full border border-[#dae0e4] bg-white text-c-orange;
+        @apply transition-colors hover:border-c-orange hover:bg-c-orange hover:text-white;
+        @apply disabled:pointer-events-none disabled:opacity-35;
+
+        &.swiper-button-lock {
+            @apply hidden;
+        }
+    }
+
+    .featured-swiper-pagination {
+        @apply static! flex! w-auto! items-center justify-center justify-self-center gap-3.5;
+    }
+
+    .featured-swiper-pagination .swiper-pagination-bullet {
+        @apply m-0! size-2.5! rounded-full! bg-[#d8d5d3]! opacity-100!;
+    }
+
+    .featured-swiper-pagination .swiper-pagination-bullet-active {
+        @apply bg-c-orange!;
+    }
+}

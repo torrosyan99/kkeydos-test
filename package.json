@@ -1,0 +1,23 @@
+{
+    "name": "keydos",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build:css": "npm run build:css:main && npm run build:css:ai",
+        "build:css:main": "tailwindcss -i ./src/input.css -o ./app/assets/styles/main.css --minify",
+        "build:css:ai": "tailwindcss -i ./ai-page/src/ai.css -o ./ai-page/assets/styles/ai.css --minify",
+        "dev:css": "tailwindcss -i ./src/input.css -o ./app/assets/styles/main.css --watch",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "validate": "node --check ./app/assets/scripts/main.js && node --check ./app/assets/scripts/homepage.js && node --check ./app/assets/scripts/technology.js && node --check ./ai-page/assets/scripts/ai.js && node ./scripts/validate-project.mjs",
+        "check": "npm run format:check && npm run build:css && npm run validate"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.3.3",
+        "prettier": "^3.9.6",
+        "tailwindcss": "^4.3.3"
+    }
+}

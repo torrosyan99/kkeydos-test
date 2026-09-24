@@ -1,0 +1,25 @@
+@theme {
+    --color-c-teal: #0f8a8d;
+    --color-c-orange: #f48949;
+    --color-c-dark: #0f172a;
+    --color-c-dark-alt: #1b1f22;
+    --color-c-gray: #64748b;
+    --color-c-slate: #334155;
+    --color-c-muted-gray: #52606d;
+    --color-c-muted-gray-alt: #687580;
+    --color-c-light: #f6f7f8;
+    --color-c-light-alt: #f8fafc;
+    --color-c-border: #e2e8f0;
+    --color-c-blue: #1764ca;
+
+    --spacing-section-mobile: 64px;
+    --spacing-section-tablet: 80px;
+    --spacing-section-desktop: 96px;
+
+    --font-outfit: 'Outfit', sans-serif;
+
+    --shadow-default: 0 12px 32px rgb(15 23 42 / 0.1);
+    --shadow-mega-menu: 0 32px 80px rgb(15 23 42 / 0.16);
+
+    --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}

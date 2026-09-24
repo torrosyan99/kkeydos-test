@@ -1,0 +1,158 @@
+@layer components {
+    .nav-icon {
+        @apply size-5 shrink-0 text-c-orange;
+    }
+
+    .header-item {
+        @apply flex h-full items-center;
+
+        &:hover > .header-dropdown,
+        &:focus-within > .header-dropdown {
+            @apply visible opacity-100;
+            transition-delay: 0ms;
+        }
+
+        &:hover > .header-link,
+        &:focus-within > .header-link {
+            @apply text-c-teal;
+        }
+
+        &:hover > .header-link::after,
+        &:focus-within > .header-link::after {
+            transform: scaleX(1);
+        }
+
+        &:hover > .header-link svg,
+        &:focus-within > .header-link svg {
+            @apply rotate-180;
+        }
+    }
+
+    .header-link {
+        @apply relative flex h-full cursor-pointer items-center gap-2;
+        @apply whitespace-nowrap font-bold leading-6;
+        @apply transition-colors duration-300;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset-inline: 0;
+            bottom: 18px;
+            height: 3px;
+            background: var(--color-c-teal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 300ms;
+        }
+    }
+
+    .header-dropdown {
+        @apply invisible absolute inset-x-0 top-full;
+        @apply max-h-[calc(100dvh-80px)];
+        @apply overflow-y-auto overscroll-contain;
+        @apply rounded-b-2xl border-y border-c-border bg-white shadow-mega-menu;
+        @apply opacity-0 transition-[opacity,visibility] duration-200 ease-out;
+        transition-delay: 300ms;
+    }
+
+    .mega-link {
+        @apply flex items-center gap-3 text-c-gray transition-colors;
+        @apply hover:text-c-teal;
+
+        .nav-icon {
+            @apply block transition-colors;
+        }
+
+        &:hover .nav-icon {
+            @apply text-c-teal;
+        }
+    }
+
+    .mega-card {
+        @apply flex items-center gap-3 rounded-xl border border-c-border;
+        @apply bg-white/85 px-3 py-2.5 shadow-default;
+    }
+
+    .mega-left {
+        @apply relative isolate w-87.5 shrink-0 overflow-hidden;
+        @apply border-r border-c-border bg-c-light-alt px-7.5 pt-8 pb-10;
+        @apply max-xl:w-70;
+    }
+
+    .mega-grid {
+        @apply grid grid-cols-[repeat(3,minmax(0,330px))] gap-15;
+        @apply px-7.5 pt-8 pb-10 text-c-gray lg:justify-between;
+        @apply max-xl:gap-15;
+    }
+
+    .mega-featured-link {
+        @apply flex items-center gap-3 transition-colors;
+
+        svg {
+            @apply block size-9 rounded-lg bg-c-teal/10 p-2 text-c-teal;
+        }
+    }
+
+    .mega-item-title {
+        @apply mb-5 flex items-center border-b border-c-border pb-4;
+        @apply text-[10px] font-bold uppercase;
+    }
+
+    .mobile-menu-button {
+        .mobile-menu-line {
+            @apply h-0.5 w-5 rounded-full bg-c-dark;
+        }
+
+        .mobile-menu-line--top,
+        .mobile-menu-line--bottom {
+            @apply transition-transform duration-300;
+        }
+
+        .mobile-menu-line--middle {
+            @apply transition-opacity duration-300;
+        }
+
+        &[aria-expanded='true'] {
+            .mobile-menu-line--top {
+                @apply translate-y-1.5 rotate-45;
+            }
+
+            .mobile-menu-line--middle {
+                @apply opacity-0;
+            }
+
+            .mobile-menu-line--bottom {
+                @apply -translate-y-1.5 -rotate-45;
+            }
+        }
+    }
+
+    .mobile-menu-toggle {
+        @apply flex min-h-16 w-full cursor-pointer items-end justify-between;
+        @apply px-1 text-left font-medium transition-colors hover:text-c-teal;
+
+        &[aria-expanded='true'] {
+            @apply text-c-teal;
+
+            svg {
+                @apply rotate-180;
+            }
+        }
+    }
+
+    .mobile-menu-item {
+        @apply grid grid-rows-[0fr] opacity-0;
+        @apply transition-[grid-template-rows,opacity] duration-300 ease-out;
+    }
+
+    .mobile-menu-toggle[aria-expanded='true'] + .mobile-menu-item {
+        @apply grid-rows-[1fr] opacity-100;
+    }
+
+    .mobile-nav-link {
+        @apply flex min-h-10 items-center gap-3 py-1.5;
+        @apply text-sm font-medium leading-5 text-c-dark;
+        @apply transition-[color,transform] duration-200;
+        @apply hover:translate-x-1 hover:text-c-teal;
+    }
+}

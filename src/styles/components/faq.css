@@ -1,0 +1,44 @@
+@layer components {
+    @supports (interpolate-size: allow-keywords) {
+        :root {
+            interpolate-size: allow-keywords;
+        }
+    }
+
+    .faq-item {
+        @apply overflow-hidden border-t border-c-border;
+    }
+
+    .faq-item:last-child {
+        @apply border-b;
+    }
+
+    .faq-item::details-content {
+        @apply overflow-hidden opacity-0;
+        height: 0;
+        transition:
+            height 400ms var(--ease-smooth),
+            opacity 300ms ease,
+            content-visibility 400ms allow-discrete;
+    }
+
+    .faq-item[open]::details-content {
+        @apply opacity-100;
+        height: auto;
+    }
+
+    .faq-summary {
+        @apply flex cursor-pointer list-none items-center justify-between;
+        @apply gap-6 py-6 text-xl font-semibold text-c-dark;
+        @apply max-md:gap-4 max-md:text-lg;
+    }
+
+    .faq-icon {
+        @apply grid size-6 shrink-0 place-items-center rounded-full;
+        @apply bg-c-orange text-white;
+    }
+
+    .faq-icon svg {
+        @apply size-5 transition-transform duration-300;
+    }
+}

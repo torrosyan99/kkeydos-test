@@ -1,0 +1,67 @@
+@layer components {
+    .btn-cta {
+        --cta-skew: -16deg;
+        --cta-skew-offset: 7px;
+
+        @apply relative isolate inline-flex h-12 items-center justify-center;
+        @apply pl-6 pr-8 text-base font-semibold leading-6 text-white;
+
+        transition:
+            transform 150ms ease,
+            filter 150ms ease;
+
+        &::before,
+        &::after {
+            content: '';
+            @apply absolute inset-y-0 -z-1 bg-c-orange;
+            transition: filter 150ms ease;
+        }
+
+        &::before {
+            @apply left-0 rounded-l-lg;
+            right: 20px;
+        }
+
+        &::after {
+            width: 32px;
+            right: var(--cta-skew-offset);
+            @apply rounded-lg;
+            transform: skewX(var(--cta-skew));
+            transform-origin: center;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.1));
+
+            &::before,
+            &::after {
+                filter: brightness(1.08);
+            }
+        }
+
+        &:active {
+            transform: translateY(0) scale(0.98);
+            filter: none;
+        }
+
+        &:focus-visible {
+            @apply outline-none ring-2 ring-c-orange ring-offset-2;
+        }
+    }
+
+    .btn-teal {
+        @apply inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-c-teal px-6;
+        @apply text-base font-semibold leading-6 text-white;
+        @apply transition-[transform,filter,box-shadow] duration-200;
+        @apply hover:-translate-y-0.5 hover:brightness-110 hover:shadow-lg;
+        @apply active:translate-y-0 active:scale-98 active:shadow-none;
+        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-c-teal focus-visible:ring-offset-2;
+    }
+
+    .btn-outline-dark {
+        @apply inline-flex h-12 items-center justify-center rounded-md border-2 border-c-dark-alt px-4;
+        @apply text-sm font-bold text-c-dark-alt transition-colors;
+        @apply hover:bg-c-dark-alt hover:text-white;
+    }
+}

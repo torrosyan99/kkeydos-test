@@ -1,0 +1,20 @@
+@import 'tailwindcss' source(none);
+
+@source '../app/**/*.html';
+@source '../app/assets/scripts/**/*.js';
+
+@import './styles/settings/tokens.css';
+@import './styles/base/global.css';
+@import './styles/base/typography.css';
+@import './styles/layout/containers.css';
+@import './styles/layout/sections.css';
+@import './styles/components/buttons.css';
+@import './styles/components/card-selector.css';
+@import './styles/components/cards.css';
+@import './styles/components/carousel.css';
+@import './styles/components/faq.css';
+@import './styles/components/forms.css';
+@import './styles/components/links.css';
+@import './styles/components/navigation.css';
+@import './styles/components/text-rotator.css';
+@import './styles/pages/home.css';

@@ -1,0 +1,23 @@
+@layer components {
+    [data-card-selector] > summary {
+        list-style: none;
+    }
+
+    [data-card-selector] > summary::-webkit-details-marker {
+        display: none;
+    }
+
+    @media (min-width: 834px) {
+        [data-card-selector] > [data-card-selector-summary] {
+            display: contents;
+            cursor: default;
+        }
+    }
+
+    @media (max-width: 833px) {
+        [data-card-selector-group] {
+            grid-template-columns: minmax(0, 1fr) !important;
+            gap: 1rem !important;
+        }
+    }
+}

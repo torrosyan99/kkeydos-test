@@ -1,0 +1,45 @@
+@layer components {
+    .link-arrow,
+    .link-arrow-orange {
+        @apply flex items-center gap-1.5 font-semibold;
+
+        svg {
+            @apply size-4 transition-transform;
+        }
+
+        &:hover svg {
+            @apply translate-x-1;
+        }
+    }
+
+    .link-arrow {
+        @apply text-c-teal;
+    }
+
+    .link-arrow-orange {
+        @apply text-c-orange;
+    }
+
+    .sliding-arrow-link-dark,
+    .sliding-arrow-link-accent {
+        container-type: inline-size;
+        @apply inline-flex shrink-0 overflow-hidden border-b-2 pb-2 font-medium;
+
+        span {
+            @apply inline-flex w-max items-center gap-2 transition-transform duration-400 ease-out;
+        }
+    }
+
+    .sliding-arrow-link-dark {
+        @apply border-[#111111] text-[#111111];
+    }
+
+    .sliding-arrow-link-accent {
+        @apply border-c-orange text-c-orange;
+    }
+
+    .sliding-arrow-link-dark:hover span,
+    .sliding-arrow-link-accent:hover span {
+        transform: translateX(calc((100cqw - 100%) / 2));
+    }
+}

@@ -1,0 +1,11 @@
+@layer components {
+    .form-control {
+        @apply h-10 w-full rounded-lg border border-c-gray/40 bg-white p-2;
+        @apply transition-[border-color,box-shadow] duration-200;
+        @apply focus:ring-2 focus:ring-c-orange/35;
+    }
+
+    .form-control--textarea {
+        @apply h-auto resize-none;
+    }
+}

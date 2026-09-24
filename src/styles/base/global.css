@@ -1,0 +1,32 @@
+@custom-variant hover (&:hover);
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply min-w-80 bg-white font-outfit text-c-dark;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-c-teal);
+        outline-offset: 4px;
+    }
+
+    input,
+    textarea {
+        @apply outline-none focus:outline-none focus:ring-0 focus-visible:outline-none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}

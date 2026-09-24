@@ -1,0 +1,29 @@
+@layer components {
+    .section-padding {
+        @apply pt-section-desktop max-lg:pt-section-tablet max-md:pt-section-mobile;
+    }
+
+
+    .section-margin {
+        @apply mt-section-desktop max-lg:mt-section-tablet max-md:mt-section-mobile;
+    }
+    .section-isolate {
+        @apply relative isolate;
+    }
+
+    .bottom-oval {
+        @apply pointer-events-none absolute left-1/2 z-20 -translate-x-1/2 rounded-[50%] bg-white;
+        @apply -bottom-82.5 h-117.5 w-[118vw];
+        @apply max-2xl:-bottom-77.5 max-2xl:h-100 max-2xl:w-[118vw];
+        @apply max-lg:-bottom-55 max-lg:h-80 max-lg:w-[125vw];
+        @apply max-sm:-bottom-41.25 max-sm:h-61.25 max-sm:w-[137vw];
+    }
+
+    .top-oval {
+        @apply pointer-events-none absolute left-1/2 z-0 -translate-x-1/2 rounded-[50%] bg-white;
+        @apply -top-82.5 h-117.5 w-[118vw];
+        @apply max-2xl:-top-77.5 max-2xl:h-100 max-2xl:w-[118vw];
+        @apply max-lg:-top-55 max-lg:h-80 max-lg:w-[125vw];
+        @apply max-sm:-top-41.25 max-sm:h-61.25 max-sm:w-[137vw];
+    }
+}

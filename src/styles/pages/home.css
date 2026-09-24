@@ -1,0 +1,70 @@
+@layer components {
+    .hero-section-bg {
+        @apply pointer-events-none absolute inset-0 bg-cover bg-no-repeat;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgb(255 255 255) 0%,
+                rgb(255 255 255) 34%,
+                rgb(255 255 255 / 0.96) 43%,
+                rgb(255 255 255 / 0.72) 54%,
+                rgb(255 255 255 / 0.18) 70%,
+                rgb(255 255 255 / 0) 82%
+            ),
+            url('../images/backgrounds/hero-desktop.webp');
+
+        background-position: 64% 52%;
+
+        @media (width < 1280px) {
+            background-image:
+                linear-gradient(
+                    180deg,
+                    rgb(246 247 248) 0%,
+                    rgb(246 247 248 / 0.96) 46%,
+                    rgb(246 247 248 / 0.86) 76%,
+                    rgb(246 247 248 / 0.72) 100%
+                ),
+                url('../images/backgrounds/hero-mobile.webp');
+
+            background-position: 70% 50%;
+        }
+    }
+
+    .section-circle-bg {
+        --circle-cut: 0%;
+
+        @apply relative isolate;
+        @apply before:pointer-events-none before:absolute before:top-20 before:left-1/2 before:z-0;
+        @apply before:h-[calc(100%-12rem)] before:min-w-625 before:-translate-x-1/2;
+        @apply before:rounded-full before:bg-[#f3f4f5] before:content-[''];
+        @apply max-[1800px]:before:h-[calc(100%-40rem)] max-2xl:before:hidden;
+
+        &::before {
+            clip-path: inset(0 0 var(--circle-cut) 0);
+        }
+    }
+
+    .process-steps {
+        @apply relative isolate flex min-w-0 flex-col gap-7 max-sm:gap-8;
+        @apply before:absolute before:top-6.5 before:bottom-6.5 before:left-6.5 before:-z-1;
+        @apply before:border-l before:border-dashed before:border-[#d7dce3] before:content-[''];
+        @apply max-sm:before:top-5.5 max-sm:before:bottom-5.5 max-sm:before:left-5.5;
+        @apply after:pointer-events-none after:absolute after:bottom-6 after:left-6.5 after:-z-1;
+        @apply after:w-13.5 after:border-t after:border-dashed after:border-[#d7dce3] after:content-[''];
+        @apply max-sm:after:left-5.5 max-sm:after:w-9.5;
+    }
+
+    .service-tag {
+        @apply inline-flex cursor-default items-center justify-center rounded-lg border
+         border-c-blue px-2.5 py-1.5 text-sm font-medium leading-5 text-c-blue transition-colors
+         hover:bg-c-blue hover:text-white;
+    }
+
+    .tech-item {
+        @apply cursor-pointer pr-18 text-[52px] font-bold leading-tight;
+        @apply text-c-muted-gray-alt/20 transition-colors duration-200;
+        @apply hover:text-c-orange! focus-visible:text-c-orange!;
+        @apply max-md:pr-8 max-md:text-[32px];
+    }
+}

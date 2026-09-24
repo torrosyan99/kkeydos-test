@@ -1,0 +1,6 @@
+node_modules
+.idea
+/tmp/
+
+app/assets/styles/main.css
+ai-page/assets/styles/ai.css
