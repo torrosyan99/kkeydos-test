@@ -8,4 +8,13 @@
     .form-control--textarea {
         @apply h-auto resize-none;
     }
+
+    .country-code-option {
+        @apply block w-full cursor-pointer rounded-md px-3 py-2 text-left text-sm text-c-dark-alt;
+        @apply hover:bg-c-light focus-visible:bg-c-light focus-visible:outline-none;
+    }
+
+    .country-code-option[aria-current='true'] {
+        @apply bg-c-teal/10 font-semibold;
+    }
 }

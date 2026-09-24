@@ -146,30 +146,36 @@ const initTableOfContents = () => {
     const toc = document.querySelector('[data-toc]');
     if (!toc) return;
 
-    const toggle = toc.querySelector('[data-toc-toggle]');
+    const slot = document.querySelector('[data-toc-slot]');
+    const hero = document.querySelector('[data-ai-hero]');
+    const footer = document.querySelector('footer');
+    const header = document.querySelector('[data-site-header]');
     const navigation = toc.querySelector('[data-toc-navigation]');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0;
 
-    const setExpanded = (expanded) => {
-        toggle.setAttribute('aria-expanded', String(expanded));
-        navigation.hidden = !expanded;
+    const updateSticky = () => {
+        frame = 0;
+        const headerHeight = header?.offsetHeight ?? 0;
+        const tocHeight = toc.offsetHeight;
+        const pastHero = hero?.getBoundingClientRect().bottom <= headerHeight;
+        const beforeFooter =
+            !footer ||
+            footer.getBoundingClientRect().top > headerHeight + tocHeight;
+        const stuck = pastHero && beforeFooter;
+        toc.style.setProperty('--toc-top', `${headerHeight}px`);
+        toc.classList.toggle('is-stuck', stuck);
+        slot.style.height = stuck ? `${tocHeight}px` : '';
     };
 
-    toggle.addEventListener('click', () => {
-        setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
-    });
-    toggle.addEventListener('keydown', (event) => {
-        if (event.key !== 'ArrowDown') return;
-        event.preventDefault();
-        setExpanded(true);
-        navigation.querySelector('a')?.focus();
-    });
-    toc.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape' || navigation.hidden) return;
-        event.preventDefault();
-        setExpanded(false);
-        toggle.focus();
-    });
+    const scheduleStickyUpdate = () => {
+        if (!frame) frame = window.requestAnimationFrame(updateSticky);
+    };
+
+    window.addEventListener('scroll', scheduleStickyUpdate, { passive: true });
+    window.addEventListener('resize', scheduleStickyUpdate);
+    updateSticky();
+
     navigation.addEventListener('click', (event) => {
         const link = event.target.closest('a[href^="#"]');
         if (!link) return;
@@ -185,6 +191,7 @@ const initTableOfContents = () => {
             target.getBoundingClientRect().top +
             window.scrollY -
             headerHeight -
+            toc.offsetHeight -
             16;
         if (window.location.hash !== link.hash)
             window.history.pushState(null, '', link.hash);
@@ -447,7 +454,79 @@ const initTestimonialVideo = () => {
     });
 };
 
+const initCountryCodeSelect = () => {
+    const root = document.querySelector('[data-country-code]');
+    if (!root) return;
+
+    const select = root.querySelector('select');
+    const trigger = root.querySelector('[data-country-trigger]');
+    const label = root.querySelector('[data-country-label]');
+    const menu = root.querySelector('[data-country-menu]');
+    const buttons = [...select.options].map((option) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'country-code-option';
+        button.textContent = option.textContent.trim();
+        button.dataset.value = option.value;
+        menu.append(button);
+        return button;
+    });
+
+    const close = () => {
+        menu.hidden = true;
+        trigger.setAttribute('aria-expanded', 'false');
+    };
+
+    const sync = () => {
+        label.textContent = select.selectedOptions[0]?.textContent.trim() ?? '';
+        buttons.forEach((button) => {
+            button.setAttribute(
+                'aria-current',
+                String(button.dataset.value === select.value),
+            );
+        });
+    };
+
+    trigger.addEventListener('click', () => {
+        menu.hidden = !menu.hidden;
+        trigger.setAttribute('aria-expanded', String(!menu.hidden));
+        if (!menu.hidden)
+            buttons
+                .find((button) => button.dataset.value === select.value)
+                ?.focus();
+    });
+    menu.addEventListener('click', (event) => {
+        const button = event.target.closest('button');
+        if (!button) return;
+        select.value = button.dataset.value;
+        sync();
+        close();
+        trigger.focus();
+    });
+    root.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            close();
+            trigger.focus();
+        }
+        if (menu.hidden || !['ArrowDown', 'ArrowUp'].includes(event.key))
+            return;
+        event.preventDefault();
+        const index = buttons.indexOf(document.activeElement);
+        const next = event.key === 'ArrowDown' ? index + 1 : index - 1;
+        buttons[(next + buttons.length) % buttons.length].focus();
+    });
+    root.addEventListener('focusout', (event) => {
+        if (!root.contains(event.relatedTarget)) close();
+    });
+    document.addEventListener('pointerdown', (event) => {
+        if (!root.contains(event.target)) close();
+    });
+    select.addEventListener('change', sync);
+    sync();
+};
+
 initAiProfessionals();
+initCountryCodeSelect();
 initTableOfContents();
 initServices();
 initTeamDetails();
