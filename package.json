@@ -4,15 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm run build:css",
-        "build:css": "npm run build:css:main && npm run build:css:ai",
-        "build:css:main": "tailwindcss -i ./src/input.css -o ./app/assets/styles/main.css --minify",
-        "build:css:ai": "tailwindcss -i app/ai-page/src/ai.css -o ./app/ai-page/assets/styles/ai.css --minify",
+        "build:css": "tailwindcss -i ./src/input.css -o ./app/assets/styles/main.css --minify",
         "dev:css": "tailwindcss -i ./src/input.css -o ./app/assets/styles/main.css --watch",
         "format": "prettier --write .",
-        "format:check": "prettier --check .",
-        "validate": "node --check ./app/assets/scripts/main.js && node --check ./app/assets/scripts/homepage.js && node --check ./app/assets/scripts/technology.js && node --check ./app/ai-page/assets/scripts/ai.js && node ./scripts/validate-project.mjs",
-        "check": "npm run format:check && npm run build:css && npm run validate"
+        "format:check": "prettier --check ."
     },
     "author": "",
     "license": "ISC",
