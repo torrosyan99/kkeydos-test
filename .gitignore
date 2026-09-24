@@ -3,4 +3,4 @@ node_modules
 /tmp/
 
 app/assets/styles/main.css
-ai-page/assets/styles/ai.css
+app/ai-page/assets/styles/ai.css

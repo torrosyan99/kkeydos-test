@@ -1,5 +1,5 @@
 /* All presentation lives in the Tailwind classes in ai.html. */
-import { Swiper } from '../../../app/assets/libs/swiper/swiper.min.js';
+import { Swiper } from '../../../assets/libs/swiper/swiper.min.js';
 
 (() => {
     const one = (selector, root = document) => root.querySelector(selector);
