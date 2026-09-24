@@ -1,11 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const htmlFiles = [
-    'app/index.html',
-    'app/technologies/technology.html',
-    'app/ai-page/ai.html',
-];
+const htmlFiles = ['app/index.html', 'app/ai-page/ai.html'];
 const cssFiles = [
     'app/assets/styles/main.css',
     'app/assets/styles/fonts.css',
@@ -16,6 +12,7 @@ const scriptFiles = [
     'app/assets/scripts/components/card-selector.js',
     'app/assets/scripts/homepage.js',
     'app/assets/scripts/technology.js',
+    'app/assets/scripts/technology-ai-sections.js',
     'app/ai-page/assets/scripts/ai.js',
 ];
 const allowedAria = new Set([
