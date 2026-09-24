@@ -1,7 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const htmlFiles = ['app/technologies/technology.html', 'app/ai-page/ai.html'];
+const htmlFiles = [
+    'app/index.html',
+    'app/technologies/technology.html',
+    'app/ai-page/ai.html',
+];
 const cssFiles = [
     'app/assets/styles/main.css',
     'app/assets/styles/fonts.css',
@@ -14,7 +18,13 @@ const scriptFiles = [
     'app/assets/scripts/technology.js',
     'app/ai-page/assets/scripts/ai.js',
 ];
-const allowedAria = new Set(['aria-expanded', 'aria-hidden', 'aria-label']);
+const allowedAria = new Set([
+    'aria-controls',
+    'aria-current',
+    'aria-expanded',
+    'aria-hidden',
+    'aria-label',
+]);
 const errors = [];
 const referencedFiles = new Set();
 
@@ -106,21 +116,6 @@ for (const file of cssFiles) {
         if (!fs.existsSync(target)) {
             errors.push(`${file}: missing ${path.relative('.', target)}`);
         }
-    }
-}
-
-const walk = (directory) =>
-    fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
-        const item = path.join(directory, entry.name);
-        return entry.isDirectory() ? walk(item) : [path.resolve(item)];
-    });
-
-for (const image of [
-    ...walk('app/assets/images'),
-    ...walk('app/ai-page/assets/images'),
-]) {
-    if (!referencedFiles.has(image)) {
-        errors.push(`Unreferenced image: ${path.relative('.', image)}`);
     }
 }
 

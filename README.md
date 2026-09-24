@@ -3,6 +3,7 @@
 ## Commands
 
 - `npm run build:css` builds the independent main-site and AI-page CSS bundles.
+- `npm run build` is the deployment build command. Publish the `app/` directory.
 - `npm run dev:css` watches the main-site CSS sources while developing.
 - `npm run format` formats maintained source files.
 - `npm run check` checks formatting, rebuilds CSS, and validates local assets,

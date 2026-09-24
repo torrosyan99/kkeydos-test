@@ -1,6 +1,7 @@
 @import 'tailwindcss' source(none);
 
-@source '../app/**/*.html';
+@source '../app/index.html';
+@source '../app/technologies/**/*.html';
 @source '../app/assets/scripts/**/*.js';
 
 @import './styles/settings/tokens.css';

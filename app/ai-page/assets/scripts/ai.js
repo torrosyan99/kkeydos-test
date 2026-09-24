@@ -54,7 +54,7 @@ import { Swiper } from '../../../assets/libs/swiper/swiper.min.js';
             const fontPath =
                 name === 'Variable'
                     ? 'assets/fonts/Outfit/Outfit-Variable.ttf'
-                    : `../app/assets/fonts/Outfit/Outfit-${name}.ttf`;
+                    : `../assets/fonts/Outfit/Outfit-${name}.ttf`;
             const font = new FontFace('Outfit', `url(${fontPath})`, {
                 weight,
                 style: 'normal',
