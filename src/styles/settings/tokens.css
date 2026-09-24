@@ -1,5 +1,6 @@
 @theme {
     --color-c-teal: #0f8a8d;
+    --color-brand-teal: var(--color-c-teal);
     --color-c-orange: #f48949;
     --color-c-dark: #0f172a;
     --color-c-dark-alt: #1b1f22;

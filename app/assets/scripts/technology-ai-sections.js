@@ -8,11 +8,17 @@ const initTabs = () => {
     const desktop = one('[data-tech-desktop]', section);
     const content = one('[data-tech-content]', desktop) ?? desktop;
     const desktopLayout = matchMedia('(min-width: 834px)');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let activeIndex = 0;
+    let visible = false;
+    let keyboardFocused = false;
+    let timer;
     const select = (index) => {
+        activeIndex = index;
         buttons.forEach((button, i) => {
             const selected = index === i;
             button.dataset.selected = String(selected);
-            button.tabIndex = selected ? 0 : -1;
+            button.tabIndex = selected || (index < 0 && i === 0) ? 0 : -1;
             const card = one('[data-tech-card]', button);
             card?.classList.toggle('border-[#f66135]', selected);
             card?.classList.toggle('border-[#ffffff]', !selected);
@@ -57,6 +63,20 @@ const initTabs = () => {
             );
         }
     };
+    const updateAutoplay = () => {
+        clearInterval(timer);
+        if (
+            !visible ||
+            keyboardFocused ||
+            document.hidden ||
+            reducedMotion.matches
+        )
+            return;
+        timer = setInterval(
+            () => select((activeIndex + 1) % buttons.length),
+            3000,
+        );
+    };
     buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             select(
@@ -64,9 +84,13 @@ const initTabs = () => {
                     ? -1
                     : index,
             );
+            updateAutoplay();
         });
         button.addEventListener('keydown', (event) => {
+            keyboardFocused = true;
+            updateAutoplay();
             let next;
+            if (['Enter', ' '].includes(event.key)) next = index;
             if (['ArrowRight', 'ArrowDown'].includes(event.key))
                 next = (index + 1) % buttons.length;
             if (['ArrowLeft', 'ArrowUp'].includes(event.key))
@@ -80,6 +104,28 @@ const initTabs = () => {
         });
     });
     select(0);
+    new IntersectionObserver(
+        ([entry]) => {
+            visible = entry.isIntersecting && entry.intersectionRatio >= 0.2;
+            updateAutoplay();
+        },
+        { threshold: [0, 0.2] },
+    ).observe(section);
+    section.addEventListener('focusin', () => {
+        keyboardFocused = document.activeElement.matches(':focus-visible');
+        updateAutoplay();
+    });
+    section.addEventListener('focusout', (event) => {
+        if (section.contains(event.relatedTarget)) return;
+        keyboardFocused = false;
+        updateAutoplay();
+    });
+    section.addEventListener('pointerdown', () => {
+        keyboardFocused = false;
+        updateAutoplay();
+    });
+    document.addEventListener('visibilitychange', updateAutoplay);
+    reducedMotion.addEventListener('change', updateAutoplay);
     desktopLayout.addEventListener('change', () => {
         select(
             Math.max(
@@ -89,6 +135,7 @@ const initTabs = () => {
                 ),
             ),
         );
+        updateAutoplay();
     });
 };
 
@@ -188,14 +235,11 @@ const initTestimonials = () => {
     if (!section) return;
     const showMore = one('[data-show-testimonials]', section);
     showMore?.addEventListener('click', () => {
-        const expanded = showMore.getAttribute('aria-expanded') !== 'true';
-        showMore.setAttribute('aria-expanded', String(expanded));
+        showMore.setAttribute('aria-expanded', 'true');
         all('[data-testimonial-card]', section).forEach((card) => {
-            card.classList.toggle('[&:nth-child(n+4)]:hidden', !expanded);
+            card.classList.remove('[&:nth-child(n+4)]:hidden');
         });
-        one('[data-show-testimonials-label]', showMore).textContent = expanded
-            ? 'Show Fewer Testimonials'
-            : 'Show More Testimonials';
+        showMore.disabled = true;
     });
     all('[data-testimonial-toggle]', section).forEach((card) => {
         const details = one('[data-testimonial-detail]', card);
@@ -228,3 +272,127 @@ const initTestimonials = () => {
 initTabs();
 initTalentCarousel();
 initTestimonials();
+
+const initEngagement = () => {
+    const section = one('[data-engagement]');
+    if (!section) return;
+    const buttons = all('[data-accordion-trigger]', section);
+    const setExpanded = (button, expanded) => {
+        button.setAttribute('aria-expanded', String(expanded));
+        const panel = button.nextElementSibling;
+        panel.inert = !expanded;
+        panel.classList.toggle('grid-rows-[1fr]', expanded);
+        panel.classList.toggle('grid-rows-[0fr]', !expanded);
+        const icon = one('[data-accordion-icon]', button);
+        icon?.classList.toggle('rotate-90', expanded);
+        icon?.classList.toggle('-rotate-90', !expanded);
+        button.classList.toggle('font-bold', expanded);
+        button.classList.toggle('font-normal', !expanded);
+        const card = button.parentElement;
+        card.classList.toggle('border-[#f66135]', expanded);
+        card.classList.toggle('border-[#d9dcdf]', !expanded);
+        card.classList.toggle(
+            'shadow-[0_10px_15px_-3px_#0000001a,_0_4px_6px_-4px_#0000001a]',
+            expanded,
+        );
+    };
+    buttons.forEach((button) => {
+        setExpanded(button, button.getAttribute('aria-expanded') === 'true');
+        button.addEventListener('click', () => {
+            const expanded = button.getAttribute('aria-expanded') !== 'true';
+            buttons.forEach((other) =>
+                setExpanded(other, other === button && expanded),
+            );
+        });
+    });
+};
+
+initEngagement();
+
+const initEngagementCards = () => {
+    all('[data-engagement-card]').forEach((card) => {
+        const setOpen = (open) => {
+            card.dataset.open = String(open);
+            card.setAttribute('aria-expanded', String(open));
+        };
+        card.addEventListener('mouseenter', () => {
+            if (matchMedia('(hover: hover)').matches) setOpen(true);
+        });
+        card.addEventListener('mouseleave', () => {
+            if (matchMedia('(hover: hover)').matches) setOpen(false);
+        });
+        card.addEventListener('click', () => {
+            setOpen(card.dataset.open !== 'true');
+        });
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setOpen(false);
+            if (['Enter', ' '].includes(event.key)) {
+                event.preventDefault();
+                setOpen(card.dataset.open !== 'true');
+            }
+        });
+        card.addEventListener('blur', () => setOpen(false));
+    });
+};
+
+const initFaq = () => {
+    const section = one('[data-faq]');
+    if (!section) return;
+    const buttons = all('[data-accordion-trigger]', section);
+    const setOpen = (button, open) => {
+        button.setAttribute('aria-expanded', String(open));
+        const panel = button.nextElementSibling;
+        panel.inert = !open;
+        panel.classList.toggle('grid-rows-[1fr]', open);
+        panel.classList.toggle('grid-rows-[0fr]', !open);
+        one('[data-accordion-icon]', button)?.classList.toggle(
+            'rotate-180',
+            open,
+        );
+    };
+    buttons.forEach((button) => {
+        setOpen(button, button.getAttribute('aria-expanded') === 'true');
+        button.addEventListener('click', () => {
+            const open = button.getAttribute('aria-expanded') !== 'true';
+            buttons.forEach((item) => setOpen(item, item === button && open));
+        });
+    });
+};
+
+const initClientLogos = () => {
+    const logos = one('[data-client-logos]');
+    if (!logos) return;
+    const section = logos.closest('section');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = false;
+    let frame;
+
+    const update = () => {
+        frame = undefined;
+        if (reducedMotion.matches) {
+            logos.style.removeProperty('--client-logo-offset');
+            return;
+        }
+        if (!visible || document.hidden) return;
+        // Match the reference: half-speed parallax, centered on the logo grid.
+        const offset = (innerHeight - section.getBoundingClientRect().top) / 2;
+        logos.style.setProperty('--client-logo-offset', `${offset}px`);
+    };
+    const schedule = () => {
+        if (frame === undefined) frame = requestAnimationFrame(update);
+    };
+    new IntersectionObserver(([entry]) => {
+        visible = entry.isIntersecting;
+        schedule();
+    }).observe(section);
+    new ResizeObserver(schedule).observe(section);
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    window.addEventListener('pageshow', schedule);
+    document.addEventListener('visibilitychange', schedule);
+    reducedMotion.addEventListener('change', schedule);
+};
+
+initEngagementCards();
+initFaq();
+initClientLogos();
