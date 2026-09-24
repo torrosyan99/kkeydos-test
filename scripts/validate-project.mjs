@@ -1,22 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const htmlFiles = [
-    'app/index.html',
-    'app/technologies/technology.html',
-    'ai-page/ai.html',
-];
+const htmlFiles = ['app/technologies/technology.html', 'app/ai-page/ai.html'];
 const cssFiles = [
     'app/assets/styles/main.css',
     'app/assets/styles/fonts.css',
-    'ai-page/assets/styles/ai.css',
+    'app/ai-page/assets/styles/ai.css',
 ];
 const scriptFiles = [
     'app/assets/scripts/main.js',
     'app/assets/scripts/components/card-selector.js',
     'app/assets/scripts/homepage.js',
     'app/assets/scripts/technology.js',
-    'ai-page/assets/scripts/ai.js',
+    'app/ai-page/assets/scripts/ai.js',
 ];
 const allowedAria = new Set(['aria-expanded', 'aria-hidden', 'aria-label']);
 const errors = [];
@@ -121,7 +117,7 @@ const walk = (directory) =>
 
 for (const image of [
     ...walk('app/assets/images'),
-    ...walk('ai-page/assets/images'),
+    ...walk('app/ai-page/assets/images'),
 ]) {
     if (!referencedFiles.has(image)) {
         errors.push(`Unreferenced image: ${path.relative('.', image)}`);

@@ -9,7 +9,7 @@
   duplicate IDs, label relationships, and the project ARIA policy.
 
 Generated CSS lives in `app/assets/styles/main.css` and
-`ai-page/assets/styles/ai.css`. Edit the files under `src/` and `ai-page/src/`
+`app/ai-page/assets/styles/ai.css`. Edit the files under `src/` and `app/ai-page/src/`
 instead.
 
 ## CSS structure
@@ -33,5 +33,5 @@ mobile starting state.
 ## Images
 
 Shared site images are grouped by purpose under `app/assets/images/`. AI-page
-assets remain page-scoped under `ai-page/assets/images/ai/` and are grouped as
+assets remain page-scoped under `app/ai-page/assets/images/ai/` and are grouped as
 `content`, `logos`, `people`, `icons`, and `flags`.

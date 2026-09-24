@@ -3,7 +3,6 @@
         @apply pt-section-desktop max-lg:pt-section-tablet max-md:pt-section-mobile;
     }
 
-
     .section-margin {
         @apply mt-section-desktop max-lg:mt-section-tablet max-md:mt-section-mobile;
     }
