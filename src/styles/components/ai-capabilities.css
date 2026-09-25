@@ -1,0 +1,271 @@
+@layer components {
+    .ai-capabilities-section {
+        border-bottom: 1px solid #edf0f2;
+        background: #fff;
+    }
+
+    .ai-capabilities-strip {
+        display: grid;
+        grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr) 9.5rem;
+        align-items: stretch;
+        gap: 1.5rem;
+        padding-block: 2rem;
+    }
+
+    .ai-capabilities-eyebrow {
+        color: #69727c;
+        font-size: 0.625rem;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        line-height: 1.5;
+        text-transform: uppercase;
+    }
+
+    .ai-capabilities h2 {
+        margin-top: 0.625rem;
+        color: #111a2d;
+        font-size: clamp(1.375rem, 1.95vw, 1.875rem);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.2;
+    }
+
+    .ai-capabilities h2 span {
+        color: #f46624;
+    }
+
+    .ai-capability-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .ai-capability-icon {
+        display: grid;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0.75rem;
+        place-items: center;
+        border-radius: 0.875rem;
+    }
+
+    .ai-capability-icon svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .ai-capability-icon--agents {
+        color: #2688e7;
+        background: linear-gradient(140deg, #f4faff, #e7f4ff);
+    }
+
+    .ai-capability-icon--generative {
+        color: #a05eea;
+        background: linear-gradient(140deg, #fcf8ff, #f0e8ff);
+    }
+
+    .ai-capability-icon--automation {
+        color: #f17530;
+        background: linear-gradient(140deg, #fffaf5, #fff0e2);
+    }
+
+    .ai-capability-icon--voice {
+        color: #14ac86;
+        background: linear-gradient(140deg, #f0fff9, #d9f9ed);
+    }
+
+    .ai-capability h3 {
+        color: #111a2d;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.4;
+    }
+
+    .ai-capability p {
+        margin-top: 0.25rem;
+        color: #626b76;
+        font-size: 0.8125rem;
+        line-height: 1.5;
+    }
+
+    .ai-technologies {
+        min-width: 0;
+        border-left: 1px solid #e8ecef;
+        padding-left: 1.5rem;
+    }
+
+    .ai-technologies-description {
+        max-width: 27rem;
+        margin-top: 0.625rem;
+        color: #626b76;
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+
+    .ai-technology-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.5rem;
+        margin-top: 1.75rem;
+    }
+
+    .ai-technology {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.625rem;
+        border: 1px solid #edf0f3;
+        border-radius: 0.75rem;
+        padding: 0.875rem 0.125rem;
+        background: linear-gradient(145deg, #fff, #fafbfc);
+    }
+
+    .ai-technology img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+    }
+
+    .ai-technology span {
+        color: #25303d;
+        font-size: 0.625rem;
+        line-height: 1.4;
+    }
+
+    .ai-capabilities-strip .ai-google-reviews {
+        flex-direction: column;
+        align-self: stretch;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0;
+        border-left: 1px solid #e8ecef;
+        border-radius: 0;
+        padding-left: 1.5rem;
+    }
+
+    .ai-capabilities-strip .ai-google-score {
+        flex-direction: column;
+        gap: 0.5rem;
+        border: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .ai-capabilities-strip .ai-google-score strong {
+        color: #17212c;
+        font-size: 2.125rem;
+        font-weight: 600;
+    }
+
+    .ai-capabilities-strip .ai-google-score strong span {
+        color: #83909b;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .ai-capabilities-strip .ai-google-stars {
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+    }
+
+    .ai-capabilities-strip .ai-google-count {
+        margin-top: 0.375rem;
+        font-size: 0.75rem;
+    }
+
+    .ai-capabilities-strip .ai-google-reviews:focus-visible {
+        outline: 2px solid #1764ca;
+        outline-offset: 5px;
+    }
+
+    @media (width < 1200px) {
+        .ai-capabilities-strip {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .ai-capabilities-strip .ai-google-reviews {
+            grid-column: 1 / -1;
+            flex-direction: row;
+            justify-content: flex-end;
+            border-top: 1px solid #e8ecef;
+            border-left: 0;
+            padding: 1.25rem 0 0;
+        }
+
+        .ai-capabilities-strip .ai-google-score {
+            flex-direction: row;
+            gap: 0.875rem;
+            text-align: left;
+        }
+
+        .ai-capabilities-strip .ai-google-count {
+            margin-top: 0.125rem;
+        }
+    }
+
+    @media (width < 834px) {
+        .ai-capabilities-strip {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1.75rem;
+            padding-block: 1.75rem;
+        }
+
+        .ai-capabilities h2 {
+            max-width: 24rem;
+            font-size: 1.75rem;
+        }
+
+        .ai-capabilities-eyebrow {
+            font-size: 0.625rem;
+            letter-spacing: 0.12em;
+        }
+
+        .ai-capability-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .ai-capability {
+            border: 1px solid #edf0f3;
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+
+        .ai-capability p {
+            max-width: 10rem;
+        }
+
+        .ai-technologies {
+            border-top: 1px solid #e8ecef;
+            border-left: 0;
+            padding: 1.5rem 0 0;
+        }
+
+        .ai-technology-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.625rem;
+            margin-top: 1.25rem;
+        }
+
+        .ai-technology {
+            padding: 1rem 0.25rem;
+        }
+
+        .ai-technology span {
+            font-size: 0.75rem;
+        }
+
+        .ai-capabilities-strip .ai-google-reviews {
+            justify-content: center;
+            gap: 1.25rem;
+            border: 1px solid #e8ecef;
+            border-radius: 0.875rem;
+            padding: 1rem 0.75rem;
+            background: #fafbfc;
+        }
+    }
+}

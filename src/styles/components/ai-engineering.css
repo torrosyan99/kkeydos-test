@@ -1,0 +1,188 @@
+@layer components {
+    .ai-engineering {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+        align-items: center;
+        gap: 3rem;
+        padding-block: 4.5rem 2rem;
+        scroll-margin-top: 9rem;
+    }
+
+    .ai-engineering-intro {
+        min-width: 0;
+    }
+
+    .ai-engineering-eyebrow {
+        margin-bottom: 0.5rem;
+        color: #ec7427;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.4;
+        text-transform: uppercase;
+    }
+
+    .ai-engineering h2 {
+        max-width: 39rem;
+        color: #111a2d;
+        font-size: clamp(2rem, 3.05vw, 3rem);
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        line-height: 1.12;
+    }
+
+    .ai-engineering h2 em {
+        color: #f47a25;
+        font-style: normal;
+    }
+
+    .ai-engineering-description {
+        max-width: 36rem;
+        margin-top: 1rem;
+        color: #69717b;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .ai-engineering-diagram {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: 0.5rem;
+    }
+
+    .ai-engineering-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .ai-engineering-card {
+        min-width: 0;
+        border: 1px solid #f0f1f6;
+        border-radius: 0.75rem;
+        padding: 1rem 0.875rem;
+        background: linear-gradient(135deg, #fff, #ffffffb3);
+        box-shadow: 0 4px 14px #26355704;
+    }
+
+    .ai-engineering-icon {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .ai-engineering-icon--architecture {
+        color: #20a7e3;
+    }
+    .ai-engineering-icon--model {
+        color: #9d5ee7;
+    }
+    .ai-engineering-icon--knowledge {
+        color: #35b98c;
+    }
+    .ai-engineering-icon--agents {
+        color: #ff831b;
+    }
+    .ai-engineering-icon--workflow {
+        color: #ed5c97;
+    }
+    .ai-engineering-icon--api {
+        color: #2460ef;
+    }
+    .ai-engineering-icon--data {
+        color: #1bbb8b;
+    }
+    .ai-engineering-icon--cloud {
+        color: #8965eb;
+    }
+    .ai-engineering-icon--monitoring {
+        color: #eebc25;
+    }
+
+    .ai-engineering-card h3 {
+        color: #182034;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+    }
+
+    .ai-engineering-card p {
+        margin-top: 0.25rem;
+        color: #69717b;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+    }
+
+    @media (width >= 1600px) {
+        .ai-engineering {
+            gap: 4rem;
+        }
+        .ai-engineering-card {
+            padding: 1.25rem;
+        }
+        .ai-engineering-card h3 {
+            font-size: 1rem;
+        }
+        .ai-engineering-card p {
+            font-size: 0.9375rem;
+        }
+    }
+
+    @media (width < 1100px) {
+        .ai-engineering {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 1.75rem;
+            padding-block: 3rem 1rem;
+        }
+
+        .ai-engineering-intro {
+            max-width: 40rem;
+            margin-inline: auto;
+        }
+
+        .ai-engineering h2 {
+            font-size: 2.5rem;
+        }
+        .ai-engineering-diagram {
+            max-width: 36rem;
+            margin-inline: auto;
+        }
+        .ai-engineering-card {
+            padding: 1.25rem;
+        }
+    }
+
+    @media (width < 640px) {
+        .ai-engineering {
+            gap: 1.25rem;
+        }
+        .ai-engineering h2 {
+            font-size: 2rem;
+        }
+        .ai-engineering-description {
+            font-size: 0.9375rem;
+        }
+        .ai-engineering-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .ai-engineering-card {
+            padding: 1rem 0.875rem;
+        }
+        .ai-engineering-card:last-child {
+            display: grid;
+            grid-template-columns: 3rem minmax(0, 1fr);
+            column-gap: 0.875rem;
+            grid-column: 1 / -1;
+            align-items: center;
+        }
+        .ai-engineering-card:last-child .ai-engineering-icon {
+            grid-row: 1 / 3;
+            margin-bottom: 0;
+        }
+        .ai-engineering-card:last-child p {
+            grid-column: 2;
+        }
+    }
+}
