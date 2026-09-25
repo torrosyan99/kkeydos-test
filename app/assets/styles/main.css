@@ -2136,6 +2136,12 @@
     }
   }
   @media (width >= 834px) {
+    .min-\[834px\]\:right-6 {
+      right: calc(var(--spacing) * 6);
+    }
+    .min-\[834px\]\:right-16 {
+      right: calc(var(--spacing) * 16);
+    }
     .min-\[834px\]\:-left-\[3\.75rem\] {
       left: calc(3.75rem * -1);
     }
@@ -2385,6 +2391,12 @@
     }
   }
   @media (width >= 1512px) {
+    .min-\[1512px\]\:right-6 {
+      right: calc(var(--spacing) * 6);
+    }
+    .min-\[1512px\]\:right-16 {
+      right: calc(var(--spacing) * 16);
+    }
     .min-\[1512px\]\:col-start-2 {
       grid-column-start: 2;
     }
