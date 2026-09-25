@@ -1,20 +1,100 @@
 @layer components {
     .form-control {
-        @apply h-10 w-full rounded-lg border border-c-gray/40 bg-white p-2;
+        @apply h-11 w-full rounded-lg border border-c-border bg-white px-3 text-sm;
         @apply transition-[border-color,box-shadow] duration-200;
-        @apply focus:ring-2 focus:ring-c-orange/35;
+        @apply focus:border-c-teal focus:ring-2 focus:ring-c-teal/20;
     }
 
     .form-control--textarea {
-        @apply h-auto resize-none;
+        @apply h-auto resize-none py-3;
+    }
+
+    .country-code-menu {
+        position: absolute;
+        z-index: 50;
+        inset: calc(100% + 0.5rem) 0 auto;
+        overflow: hidden;
+        border: 1px solid var(--color-c-border);
+        border-radius: 0.875rem;
+        padding: 0.375rem;
+        background: white;
+        box-shadow:
+            0 16px 36px rgb(15 23 42 / 0.12),
+            0 3px 8px rgb(15 23 42 / 0.05);
+    }
+
+    .country-code-menu-heading {
+        padding: 0.625rem 0.625rem 0.75rem;
+        color: var(--color-c-muted-gray-alt);
+        font-size: 0.625rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .country-code-options {
+        max-height: 15rem;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        scrollbar-color: #cbd5df transparent;
+        scrollbar-width: thin;
     }
 
     .country-code-option {
-        @apply block w-full cursor-pointer rounded-md px-3 py-2 text-left text-sm text-c-dark-alt;
-        @apply hover:bg-c-light focus-visible:bg-c-light focus-visible:outline-none;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1.75rem minmax(0, 1fr) auto 0.75rem;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0.5rem;
+        padding: 0.625rem;
+        color: var(--color-c-dark-alt);
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        text-align: left;
+        cursor: pointer;
+        transition: background 150ms ease;
+    }
+
+    .country-code-option:is(:hover, :focus-visible) {
+        outline: none;
+        background: var(--color-c-light);
+    }
+
+    .country-code-iso {
+        display: grid;
+        height: 1.75rem;
+        place-items: center;
+        border: 1px solid #e3e9ed;
+        border-radius: 0.375rem;
+        color: var(--color-c-muted-gray);
+        background: white;
+        font-size: 0.625rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+    }
+
+    .country-code-dial {
+        color: var(--color-c-muted-gray-alt);
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .country-code-check {
+        width: 0.625rem;
+        height: 0.375rem;
+        border-bottom: 2px solid currentColor;
+        border-left: 2px solid currentColor;
+        color: var(--color-c-teal);
+        transform: rotate(-45deg);
+        opacity: 0;
     }
 
     .country-code-option[aria-current='true'] {
         @apply bg-c-teal/10 font-semibold;
+    }
+
+    .country-code-option[aria-current='true'] .country-code-check {
+        opacity: 1;
     }
 }

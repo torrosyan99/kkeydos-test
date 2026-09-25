@@ -36,3 +36,33 @@ mobile starting state.
 Shared site images are grouped by purpose under `app/assets/images/`. AI-page
 assets remain page-scoped under `app/ai-page/assets/images/ai/` and are grouped as
 `content`, `logos`, `people`, `icons`, and `flags`.
+
+## Reusing the service hero
+
+The hero in `app/index.html` uses `src/styles/components/service-hero.css`.
+Change its heading, description, links, and benefit labels directly in HTML.
+The visual is independent of JavaScript and supports any service content:
+
+- `.service-hero-artwork` accepts an image or a responsive `<picture>`. The
+  current picture uses `chip.svg` from 640px upward and `assistant-v2.png` on
+  mobile. Change its `<source srcset>` and `<img src>` to use other artwork,
+  updating the alternative text and dimensions. A single `<img>` with the same
+  class can be used when both layouts should share one image.
+- Each `.service-hero-icon` accepts either an inline SVG (including an external
+  `<use>`) or `<img src="…" alt="" />`. Edit the adjacent heading and description
+  to match. Card colors and positions do not depend on the icon or text.
+- For an icon grid without the central illustration, add
+  `service-hero-visual--icons` to `.service-hero-visual`. This supports any number
+  of cards in two columns. The default illustration layout uses four cards.
+- Keep `data-ai-contact`, `data-ai-project-link`, and the `ai-project` anchor if
+  reusing the contact reveal behavior on mobile. These hooks do not depend on
+  the page's wording or icons.
+
+The overview Google Reviews badge uses the figures published on
+https://staging.kkeydos.com/ on September 24, 2026: 4.9/5 and 60+ reviews.
+It is a static badge; review figures should be updated alongside the site's
+existing Google Reviews card.
+
+The mobile robot at `app/assets/images/ai/assistant-v2.png` was generated with
+the built-in image generation tool from the supplied mobile screenshot.
+See [hero asset notes](docs/hero-assets.md) for the saved paths and full prompt.

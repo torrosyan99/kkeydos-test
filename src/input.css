@@ -17,4 +17,6 @@
 @import './styles/components/links.css';
 @import './styles/components/navigation.css';
 @import './styles/components/text-rotator.css';
+@import './styles/components/service-hero.css';
 @import './styles/pages/home.css';
+@import './styles/pages/technology.css';
