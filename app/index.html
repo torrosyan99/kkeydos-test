@@ -45,7 +45,7 @@
 		data-site-header
 		class="fixed inset-x-0 top-0 z-50 h-20 max-xl:h-18 border-b border-c-border bg-white transition-[translate,background-color] duration-500 ease-smooth"
 >
-	<div class="page-container flex h-full items-center gap-4">
+	<div class="page-container flex h-full items-center gap-10">
 		<!-- Logo -->
 		<a
 				href="#"
@@ -65,7 +65,7 @@
 				class="hidden h-full lg:flex"
 				aria-label="Primary navigation"
 		>
-			<ul class="flex h-full items-center gap-11 max-2xl:gap-8">
+			<ul class="flex h-full items-center gap-10 max-2xl:gap-8">
 				<!-- Services -->
 				<li class="header-item">
 					<a
@@ -161,9 +161,7 @@
 											class="link-arrow"
 									>View All Services
 										<svg aria-hidden="true">
-											<use
-													href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-											></use>
+											<use href="assets/images/icons/dropdown-sprite.svg#arrow-right"></use>
 										</svg>
 									</a>
 								</div>
@@ -786,9 +784,7 @@
 											class="link-arrow"
 									>View All Technologies
 										<svg aria-hidden="true">
-											<use
-													href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-											></use>
+											<use href="assets/images/icons/dropdown-sprite.svg#arrow-right"></use>
 										</svg>
 									</a>
 								</div>
@@ -1366,9 +1362,7 @@
 											class="link-arrow"
 									>View All Industries
 										<svg aria-hidden="true">
-											<use
-													href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-											></use>
+											<use href="assets/images/icons/dropdown-sprite.svg#arrow-right"></use>
 										</svg>
 									</a>
 								</div>
@@ -1990,7 +1984,7 @@
 					href="#"
 					class="btn-cta h-10"
 			>
-				Schedule a Call
+				Start Your Project
 			</a>
 		</div>
 
@@ -2122,11 +2116,6 @@
 										class="link-arrow-orange mt-2"
 								>
 									<span>Explore all services</span>
-									<svg aria-hidden="true">
-										<use
-												href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-										></use>
-									</svg>
 								</a>
 							</div>
 						</div>
@@ -2237,11 +2226,6 @@
                                             <span
                                             >Explore all technologies</span
                                             >
-									<svg aria-hidden="true">
-										<use
-												href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-										></use>
-									</svg>
 								</a>
 							</div>
 						</div>
@@ -2342,11 +2326,6 @@
 										class="link-arrow-orange mt-2"
 								>
 									<span>Explore all industries</span>
-									<svg aria-hidden="true">
-										<use
-												href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-										></use>
-									</svg>
 								</a>
 							</div>
 						</div>
@@ -2444,11 +2423,6 @@
 										class="link-arrow-orange mt-2"
 								>
 									<span>Explore more about us</span>
-									<svg aria-hidden="true">
-										<use
-												href="./assets/images/icons/dropdown-sprite.svg#arrow-right"
-										></use>
-									</svg>
 								</a>
 							</div>
 						</div>
@@ -2742,7 +2716,7 @@
                 </div>
                 <form class="ai-project-form">
                     <input
-                        class="form-control service-hero-field"
+                        class="input service-hero-field"
                         type="text"
                         aria-label="Your name"
                         placeholder="Your name"
@@ -2751,7 +2725,7 @@
                         required=""
                     />
                     <input
-                        class="form-control service-hero-field"
+                        class="input service-hero-field"
                         type="email"
                         aria-label="Your email"
                         placeholder="Your email"
@@ -2761,7 +2735,7 @@
                         required=""
                     />
                     <input
-                        class="form-control service-hero-field"
+                        class="input service-hero-field"
                         type="text"
                         aria-label="Company name"
                         placeholder="Company name"
@@ -2810,7 +2784,7 @@
                                 </select>
                                 <button
                                     type="button"
-                                    class="form-control service-hero-field service-hero-country-trigger"
+                                    class="input service-hero-field service-hero-country-trigger"
                                     data-country-trigger=""
                                     aria-label="Country calling code"
                                     aria-expanded="false"
@@ -2837,7 +2811,7 @@
                                 </div>
                             </div>
                             <input
-                                class="form-control service-hero-field"
+                                class="input service-hero-field"
                                 id="hero-mobile-number"
                                 type="tel"
                                 name="phone"
@@ -2849,7 +2823,7 @@
                         </div>
                     </div>
                     <textarea
-                        class="form-control form-control--textarea service-hero-field"
+                        class="input textarea service-hero-field"
                         aria-label="Tell us about your AI requirements"
                         name="message"
                         placeholder="Tell us about your AI requirements."
@@ -6008,7 +5982,7 @@
 				class="technology-container contents min-[834px]:block"
 		>
 			<section
-					class="min-[834px]:bg-[linear-gradient(#fff_0%,#fff0_20%_80%,#fff_100%)] bg-[linear-gradient(#fff_0%,#fffc_40%_60%,#fff_100%)] min-[1280px]:mx-auto relative grid auto-rows-auto grid-cols-12 gap-x-0 mb-12 mt-20 overflow-clip w-full"
+					class="min-[834px]:bg-[linear-gradient(#fff_0%,#fff0_20%_80%,#fff_100%)] bg-[linear-gradient(#fff_0%,#fffc_40%_60%,#fff_100%)] min-[1280px]:mx-auto relative grid auto-rows-auto grid-cols-12 gap-x-0 mb-12 mt-20 w-full"
 					data-awards=""
 			>
 				<div
@@ -6032,8 +6006,9 @@
 					></div
 					></span>
 				</div>
+				<div class="pointer-events-none absolute inset-0 z-[-1] overflow-hidden">
 				<ul
-						class="pointer-events-none absolute z-[-1] col-start-1 col-end-13 row-start-1 row-end-4 mx-6 grid h-full w-full auto-rows-auto grid-cols-2 justify-center gap-8 min-[834px]:col-start-7 min-[834px]:col-end-13 min-[834px]:mx-0 min-[1512px]:col-start-8 min-[1512px]:col-end-12 [transform:translateY(calc(-50%+var(--client-logo-offset,0px)))] will-change-transform motion-reduce:transform-none motion-reduce:will-change-auto"
+						class="absolute right-0 top-0 grid h-full w-full auto-rows-auto grid-cols-2 justify-center gap-8 min-[834px]:w-1/2 min-[1512px]:w-1/3 [transform:translateY(calc(-50%+var(--client-logo-offset,0px)))] will-change-transform motion-reduce:transform-none motion-reduce:will-change-auto"
 						data-client-logos=""
 				>
 					<li class="relative p-8">
@@ -6640,15 +6615,17 @@
 						/>
 					</li>
 				</ul>
+				</div>
 				<div
 						class="col-start-1 col-end-13 row-start-2 row-end-3"
 				>
 					<section
 							data-excellence
-							class="relative z-5 -mt-8 pt-0 max-2xl:mt-0 max-2xl:pt-section-desktop max-lg:pt-section-tablet max-md:pt-section-mobile"
-					>
+							class="ai-excellence relative z-5 -mt-8 pt-0 max-2xl:mt-0 max-2xl:pt-section-desktop max-lg:pt-section-tablet max-md:pt-section-mobile"
+						>
+						<div class="page-container">
 						<div
-								class="flex gap-10 rounded-2xl bg-[#111111] px-24 py-32 text-white max-2xl:rounded-none max-2xl:px-6 max-xl:flex-wrap max-xl:justify-between max-xl:py-16 max-lg:flex-col min-[1536px]:max-[1728px]:px-12"
+								class="flex gap-10 rounded-2xl bg-[#111111] px-24 py-32 text-white max-2xl:px-6 max-xl:flex-wrap max-xl:justify-between max-xl:py-16 max-lg:flex-col min-[1536px]:max-[1728px]:px-12"
 						>
 							<div
 									class="flex w-96 shrink-0 flex-col max-lg:w-full"
@@ -6686,18 +6663,9 @@
                                             <span
 		                                            class="flex items-center gap-2"
                                             >Explore Case Studies
-                                                <svg
-		                                                class="size-4 shrink-0 fill-none stroke-current"
-		                                                viewBox="0 0 24 24"
-		                                                aria-hidden="true"
-                                                >
-                                                    <path
-		                                                    d="M4 12h16m-6-6 6 6-6 6"
-		                                                    stroke-width="1.8"
-		                                                    stroke-linecap="round"
-		                                                    stroke-linejoin="round"
-                                                    ></path>
-                                                </svg>
+	                                              <svg class="size-4 shrink-0" aria-hidden="true">
+                    <use href="assets/images/icons/dropdown-sprite.svg#arrow-right"></use>
+                  </svg>
                                             </span>
 								</a>
 							</div>
@@ -6909,6 +6877,7 @@
 								</article>
 							</div>
 						</div>
+						</div>
 					</section>
 				</div>
 				<div
@@ -6926,14 +6895,9 @@
 						top-rated nearshore teams.
 					</p>
 					<a
-							class="btn-secondary w-fit max-w-full text-base [&_svg]:fill-current mt-6 min-[834px]:mt-12"
+							class="btn-secondary w-fit max-w-full text-base mt-6 min-[834px]:mt-12"
 							href="https://www.bairesdev.com/start/basic-details/"
-					><span>Schedule a Call</span
-					><span
-					><div
-							class="w-6 h-6 transition-colors duration-300 [&:not(svg)]:bg-current [mask:url(../../ai-page/assets/images/ai/icons/db45a5c4-ArrowForward.svg)] [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]"
-					></div></span
-					></a>
+					>Schedule a Call</a>
 				</div>
 			</section>
 		</div>
@@ -7969,8 +7933,7 @@
 						>Your e-mail address</label
 						>
 						<input
-								class="h-11 w-full min-w-0 rounded-lg border border-c-border bg-white px-3 text-sm focus:border-c-teal focus:ring-2 focus:ring-c-teal/20"
-								id="footer-email"
+class="input"								id="footer-email"
 								name="email"
 								type="email"
 								placeholder="name@email.com"

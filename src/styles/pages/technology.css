@@ -8,6 +8,13 @@
         margin-inline: auto;
     }
 
+    .ai-excellence > .page-container {
+        position: relative;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+    }
+
     .ai-trust-strip {
         display: flex;
         align-items: stretch;

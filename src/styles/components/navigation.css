@@ -48,7 +48,7 @@
 
     .header-dropdown {
         @apply invisible absolute inset-x-0 top-full;
-        @apply max-h-[calc(100dvh-80px)];
+        @apply max-h-[calc(100dvh-160px)];
         @apply overflow-y-auto overscroll-contain;
         @apply rounded-b-2xl border-y border-c-border bg-white shadow-mega-menu;
         @apply opacity-0 transition-[opacity,visibility] duration-200 ease-out;

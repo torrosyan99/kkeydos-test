@@ -97,4 +97,15 @@
     .country-code-option[aria-current='true'] .country-code-check {
         opacity: 1;
     }
+
+    .input,
+    .textarea {
+        @apply border-c-gray/40 h-11 w-full rounded-lg border bg-white p-2;
+        @apply transition-[border-color,box-shadow];
+        @apply focus:ring-c-orange/35 focus:ring-2;
+    }
+
+    .textarea {
+        @apply h-auto resize-none;
+    }
 }
