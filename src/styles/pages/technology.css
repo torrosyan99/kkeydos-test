@@ -1,6 +1,6 @@
 @layer components {
     .technology-page {
-        --technology-content-width: var(--page-content-width);
+        --technology-content-width: min(100% - 3rem, 80rem);
     }
 
     .technology-container {
@@ -9,12 +9,26 @@
     }
 
     .ai-excellence > .page-container {
-        width: var(--page-content-width);
+        position: relative;
+        left: 50%;
+        width: min(100vw - 3rem, 76rem);
+        margin-inline: 0;
+        transform: translateX(-50%);
     }
 
-    @media (width >= 834px) {
+    [data-faq] {
+        position: relative;
+        left: 50%;
+        width: min(100vw - 3rem, 76rem);
+        transform: translateX(-50%);
+    }
+
+    @media (width >= 1600px) {
         .ai-excellence > .page-container {
-            width: 100%;
+            width: min(100vw - 6rem, 94rem);
+        }
+        [data-faq] {
+            width: min(100vw - 6rem, 94rem);
         }
     }
 

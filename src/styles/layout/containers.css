@@ -1,6 +1,13 @@
 @layer base {
     :root {
-        --page-content-width: min(100% - 3rem, 95rem);
+        --page-content-width: min(100% - 3rem, 76rem);
+        --technology-content-width: min(100% - 3rem, 80rem);
+    }
+
+    @media (width >= 1600px) {
+        :root {
+            --page-content-width: min(100% - 6rem, 94rem);
+        }
     }
 }
 

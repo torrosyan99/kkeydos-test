@@ -1,199 +1,241 @@
 @layer components {
     .ai-process-section {
-        padding-block: 4rem;
+        padding-block: clamp(3rem, 5vw, 5rem);
     }
 
     .ai-process-panel {
-        border-bottom-right-radius: 22rem 13rem;
-        padding: clamp(1.5rem, 4vw, 4rem);
-        background: #f3f4f5;
+        border-top: 1px solid #edf0f2;
+        padding-top: 1.25rem;
+    }
+
+    .ai-process-eyebrow {
+        color: #7b838b;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     .ai-process-heading {
-        margin-bottom: 3.5rem;
-        color: #101828;
-        font-size: clamp(2rem, 3vw, 3rem);
-        font-weight: 500;
-        line-height: 1.25;
+        margin: 0.625rem auto 0;
+        color: #101b35;
+        font-size: clamp(2rem, 3.15vw, 2.75rem);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        line-height: 1.12;
         text-align: center;
         scroll-margin-top: 7rem;
     }
 
-    .ai-process-layout {
-        display: grid;
-        grid-template-columns: 13rem minmax(0, 1fr);
-        align-items: start;
-        gap: clamp(2rem, 5vw, 5rem);
+    .ai-process-heading span {
+        display: block;
+        color: #f47a55;
     }
 
-    .ai-process-reps {
-        padding-top: 1rem;
+    .ai-process-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+        align-items: start;
+        gap: 3rem;
+        margin-top: 0.875rem;
+    }
+
+    .ai-process-visual {
+        min-width: 0;
+        width: min(100%, 29rem);
+        justify-self: center;
+        margin: 0;
+    }
+
+    .ai-process-illustration {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .ai-process-visual-note {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: -1.5rem 0.75rem 0;
+        border-radius: 0.5rem;
+        padding: 1rem 1.25rem;
+        background: linear-gradient(110deg, #fffbf7, #f2fbfe);
+        box-shadow: 0 4px 18px rgb(32 48 65 / 0.045);
+    }
+
+    .ai-process-note-icon {
+        display: grid;
+        width: 2.75rem;
+        height: 2.75rem;
+        flex: none;
+        place-items: center;
+        border-radius: 0.5rem;
+        color: #f58a39;
+        background: #fff0df;
+    }
+
+    .ai-process-note-icon svg {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    .ai-process-visual-note strong {
+        color: #17212c;
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .ai-process-visual-note p {
+        color: #6b737b;
+        font-size: 0.8125rem;
+        line-height: 1.45;
     }
 
     .ai-process-timeline {
-        position: relative;
         min-width: 0;
     }
 
-    .ai-process-timeline::before {
-        content: '';
-        position: absolute;
-        top: 2.5rem;
-        bottom: 1.5rem;
-        left: 1.5rem;
-        width: 3.5rem;
-        border-bottom: 1px dashed #bac4d2;
-        border-left: 1px dashed #bac4d2;
+    .ai-process-intro {
+        margin-bottom: 2rem;
+        color: #6b737b;
+        font-size: 0.9375rem;
+        line-height: 1.5;
     }
 
     .ai-process-steps {
         display: grid;
-        gap: 2rem;
-    }
-
-    .ai-process-step {
-        position: relative;
-        display: grid;
-        grid-template-columns: 3rem minmax(0, 1fr) 4.5rem;
-        align-items: center;
         gap: 1.75rem;
     }
 
-    .ai-process-icon {
+    .ai-process-step {
+        --step-color: #f47d41;
+        --step-tint: #fff1e7;
         position: relative;
+        display: grid;
+        grid-template-columns: 3rem 1.75rem minmax(0, 1fr);
+        align-items: start;
+        gap: 1.25rem;
+    }
+
+    .ai-process-step:nth-child(2) {
+        --step-color: #189bdd;
+        --step-tint: #e9f6ff;
+    }
+
+    .ai-process-step:nth-child(3) {
+        --step-color: #19bda0;
+        --step-tint: #e3faf2;
+    }
+
+    .ai-process-step:nth-child(4) {
+        --step-color: #a74ce0;
+        --step-tint: #f7eafa;
+    }
+
+    .ai-process-step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 3.5rem;
+        bottom: -1.25rem;
+        left: 1.5rem;
+        border-left: 1px dashed #cdd3db;
+    }
+
+    .ai-process-icon {
         display: grid;
         width: 3rem;
         height: 3rem;
         place-items: center;
         border-radius: 50%;
-        color: #ff641c;
-        background: #fff0e6;
+        color: var(--step-color);
+        background: var(--step-tint);
     }
 
     .ai-process-icon svg {
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 1.375rem;
+        height: 1.375rem;
     }
 
-    .ai-process-step:nth-child(2) .ai-process-icon {
-        color: #1681ff;
-        background: #e9f3ff;
+    .ai-process-number {
+        padding-top: 0.375rem;
+        color: var(--step-color);
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.3;
     }
 
     .ai-process-copy h3 {
-        color: #071528;
-        font-size: 2rem;
-        font-weight: 500;
-        line-height: 1.2;
-        letter-spacing: -0.025em;
+        color: #152037;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.35;
     }
 
     .ai-process-copy p {
         margin-top: 0.375rem;
-        color: #637b98;
-        font-size: 1rem;
+        color: #737b83;
+        font-size: 0.9375rem;
         line-height: 1.5;
     }
 
-    .ai-process-number {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        color: #b8c3d2;
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 1;
-    }
-
-    .ai-process-number::before {
-        content: '';
-        width: 1.5rem;
-        height: 1px;
-        flex: none;
-        background: currentColor;
-    }
-
     .ai-process-action {
-        position: relative;
-        margin-top: 1.75rem;
-        margin-left: 4.75rem;
+        margin-top: 1.25rem;
+        margin-left: 1.5rem;
     }
 
-    .ai-process-action .btn-cta {
-        max-width: 100%;
-        height: auto;
-        min-height: 3rem;
-        padding-block: 0.75rem;
-        text-align: center;
+    .ai-process-action a {
+        min-height: 2.75rem;
+        border-radius: 0.375rem;
+        padding-inline: 1.75rem;
+        background: #fa8b40;
+        box-shadow: none;
     }
 
     @media (width < 1024px) {
         .ai-process-layout {
-            grid-template-columns: minmax(0, 1fr);
+            gap: 1.5rem;
+            align-items: center;
         }
-
-        .ai-process-reps {
-            grid-row: 2;
-            padding-top: 0;
-        }
-
-        .ai-process-panel {
-            border-bottom-right-radius: 10rem 7rem;
-        }
-    }
-
-    @media (width < 640px) {
-        .ai-process-panel {
-            border-bottom-right-radius: 5rem 4rem;
-            padding-inline: 1rem;
-        }
-
-        .ai-process-heading {
-            margin-bottom: 2rem;
-            font-size: 1.75rem;
-        }
-
         .ai-process-step {
-            grid-template-columns: 2.5rem minmax(0, 1fr);
-            column-gap: 1rem;
-            row-gap: 0.5rem;
-            align-items: start;
+            grid-template-columns: 2.5rem 1.5rem minmax(0, 1fr);
+            gap: 0.75rem;
         }
-
         .ai-process-icon {
-            grid-row: 1 / 3;
             width: 2.5rem;
             height: 2.5rem;
         }
-
-        .ai-process-copy {
-            grid-column: 2;
-            grid-row: 2;
-        }
-
-        .ai-process-copy h3 {
-            font-size: 1.375rem;
-        }
-
-        .ai-process-copy p {
-            font-size: 0.9375rem;
-        }
-
-        .ai-process-number {
-            grid-column: 2;
-            grid-row: 1;
-            justify-self: end;
-            font-size: 1.125rem;
-        }
-
-        .ai-process-timeline::before {
-            top: 1.25rem;
+        .ai-process-step:not(:last-child)::after {
+            top: 3rem;
             left: 1.25rem;
-            width: 2.25rem;
         }
+        .ai-process-visual-note {
+            margin-inline: 0;
+            padding: 0.875rem;
+            gap: 0.75rem;
+        }
+    }
 
+    @media (width < 768px) {
+        .ai-process-layout {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .ai-process-visual {
+            width: min(100%, 32rem);
+            justify-self: center;
+        }
+        .ai-process-heading {
+            font-size: clamp(1.75rem, 6.4vw, 2.5rem);
+        }
+        .ai-process-copy h3 {
+            font-size: 1rem;
+        }
         .ai-process-action {
-            margin-left: 3.5rem;
+            margin-left: 0;
         }
     }
 }

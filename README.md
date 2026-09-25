@@ -24,10 +24,9 @@ instead.
 Use classes for presentation, `data-*` attributes for JavaScript hooks and
 state, and IDs only for document anchors and form labels.
 
-The main page uses `--page-content-width: min(100% - 3rem, 95rem)` for its
-header, hero, sections, sticky navigation, and footer: a 1520px maximum with
-24px minimum side gutters. Keep this shared width fluid instead of adding
-smaller container caps at desktop breakpoints.
+The main content uses a 1280px maximum. The header, FAQ, and footer retain
+their earlier 1216px maximum, switching at 1600px to a 1504px maximum. The
+black Excellence panel follows that original width too.
 
 `details[data-card-selector]` is the shared responsive card contract. Its
 `summary[data-card-selector-summary]` behaves like a static card heading from
@@ -46,9 +45,9 @@ assets remain page-scoped under `app/ai-page/assets/images/ai/` and are grouped 
 
 The hero in `app/index.html` uses `src/styles/components/service-hero.css`.
 Change its heading, description, links, and benefit labels directly in HTML.
-Its copy column stays 512px wide from 900px upward; the illustration and form
-share the remaining space. Below 1200px the form opens beneath the hero through
-the project buttons. Below 900px both visible columns can shrink, and below
+Its copy column stays 704px wide from 1024px upward; the illustration and form
+share the remaining space. Below 1280px the form opens beneath the hero through
+the project buttons. Below 1024px both visible columns can shrink, and below
 640px the hero stacks vertically.
 The visual is independent of JavaScript and supports any service content:
 
@@ -75,3 +74,8 @@ existing Google Reviews card.
 The mobile robot at `app/assets/images/ai/assistant-v2.png` was generated with
 the built-in image generation tool from the supplied mobile screenshot.
 See [hero asset notes](docs/hero-assets.md) for the saved paths and full prompt.
+
+The development-process team illustration at
+`app/assets/images/ai/development-process-team.png` was generated from the
+left illustration in `example/image (2).png`. The heading, four process steps,
+caption, and arrow-free project button are editable HTML in `app/index.html`.

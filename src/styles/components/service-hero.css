@@ -1,11 +1,16 @@
 @layer components {
+
+    h1 {
+        @apply text-[74px] leading-[1.2] max-2xl:text-[64px] max-md:text-[32px];
+    }
+
     .service-hero {
         background:
             radial-gradient(ellipse at 61% 53%, #eeedfa 0%, transparent 42%),
             linear-gradient(110deg, #f8f9fb, #f0f3f5);
     }
     .service-hero-container {
-        width: var(--page-content-width);
+        width: var(--technology-content-width);
         margin-inline: auto;
     }
     .service-hero-breadcrumb {
@@ -17,10 +22,10 @@
     }
     .service-hero-layout {
         display: grid;
-        grid-template-columns: 32rem minmax(0, 0.83fr) minmax(0, 1.04fr);
+        grid-template-columns: 44rem minmax(0, 1fr) minmax(19rem, 1.75fr);
         grid-template-rows: 1fr auto;
         align-items: center;
-        gap: 1.5rem clamp(1rem, calc(3vw - 1.5rem), 2rem);
+        gap: 1.5rem 1rem;
         padding: 0.25rem 0 2.5rem;
     }
     .service-hero-copy {
@@ -35,13 +40,7 @@
         letter-spacing: 0.18em;
         text-transform: uppercase;
     }
-    .service-hero-copy h1 {
-        color: #17212c;
-        font-size: 3.25rem;
-        font-weight: 700;
-        letter-spacing: -0.04em;
-        line-height: 1.12;
-    }
+  
     .service-hero-copy h1 span {
         color: #ff712c;
     }
@@ -49,8 +48,8 @@
         display: none;
     }
     .service-hero-description {
-        max-width: 30rem;
-        margin-top: 1rem;
+        max-width: 40rem;
+        margin-top: 1.75rem;
         color: #4d535b;
         font-size: 1.0625rem;
         line-height: 1.5;
@@ -59,7 +58,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
-        margin-top: 1.25rem;
+        margin-top: 1.75rem;
     }
     .service-hero-button {
         display: inline-flex;
@@ -178,7 +177,7 @@
         --icon-color: #ff7c31;
         --icon-tint: #fff0e7;
         top: 25%;
-        left: -3%;
+        left: 0;
     }
     .service-hero-card:nth-child(3) {
         --icon-color: #35bd35;
@@ -259,7 +258,6 @@
         grid-row: 2;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 0.75rem;
         color: #535b64;
         font-size: 0.6875rem;
@@ -282,7 +280,7 @@
         min-width: 0;
         border: 1px solid white;
         border-radius: 1rem;
-        padding: 1.5rem;
+        padding: clamp(1rem, 1.5vw, 1.5rem);
         background: rgb(255 255 255 / 0.9);
         box-shadow: 0 10px 30px rgb(57 72 116 / 0.04);
         scroll-margin-top: calc(var(--page-sticky-offset, 80px) + 1rem);
@@ -359,9 +357,37 @@
         width: 100%;
         margin-top: 0.125rem;
     }
-    @media (width < 1200px) {
+    @media (width >= 1280px) {
+        .service-hero-visual {
+            height: 34rem;
+        }
+        .service-hero-card {
+            width: 67%;
+            gap: 0.375rem;
+            padding: 0.75rem 0.5rem;
+        }
+        .service-hero-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .service-hero-icon :is(svg, img) {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        .service-hero-card h2 {
+            font-size: 0.75rem;
+        }
+        .service-hero-card p {
+            font-size: 0.625rem;
+        }
+        .service-hero-artwork {
+            left: 84%;
+            width: 32%;
+        }
+    }
+    @media (width < 1280px) {
         .service-hero-layout {
-            grid-template-columns: 32rem minmax(0, 1fr);
+            grid-template-columns: 44rem minmax(0, 1fr);
             gap: 1.5rem;
             padding-top: 1rem;
         }
@@ -379,13 +405,15 @@
             display: block;
         }
     }
-    @media (width < 900px) {
+    @media (width < 1024px) {
         .service-hero-layout {
             grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
         }
-        .service-hero-copy h1 {
-            font-size: clamp(1.875rem, 4.6vw, 2.75rem);
+        .service-hero-copy,
+        .service-hero-benefits {
+            padding-left: 0;
         }
+
     }
     @media (width < 640px) {
         .service-hero-breadcrumb {
@@ -403,7 +431,6 @@
             letter-spacing: 0.09em;
         }
         .service-hero-copy h1 {
-            font-size: clamp(2.125rem, 10.7vw, 3.25rem);
             letter-spacing: -0.04em;
             line-height: 1.08;
         }
