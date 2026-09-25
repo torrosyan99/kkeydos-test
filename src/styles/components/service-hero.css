@@ -5,7 +5,7 @@
             linear-gradient(110deg, #f8f9fb, #f0f3f5);
     }
     .service-hero-container {
-        width: var(--technology-content-width, min(100% - 3rem, 76rem));
+        width: var(--page-content-width);
         margin-inline: auto;
     }
     .service-hero-breadcrumb {
@@ -17,13 +17,10 @@
     }
     .service-hero-layout {
         display: grid;
-        grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.83fr) minmax(
-                0,
-                1.04fr
-            );
+        grid-template-columns: 32rem minmax(0, 0.83fr) minmax(0, 1.04fr);
         grid-template-rows: 1fr auto;
         align-items: center;
-        gap: 1.5rem 1rem;
+        gap: 1.5rem clamp(1rem, calc(3vw - 1.5rem), 2rem);
         padding: 0.25rem 0 2.5rem;
     }
     .service-hero-copy {
@@ -40,7 +37,7 @@
     }
     .service-hero-copy h1 {
         color: #17212c;
-        font-size: clamp(2rem, 3.65vw, 3.5rem);
+        font-size: 3.25rem;
         font-weight: 700;
         letter-spacing: -0.04em;
         line-height: 1.12;
@@ -61,7 +58,7 @@
     .service-hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 1.5rem;
         margin-top: 1.25rem;
     }
     .service-hero-button {
@@ -99,13 +96,19 @@
         transform: translateY(-2px);
     }
     .service-hero-action {
+        min-width: 0;
+        height: auto;
+        min-height: 3rem;
+        padding-block: 0.75rem;
         text-align: center;
         cursor: pointer;
     }
     .service-hero-actions .service-hero-action {
-        flex: 1 1 auto;
-        font-size: 0.875rem;
-        white-space: nowrap;
+        flex: 0 1 10.5rem;
+        width: 10.5rem;
+        padding-inline: 0.75rem;
+        font-size: 0.8125rem;
+        white-space: normal;
     }
     /* Content and icon sources are independent of this responsive composition. */
     .service-hero-visual {
@@ -219,14 +222,14 @@
     .service-hero-card h2 {
         margin: 0;
         color: #242d36;
-        font-size: 0.75rem;
+        font-size: clamp(0.75rem, 0.9vw, 0.875rem);
         font-weight: 700;
         line-height: 1.35;
     }
     .service-hero-card p {
         margin-top: 0.3rem;
         color: #616771;
-        font-size: 0.625rem;
+        font-size: clamp(0.625rem, 0.78vw, 0.75rem);
         line-height: 1.45;
     }
     /* Use this variant for any number of icons without a central illustration. */
@@ -356,37 +359,14 @@
         width: 100%;
         margin-top: 0.125rem;
     }
-    @media (width >= 1600px) {
-        .service-hero-container {
-            width: var(--technology-content-width, min(100% - 6rem, 94rem));
-        }
+    @media (width < 1200px) {
         .service-hero-layout {
-            gap: 1.75rem 2rem;
-        }
-        .service-hero-copy h1 {
-            font-size: 3.75rem;
-        }
-        .service-hero-description {
-            font-size: 1.125rem;
-        }
-        .service-hero-card h2 {
-            font-size: 0.875rem;
-        }
-        .service-hero-card p {
-            font-size: 0.75rem;
-        }
-    }
-    @media (width < 1024px) {
-        .service-hero-layout {
-            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            grid-template-columns: 32rem minmax(0, 1fr);
             gap: 1.5rem;
             padding-top: 1rem;
         }
         .service-hero-copy {
             padding-top: 0;
-        }
-        .service-hero-copy h1 {
-            font-size: clamp(1.875rem, 4.6vw, 2.75rem);
         }
         .service-hero-contact {
             display: none;
@@ -399,10 +379,15 @@
             display: block;
         }
     }
-    @media (width < 640px) {
-        .service-hero-container {
-            width: calc(100% - 3rem);
+    @media (width < 900px) {
+        .service-hero-layout {
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
         }
+        .service-hero-copy h1 {
+            font-size: clamp(1.875rem, 4.6vw, 2.75rem);
+        }
+    }
+    @media (width < 640px) {
         .service-hero-breadcrumb {
             display: none;
         }
@@ -440,6 +425,7 @@
         }
         .service-hero-actions .service-hero-action {
             flex: none;
+            width: 100%;
             font-size: 1rem;
         }
         .service-hero-visual {

@@ -1,6 +1,13 @@
+@layer base {
+    :root {
+        --page-content-width: min(100% - 3rem, 95rem);
+    }
+}
+
 @layer components {
     .page-container {
-        @apply mx-auto w-full max-w-380 px-6;
+        width: var(--page-content-width);
+        margin-inline: auto;
     }
 
     .page-container-narrow {

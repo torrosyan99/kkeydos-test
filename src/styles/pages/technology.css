@@ -1,6 +1,6 @@
 @layer components {
     .technology-page {
-        --technology-content-width: min(100% - 3rem, 76rem);
+        --technology-content-width: var(--page-content-width);
     }
 
     .technology-container {
@@ -9,10 +9,13 @@
     }
 
     .ai-excellence > .page-container {
-        position: relative;
-        left: 50%;
-        width: 100vw;
-        transform: translateX(-50%);
+        width: var(--page-content-width);
+    }
+
+    @media (width >= 834px) {
+        .ai-excellence > .page-container {
+            width: 100%;
+        }
     }
 
     .ai-trust-strip {
@@ -500,10 +503,6 @@
     }
 
     @media (width >= 1600px) {
-        .technology-page {
-            --technology-content-width: min(100% - 6rem, 94rem);
-        }
-
         .ai-trust-strip {
             gap: 3rem;
         }
