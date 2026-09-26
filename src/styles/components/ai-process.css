@@ -43,7 +43,7 @@
 
     .ai-process-visual {
         min-width: 0;
-        width: min(100%, 29rem);
+        width: min(100%, 36rem);
         justify-self: center;
         margin: 0;
     }

@@ -1,23 +1,5 @@
-@layer base {
-    :root {
-        --page-content-width: min(100% - 3rem, 76rem);
-        --technology-content-width: min(100% - 3rem, 80rem);
-    }
-
-    @media (width >= 1600px) {
-        :root {
-            --page-content-width: min(100% - 6rem, 94rem);
-        }
-    }
-}
-
 @layer components {
     .page-container {
-        width: var(--page-content-width);
-        margin-inline: auto;
-    }
-
-    .page-container-narrow {
-        @apply mx-auto w-full max-w-7xl px-6;
+        @apply mx-auto w-full max-w-380 px-5;
     }
 }

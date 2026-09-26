@@ -10,8 +10,7 @@
             linear-gradient(110deg, #f8f9fb, #f0f3f5);
     }
     .service-hero-container {
-        width: var(--technology-content-width);
-        margin-inline: auto;
+        @apply mx-auto w-full max-w-380 px-5;
     }
     .service-hero-breadcrumb {
         display: flex;

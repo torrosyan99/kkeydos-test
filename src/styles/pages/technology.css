@@ -1,35 +1,23 @@
 @layer components {
-    .technology-page {
-        --technology-content-width: min(100% - 3rem, 80rem);
-    }
-
     .technology-container {
-        width: var(--technology-content-width);
-        margin-inline: auto;
+        @apply mx-auto w-full max-w-380 px-5;
     }
 
     .ai-excellence > .page-container {
         position: relative;
         left: 50%;
-        width: min(100vw - 3rem, 76rem);
+        width: min(100vw, 95rem);
         margin-inline: 0;
+        padding-inline: 1.25rem;
         transform: translateX(-50%);
     }
 
     [data-faq] {
         position: relative;
         left: 50%;
-        width: min(100vw - 3rem, 76rem);
+        width: min(100vw, 95rem);
+        padding-inline: 1.25rem;
         transform: translateX(-50%);
-    }
-
-    @media (width >= 1600px) {
-        .ai-excellence > .page-container {
-            width: min(100vw - 6rem, 94rem);
-        }
-        [data-faq] {
-            width: min(100vw - 6rem, 94rem);
-        }
     }
 
     .ai-trust-strip {
@@ -269,8 +257,7 @@
     }
 
     .ai-toc-inner {
-        width: var(--technology-content-width);
-        margin-inline: auto;
+        @apply mx-auto w-full max-w-380 px-5;
         padding-block: 0.625rem;
     }
 

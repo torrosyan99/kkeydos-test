@@ -24,9 +24,8 @@ instead.
 Use classes for presentation, `data-*` attributes for JavaScript hooks and
 state, and IDs only for document anchors and form labels.
 
-The main content uses a 1280px maximum. The header, FAQ, and footer retain
-their earlier 1216px maximum, switching at 1600px to a 1504px maximum. The
-black Excellence panel follows that original width too.
+The header, page sections, FAQ, and footer share a 1520px maximum container
+with 20px side padding. Narrow text columns keep their own readable widths.
 
 `details[data-card-selector]` is the shared responsive card contract. Its
 `summary[data-card-selector-summary]` behaves like a static card heading from
