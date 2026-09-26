@@ -423,9 +423,6 @@
   .h-11 {
     height: calc(var(--spacing) * 11);
   }
-  .h-14 {
-    height: calc(var(--spacing) * 14);
-  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -4065,7 +4062,7 @@
   .ai-case-shade {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgb(0 0 0 / 0.35), #030506 42%);
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.2), rgb(3 5 6 / 0.55) 55%, rgb(3 5 6 / 0.82));
     pointer-events: none;
   }
   .ai-case-category {
