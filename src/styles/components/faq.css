@@ -1,44 +1,31 @@
 @layer components {
-    @supports (interpolate-size: allow-keywords) {
-        :root {
-            interpolate-size: allow-keywords;
-        }
-    }
-
     .faq-item {
-        @apply overflow-hidden border-t border-c-border;
+        @apply border-t border-c-border font-medium;
     }
 
     .faq-item:last-child {
         @apply border-b;
     }
 
-    .faq-item::details-content {
-        @apply overflow-hidden opacity-0;
-        height: 0;
-        transition:
-            height 400ms var(--ease-smooth),
-            opacity 300ms ease,
-            content-visibility 400ms allow-discrete;
+    .faq-item__button {
+        @apply flex w-full cursor-pointer items-center justify-between gap-5 py-6 text-left text-xl text-c-dark-alt;
+        @apply max-md:text-lg;
     }
 
-    .faq-item[open]::details-content {
-        @apply opacity-100;
-        height: auto;
+    .faq-item__button svg {
+        @apply size-6 shrink-0 rounded-full bg-c-orange p-1 text-white;
+        @apply transition-transform duration-300;
     }
 
-    .faq-summary {
-        @apply flex cursor-pointer list-none items-center justify-between;
-        @apply gap-6 py-6 text-xl font-semibold text-c-dark;
-        @apply max-md:gap-4 max-md:text-lg;
+    .faq-item__button:focus-visible {
+        @apply outline-2 outline-offset-4 outline-c-orange;
     }
 
-    .faq-icon {
-        @apply grid size-6 shrink-0 place-items-center rounded-full;
-        @apply bg-c-orange text-white;
+    .faq-item__content {
+        @apply grid overflow-hidden transition-[grid-template-rows] duration-300;
     }
 
-    .faq-icon svg {
-        @apply size-5 transition-transform duration-300;
+    .faq-item__content > div {
+        @apply min-h-0 overflow-hidden;
     }
 }

@@ -4,7 +4,6 @@
     }
 
     .ai-process-panel {
-        border-top: 1px solid #edf0f2;
         padding-top: 1.25rem;
     }
 
@@ -135,13 +134,17 @@
         --step-tint: #f7eafa;
     }
 
-    .ai-process-step:not(:last-child)::after {
+    .ai-process-step::after {
         content: '';
         position: absolute;
         top: 3.5rem;
-        bottom: -1.25rem;
+        bottom: -1.75rem;
         left: 1.5rem;
         border-left: 1px dashed #cdd3db;
+    }
+
+    .ai-process-step:last-child::after {
+        bottom: -1.25rem;
     }
 
     .ai-process-icon {
@@ -182,16 +185,30 @@
     }
 
     .ai-process-action {
+        position: relative;
         margin-top: 1.25rem;
-        margin-left: 1.5rem;
+        padding-left: 4.25rem;
     }
 
-    .ai-process-action a {
-        min-height: 2.75rem;
-        border-radius: 0.375rem;
-        padding-inline: 1.75rem;
-        background: #fa8b40;
-        box-shadow: none;
+    .ai-process-action::before,
+    .ai-process-action::after {
+        position: absolute;
+        content: '';
+        pointer-events: none;
+    }
+
+    .ai-process-action::before {
+        top: 0;
+        bottom: 50%;
+        left: 1.5rem;
+        border-left: 1px dashed #cdd3db;
+    }
+
+    .ai-process-action::after {
+        top: 50%;
+        left: 1.5rem;
+        width: 2.75rem;
+        border-top: 1px dashed #cdd3db;
     }
 
     @media (width < 1024px) {
@@ -207,9 +224,19 @@
             width: 2.5rem;
             height: 2.5rem;
         }
-        .ai-process-step:not(:last-child)::after {
+        .ai-process-step::after {
             top: 3rem;
             left: 1.25rem;
+        }
+        .ai-process-action {
+            padding-left: 3.5rem;
+        }
+        .ai-process-action::before,
+        .ai-process-action::after {
+            left: 1.25rem;
+        }
+        .ai-process-action::after {
+            width: 2.25rem;
         }
         .ai-process-visual-note {
             margin-inline: 0;
@@ -233,9 +260,6 @@
         }
         .ai-process-copy h3 {
             font-size: 1rem;
-        }
-        .ai-process-action {
-            margin-left: 0;
         }
     }
 }

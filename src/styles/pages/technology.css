@@ -3,19 +3,27 @@
         @apply mx-auto w-full max-w-380 px-5;
     }
 
+    .ai-tech-detail {
+        @apply text-left text-base leading-6 text-[#111111];
+    }
+
+    .ai-tech-detail-label {
+        @apply mt-4 font-semibold;
+    }
+
+    .ai-tech-chips {
+        @apply mt-2 flex flex-wrap gap-2;
+    }
+
+    .ai-tech-chips li {
+        @apply rounded-lg bg-[#d9dcdf] px-2.5 py-1.5;
+    }
+
     .ai-excellence > .page-container {
         position: relative;
         left: 50%;
         width: min(100vw, 95rem);
         margin-inline: 0;
-        padding-inline: 1.25rem;
-        transform: translateX(-50%);
-    }
-
-    [data-faq] {
-        position: relative;
-        left: 50%;
-        width: min(100vw, 95rem);
         padding-inline: 1.25rem;
         transform: translateX(-50%);
     }
@@ -341,7 +349,7 @@
         position: relative;
         display: flex;
         width: 100%;
-        min-height: 18rem;
+        min-height: 20rem;
         flex-direction: column;
         overflow: hidden;
         border-radius: 0.875rem;
@@ -355,6 +363,11 @@
 
     .ai-case-card:is(:hover, :focus-visible) {
         box-shadow: 0 10px 24px rgb(16 24 40 / 0.14);
+    }
+
+    .ai-case-tag {
+        @apply inline-flex items-center rounded-lg border border-[#91bcf4]/35 bg-[#1b1f22] px-3 py-1;
+        @apply text-sm leading-5 text-[#c2c7cc];
     }
 
     .ai-case-image {
@@ -415,10 +428,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
-        border: 1px solid var(--color-brand-teal);
+        border: 1px solid #c6e7e1;
         border-radius: 1rem;
         padding: 3rem;
-        background: var(--color-brand-teal);
+        background: linear-gradient(110deg, #f0fbf8, #e6f4f4);
     }
 
     .ai-project-cta::before,
@@ -444,16 +457,27 @@
     .ai-project-cta::before {
         background: radial-gradient(
             ellipse 28rem 20rem at var(--glow-x) var(--glow-y),
-            rgb(255 255 255 / 0.16),
+            rgb(104 196 184 / 0.16),
             transparent 75%
         );
     }
 
     .ai-project-cta-copy {
         max-width: 44rem;
-        color: white;
+    }
+
+    .ai-project-cta-copy h2 {
+        color: #17343a;
         font-size: clamp(1.25rem, 2.1vw, 2rem);
         line-height: 1.35;
+    }
+
+    .ai-project-cta-copy p {
+        max-width: 39rem;
+        margin-top: 0.875rem;
+        color: #46626a;
+        font-size: 1.0625rem;
+        line-height: 1.55;
     }
 
     .ai-project-cta .btn-cta {
@@ -623,10 +647,6 @@
         .ai-project-cta {
             gap: 1.25rem;
             padding: 1.75rem 1.5rem;
-        }
-
-        .ai-project-cta-copy br {
-            display: none;
         }
 
         .ai-final-cta {

@@ -18,6 +18,7 @@ const initTabs = () => {
         buttons.forEach((button, i) => {
             const selected = index === i;
             button.dataset.selected = String(selected);
+            button.setAttribute('aria-selected', String(selected));
             button.tabIndex = selected || (index < 0 && i === 0) ? 0 : -1;
             const card = one('[data-tech-card]', button);
             card?.classList.toggle('border-[#f66135]', selected);
@@ -44,23 +45,7 @@ const initTabs = () => {
                     panel.innerHTML;
         });
         if (desktop && index >= 0) {
-            const heights = [
-                'h-[11.111%]',
-                'h-[22.222%]',
-                'h-[33.333%]',
-                'h-[44.444%]',
-                'h-[55.555%]',
-                'h-[66.666%]',
-                'h-[77.777%]',
-                'h-[88.888%]',
-                'h-full',
-            ];
-            desktop.classList.remove('[height:11.11111111111111%]', ...heights);
-            desktop.classList.add(
-                heights[index],
-                'transition-[height]',
-                'duration-300',
-            );
+            desktop.style.height = `${((index + 1) / buttons.length) * 100}%`;
         }
     };
     const updateAutoplay = () => {

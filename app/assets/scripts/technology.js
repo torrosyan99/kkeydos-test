@@ -255,7 +255,6 @@ const initCaseStudies = () => {
     const section = document.querySelector('[data-technology-cases]');
     if (!section) return;
     const list = section.querySelector('[data-case-list]');
-    const showMore = section.querySelector('[data-show-cases]');
     const cards = [...list.querySelectorAll('[data-case-card]')];
     const desktop = window.matchMedia('(min-width: 834px)');
     cards.forEach((card) => {
@@ -306,11 +305,6 @@ const initCaseStudies = () => {
             mouseInside = false;
             setOpen(false);
         });
-    });
-    showMore.addEventListener('click', () => {
-        list.dataset.expanded = 'true';
-        showMore.setAttribute('aria-expanded', 'true');
-        showMore.disabled = true;
     });
 };
 

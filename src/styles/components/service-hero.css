@@ -446,13 +446,19 @@
         }
         .service-hero-actions {
             flex-direction: column;
-            gap: 0.625rem;
+            align-items: center;
+            gap: 1rem;
             margin-top: 1rem;
         }
         .service-hero-actions .service-hero-action {
             flex: none;
-            width: 100%;
+            width: max-content;
+            max-width: 100%;
+            padding-inline: 1.5rem;
             font-size: 1rem;
+        }
+        .service-hero-actions .btn-cta.service-hero-action {
+            padding-right: 2rem;
         }
         .service-hero-visual {
             grid-column: 1;
