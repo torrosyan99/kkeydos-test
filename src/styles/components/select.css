@@ -1,0 +1,34 @@
+@layer components {
+  .select-field {
+    @apply relative;
+  }
+
+  .select__button {
+    @apply border-brand-gray/40 flex h-11 w-full items-center justify-between gap-2 rounded-lg border bg-white p-2;
+    @apply transition-[border-color,box-shadow];
+  }
+
+  .select__button[aria-expanded='true'] {
+    @apply ring-brand-orange/35 ring-2;
+  }
+
+  .select__button svg {
+    @apply text-brand-gray/40 size-5 transition-transform;
+  }
+
+  .select__button[aria-expanded='true'] svg {
+    @apply rotate-180;
+  }
+
+  .select__dropdown {
+    @apply border-brand-border shadow-default invisible absolute inset-x-0 top-full z-20 max-h-60 translate-y-2 overflow-auto rounded-2xl border bg-white p-1.5 opacity-0 transition-opacity data-[position=top]:top-auto data-[position=top]:bottom-full data-[position=top]:-translate-y-2;
+  }
+
+  .select__dropdown-button {
+    @apply hover:bg-brand-light aria-selected:bg-brand-teal/30 flex w-full cursor-pointer items-center gap-2 rounded-lg p-2.5 text-left text-sm transition-colors aria-selected:font-semibold;
+  }
+
+  .select__dropdown[data-open='true'] {
+    @apply visible opacity-100;
+  }
+}

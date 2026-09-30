@@ -1,0 +1,15 @@
+@layer components {
+  .industry-toc a[href^='#'] {
+    @apply transition-colors;
+  }
+
+  .industry-content:not(:has(:target)) .industry-toc a[href='#fintech-services'],
+  .industry-content:has(#fintech-services:target) .industry-toc a[href='#fintech-services'],
+  .industry-content:has(#services-we-provide:target) .industry-toc a[href='#services-we-provide'],
+  .industry-content:has(#benefits:target) .industry-toc a[href='#benefits'],
+  .industry-content:has(#why-choose-kkeydos:target) .industry-toc a[href='#why-choose-kkeydos'],
+  .industry-content:has(#technologies:target) .industry-toc a[href='#technologies'],
+  .industry-content:has(#faq-section:target) .industry-toc a[href='#faq-section'] {
+    @apply border-brand-orange text-primary font-semibold;
+  }
+}

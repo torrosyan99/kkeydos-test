@@ -1,0 +1,194 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "container": {
+        "x": 208,
+        "width": 1504
+      },
+      "font": "48px",
+      "line": "60px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "block"
+    },
+    {
+      "width": 1728,
+      "container": {
+        "x": 208,
+        "width": 1312
+      },
+      "font": "48px",
+      "line": "60px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "block"
+    },
+    {
+      "width": 1512,
+      "container": {
+        "x": 148,
+        "width": 1216
+      },
+      "font": "48px",
+      "line": "60px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "block"
+    },
+    {
+      "width": 1440,
+      "container": {
+        "x": 24,
+        "width": 1392
+      },
+      "font": "40px",
+      "line": "48px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "flex"
+    },
+    {
+      "width": 1280,
+      "container": {
+        "x": 24,
+        "width": 1232
+      },
+      "font": "40px",
+      "line": "48px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "flex"
+    },
+    {
+      "width": 1024,
+      "container": {
+        "x": 24,
+        "width": 976
+      },
+      "font": "40px",
+      "line": "48px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "flex"
+    },
+    {
+      "width": 834,
+      "container": {
+        "x": 24,
+        "width": 786
+      },
+      "font": "40px",
+      "line": "48px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "block",
+      "quotes": "flex"
+    },
+    {
+      "width": 833,
+      "container": {
+        "x": 16,
+        "width": 801
+      },
+      "font": "32px",
+      "line": "40px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "grid",
+      "quotes": "flex"
+    },
+    {
+      "width": 640,
+      "container": {
+        "x": 16,
+        "width": 608
+      },
+      "font": "32px",
+      "line": "40px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "grid",
+      "quotes": "flex"
+    },
+    {
+      "width": 639,
+      "container": {
+        "x": 16,
+        "width": 607
+      },
+      "font": "32px",
+      "line": "40px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "grid",
+      "quotes": "flex"
+    },
+    {
+      "width": 390,
+      "container": {
+        "x": 16,
+        "width": 358
+      },
+      "font": "32px",
+      "line": "40px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "grid",
+      "quotes": "flex"
+    },
+    {
+      "width": 375,
+      "container": {
+        "x": 16,
+        "width": 343
+      },
+      "font": "32px",
+      "line": "40px",
+      "firstHidden": true,
+      "wrapped": true,
+      "orbit": "grid",
+      "quotes": "flex"
+    },
+    {
+      "progress": 0.4,
+      "firstShown": false
+    },
+    {
+      "progress": 0.8,
+      "firstShown": false
+    },
+    {
+      "progress": 1,
+      "firstShown": true
+    },
+    {
+      "quoteScroll": 0,
+      "active": "“Repeat Business is the best testament to a team's ability to perform, and I have no hesitation in hiring them again.”\n\nBrad Mabry\n\nProduct Manager at Rolls Royce"
+    },
+    {
+      "quoteScroll": 300,
+      "active": "“They have excellent resources available in multiple areas, but mostly, I was impressed by the flexibility and cooperation of the management.”\n\nLana Shaova\n\nSr. Director, Business Technology at Associated Press"
+    },
+    {
+      "quoteScroll": 600,
+      "active": "“BairesDev has been hands down the best vendor decision my team has made.”\n\nAdam Isley\n\nDirector of Digital Strategy at IQVIA"
+    },
+    {
+      "mobileQuoteScroll": 286
+    },
+    {
+      "reducedMotion": {
+        "firstVisible": "visible",
+        "running": 0
+      }
+    }
+  ],
+  "errors": []
+}

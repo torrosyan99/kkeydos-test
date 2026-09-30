@@ -1,0 +1,13 @@
+@layer components {
+  .technology-page:not(:has(:target)) .technology-toc a[href='#ai-services'],
+  .technology-page:has(#ai-services:target) .technology-toc a[href='#ai-services'],
+  .technology-page:has(#ai-team:target) .technology-toc a[href='#ai-team'],
+  .technology-page:has(#ai-case-studies:target) .technology-toc a[href='#ai-case-studies'],
+  .technology-page:has(#ai-engineering:target) .technology-toc a[href='#ai-engineering'],
+  .technology-page:has(#ai-tools:target) .technology-toc a[href='#ai-tools'],
+  .technology-page:has(#ai-process:target) .technology-toc a[href='#ai-process'],
+  .technology-page:has(#ai-faq:target) .technology-toc a[href='#ai-faq'],
+  .technology-page:has(#ai-resources:target) .technology-toc a[href='#ai-resources'] {
+    @apply bg-brand-orange/15 text-brand-orange font-semibold;
+  }
+}

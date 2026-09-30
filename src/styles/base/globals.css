@@ -1,0 +1,120 @@
+@custom-variant hover (&:hover);
+
+@theme {
+  --font-outfit: 'Outfit';
+
+  --default-transition-duration: 300ms;
+
+  --color-bg: #fff;
+  --color-primary: #0f172a;
+  --color-brand-teal: #0f8a8d;
+  --color-brand-orange: #f48949;
+  --color-brand-border: #e2e8e0;
+  --color-brand-light: #f6f7f8;
+
+  --color-brand-light-alt: #f8fafc;
+  --color-brand-gray: #64748b;
+  --color-brand-gray-alt: #d9dcdf;
+  --color-brand-slate: #334155;
+  --color-brand-blue: #1764ca;
+  --color-brand-muted-gray: #52606d;
+  --color-brand-muted-gray-alt: #687580;
+  --color-bottom-bg: #f1f5f9;
+
+  --breakpoint-desktop: 1920px;
+  --breakpoint-lg-h: 1154px;
+  --breakpoint-middle: 834px;
+  --breakpoint-mobile: 32.5rem;
+
+  --spacing-section-mobile: 64px;
+  --spacing-section-tablet: 80px;
+  --spacing-section-desktop: 96px;
+
+  --shadow-default: 0 12px 32px rgb(15 23 42 / 0.1);
+  --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+  body {
+    @apply font-outfit text-primary bg-bg flex min-h-screen flex-col;
+  }
+
+  main {
+    @apply grow overflow-hidden pt-20;
+  }
+  input,
+  textarea {
+    @apply outline-none focus:ring-0 focus:outline-none focus-visible:outline-none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-[74px] leading-[1.1] max-2xl:text-[64px] max-md:text-[32px];
+  }
+
+  h2 {
+    @apply text-[48px] leading-[1.1] max-2xl:text-[40px] max-md:text-[32px];
+  }
+
+  h3 {
+    @apply text-[36px] leading-[1.1] max-2xl:text-[32px] max-md:text-[28px];
+  }
+
+  h4 {
+    @apply text-[30px] leading-[1.1] max-2xl:text-[28px] max-md:text-[24px];
+  }
+
+  h5 {
+    @apply text-[24px] leading-[1.1] max-md:text-[20px];
+  }
+
+  h6 {
+    @apply text-[20px] leading-[1.1] max-md:text-[18px];
+  }
+
+  button[data-accordion-trigger] svg,
+  button[data-card-trigger] svg {
+    @apply shrink-0 transition-transform;
+  }
+
+  [data-accordion-content] {
+    @apply grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows];
+  }
+
+  @media (max-width: 833px) {
+    [data-card-content] {
+      @apply grid grid-rows-[0fr] overflow-hidden transition-[grid-template-rows];
+    }
+
+    [data-card][data-open='true'] [data-card-content] {
+      @apply grid-rows-[1fr];
+    }
+  }
+
+  [data-card-content],
+  [data-card-content] > div {
+    @apply h-full;
+  }
+
+  [data-accordion-content] > div,
+  [data-card-content] > div {
+    @apply overflow-hidden;
+  }
+
+  button[data-accordion-trigger][aria-expanded='true'] svg,
+  button[data-card-trigger][aria-expanded='true'] svg {
+    @apply rotate-180;
+  }
+
+  [data-accordion][data-open='true'] [data-accordion-content] {
+    @apply grid-rows-[1fr];
+  }
+}

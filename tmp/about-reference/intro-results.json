@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "initial": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1178.17,
+        "point": "translate(673.344px, -34px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "during": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1178.17,
+        "point": "translate(745.344px, 113.137px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "drawing": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1114.15,
+        "point": "translate(0px, 363px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "touchBlocked": true,
+      "complete": {
+        "locked": false,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 0,
+        "point": "translate(0px, 363px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "scrollAfter": 600
+    },
+    {
+      "width": 834,
+      "initial": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1061.95,
+        "point": "translate(561.125px, -30px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "during": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1061.95,
+        "point": "translate(633.125px, 52.8976px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "drawing": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 1004.27,
+        "point": "translate(0px, 363px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "touchBlocked": true,
+      "complete": {
+        "locked": false,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 0,
+        "point": "translate(0px, 363px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "scrollAfter": 600
+    },
+    {
+      "width": 390,
+      "initial": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 644.72,
+        "point": "translate(137.891px, -28px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "during": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 644.72,
+        "point": "translate(209.891px, 71.6723px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "drawing": {
+        "locked": true,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 609.907,
+        "point": "translate(0px, 371px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "touchBlocked": true,
+      "complete": {
+        "locked": false,
+        "scroll": 0,
+        "hidden": true,
+        "dash": 0,
+        "point": "translate(0px, 371px)",
+        "stroke": "12px",
+        "line": "12px"
+      },
+      "scrollAfter": 600
+    },
+    {
+      "reduced": {
+        "locked": false,
+        "scroll": 0,
+        "hidden": false,
+        "dash": 0,
+        "point": "translate(0px, 371px)",
+        "stroke": "12px",
+        "line": "12px"
+      }
+    },
+    {
+      "anchor": {
+        "locked": false,
+        "scroll": 807,
+        "hidden": false,
+        "dash": 0,
+        "point": "translate(0px, 371px)",
+        "stroke": "12px",
+        "line": "12px"
+      }
+    }
+  ],
+  "errors": []
+}

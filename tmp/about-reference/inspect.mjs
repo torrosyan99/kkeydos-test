@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import { load } from '../about-tools/node_modules/cheerio/dist/esm/index.js';
+const $ = load(fs.readFileSync('tmp/about-reference/source.html', 'utf8'));
+const main = $('main');
+fs.writeFileSync('tmp/about-reference/main.html', main.html().replace(/></g, '>\n<'));
+const resources = [...$('link[rel="stylesheet"], script[src]').map((i,e) => $(e).attr('href') || $(e).attr('src'))].filter(s=>s.startsWith('/_next'));
+fs.writeFileSync('tmp/about-reference/resources.json', JSON.stringify(resources,null,2));
+main.find('img').removeAttr('srcset').removeAttr('sizes');
+fs.writeFileSync('tmp/about-reference/structure.html', main.html().replace(/></g, '>\n<'));
+const assets = [...new Set(main.find('img').map((i,e)=>$(e).attr('src')).get())];
+assets.push('https://assets.bairesdev.com/image/upload/www/static/office-table_cbomcw.jpg');
+fs.writeFileSync('tmp/about-reference/assets.json', JSON.stringify(assets,null,2));
+console.log(main.children().map((i,e)=>({tag:e.tagName,id:$(e).attr('id'),class:$(e).attr('class'),text:$(e).text().slice(0,160)})).get());
+console.log('Resources:', resources);
+console.log('Images:', main.find('img').map((i,e)=>({src:$(e).attr('src'),alt:$(e).attr('alt')})).get());

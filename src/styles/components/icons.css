@@ -1,0 +1,71 @@
+@layer components {
+  .icon {
+    @apply grid size-12 shrink-0 place-items-center rounded-xl;
+  }
+
+  .icon-circle {
+    @apply grid size-12 shrink-0 place-items-center rounded-full;
+  }
+
+  .icon-border {
+    @apply border-brand-border bg-brand-light grid size-12 shrink-0 place-items-center rounded-lg border;
+  }
+
+  .icon > svg,
+  .icon-circle > svg,
+  .icon-border > svg {
+    @apply size-1/2;
+  }
+
+  /* Colors */
+  .icon-blue {
+    @apply text-brand-blue;
+  }
+
+  .icon-circle.icon-blue,
+  .icon.icon-blue {
+    @apply bg-[#E9F3FF];
+  }
+
+  .icon-orange {
+    @apply text-[#F97316];
+  }
+
+  .icon-circle.icon-orange,
+  .icon.icon-orange {
+    @apply bg-[#FFF0E7];
+  }
+  .icon-purple {
+    @apply text-[#7849DE];
+  }
+
+  .icon-pink {
+    @apply text-[#DB2777];
+  }
+  .icon-yellow {
+    @apply text-[#CA8A04];
+  }
+  .icon-circle.icon-purple,
+  .icon.icon-purple {
+    @apply bg-[#F2EDFC];
+  }
+
+  .icon-green {
+    @apply text-[#079C6D];
+  }
+
+  .icon-circle.icon-green,
+  .icon.icon-green {
+    @apply bg-[#E6F6F1];
+  }
+
+  .icon-circle.icon-pink,
+  .icon.icon-pink {
+    @apply bg-[#FCE7F3];
+  }
+
+  .icon-circle.icon-yellow,
+  .icon.icon-yellow {
+    @apply bg-[#FEF9C3];
+  }
+}

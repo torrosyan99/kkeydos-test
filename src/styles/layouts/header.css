@@ -1,0 +1,79 @@
+@layer components {
+  .dropdown {
+    @apply invisible absolute top-full max-h-[calc(100dvh-160px)] opacity-0;
+    @apply border-brand-border inset-x-0 rounded-b-2xl border-t bg-white text-sm delay-100;
+    @apply overflow-y-auto overscroll-contain shadow-[0_32px_80px_rgb(15_23_42/0.16)];
+  }
+
+  .header-link {
+    @apply relative flex h-full cursor-pointer items-center gap-2 font-bold whitespace-nowrap transition-colors;
+
+    &:after {
+      @apply bg-brand-teal absolute bottom-4.5 left-0 h-0.75 w-full origin-left scale-x-0 transition-transform content-[''];
+    }
+  }
+
+  .header-item {
+    @apply h-full;
+
+    &:hover .header-link {
+      @apply text-brand-teal;
+    }
+
+
+    &:hover .header-link::after {
+      @apply scale-x-100;
+    }
+
+    &:hover .dropdown {
+      @apply visible opacity-100 delay-0;
+    }
+  }
+
+  .dropdown__left {
+    @apply border-brand-border bg-brand-light-alt w-87.5 shrink-0 overflow-hidden border-r px-7.5 pt-8 pb-10 max-xl:w-70;
+  }
+
+  .dropdown__right {
+    @apply flex grow gap-15 px-7.5 pt-8 pb-10 max-xl:gap-5;
+  }
+
+  .dropdown__card {
+    @apply shadow-default flex items-center gap-3 rounded-xl bg-white/85 px-3 py-2.5 text-sm font-semibold;
+
+    svg {
+      @apply text-brand-teal size-5 shrink-0;
+    }
+  }
+
+  .dropdown__featured-link {
+    @apply flex items-center gap-3;
+
+    svg {
+      @apply bg-brand-teal/10 text-brand-teal block size-9 rounded-lg p-2;
+    }
+  }
+
+  .dropdown__item-title {
+    @apply border-brand-border mb-5 flex items-center gap-2 border-b pb-4;
+    @apply text-xs font-bold uppercase;
+
+    &:before {
+      content: '';
+      @apply bg-brand-orange size-2 rounded-full;
+    }
+  }
+
+  .service-link {
+    @apply flex items-center gap-3;
+    @apply text-brand-gray hover:text-brand-teal transition-colors;
+
+    svg {
+      @apply text-brand-orange size-5 shrink-0 transition-colors;
+    }
+
+    &:hover svg {
+      @apply text-brand-teal;
+    }
+  }
+}

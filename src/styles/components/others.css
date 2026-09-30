@@ -1,0 +1,54 @@
+@layer components {
+  .orange-pagination {
+    --swiper-pagination-color: var(--color-brand-orange);
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: #d8d5d3;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 7px;
+
+    @apply flex w-auto items-center justify-center justify-self-center;
+  }
+
+  .circle-bg {
+    --circle-cut: 0%;
+
+    @apply relative isolate;
+    @apply before:pointer-events-none before:absolute before:top-20 before:left-1/2 before:-z-1;
+    @apply before:h-[calc(100%-12rem)] before:min-w-625 before:-translate-x-1/2;
+    @apply before:rounded-full before:bg-[#f3f4f5] before:content-[''];
+    @apply max-[1800px]:before:h-[calc(100%-40rem)] max-2xl:before:hidden;
+
+    &::before {
+      clip-path: inset(0 0 var(--circle-cut) 0);
+    }
+  }
+
+  .eyebrow {
+    @apply text-brand-gray inline-block text-sm font-semibold tracking-widest uppercase;
+  }
+
+  .auto-accordions-line {
+    @apply bg-brand-border absolute inset-y-0 left-0 w-1;
+
+    &:after {
+      @apply bg-brand-teal absolute inset-0 origin-top scale-y-0 content-[''];
+    }
+  }
+
+  [data-open='true'] .auto-accordions-line::after,
+  [data-open='true'] .auto-accordions-line::after {
+    @apply scale-y-100 transition-transform duration-5800 ease-linear;
+  }
+
+  [data-open='true'] .auto-accordions-line.no-duration::after {
+    @apply duration-500;
+  }
+
+  .green-block {
+    @apply relative isolate overflow-hidden rounded-2xl border border-[rgb(198_231_225_/_0.4)] bg-[linear-gradient(110deg,#f0fbf8,#e6f4f4)] [--glow-x:75%] [--glow-y:50%] before:pointer-events-none before:absolute before:inset-0 before:-z-1 before:bg-[radial-gradient(ellipse_32rem_24rem_at_var(--glow-x)_var(--glow-y),rgba(77,201,163,0.4)_0%,rgba(86,190,170,0.24)_35%,rgba(104,196,184,0.08)_60%,rgba(104,196,184,0)_82%)] before:opacity-0 before:transition-opacity before:ease-out before:content-[''] hover:before:opacity-100;
+  }
+
+  .black-section {
+    @apply relative isolate overflow-hidden bg-[linear-gradient(110deg,#111516,#101313_65%,#111919)] py-16 text-white [--glow-x:75%] [--glow-y:50%] before:pointer-events-none before:absolute before:inset-0 before:-z-1 before:bg-[radial-gradient(ellipse_36rem_26rem_at_var(--glow-x)_var(--glow-y),rgba(35,143,146,0.22),transparent_75%)] before:opacity-0 before:transition-opacity before:duration-350 before:content-[''] focus-within:before:opacity-100 hover:before:opacity-100 max-sm:py-12;
+  }
+}

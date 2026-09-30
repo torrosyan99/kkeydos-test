@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "width": 1920,
+      "document": 1920,
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "document": 1440,
+      "brokenImages": []
+    },
+    {
+      "width": 1280,
+      "document": 1280,
+      "brokenImages": []
+    },
+    {
+      "width": 1024,
+      "document": 1024,
+      "brokenImages": []
+    },
+    {
+      "width": 834,
+      "document": 834,
+      "brokenImages": []
+    },
+    {
+      "width": 768,
+      "document": 768,
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "document": 390,
+      "brokenImages": []
+    },
+    {
+      "width": 375,
+      "document": 375,
+      "brokenImages": []
+    },
+    {
+      "accordion": [
+        "false",
+        "true",
+        "false",
+        "false"
+      ]
+    },
+    {
+      "quotes": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "history": {
+        "left": 1108,
+        "width": 5468,
+        "visible": 1392
+      }
+    },
+    {
+      "mobileMenu": "true"
+    },
+    {
+      "reducedMotion": {
+        "hidden": 0,
+        "running": 0
+      }
+    }
+  ],
+  "errors": []
+}

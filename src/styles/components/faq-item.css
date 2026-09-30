@@ -1,0 +1,17 @@
+@layer components {
+  .faq-item {
+    @apply border-brand-border border-t font-medium;
+  }
+
+  .faq-item:last-child {
+    @apply border-b;
+  }
+
+  .faq-item__button {
+    @apply flex w-full cursor-pointer items-center justify-between py-6 text-xl;
+
+    svg {
+      @apply bg-brand-orange size-6 rounded-full p-1 text-white;
+    }
+  }
+}

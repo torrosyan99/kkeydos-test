@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@import './base/fonts.css';
+@import './base/globals.css';
+
+@import './components/buttons.css';
+@import './components/text-rotator.css';
+@import './components/faq-item.css';
+@import './components/forms.css';
+@import './components/icons.css';
+@import './components/select.css';
+@import './components/others.css';
+
+@import './layouts/header.css';
+@import './layouts/containers.css';
+@import './layouts/sections.css';
+
+@import './pages/home.css';
+@import './pages/industry.css';
+@import './pages/technology.css';

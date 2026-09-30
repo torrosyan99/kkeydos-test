@@ -1,0 +1,39 @@
+@layer components {
+  .hero-section {
+    @apply bg-cover bg-no-repeat;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(255 255 255) 0%,
+        rgb(255 255 255) 34%,
+        rgb(255 255 255 / 0.96) 43%,
+        rgb(255 255 255 / 0.72) 54%,
+        rgb(255 255 255 / 0.18) 70%,
+        rgb(255 255 255 / 0) 82%
+      ),
+      url('../images/backgrounds/hero-desktop.webp');
+
+    background-position: 64% 52%;
+
+    @media (width < 1280px) {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgb(246 247 248) 0%,
+          rgb(246 247 248 / 0.96) 46%,
+          rgb(246 247 248 / 0.86) 76%,
+          rgb(246 247 248 / 0.72) 100%
+        ),
+        url('../images/backgrounds/hero-mobile.webp');
+
+      background-position: 70% 50%;
+    }
+  }
+
+  .engagement-reveal {
+    --engagement-radius: 0;
+    @apply pointer-events-none absolute inset-0 -z-1 bg-[#20272b] transition-[clip-path] duration-800 ease-in-out;
+    clip-path: circle(var(--engagement-radius, 0%) at calc(100% - 38px) calc(100% - 38px));
+  }
+}
