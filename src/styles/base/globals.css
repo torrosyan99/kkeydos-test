@@ -22,6 +22,8 @@
   --color-bottom-bg: #f1f5f9;
 
   --breakpoint-desktop: 1920px;
+  --breakpoint-wide: 1728px;
+  --breakpoint-notebook: 1512px;
   --breakpoint-lg-h: 1154px;
   --breakpoint-middle: 834px;
   --breakpoint-mobile: 32.5rem;

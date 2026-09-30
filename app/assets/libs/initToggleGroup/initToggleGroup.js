@@ -1,5 +1,6 @@
 export function initToggleGroup({ containerSelector, itemSelector, triggerSelector }) {
-  const containers = containerSelector ? document.querySelectorAll(`[${containerSelector}]`)
+  const containers = containerSelector
+    ? document.querySelectorAll(`[${containerSelector}]`)
     : [document];
 
   containers.forEach((container) => {

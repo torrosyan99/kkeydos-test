@@ -250,5 +250,3 @@ document.querySelectorAll('[data-cta-glow]').forEach((cta) => {
     cta.style.setProperty('--glow-y', `${event.clientY - rect.top}px`);
   });
 });
-
-
