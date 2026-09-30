@@ -109,7 +109,8 @@ if (page) {
     );
     curveLength = curve.getTotalLength();
     curve.style.strokeDasharray = String(curveLength);
-    introStart = Math.max(0, rect.top + window.scrollY + startY - window.innerHeight * 0.52);
+    // Start earlier and use the taller intro track to give both phases more scroll room.
+    introStart = Math.max(0, rect.top + window.scrollY + startY - window.innerHeight * 0.72);
     introEnd = marker.top + window.scrollY + marker.height / 2 - window.innerHeight * 0.52;
 
     const pageRect = page.getBoundingClientRect();
@@ -122,17 +123,21 @@ if (page) {
   };
 
   const drawIntro = () => {
-    curve.style.strokeDashoffset = String(curveLength * (1 - introProgress));
-    curve.style.opacity = introProgress > 0 ? '1' : '0';
-    const point = curve.getPointAtLength(curveLength * introProgress);
+    // The circle completes its descent before the line follows it.
+    // Both phases scrub with native scroll, including when scrolling back up.
+    const ballProgress = clamp(introProgress / 0.55);
+    const lineProgress = clamp((introProgress - 0.55) / 0.45);
+    curve.style.strokeDashoffset = String(curveLength * (1 - lineProgress));
+    curve.style.opacity = lineProgress > 0 ? '1' : '0';
+    const point = curve.getPointAtLength(curveLength * ballProgress);
     introBall.style.transform = `translate(${point.x - 16}px, ${point.y - 16}px)`;
     introBall.hidden = introProgress === 1;
     introTrail.forEach((trail, index) => {
       const previous = curve.getPointAtLength(
-        curveLength * Math.max(0, introProgress - (index + 1) * 0.012),
+        curveLength * Math.max(0, ballProgress - (index + 1) * 0.012),
       );
       trail.style.transform = `translate(${previous.x - 16}px, ${previous.y - 16}px)`;
-      trail.hidden = introProgress === 0 || introProgress >= 1;
+      trail.hidden = ballProgress === 0 || ballProgress === 1;
     });
   };
 
