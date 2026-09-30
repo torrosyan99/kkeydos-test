@@ -1,12 +1,19 @@
-const page = document.querySelector('.about-page');
+const page = document.querySelector('[data-about-page]');
 
 if (page) {
-  const motion = window.matchMedia('(prefers-reduced-motion: no-preference)');
-  const story = page.querySelector('[data-about-story]');
+  const storyTrack = page.querySelector('[data-story-track]');
   const line = page.querySelector('[data-story-line]');
   const ball = page.querySelector('[data-story-ball]');
   const steps = [...page.querySelectorAll('[data-story-step]')];
   const reveals = [...page.querySelectorAll('[data-about-reveal]')];
+  const mapReveal = page.querySelector('[data-map-reveal]');
+  const mapCard = mapReveal.querySelector('[data-map-card]');
+  const mapScene = page.querySelector('[data-map-scene]');
+  const mapPin = mapScene.querySelector('[data-map-pin]');
+  const mapTimeline = mapPin.querySelector('[data-map-timeline]');
+  const mapExitGap = page.querySelector('[data-map-exit-gap]');
+  const mapFollowing = page.querySelector('[data-map-following]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const projectsPhoto = page.querySelector('[data-projects-photo]');
   const projectsImage = projectsPhoto.querySelector('img');
   const intro = page.querySelector('[data-intro-path]');
@@ -22,12 +29,14 @@ if (page) {
   const givebackStop = page.querySelector('[data-giveback-stop]');
   const wash = page.querySelector('[data-giveback-wash]');
   let curveLength = 0;
-  let introProgress = motion.matches && !location.hash && window.scrollY < 1 ? 0 : 1;
-  let introLineProgress = introProgress;
-  let introComplete = introProgress === 1;
-  let firstRevealed = introComplete;
-  let introFrame = 0;
-  let introTimeout = 0;
+  let introProgress = 0;
+  let introStart = 0;
+  let introEnd = 0;
+  let firstRevealed = false;
+  let mapStart = 0;
+  let mapDistance = 1;
+  let mapPinEnd = 0;
+  let mapTravel = 0;
   let frame = 0;
   const clamp = (value) => Math.min(1, Math.max(0, value));
 
@@ -47,12 +56,39 @@ if (page) {
   );
 
   reveals
-    .filter((element) => !steps[0].contains(element))
+    .filter((element) => !steps[0].contains(element) && !mapReveal.contains(element))
     .forEach((element) => revealObserver.observe(element));
 
   const measure = () => {
+    const pinHeight = mapPin.offsetHeight;
+    // Short screens can scroll past the copy before pinning the map in view.
+    const pinTop = Math.min(128, window.innerHeight - pinHeight - 32);
+    mapDistance = reducedMotion.matches ? 0 : Math.max(560, window.innerHeight * 0.9);
+    const settleDistance = reducedMotion.matches ? 0 : Math.max(120, window.innerHeight * 0.18);
+    mapPin.style.position = reducedMotion.matches ? 'relative' : 'sticky';
+    mapPin.style.top = reducedMotion.matches ? '0px' : `${pinTop}px`;
+    mapScene.style.height = `${pinHeight + mapDistance + settleDistance}px`;
+    mapStart = mapScene.getBoundingClientRect().top + window.scrollY - pinTop;
+    mapPinEnd = mapStart + mapDistance + settleDistance;
+    // Let the settled card remain in view, then bring the next block in from
+    // below the viewport rather than revealing its background under the pin.
+    const sceneMargin = parseFloat(getComputedStyle(mapScene).marginBottom);
+    mapExitGap.style.height = reducedMotion.matches
+      ? '0px'
+      : `${Math.max(0, window.innerHeight - pinTop - pinHeight - sceneMargin + 48)}px`;
+    // This rail belongs to the native sticky layer. No scroll compensation or
+    // per-frame transforms are needed while the map is descending.
+    mapTimeline.style.left = `${mapPin.querySelector('[data-story-stop]').offsetLeft + 10}px`;
+    mapTimeline.style.top = `${-window.innerHeight * 2}px`;
+    mapTimeline.style.height = `${window.innerHeight * 2.52 - pinTop}px`;
+    const mapOffset = mapReveal.getBoundingClientRect().top - mapPin.getBoundingClientRect().top;
+    mapTravel = Math.max(
+      window.innerHeight * 0.75,
+      pinTop + mapOffset + mapCard.offsetHeight + 100,
+    );
+
     const rect = intro.getBoundingClientRect();
-    const marker = steps[0].querySelector('.about-stop').getBoundingClientRect();
+    const marker = steps[0].querySelector('[data-story-stop]').getBoundingClientRect();
     const endX = marker.left + marker.width / 2 - rect.left;
     const endY = marker.top + marker.height / 2 - rect.top;
     const width = rect.width;
@@ -70,16 +106,24 @@ if (page) {
     );
     curveLength = curve.getTotalLength();
     curve.style.strokeDasharray = String(curveLength);
+    introStart = Math.max(0, rect.top + window.scrollY + startY - window.innerHeight * 0.52);
+    introEnd = marker.top + window.scrollY + marker.height / 2 - window.innerHeight * 0.52;
+
+    const pageRect = page.getBoundingClientRect();
+    const trackTop = marker.top + marker.height / 2;
+    storyTrack.style.top = `${trackTop - pageRect.top}px`;
+    storyTrack.style.left = `${marker.left + marker.width / 2 - pageRect.left - 6}px`;
+    storyTrack.style.height = `${Math.max(0, givebackTrack.getBoundingClientRect().top - trackTop)}px`;
 
     schedule();
   };
 
   const drawIntro = () => {
-    curve.style.strokeDashoffset = String(curveLength * (1 - introLineProgress));
-    curve.style.opacity = introLineProgress > 0 ? '1' : '0';
+    curve.style.strokeDashoffset = String(curveLength * (1 - introProgress));
+    curve.style.opacity = introProgress > 0 ? '1' : '0';
     const point = curve.getPointAtLength(curveLength * introProgress);
     introBall.style.transform = `translate(${point.x - 16}px, ${point.y - 16}px)`;
-    introBall.hidden = introComplete && firstRevealed;
+    introBall.hidden = introProgress === 1;
     introTrail.forEach((trail, index) => {
       const previous = curve.getPointAtLength(
         curveLength * Math.max(0, introProgress - (index + 1) * 0.012),
@@ -89,136 +133,78 @@ if (page) {
     });
   };
 
-  const preventIntroScroll = (event) => {
-    if (event.type === 'keydown') {
-      if (event.target.closest('input, textarea, select, button, a, [contenteditable]')) return;
-      if (!['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key))
-        return;
-    }
-    event.preventDefault();
-  };
-
-  const finishIntro = () => {
-    introProgress = 1;
-    introLineProgress = 1;
-    introComplete = true;
-    cancelAnimationFrame(introFrame);
-    clearTimeout(introTimeout);
-    document.documentElement.classList.remove('about-intro-lock');
-    document.removeEventListener('wheel', preventIntroScroll);
-    document.removeEventListener('touchmove', preventIntroScroll);
-    document.removeEventListener('keydown', preventIntroScroll);
-    drawIntro();
-    schedule();
-  };
-
-  const startIntro = () => {
-    if (introComplete) return;
-    document.documentElement.classList.add('about-intro-lock');
-    document.addEventListener('wheel', preventIntroScroll, { passive: false });
-    document.addEventListener('touchmove', preventIntroScroll, { passive: false });
-    document.addEventListener('keydown', preventIntroScroll);
-    // Always release the page, even if font loading or animation frames are interrupted.
-    introTimeout = setTimeout(finishIntro, 5000);
-    document.fonts.ready.then(() => {
-      if (introComplete) return;
-      measure();
-      let started;
-      const animate = (time) => {
-        started ??= time;
-        const elapsed = time - started - 250;
-        const progress = clamp(elapsed / 1800);
-        introProgress =
-          progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-        introLineProgress = 1 - Math.pow(1 - clamp((elapsed - 1800) / 900), 3);
-        drawIntro();
-        if (introLineProgress === 1) finishIntro();
-        else introFrame = requestAnimationFrame(animate);
-      };
-      introFrame = requestAnimationFrame(animate);
-    });
-  };
-
   const update = () => {
     frame = 0;
     const viewport = window.innerHeight;
-    const storyRect = story.getBoundingClientRect();
-    if (!firstRevealed && introComplete && window.scrollY > 4 && storyRect.top < viewport * 0.94) {
-      firstRevealed = true;
-    }
-    steps[0].toggleAttribute('data-reached', firstRevealed);
+    introProgress = clamp((window.scrollY - introStart) / Math.max(1, introEnd - introStart));
+    firstRevealed ||= introProgress === 1;
+    steps[0].toggleAttribute('data-reached', introProgress === 1);
+    steps[0].dataset.visible = String(firstRevealed);
     steps[0].querySelectorAll('[data-about-reveal]').forEach((element) => {
       element.dataset.visible = String(firstRevealed);
     });
-    const track = line.parentElement.getBoundingClientRect();
+    const mapPinned =
+      !reducedMotion.matches && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
+    storyTrack.style.visibility = mapPinned ? 'hidden' : 'visible';
+    mapTimeline.hidden = !mapPinned;
+    const track = storyTrack.getBoundingClientRect();
+    const trackLength = track.height;
     const lineHead = viewport * 0.52;
-    const progress = firstRevealed ? Math.min(track.height, Math.max(0, lineHead - track.top)) : 0;
-    line.style.height = `${motion.matches ? progress : track.height}px`;
+    const progress = firstRevealed ? Math.min(trackLength, Math.max(0, lineHead - track.top)) : 0;
+    line.style.height = `${progress}px`;
     ball.style.transform = `translateY(${progress - 16}px)`;
-    ball.hidden = !motion.matches || progress === 0 || progress === track.height;
-    steps
-      .slice(1)
-      .forEach((step) =>
-        step.toggleAttribute(
-          'data-reached',
-          !motion.matches || step.getBoundingClientRect().top <= lineHead,
-        ),
-      );
+    ball.hidden = progress === 0 || progress === trackLength;
+    steps.slice(1).forEach((step) => {
+      const marker = step.querySelector('[data-story-stop]').getBoundingClientRect();
+      step.toggleAttribute('data-reached', marker.top + marker.height / 2 <= lineHead);
+    });
 
     const givebackTop = givebackTrack.getBoundingClientRect().top;
     const stopRect = givebackStop.getBoundingClientRect();
     const givebackLength = stopRect.top + stopRect.height / 2 - givebackTop;
-    const givebackProgress = !motion.matches
-      ? givebackLength
-      : firstRevealed
-        ? Math.min(givebackLength, Math.max(0, lineHead - givebackTop))
-        : 0;
+    const givebackProgress = firstRevealed
+      ? Math.min(givebackLength, Math.max(0, lineHead - givebackTop))
+      : 0;
     givebackLine.style.height = `${givebackProgress}px`;
     givebackBall.style.transform = `translateY(${givebackProgress - 16}px)`;
-    givebackBall.hidden =
-      !motion.matches || givebackProgress === 0 || givebackProgress === givebackLength;
+    givebackBall.hidden = givebackProgress === 0 || givebackProgress === givebackLength;
     givebackStop.dataset.reached = String(givebackProgress === givebackLength);
 
     drawIntro();
 
+    // Sticky holds the block while this scroll interval lowers and straightens the map.
+    // Deriving progress directly from scroll position makes the entire scene reversible.
+    const mapProgress = clamp((window.scrollY - mapStart) / Math.max(1, mapDistance));
+    const mapRemaining = reducedMotion.matches ? 0 : 1 - mapProgress;
+    mapFollowing.style.visibility =
+      reducedMotion.matches || window.scrollY > mapPinEnd ? 'visible' : 'hidden';
+    mapCard.style.transform = `translateY(${-mapTravel * mapRemaining}px) rotate(${7 * mapRemaining}deg)`;
+    mapCard.style.opacity = reducedMotion.matches ? '1' : String(clamp(mapProgress / 0.2));
+
     const photoRect = projectsPhoto.getBoundingClientRect();
     const photoTravel = Math.max(0, projectsImage.offsetWidth - projectsPhoto.clientWidth);
-    if (!motion.matches) projectsImage.style.transform = `translateX(${-photoTravel / 2}px)`;
-    else if (photoRect.bottom >= 0 && photoRect.top <= viewport) {
+    if (photoRect.bottom >= 0 && photoRect.top <= viewport) {
       const photoProgress = clamp((viewport - photoRect.top) / (viewport + photoRect.height));
-      const photoOffset = (photoProgress - 0.5) * photoTravel * 0.25;
-      projectsImage.style.transform = `translateX(${-photoTravel / 2 + photoOffset}px)`;
+      projectsImage.style.transform = `translateX(${-photoProgress * photoTravel}px)`;
     }
 
-    if (motion.matches) {
-      const sinceProgress = clamp((viewport - since.getBoundingClientRect().top) / viewport);
-      since.style.transform = `translateX(${(1 - sinceProgress) * Math.min(280, window.innerWidth * 0.25)}px)`;
-      const reveal = clamp((viewport - giveback.getBoundingClientRect().top) / (viewport * 1.3));
-      wash.style.clipPath = `circle(${reveal * 150}% at 10% 0%)`;
-    } else {
-      since.style.transform = '';
-      wash.style.clipPath = 'none';
-    }
+    const sinceProgress = clamp((viewport - since.getBoundingClientRect().top) / viewport);
+    since.style.transform = `translateX(${(1 - sinceProgress) * Math.min(280, window.innerWidth * 0.25)}px)`;
+    const reveal = clamp((viewport - giveback.getBoundingClientRect().top) / (viewport * 1.3));
+    wash.style.clipPath = `circle(${reveal * 150}% at 10% 0%)`;
   };
 
   function schedule() {
     if (!frame) frame = requestAnimationFrame(update);
   }
 
-  const setMotion = () => {
-    page.dataset.motion = String(motion.matches);
-    measure();
-    if (!motion.matches) {
-      firstRevealed = true;
-      finishIntro();
-    }
-  };
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', measure, { passive: true });
-  motion.addEventListener('change', setMotion);
+  reducedMotion.addEventListener('change', measure);
+  projectsImage.addEventListener('load', schedule);
   new ResizeObserver(measure).observe(page);
+  new ResizeObserver(measure).observe(mapPin);
   document.fonts.ready.then(measure);
-  setMotion();
-  startIntro();
-  window.addEventListener('pagehide', finishIntro);
+  page.dataset.ready = 'true';
+  measure();
 }

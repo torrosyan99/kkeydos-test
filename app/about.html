@@ -24,7 +24,7 @@
     <link href="assets/libs/swiper/swiper.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/styles/main.css" rel="stylesheet" type="text/css" />
 
-    <script src="assets/scripts/pages/about.js" type="module" defer=""></script>
+    <script src="assets/scripts/pages/about.js?v=map-pin-5" type="module" defer=""></script>
     <script src="assets/scripts/main.js" type="module" defer=""></script>
   </head>
   <body>
@@ -36,11 +36,7 @@
       <div class="page-container">
         <div class="flex h-20 items-center gap-10">
           <a class="mr-auto" href="index.html" aria-label="KKEYDOS home">
-            <img
-              class="h-16 w-auto max-xl:h-14"
-              src="assets/images/logo.png"
-              alt="KKEYDOS logo"
-            />
+            <img class="h-16 w-auto max-xl:h-14" src="assets/images/logo.png" alt="KKEYDOS logo" />
           </a>
 
           <nav class="h-full max-lg:hidden" aria-label="Primary navigation">
@@ -1172,22 +1168,17 @@
       </div>
     </header>
 
-    <main id="main-content" class="about-page overflow-clip">
+    <main id="main-content" class="group/about relative overflow-clip" data-about-page>
       <section class="max-middle:pt-6 pt-10">
         <div
-          class="page-container
-          max-desktop:mx-52
-          max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-w-376 px-0"
+          class="page-container max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-w-376 px-0"
         >
           <div>
             <nav
               class="max-middle:mb-8 mb-12 flex items-center gap-3 text-sm"
               aria-label="Breadcrumb"
             >
-              <a
-                class="text-brand-gray hover:text-brand-teal"
-                href="index.html"
-                aria-label="Home"
+              <a class="text-brand-gray hover:text-brand-teal" href="index.html" aria-label="Home"
                 ><svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="../assets/images/icons.svg#breadcrumbs-home"></use></svg></a
               ><span class="text-brand-gray" aria-hidden="true">/</span
@@ -1195,16 +1186,13 @@
             </nav>
             <div class="max-w-237.5">
               <p class="text-brand-gray mb-8 text-sm font-semibold uppercase">About KKEYDOS</p>
-              <h1 class="max-notebook:text-4xl max-middle:text-3xl mb-6 text-5xl">
+              <h1>
                 For over a decade we’ve partnered with technology leaders to rapidly scale their
                 teams and meet their business challenges.
+                <span class="text-brand-orange mt-6 block whitespace-nowrap" data-about-intro>
+                  We think we’re pretty good at it
+                </span>
               </h1>
-              <p
-                class="max-notebook:text-4xl max-middle:text-3xl text-brand-orange text-5xl font-semibold"
-                data-about-intro=""
-              >
-                We think we’re pretty good at it
-              </p>
             </div>
             <div class="relative h-93.75" aria-hidden="true" data-intro-path="">
               <svg class="absolute inset-0 size-full overflow-visible" fill="none">
@@ -1231,243 +1219,258 @@
                 data-intro-trail=""
               ></span>
             </div>
-            <div class="relative" data-about-story="">
-              <div
-                class="pointer-events-none absolute top-5 bottom-0 left-2.5 w-3"
-                aria-hidden="true"
+          </div>
+        </div>
+      </section>
+      <div class="pointer-events-none absolute w-3" aria-hidden="true" data-story-track="">
+        <div
+          class="bg-brand-orange absolute top-0 left-0 w-full origin-top"
+          data-story-line=""
+        ></div>
+        <span
+          class="bg-brand-orange absolute top-0 -left-2.5 size-8 rounded-full"
+          data-story-ball=""
+          hidden
+        ></span>
+      </div>
+
+      <section
+        id="our-story"
+        class="group/step max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-middle:pb-50 max-middle:pl-12 relative mx-auto flow-root max-w-376 scroll-mt-28 pb-100 pl-14 max-xl:pb-75 group-data-[ready=true]/about:[&:not([data-visible=true])]:invisible"
+        data-story-step=""
+      >
+        <span
+          data-story-stop
+          class="ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 group-data-[ready=true]/about:group-[:not([data-reached])]/step:scale-30 group-data-[ready=true]/about:group-[:not([data-reached])]/step:opacity-0"
+          aria-hidden="true"
+        ></span>
+        <div
+          class="max-wide:gap-9 max-notebook:flex-col max-notebook:gap-0 max-middle:-mt-2 -mt-4 flex items-start justify-between gap-20"
+        >
+          <div
+            data-about-reveal=""
+            class="max-desktop:max-w-xl max-wide:max-w-none max-w-134 duration-700 ease-[ease] group-data-[ready=true]/about:transition-[opacity,transform] group-data-[ready=true]/about:[&:not([data-visible=true])]:[transform:translateY(32px)] group-data-[ready=true]/about:[&:not([data-visible=true])]:opacity-0"
+          >
+            <h2
+              class="max-notebook:text-4xl max-middle:text-3xl max-notebook:mb-4 max-middle:mb-2 mb-6 text-5xl font-medium"
+            >
+              From humble beginnings to global partner.
+            </h2>
+            <p
+              class="text-brand-gray max-notebook:mb-8 max-middle:mb-6 max-middle:text-base mb-18 text-xl"
+            >
+              Founded in Buenos Aires, Argentina in 2009 by Nacho De Marco and Paul Azorin. With a
+              mission to connect the top 1% Latin American developers with companies needing
+              top-quality software solutions.
+            </p>
+            <p
+              class="max-notebook:mb-10 max-middle:mb-8 max-middle:text-2xl mb-0 text-3xl font-medium"
+            >
+              We were fully remote<br /><span class="text-brand-orange"
+                >before fully remote was trendy.</span
               >
-                <div
-                  class="bg-brand-orange absolute top-0 left-0 w-full origin-top"
-                  data-story-line=""
-                ></div>
-                <span
-                  class="bg-brand-orange absolute top-0 -left-2.5 size-8 rounded-full"
-                  data-story-ball=""
-                ></span>
-              </div>
-              <section
-                id="our-story"
-                class="max-middle:pb-50 max-middle:pl-12 relative scroll-mt-28 pb-100 pl-14 max-xl:pb-75"
-                data-story-step=""
-              >
-                <span
-                  class="about-stop ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 motion-reduce:transition-none"
-                  aria-hidden="true"
-                ></span>
-                <div
-                  class="max-wide:gap-9 max-notebook:flex-col max-notebook:gap-0 max-middle:-mt-2 -mt-4 flex items-start justify-between gap-20"
-                >
-                  <div
-                    data-about-reveal=""
-                    class="max-desktop:max-w-xl max-wide:max-w-none max-w-134"
-                  >
-                    <h2
-                      class="max-notebook:text-4xl max-middle:text-3xl max-notebook:mb-4 max-middle:mb-2 mb-6 text-5xl font-medium"
-                    >
-                      From humble beginnings to global partner.
-                    </h2>
-                    <p
-                      class="text-brand-gray max-notebook:mb-8 max-middle:mb-6 max-middle:text-base mb-18 text-xl"
-                    >
-                      Founded in Buenos Aires, Argentina in 2009 by Nacho De Marco and Paul Azorin.
-                      With a mission to connect the top 1% Latin American developers with companies
-                      needing top-quality software solutions.
-                    </p>
-                    <p
-                      class="max-notebook:mb-10 max-middle:mb-8 max-middle:text-2xl mb-0 text-3xl font-medium"
-                    >
-                      We were fully remote<br /><span class="text-brand-orange"
-                        >before fully remote was trendy.</span
-                      >
-                    </p>
-                  </div>
-                  <img
-                    class="max-notebook:mt-12 max-notebook:ml-12.5 max-notebook:self-start max-middle:mx-auto max-middle:mt-0 max-middle:w-full aspect-square w-147.5 shrink-0 rounded-xl object-cover object-left"
-                    src="assets/images/team-flow/services-team.webp"
-                    alt="Software developers working together on a project"
-                    loading="lazy"
-                    decoding="async"
-                    width="590"
-                    height="536"
-                    data-about-reveal="right"
-                  />
-                </div>
-              </section>
-              <section
-                id="since-then"
-                class="max-middle:pb-50 max-middle:pl-12 relative scroll-mt-28 pb-100 pl-14 max-xl:pb-75"
-                data-story-step=""
-              >
-                <span
-                  class="about-stop ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 motion-reduce:transition-none"
-                  aria-hidden="true"
-                ></span>
-                <h2
-                  class="max-desktop:text-8xl max-notebook:text-7xl max-middle:text-6xl max-desktop:pb-60 max-notebook:pb-40 w-fit pb-100 text-9xl font-medium whitespace-nowrap max-sm:pb-60 max-sm:text-5xl"
-                  data-about-since=""
-                >
-                  Since then...
+            </p>
+          </div>
+          <img
+            class="max-notebook:mt-12 max-notebook:ml-12.5 max-notebook:self-start max-middle:mx-auto max-middle:mt-0 max-middle:w-full aspect-square w-147.5 shrink-0 rounded-xl object-cover object-left duration-700 ease-[ease] group-data-[ready=true]/about:transition-[opacity,transform] group-data-[ready=true]/about:[&:not([data-visible=true])]:[transform:translateX(32px)] group-data-[ready=true]/about:[&:not([data-visible=true])]:opacity-0"
+            src="assets/images/team-flow/services-team.webp"
+            alt="Software developers working together on a project"
+            loading="lazy"
+            decoding="async"
+            width="1942"
+            height="809"
+            data-about-reveal="right"
+          />
+        </div>
+      </section>
+      <section
+        id="since-then"
+        class="group/step max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-middle:pb-50 max-middle:pl-12 relative mx-auto flow-root max-w-376 scroll-mt-28 pb-100 pl-14 max-xl:pb-75"
+        data-story-step=""
+      >
+        <span
+          data-story-stop
+          class="ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 group-data-[ready=true]/about:group-[:not([data-reached])]/step:scale-30 group-data-[ready=true]/about:group-[:not([data-reached])]/step:opacity-0"
+          aria-hidden="true"
+        ></span>
+        <h2
+          class="max-desktop:text-8xl max-notebook:text-7xl max-middle:text-6xl max-desktop:pb-60 max-notebook:pb-40 w-fit pb-100 text-9xl font-medium whitespace-nowrap max-sm:pb-60 max-sm:text-5xl"
+          data-about-since=""
+        >
+          Since then...
+        </h2>
+      </section>
+      <section
+        id="our-projects"
+        class="group/step max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-middle:pb-50 max-middle:pl-12 relative mx-auto flow-root max-w-376 scroll-mt-28 pb-100 pl-14 max-xl:pb-75"
+        data-story-step=""
+      >
+        <span
+          data-story-stop
+          class="ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 group-data-[ready=true]/about:group-[:not([data-reached])]/step:scale-30 group-data-[ready=true]/about:group-[:not([data-reached])]/step:opacity-0"
+          aria-hidden="true"
+        ></span>
+        <div
+          class="max-notebook:pb-0 -mt-4 flex items-start gap-10 pb-25 max-xl:gap-4 max-sm:-mt-46 max-sm:flex-col-reverse"
+        >
+          <h2
+            class="max-notebook:text-4xl max-middle:text-3xl w-2/5 text-5xl font-medium max-xl:w-1/2 max-lg:w-3/5 max-sm:w-full"
+          >
+            We've delivered over
+            <strong class="text-brand-orange font-medium">1,480</strong> projects for over
+            <strong class="text-brand-orange font-medium">500</strong> different companies...
+          </h2>
+          <div
+            class="max-desktop:h-120 relative h-150 w-3/5 -translate-y-1/4 overflow-hidden rounded-xl max-xl:w-1/2 max-lg:h-90 max-lg:w-2/5 max-sm:h-40 max-sm:w-full max-sm:translate-y-0"
+            data-projects-photo=""
+          >
+            <img
+              class="absolute inset-y-0 left-0 h-full w-auto max-w-none min-w-[140%] object-cover"
+              src="assets/images/pages/about/software-projects-panorama.webp"
+              alt="Web and mobile application development with code, interface designs, and a working app"
+              loading="lazy"
+              decoding="async"
+              width="2172"
+              height="724"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        id="our-team"
+        class="group/step max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 max-middle:mb-24 max-middle:pl-12 relative mx-auto mb-40 flow-root max-w-376 scroll-mt-28 pl-14 max-xl:mb-32"
+        data-story-step=""
+        data-map-scene
+      >
+        <div class="relative" data-map-pin>
+          <div class="pointer-events-none absolute w-3" data-map-timeline aria-hidden="true" hidden>
+            <div class="bg-brand-orange absolute inset-0"></div>
+            <span class="bg-brand-orange absolute -bottom-4 -left-2.5 size-8 rounded-full"></span>
+          </div>
+          <span
+            data-story-stop
+            class="ring-brand-orange/15 bg-brand-orange max-middle:-left-12 absolute top-1 -left-14 size-8 rounded-full ring-8 transition duration-500 group-data-[ready=true]/about:group-[:not([data-reached])]/step:scale-30 group-data-[ready=true]/about:group-[:not([data-reached])]/step:opacity-0"
+            aria-hidden="true"
+          ></span>
+          <div
+            class="max-middle:gap-8 flex items-center gap-12 max-lg:flex-col max-lg:items-stretch"
+          >
+            <div class="w-96 shrink-0 max-xl:w-80 max-lg:w-full">
+              <div>
+                <h2 class="max-notebook:text-4xl max-middle:text-3xl mb-6 text-5xl font-medium">
+                  Our Global Footprint
                 </h2>
-              </section>
-              <section
-                id="our-projects"
-                class="max-middle:pb-50 max-middle:pl-12 relative scroll-mt-28 pb-100 pl-14 max-xl:pb-75"
-                data-story-step=""
-              >
-                <span
-                  class="about-stop ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 motion-reduce:transition-none"
-                  aria-hidden="true"
-                ></span>
-                <div
-                  class="max-notebook:pb-0 -mt-4 flex items-start gap-10 pb-25 max-xl:gap-4 max-sm:-mt-46 max-sm:flex-col-reverse"
-                >
-                  <h2
-                    class="max-notebook:text-4xl max-middle:text-3xl w-2/5 text-5xl font-medium max-xl:w-1/2 max-lg:w-3/5 max-sm:w-full"
-                  >
-                    We've delivered over
-                    <strong class="text-brand-orange font-medium">1,480</strong> projects for over
-                    <strong class="text-brand-orange font-medium">500</strong> different
-                    companies...
-                  </h2>
-                  <div
-                    class="max-desktop:h-120 relative h-150 w-3/5 -translate-y-1/4 overflow-hidden max-xl:w-1/2 max-lg:h-90 max-lg:w-2/5 max-sm:h-40 max-sm:w-full max-sm:translate-y-0"
-                    data-projects-photo=""
-                  >
-                    <img
-                      class="absolute inset-y-0 left-0 h-full w-auto max-w-none min-w-full object-cover max-sm:w-2/1"
-                      src="assets/images/pages/about/office-table_cbomcw.jpg"
-                      alt="Software developers collaborating in an office"
-                      loading="lazy"
-                      decoding="async"
-                      width="1728"
-                      height="548"
-                    />
-                  </div>
+                <p class="text-brand-gray max-middle:text-base mb-8 text-xl">
+                  From our headquarters in Hyderabad, India, we work with clients and partners
+                  around the world.
+                </p>
+                <div class="border-brand-orange mb-8 border-l-2 pl-4">
+                  <p class="text-brand-gray mb-1 text-sm">Headquarters</p>
+                  <p class="text-xl font-semibold">Hyderabad, India</p>
                 </div>
-              </section>
-              <section
-                id="our-team"
-                class="max-middle:pb-24 max-middle:pl-12 relative scroll-mt-28 pb-40 pl-14 max-xl:pb-32"
-                data-story-step=""
+              </div>
+              <div>
+                <h3 class="mb-4 text-base font-semibold">Clients &amp; partnerships</h3>
+                <ul class="text-brand-gray grid grid-cols-2 gap-x-4 gap-y-3 text-base">
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >USA
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Canada
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Germany
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Denmark
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Netherlands
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Qatar
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Dubai, UAE
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Singapore
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >Philippines
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span
+                      class="bg-brand-teal size-1.5 shrink-0 rounded-full"
+                      aria-hidden="true"
+                    ></span
+                    >South Africa
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="ml-auto w-full min-w-0 flex-1 max-lg:mx-auto" data-map-reveal>
+              <figure
+                class="bg-brand-light-alt border-brand-border max-middle:p-2 origin-center overflow-hidden rounded-2xl border p-6"
+                data-map-card
               >
-                <span
-                  class="about-stop ring-brand-orange/15 bg-brand-orange absolute top-1 left-0 size-8 rounded-full ring-8 transition duration-500 motion-reduce:transition-none"
-                  aria-hidden="true"
-                ></span>
-                <div
-                  class="max-middle:gap-8 -mt-4 flex items-center gap-12 max-xl:flex-col max-xl:items-stretch max-sm:-mt-2"
-                >
-                  <div class="w-112 shrink-0 max-xl:w-full">
-                    <h2 class="max-notebook:text-4xl max-middle:text-3xl mb-6 text-5xl font-medium">
-                      Our Global Footprint
-                    </h2>
-                    <p class="text-brand-gray max-middle:text-base mb-8 text-xl">
-                      From our headquarters in Hyderabad, India, we work with clients and partners
-                      around the world.
-                    </p>
-                    <div class="border-brand-orange mb-8 border-l-2 pl-4">
-                      <p class="text-brand-gray mb-1 text-sm">Headquarters</p>
-                      <p class="text-xl font-semibold">Hyderabad, India</p>
-                    </div>
-                    <h3 class="mb-4 text-base font-semibold">Clients &amp; partnerships</h3>
-                    <ul class="text-brand-gray grid grid-cols-2 gap-x-4 gap-y-3 text-base">
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >USA
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Canada
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Germany
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Denmark
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Netherlands
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Qatar
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Dubai, UAE
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Singapore
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >Philippines
-                      </li>
-                      <li class="flex items-center gap-2">
-                        <span
-                          class="bg-brand-teal size-1.5 shrink-0 rounded-full"
-                          aria-hidden="true"
-                        ></span
-                        >South Africa
-                      </li>
-                    </ul>
-                  </div>
-                  <figure
-                    class="bg-brand-light-alt border-brand-border max-middle:p-2 ml-auto w-full max-w-216 min-w-0 flex-1 overflow-hidden rounded-2xl border p-4 max-xl:mx-auto"
-                  >
-                    <img
-                      class="h-auto w-full"
-                      src="assets/images/pages/about/global-footprint.svg"
-                      alt="World map connecting Hyderabad, India headquarters with our international clients and partners."
-                      width="1200"
-                      height="520"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <figcaption class="text-brand-gray px-2 pt-3 pb-2 text-sm">
-                      Global presence through clients and partnerships.
-                    </figcaption>
-                  </figure>
-                </div>
-              </section>
+                <img
+                  class="h-auto w-full"
+                  src="assets/images/pages/about/global-footprint-india.svg"
+                  alt="World map connecting Hyderabad, India headquarters with our international clients and partners."
+                  width="1200"
+                  height="520"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="text-brand-gray px-2 pt-3 pb-2 text-sm">
+                  Global presence through clients and partnerships.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
       </section>
-      <div class="bg-primary">
+      <div data-map-exit-gap aria-hidden="true"></div>
+      <div class="bg-primary" data-map-following>
         <section
-          class="about-giveback bg-primary max-desktop:pb-96 max-middle:pb-40 relative isolate overflow-hidden pb-137.5 text-white max-xl:pb-60"
+          class="bg-primary max-desktop:pb-96 max-middle:pb-40 relative isolate overflow-hidden pb-137.5 text-white [clip-path:ellipse(110%_100%_at_50%_0)] max-xl:pb-60"
           data-about-giveback=""
         >
           <div
@@ -1475,8 +1478,7 @@
             data-giveback-wash=""
           ></div>
           <div
-            class="page-container max-desktop:mx-52 max-desktop:max-w-none
-            max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 relative max-w-376 px-0 pt-40 max-xl:pt-20"
+            class="page-container max-desktop:mx-52 max-desktop:max-w-none max-wide:mx-37 max-notebook:mx-6 max-middle:mx-4 relative max-w-376 px-0 pt-40 max-xl:pt-20"
             data-giveback-track=""
           >
             <div class="pointer-events-none absolute top-0 left-2.5 w-3" aria-hidden="true">
@@ -1492,13 +1494,14 @@
                 class="max-notebook:flex-col max-middle:gap-8 max-middle:px-12 max-middle:pb-20 relative flex items-center justify-between gap-12 px-14 pb-24"
               >
                 <span
-                  class="absolute top-1 left-0 size-8 rounded-full bg-white
-                  ring-8 ring-white/15 transition-opacity
-                  duration-500 data-[reached=false]:opacity-0"
+                  class="absolute top-1 left-0 size-8 rounded-full bg-white ring-8 ring-white/15 transition-opacity duration-500 data-[reached=false]:opacity-0"
                   data-giveback-stop=""
                   aria-hidden="true"
                 ></span>
-                <div data-about-reveal="" class="max-notebook:w-full w-130">
+                <div
+                  data-about-reveal=""
+                  class="max-notebook:w-full w-130 duration-700 ease-[ease] group-data-[ready=true]/about:transition-[opacity,transform] group-data-[ready=true]/about:[&:not([data-visible=true])]:[transform:translateY(32px)] group-data-[ready=true]/about:[&:not([data-visible=true])]:opacity-0"
+                >
                   <h2 class="max-notebook:text-4xl max-middle:text-3xl mb-4 text-5xl font-medium">
                     Now, we are committed to making a difference.
                   </h2>
@@ -1508,31 +1511,29 @@
                     taking that commitment one step further, by creating opportunities for talented
                     people to thrive.
                   </p>
-                  <a
-                    class="arrow-btn w-fit text-white"
-                    href="#"
+                  <a class="arrow-btn w-fit text-white" href="#"
                     >All the causes we support<svg class="size-5 shrink-0" aria-hidden="true">
                       <use href="../assets/images/icons.svg#arrow-right"></use></svg
                   ></a>
                 </div>
                 <img
-                  class="max-notebook:w-full h-auto w-130 max-w-full rounded-2xl object-cover"
-                  src="assets/images/pages/about/talent-mentorship.jpg"
-                  alt="A mentor supporting young adults during a collaborative learning session"
+                  class="max-notebook:w-full h-auto w-130 max-w-full rounded-2xl object-cover duration-700 ease-[ease] group-data-[ready=true]/about:transition-[opacity,transform] group-data-[ready=true]/about:[&:not([data-visible=true])]:[transform:translateY(32px)] group-data-[ready=true]/about:[&:not([data-visible=true])]:opacity-0"
+                  src="assets/images/pages/about/coding-mentorship.webp"
+                  alt="A software development mentor helping aspiring developers build a web application"
                   loading="lazy"
                   decoding="async"
-                  width="1672"
-                  height="941"
+                  width="1536"
+                  height="1024"
                   data-about-reveal=""
                 />
               </div>
-              <div class="max-middle:px-12 relative px-14 pb-4 ">
+              <div class="max-middle:px-12 relative px-14 pb-4">
                 <h2
-                  class="max-notebook:text-6xl max-middle:text-5xl  mb-10 w-full max-w-200 text-8xl font-semibold max-sm:text-4xl"
+                  class="max-notebook:text-6xl max-middle:text-5xl mb-10 w-full max-w-200 text-8xl font-semibold max-sm:text-4xl"
                 >
                   Join us on<br />this journey.
                 </h2>
-                <div class="flex flex-wrap  gap-6">
+                <div class="flex flex-wrap gap-6">
                   <a class="btn" href="mailto:info@keydos.com">Talk to Sales</a
                   ><a
                     class="btn-secondary"
@@ -1556,7 +1557,7 @@
               How our vision became reality
             </h2>
             <div
-              class="about-history flex w-full gap-8 overflow-x-auto p-4 pb-20 max-lg:gap-6 max-lg:pb-16 max-md:gap-4 max-md:pb-10"
+              class="[&::-webkit-scrollbar-track]:bg-brand-slate [&::-webkit-scrollbar-thumb]:bg-brand-teal flex w-full gap-8 overflow-x-auto p-4 pb-20 max-lg:gap-6 max-lg:pb-16 max-md:gap-4 max-md:pb-10 [&::-webkit-scrollbar]:h-2.5 [&::-webkit-scrollbar-thumb]:rounded-lg [&::-webkit-scrollbar-thumb:hover]:[background:color-mix(in_srgb,var(--color-brand-teal)_80%,black)] [&::-webkit-scrollbar-track]:rounded-lg [@supports_not_selector(::-webkit-scrollbar)]:[scrollbar-width:thin] [@supports_not_selector(::-webkit-scrollbar)]:[scrollbar-color:var(--color-brand-teal)_var(--color-brand-slate)]"
               role="region"
               aria-label="Company history, 2009 to 2026"
               tabindex="0"
@@ -1866,13 +1867,13 @@
             class="max-notebook:max-w-xl max-notebook:flex-col max-notebook:gap-12 max-middle:max-w-lg mx-auto flex max-w-none flex-row-reverse items-center justify-between gap-14"
           >
             <img
-              class="max-desktop:w-151 max-wide:w-135  max-notebook:w-full   w-173 shrink-0 object-contain"
-              src="assets/images/pages/about/bottom_cta_4_ifbd5q.webp"
-              alt="A team ready to help with your software development needs"
+              class="max-desktop:w-151 max-wide:w-135 max-notebook:w-full w-173 shrink-0 object-contain"
+              src="assets/images/pages/about/discovery-team.webp"
+              alt="A team discussing a software project around a laptop"
               loading="lazy"
               decoding="async"
-              width="360"
-              height="300"
+              width="1536"
+              height="1024"
             />
             <div class="max-wide:w-156 max-notebook:w-full w-136">
               <h2 class="max-notebook:text-3xl max-middle:text-2xl mb-8 text-4xl font-medium">
