@@ -14,6 +14,7 @@ if (page) {
   const mapExitGap = page.querySelector('[data-map-exit-gap]');
   const mapFollowing = page.querySelector('[data-map-following]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const desktopMap = window.matchMedia('(min-width: 1024px)');
   const projectsPhoto = page.querySelector('[data-projects-photo]');
   const projectsImage = projectsPhoto.querySelector('img');
   const intro = page.querySelector('[data-intro-path]');
@@ -37,6 +38,7 @@ if (page) {
   let mapDistance = 1;
   let mapPinEnd = 0;
   let mapTravel = 0;
+  let mapAnimated = false;
   let frame = 0;
   const clamp = (value) => Math.min(1, Math.max(0, value));
 
@@ -60,22 +62,23 @@ if (page) {
     .forEach((element) => revealObserver.observe(element));
 
   const measure = () => {
+    mapAnimated = desktopMap.matches && !reducedMotion.matches;
     const pinHeight = mapPin.offsetHeight;
     // Short screens can scroll past the copy before pinning the map in view.
     const pinTop = Math.min(128, window.innerHeight - pinHeight - 32);
-    mapDistance = reducedMotion.matches ? 0 : Math.max(560, window.innerHeight * 0.9);
-    const settleDistance = reducedMotion.matches ? 0 : Math.max(120, window.innerHeight * 0.18);
-    mapPin.style.position = reducedMotion.matches ? 'relative' : 'sticky';
-    mapPin.style.top = reducedMotion.matches ? '0px' : `${pinTop}px`;
-    mapScene.style.height = `${pinHeight + mapDistance + settleDistance}px`;
+    mapDistance = mapAnimated ? Math.max(560, window.innerHeight * 0.9) : 0;
+    const settleDistance = mapAnimated ? Math.max(120, window.innerHeight * 0.18) : 0;
+    mapPin.style.position = mapAnimated ? 'sticky' : 'relative';
+    mapPin.style.top = mapAnimated ? `${pinTop}px` : '0px';
+    mapScene.style.height = mapAnimated ? `${pinHeight + mapDistance + settleDistance}px` : 'auto';
     mapStart = mapScene.getBoundingClientRect().top + window.scrollY - pinTop;
     mapPinEnd = mapStart + mapDistance + settleDistance;
     // Let the settled card remain in view, then bring the next block in from
     // below the viewport rather than revealing its background under the pin.
     const sceneMargin = parseFloat(getComputedStyle(mapScene).marginBottom);
-    mapExitGap.style.height = reducedMotion.matches
-      ? '0px'
-      : `${Math.max(0, window.innerHeight - pinTop - pinHeight - sceneMargin + 48)}px`;
+    mapExitGap.style.height = mapAnimated
+      ? `${Math.max(0, window.innerHeight - pinTop - pinHeight - sceneMargin + 48)}px`
+      : '0px';
     // This rail belongs to the native sticky layer. No scroll compensation or
     // per-frame transforms are needed while the map is descending.
     mapTimeline.style.left = `${mapPin.querySelector('[data-story-stop]').offsetLeft + 10}px`;
@@ -143,8 +146,7 @@ if (page) {
     steps[0].querySelectorAll('[data-about-reveal]').forEach((element) => {
       element.dataset.visible = String(firstRevealed);
     });
-    const mapPinned =
-      !reducedMotion.matches && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
+    const mapPinned = mapAnimated && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
     storyTrack.style.visibility = mapPinned ? 'hidden' : 'visible';
     mapTimeline.hidden = !mapPinned;
     const track = storyTrack.getBoundingClientRect();
@@ -175,11 +177,23 @@ if (page) {
     // Sticky holds the block while this scroll interval lowers and straightens the map.
     // Deriving progress directly from scroll position makes the entire scene reversible.
     const mapProgress = clamp((window.scrollY - mapStart) / Math.max(1, mapDistance));
-    const mapRemaining = reducedMotion.matches ? 0 : 1 - mapProgress;
+    const mobileProgress = clamp(
+      (viewport * 0.94 - mapReveal.getBoundingClientRect().top) / (viewport * 0.35),
+    );
+    const mapRemaining = 1 - mapProgress;
     mapFollowing.style.visibility =
-      reducedMotion.matches || window.scrollY > mapPinEnd ? 'visible' : 'hidden';
-    mapCard.style.transform = `translateY(${-mapTravel * mapRemaining}px) rotate(${7 * mapRemaining}deg)`;
-    mapCard.style.opacity = reducedMotion.matches ? '1' : String(clamp(mapProgress / 0.2));
+      !mapAnimated || window.scrollY > mapPinEnd ? 'visible' : 'hidden';
+    if (reducedMotion.matches) {
+      mapCard.style.transform = 'none';
+      mapCard.style.opacity = '1';
+    } else if (mapAnimated) {
+      mapCard.style.transform = `translateY(${-mapTravel * mapRemaining}px) rotate(${7 * mapRemaining}deg)`;
+      mapCard.style.opacity = String(clamp(mapProgress / 0.2));
+    } else {
+      const remaining = (1 - mobileProgress) ** 3;
+      mapCard.style.transform = `translateX(${Math.min(220, mapReveal.clientWidth * 0.6) * remaining}px)`;
+      mapCard.style.opacity = String(clamp(mobileProgress / 0.35));
+    }
 
     const photoRect = projectsPhoto.getBoundingClientRect();
     const photoTravel = Math.max(0, projectsImage.offsetWidth - projectsPhoto.clientWidth);
@@ -190,8 +204,16 @@ if (page) {
 
     const sinceProgress = clamp((viewport - since.getBoundingClientRect().top) / viewport);
     since.style.transform = `translateX(${(1 - sinceProgress) * Math.min(280, window.innerWidth * 0.25)}px)`;
-    const reveal = clamp((viewport - giveback.getBoundingClientRect().top) / (viewport * 1.3));
-    wash.style.clipPath = `circle(${reveal * 150}% at 10% 0%)`;
+    const givebackPosition = giveback.getBoundingClientRect().top;
+    if (!desktopMap.matches) {
+      const reveal = reducedMotion.matches
+        ? 1
+        : clamp((viewport * 0.94 - givebackPosition) / (viewport * 0.55));
+      wash.style.clipPath = `inset(0 0 0 ${(1 - reveal) ** 2 * 100}%)`;
+    } else {
+      const reveal = clamp((viewport - givebackPosition) / (viewport * 1.3));
+      wash.style.clipPath = `circle(${reveal * 150}% at 10% 0%)`;
+    }
   };
 
   function schedule() {
@@ -201,6 +223,7 @@ if (page) {
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', measure, { passive: true });
   reducedMotion.addEventListener('change', measure);
+  desktopMap.addEventListener('change', measure);
   projectsImage.addEventListener('load', schedule);
   new ResizeObserver(measure).observe(page);
   new ResizeObserver(measure).observe(mapPin);

@@ -4923,6 +4923,9 @@
     .max-lg\:text-\[34px\] {
       font-size: 34px;
     }
+    .max-lg\:\[clip-path\:none\] {
+      clip-path: none;
+    }
   }
   @media not all and (min-width: 48rem) {
     .max-md\:static {
@@ -5409,6 +5412,9 @@
   @media (min-width: 64rem) {
     .lg\:hidden {
       display: none;
+    }
+    .lg\:whitespace-nowrap {
+      white-space: nowrap;
     }
     .lg\:\[clip-path\:inset\(-4rem_-100vw_-4rem_20px\)\] {
       clip-path: inset(-4rem -100vw -4rem 20px);
