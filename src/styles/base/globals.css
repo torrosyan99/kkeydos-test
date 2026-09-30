@@ -38,7 +38,7 @@
 
 @layer base {
   body {
-    @apply font-outfit text-primary bg-bg flex min-h-screen flex-col;
+    @apply font-outfit text-primary bg-bg flex min-h-screen flex-col scrol-smooth;
   }
 
   main {
