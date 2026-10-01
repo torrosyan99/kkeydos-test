@@ -1168,10 +1168,10 @@
           </div>
           <img
             class="middle:h-110 middle:translate-y-4 middle:object-left h-56 w-full object-cover object-center max-sm:h-48 sm:rounded-2xl"
-            src="assets/images/pages/contact/hero.jpg"
-            alt="An engineering team collaborating in an open office"
-            width="1800"
-            height="1202"
+            src="assets/images/pages/contact/hero-editorial.jpg"
+            alt="Abstract speech bubbles meeting around an orange spark"
+            width="1536"
+            height="1024"
             fetchpriority="high"
           />
         </div>
@@ -1180,9 +1180,6 @@
         <div class="page-container">
           <form
             class="border-brand-border shadow-default mx-auto grid max-w-4xl grid-cols-2 gap-6 rounded-2xl border bg-white p-10 max-sm:grid-cols-1 max-sm:gap-5 max-sm:p-5"
-            action="mailto:info@keydos.com"
-            method="post"
-            enctype="text/plain"
             data-project-form=""
           >
             <div class="col-span-2 max-sm:col-span-1">
@@ -1292,18 +1289,18 @@
                   <span>E-commerce</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="UI/UX Design" />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#pencil"></use>
-                  </svg>
-                  <span>UI/UX Design</span>
-                </label>
-                <label class="service-option">
                   <input class="sr-only" type="radio" name="services" value="Custom Software" />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#settings"></use>
                   </svg>
                   <span>Custom Software</span>
+                </label>
+                <label class="service-option">
+                  <input class="sr-only" type="radio" name="services" value="Other" />
+                  <svg aria-hidden="true">
+                    <use href="assets/images/icons.svg#message"></use>
+                  </svg>
+                  <span>Other</span>
                 </label>
               </div>
               <p class="mt-2 text-sm text-red-700" id="services-error" hidden="">
@@ -1482,11 +1479,8 @@
                 </button>
               </div>
             </div>
-            <button class="btn col-span-2 w-full max-sm:col-span-1" type="submit">
-              Submit Project
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+            <button class="btn col-span-2 w-full max-w-80 mx-auto max-sm:col-span-1" type="submit" disabled>
+              Prepare Project Email
             </button>
             <p
               class="text-brand-gray col-span-2 text-sm max-sm:col-span-1"
@@ -1495,10 +1489,14 @@
               hidden=""
             ></p>
             <a
-              class="text-brand-teal col-span-2 font-medium underline max-sm:col-span-1"
+              class="text-brand-teal col-span-2 w-fit mx-auto arrow-btn max-sm:col-span-1"
               data-project-email=""
               hidden=""
-              >Open your project email</a
+              >Open your project email
+              <svg aria-hidden="true">
+                <use href="assets/images/icons.svg#arrow-right"></use>
+              </svg>
+            </a
             >
           </form>
           <div class="mt-12 flex flex-wrap justify-center gap-x-16 gap-y-6">
@@ -1510,33 +1508,37 @@
             </div>
             <div>
               <h3 class="mb-3 text-lg">Email us</h3>
-              <a class="text-brand-gray hover:text-brand-teal" href="mailto:info@keydos.com"
-                >info@keydos.com</a
+              <a class="text-brand-gray hover:text-brand-teal" href="mailto:info@kkeydos.com"
+                >info@kkeydos.com</a
               >
             </div>
           </div>
         </div>
       </section>
-      <section class="black-section  text-white max-md:py-12" data-cta-glow>
+	    <section class="section-margin black-section" data-cta-glow>
+		    <div class="page-container flex items-center gap-12 max-lg:flex-col">
+			    <div
+					    class="flex-1 max-lg:order-1 max-lg:mx-auto max-lg:w-full max-lg:max-w-140 max-lg:text-center"
+			    >
+				    <h2>
+					    Bring your next<br />big idea to life.
+				    </h2>
+				    <a href="#" class="btn mt-8">Start Your Project</a>
+			    </div>
+			    <div class="flex-1 max-lg:w-full">
+				    <img
+						    class="size-full object-contain max-lg:mx-auto max-lg:max-w-140"
+						    src="assets/images/pages/contact/cta-3d.png"
+                  alt=""
+						    width="1469"
+						    height="1071"
+						    loading="lazy"
+				    />
 
-        <div class="page-container item-center grid grid-cols-2 gap-12 max-lg:grid-cols-1">
-          <div class="flex items-start justify-center flex-col">
-            <h2 class="mb-8 font-medium">Bring your next<br />big idea to life.</h2>
-            <a class="btn" href="#project"
-              >Let’s talk about your project
+			    </div>
+		    </div>
+	    </section>
 
-            </a>
-          </div>
-          <img
-            class="w-full max-xl:max-w-180 max-xl:mx-auto"
-            src="assets/images/pages/contact/cta.png"
-            alt=""
-            width="1223"
-            height="894"
-            loading="lazy"
-          />
-        </div>
-      </section>
     </main>
     <footer class="overflow-hidden">
       <div class="page-container flex max-xl:flex-col">
@@ -1636,11 +1638,11 @@
                 </svg>
                 <span>+91-9581083083</span>
               </a>
-              <a class="flex items-center gap-2 hover:underline" href="mailto:info@keydos.com">
+              <a class="flex items-center gap-2 hover:underline" href="mailto:info@kkeydos.com">
                 <svg class="size-4 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#contact-email"></use>
                 </svg>
-                <span>info@keydos.com</span>
+                <span>info@kkeydos.com</span>
               </a>
             </div>
           </div>

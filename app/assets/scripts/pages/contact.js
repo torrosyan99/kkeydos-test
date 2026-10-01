@@ -1,6 +1,7 @@
 const form = document.querySelector('[data-project-form]');
 
 if (form) {
+  form.querySelector('[type="submit"]').disabled = false;
   const services = [...form.querySelectorAll('[name="services"]')];
   const serviceError = document.getElementById('services-error');
   const status = form.querySelector('[data-project-status]');
@@ -42,7 +43,7 @@ if (form) {
       'Project details:',
       data.get('description'),
     ].join('\n');
-    emailLink.href = `mailto:info@keydos.com?subject=${encodeURIComponent('New project inquiry')}&body=${encodeURIComponent(body)}`;
+    emailLink.href = `mailto:info@kkeydos.com?subject=${encodeURIComponent('New project inquiry')}&body=${encodeURIComponent(body)}`;
     emailLink.hidden = false;
     status.textContent =
       'Your project brief is ready. Open the email below and send it to our team to complete your inquiry.';

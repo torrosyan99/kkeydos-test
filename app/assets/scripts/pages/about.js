@@ -13,7 +13,6 @@ if (page) {
   const mapTimeline = mapPin.querySelector('[data-map-timeline]');
   const mapExitGap = page.querySelector('[data-map-exit-gap]');
   const mapFollowing = page.querySelector('[data-map-following]');
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktopMap = window.matchMedia('(min-width: 1024px)');
   const projectsPhoto = page.querySelector('[data-projects-photo]');
   const projectsImage = projectsPhoto.querySelector('img');
@@ -31,7 +30,7 @@ if (page) {
   const wash = page.querySelector('[data-giveback-wash]');
   let curveLength = 0;
   let introProgress = 0;
-  let introBallProgress = reducedMotion.matches || location.hash || window.scrollY > 0 ? 1 : 0;
+  let introBallProgress = location.hash || window.scrollY > 0 ? 1 : 0;
   let introBallStarted = null;
   let introStart = 0;
   let introEnd = 0;
@@ -64,7 +63,7 @@ if (page) {
     .forEach((element) => revealObserver.observe(element));
 
   const measure = () => {
-    mapAnimated = desktopMap.matches && !reducedMotion.matches;
+    mapAnimated = desktopMap.matches;
     const pinHeight = mapPin.offsetHeight;
     // Short screens can scroll past the copy before pinning the map in view.
     const pinTop = Math.min(128, window.innerHeight - pinHeight - 32);
@@ -146,7 +145,6 @@ if (page) {
   const update = (time) => {
     frame = 0;
     const viewport = window.innerHeight;
-    if (reducedMotion.matches) introBallProgress = 1;
     if (introBallProgress < 1) {
       introBallStarted ??= time;
       const progress = clamp((time - introBallStarted - 250) / 1800);
@@ -201,10 +199,7 @@ if (page) {
     const mapRemaining = 1 - mapProgress;
     mapFollowing.style.visibility =
       !mapAnimated || window.scrollY > mapPinEnd ? 'visible' : 'hidden';
-    if (reducedMotion.matches) {
-      mapCard.style.transform = 'none';
-      mapCard.style.opacity = '1';
-    } else if (mapAnimated) {
+    if (mapAnimated) {
       mapCard.style.transform = `translateY(${-mapTravel * mapRemaining}px) rotate(${7 * mapRemaining}deg)`;
       mapCard.style.opacity = String(clamp(mapProgress / 0.2));
     } else {
@@ -225,9 +220,7 @@ if (page) {
     since.style.transform = `translateX(${(1 - sinceProgress) * Math.min(280, window.innerWidth * 0.25)}px)`;
     const givebackPosition = giveback.getBoundingClientRect().top;
     if (!desktopMap.matches) {
-      const reveal = reducedMotion.matches
-        ? 1
-        : clamp((viewport * 0.94 - givebackPosition) / (viewport * 0.55));
+      const reveal = clamp((viewport * 0.94 - givebackPosition) / (viewport * 0.55));
       wash.style.clipPath = `inset(0 0 0 ${(1 - reveal) ** 2 * 100}%)`;
     } else {
       const reveal = clamp((viewport - givebackPosition) / (viewport * 1.3));
@@ -241,12 +234,10 @@ if (page) {
 
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', measure, { passive: true });
-  reducedMotion.addEventListener('change', measure);
   desktopMap.addEventListener('change', measure);
   projectsImage.addEventListener('load', schedule);
   new ResizeObserver(measure).observe(page);
   new ResizeObserver(measure).observe(mapPin);
   document.fonts.ready.then(measure);
-  page.dataset.ready = 'true';
   measure();
 }
