@@ -1,4 +1,4 @@
-const page = document.querySelector('[data-about-page]');
+const page = document.getElementById('about-main');
 
 if (page) {
   const storyTrack = page.querySelector('[data-story-track]');
@@ -30,6 +30,9 @@ if (page) {
   const wash = page.querySelector('[data-giveback-wash]');
   let curveLength = 0;
   let introProgress = 0;
+  let storyProgress = 0;
+  let givebackProgress = 0;
+  let lastFrameTime = null;
   let introBallProgress = location.hash || window.scrollY > 0 ? 1 : 0;
   let introBallStarted = null;
   let introStart = 0;
@@ -67,7 +70,7 @@ if (page) {
     const pinHeight = mapPin.offsetHeight;
     // Short screens can scroll past the copy before pinning the map in view.
     const pinTop = Math.min(128, window.innerHeight - pinHeight - 32);
-    mapDistance = mapAnimated ? Math.max(560, window.innerHeight * 0.9) : 0;
+    mapDistance = mapAnimated ? Math.max(340, window.innerHeight * 0.55) : 0;
     const settleDistance = mapAnimated ? Math.max(120, window.innerHeight * 0.18) : 0;
     mapPin.style.position = mapAnimated ? 'sticky' : 'relative';
     mapPin.style.top = mapAnimated ? `${pinTop}px` : '0px';
@@ -113,7 +116,10 @@ if (page) {
     curve.style.strokeDasharray = String(curveLength);
     // The line follows scroll independently of the circle's entrance animation.
     introStart = Math.max(0, rect.top + window.scrollY + startY - window.innerHeight * 0.72);
-    introEnd = marker.top + window.scrollY + marker.height / 2 - window.innerHeight * 0.52;
+    introEnd = Math.max(
+      introStart + 160,
+      marker.top + window.scrollY + marker.height / 2 - window.innerHeight * 0.52,
+    );
 
     const pageRect = page.getBoundingClientRect();
     const trackTop = marker.top + marker.height / 2;
@@ -125,8 +131,10 @@ if (page) {
   };
 
   const drawIntro = () => {
-    // Fast scrolling can advance the circle, but never leave it behind the line.
-    const ballProgress = Math.max(introBallProgress, introProgress);
+    // Keep the circle at its destination while the line retracts on upward scroll.
+    const ballProgress = firstRevealed
+      ? 1
+      : Math.max(introBallProgress, introProgress);
     const lineProgress = introProgress;
     curve.style.strokeDashoffset = String(curveLength * (1 - lineProgress));
     curve.style.opacity = lineProgress > 0 ? '1' : '0';
@@ -145,6 +153,14 @@ if (page) {
   const update = (time) => {
     frame = 0;
     const viewport = window.innerHeight;
+    const elapsed = lastFrameTime === null ? 16 : Math.min(64, time - lastFrameTime);
+    lastFrameTime = time;
+    const easing = 1 - Math.exp(-elapsed / 90);
+    const approach = (current, target, tolerance) => {
+      if (Math.abs(target - current) <= tolerance) return target;
+      schedule();
+      return current + (target - current) * easing;
+    };
     if (introBallProgress < 1) {
       introBallStarted ??= time;
       const progress = clamp((time - introBallStarted - 250) / 1800);
@@ -152,37 +168,43 @@ if (page) {
         progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
       if (introBallProgress < 1) schedule();
     }
-    introProgress =
-      window.scrollY > 0
-        ? clamp((window.scrollY - introStart) / Math.max(1, introEnd - introStart))
-        : 0;
-    firstRevealed ||= introProgress === 1;
-    steps[0].toggleAttribute('data-reached', introProgress === 1);
+    const introTarget = clamp((window.scrollY - introStart) / (introEnd - introStart));
+    // Finish retracting the straight segment before retracting the upper curve.
+    const returningToIntro = introTarget < 1 && storyProgress > 0;
+    if (returningToIntro) schedule();
+    introProgress = approach(introProgress, returningToIntro ? 1 : introTarget, 0.0001);
+    const storyActive = introProgress === 1;
+    firstRevealed ||= storyActive;
+    steps[0].toggleAttribute('data-reached', storyActive);
     steps[0].dataset.visible = String(firstRevealed);
     steps[0].querySelectorAll('[data-about-reveal]').forEach((element) => {
       element.dataset.visible = String(firstRevealed);
     });
-    const mapPinned = mapAnimated && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
+    const mapPinned = storyActive && mapAnimated && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
     storyTrack.style.visibility = mapPinned ? 'hidden' : 'visible';
     mapTimeline.hidden = !mapPinned;
     const track = storyTrack.getBoundingClientRect();
     const trackLength = track.height;
     const lineHead = viewport * 0.52;
-    const progress = firstRevealed ? Math.min(trackLength, Math.max(0, lineHead - track.top)) : 0;
+    const storyTarget = storyActive && introTarget === 1
+      ? Math.min(trackLength, Math.max(0, lineHead - track.top))
+      : 0;
+    const progress = storyProgress = approach(storyProgress, storyTarget, 0.1);
     line.style.height = `${progress}px`;
     ball.style.transform = `translateY(${progress - 16}px)`;
     ball.hidden = progress === 0 || progress === trackLength;
     steps.slice(1).forEach((step) => {
       const marker = step.querySelector('[data-story-stop]').getBoundingClientRect();
-      step.toggleAttribute('data-reached', marker.top + marker.height / 2 <= lineHead);
+      step.toggleAttribute('data-reached', storyActive && marker.top + marker.height / 2 <= track.top + progress);
     });
 
     const givebackTop = givebackTrack.getBoundingClientRect().top;
     const stopRect = givebackStop.getBoundingClientRect();
     const givebackLength = stopRect.top + stopRect.height / 2 - givebackTop;
-    const givebackProgress = firstRevealed
+    const givebackTarget = storyActive && introTarget === 1
       ? Math.min(givebackLength, Math.max(0, lineHead - givebackTop))
       : 0;
+    givebackProgress = approach(givebackProgress, givebackTarget, 0.1);
     givebackLine.style.height = `${givebackProgress}px`;
     givebackBall.style.transform = `translateY(${givebackProgress - 16}px)`;
     givebackBall.hidden = givebackProgress === 0 || givebackProgress === givebackLength;
