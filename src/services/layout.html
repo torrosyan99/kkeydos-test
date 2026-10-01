@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}} | KKEYDOS</title>
+    <meta name="description" content="{{description}}" />
+    <meta property="og:title" content="{{title}} | KKEYDOS" />
+    <meta property="og:description" content="{{description}}" />
+    <link rel="canonical" href="https://www.kkeydos.com/services/{{slug}}/" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <script src="../assets/scripts/main.js" type="module"></script>
+    <script src="../assets/scripts/pages/service.js" type="module"></script>
+  </head>
+  <body>
+    {{header}}
+    <main id="main-content" class="overflow-clip" data-service="{{name}}">
+      {{hero}} {{navigation}} {{content}}
+    </main>
+    {{footer}}
+  </body>
+</html>

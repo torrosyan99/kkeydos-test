@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:services": "node scripts/build-services.mjs",
+    "build": "npm run build:services && npm run build:css",
     "build:css": "tailwindcss -i ./src/styles/input.css -o ./app/assets/styles/main.css --minify",
     "dev:css": "tailwindcss -i ./src/styles/input.css -o ./app/assets/styles/main.css --watch",
     "format": "prettier --write .",

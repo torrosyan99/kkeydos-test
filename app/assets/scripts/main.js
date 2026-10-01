@@ -20,7 +20,7 @@ if (header && menuButton) {
     document.body.classList.toggle('overflow-hidden', open);
   });
 
-  const desktopMedia = window.matchMedia('(min-width: 1024)');
+  const desktopMedia = window.matchMedia('(min-width: 1024px)');
 
   desktopMedia.addEventListener('change', (e) => {
     if (e.matches) {

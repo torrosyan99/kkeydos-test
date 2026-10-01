@@ -1,0 +1,17 @@
+@layer components {
+  .service-nav-link {
+    @apply text-brand-slate flex min-h-11 shrink-0 items-center rounded-xl px-4 text-sm whitespace-nowrap;
+    @apply hover:bg-brand-light transition-colors;
+    &[aria-current='location'] {
+      @apply bg-brand-orange/15 text-brand-orange font-semibold;
+    }
+  }
+
+  .service-ai-hero {
+    background: linear-gradient(120deg, var(--color-brand-light-alt), #e6f4f4);
+  }
+
+  .service-ai-cta {
+    background: linear-gradient(120deg, #111516, #15383b);
+  }
+}

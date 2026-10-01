@@ -1,0 +1,1626 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abra Case Study | KKEYDOS</title>
+    <meta
+      name="description"
+      content="A secure bitcoin-based crypto platform: the Abra software development case study."
+    />
+    <link rel="canonical" href="https://www.kkeydos.com/case-studies/abra/" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <script src="../assets/scripts/main.js" type="module"></script>
+    <script src="../assets/scripts/pages/case-study.js" type="module"></script>
+  </head>
+  <body>
+    <header
+      id="header"
+      class="group bg-bg border-brand-border fixed inset-x-0 top-0 z-50 border-b"
+      data-open="false"
+    >
+      <div class="page-container flex h-20 items-center gap-10">
+        <a class="mr-auto" href="../index.html" aria-label="KKEYDOS home">
+          <img class="h-16 w-auto max-xl:h-14" src="../assets/images/logo.png" alt="KKEYDOS logo" />
+        </a>
+
+        <nav class="h-full max-lg:hidden" aria-label="Primary navigation">
+          <div class="flex h-full gap-14 max-xl:gap-10">
+            <div class="header-item">
+              <a class="header-link" href="#"> Services </a>
+              <div class="dropdown">
+                <div class="flex min-h-max">
+                  <div class="dropdown__left">
+                    <h5 class="mb-4">Services <span class="text-brand-teal">.</span></h5>
+                    <p class="text-brand-gray mb-6.5">
+                      We design and develop scalable digital solutions tailored to your business
+                      needs.
+                    </p>
+                    <div class="space-y-3 font-semibold">
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#sparkles"></use>
+                        </svg>
+                        AI Development
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#globe"></use>
+                        </svg>
+                        Web Development
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#mobile"></use>
+                        </svg>
+                        Mobile App Development
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#cloud"></use>
+                        </svg>
+                        SaaS Development
+                      </a>
+                    </div>
+                    <div class="border-brand-border mt-5 border-y py-4">
+                      <a class="arrow-btn text-brand-teal" href="#">
+                        View All Services
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#product"></use>
+                        </svg>
+                        280+ Products Delivered
+                      </div>
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#users"></use>
+                        </svg>
+                        280+ Happy Clients
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown__right">
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Top Services</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#sparkles"></use>
+                            </svg>
+                            AI Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#globe"></use>
+                            </svg>
+                            Web Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#mobile"></use>
+                            </svg>
+                            Mobile App Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#cloud"></use>
+                            </svg>
+                            SaaS Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#users"></use>
+                            </svg>
+                            CRM Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#shopping-bag"></use>
+                            </svg>
+                            E-commerce Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#paintbrush"></use>
+                            </svg>
+                            UI/UX Design
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#shield-check"></use>
+                            </svg>
+                            QA Testing &amp; Automation
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Development Capabilities</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#monitor"></use>
+                            </svg>
+                            Frontend Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#server"></use>
+                            </svg>
+                            Backend Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#terminal"></use>
+                            </svg>
+                            Full Stack Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#link-chain"></use>
+                            </svg>
+                            API Development &amp; Integration
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#cloud"></use>
+                            </svg>
+                            Cloud Application Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#rocket"></use>
+                            </svg>
+                            DevOps &amp; Deployment
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#database"></use>
+                            </svg>
+                            Database Architecture
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#architecture"></use>
+                            </svg>
+                            System Architecture
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Business Solutions</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#code"></use>
+                            </svg>
+                            Custom Software Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#enterprise"></use>
+                            </svg>
+                            Enterprise Application Development
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#lightning"></use>
+                            </svg>
+                            Workflow Automation
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#refresh"></use>
+                            </svg>
+                            Digital Transformation
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#rocket"></use>
+                            </svg>
+                            Product Development (MVP to Scale)
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#wrench"></use>
+                            </svg>
+                            Maintenance &amp; Support
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#gauge"></use>
+                            </svg>
+                            Performance Optimization
+                          </a>
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#link-chain"></use>
+                            </svg>
+                            Third-party Integrations
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-item">
+              <a class="header-link" href="#"> Technologies </a>
+              <div class="dropdown">
+                <div class="flex min-h-max">
+                  <div class="dropdown__left">
+                    <h5 class="mb-4">Technologies <span class="text-brand-teal">.</span></h5>
+                    <p class="text-brand-gray mb-6.5">
+                      We use modern technologies to build scalable, high-performance digital
+                      products.
+                    </p>
+                    <nav class="space-y-3 font-semibold">
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#html5"></use>
+                        </svg>
+                        HTML5 / CSS3
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#javascript"></use>
+                        </svg>
+                        JavaScript
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#typescript"></use>
+                        </svg>
+                        TypeScript
+                      </a>
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#react"></use>
+                        </svg>
+                        React.js
+                      </a>
+                    </nav>
+                    <div class="border-brand-border mt-5 border-y py-4">
+                      <a class="arrow-btn text-brand-teal" href="#">
+                        View All Technologies
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#product"></use>
+                        </svg>
+                        280+ Products Delivered
+                      </div>
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#users"></use>
+                        </svg>
+                        280+ Happy Clients
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown__right">
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Frontend &amp; Mobile</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#html5"></use>
+                            </svg>
+                            HTML5 / CSS3</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#javascript"></use>
+                            </svg>
+                            JavaScript</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#typescript"></use>
+                            </svg>
+                            TypeScript</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#react"></use>
+                            </svg>
+                            React.js</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#nextjs"></use>
+                            </svg>
+                            Next.js</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#vue"></use>
+                            </svg>
+                            Vue.js</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#flutter"></use>
+                            </svg>
+                            Flutter</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#react"></use>
+                            </svg>
+                            React Native</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Backend &amp; Systems</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#nodejs"></use>
+                            </svg>
+                            Node.js</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#php"></use>
+                            </svg>
+                            PHP (Laravel)</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#python"></use>
+                            </svg>
+                            Python</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#java"></use>
+                            </svg>
+                            Java</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#dotnet"></use>
+                            </svg>
+                            .NET</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#mysql"></use>
+                            </svg>
+                            MySQL</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#postgresql"></use>
+                            </svg>
+                            PostgreSQL</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#mongodb"></use>
+                            </svg>
+                            MongoDB</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Cloud, AI &amp; Tools</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#aws"></use>
+                            </svg>
+                            AWS</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#azure"></use>
+                            </svg>
+                            Microsoft Azure</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#google-cloud"></use>
+                            </svg>
+                            Google Cloud</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#firebase"></use>
+                            </svg>
+                            Firebase</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#docker"></use>
+                            </svg>
+                            Docker</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#sparkles"></use>
+                            </svg>
+                            AI / Machine Learning</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#openai-dots"></use>
+                            </svg>
+                            OpenAI / LLM Integration</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#rest-api"></use>
+                            </svg>
+                            REST API / GraphQL</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-item">
+              <a class="header-link" href="#"> Industries </a>
+              <div class="dropdown">
+                <div class="flex min-h-max">
+                  <div class="dropdown__left">
+                    <h5 class="mb-4">Industries <span class="text-brand-teal">.</span></h5>
+                    <p class="text-brand-gray mb-6.5">
+                      We deliver tailored solutions across diverse industries and business
+                      verticals.
+                    </p>
+                    <nav class="space-y-3 font-semibold">
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#heart"></use>
+                        </svg>
+                        Healthcare</a
+                      >
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#dollar"></use>
+                        </svg>
+                        Fintech</a
+                      >
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#shopping-bag"></use>
+                        </svg>
+                        E-commerce</a
+                      >
+                      <a class="dropdown__featured-link" href="#">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#school"></use>
+                        </svg>
+                        Education &amp; EdTech</a
+                      >
+                    </nav>
+                    <div class="border-brand-border mt-5 border-y py-4">
+                      <a class="arrow-btn text-brand-teal" href="#"
+                        >View All Industries
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#arrow-right"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="mt-5 space-y-2">
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#product"></use>
+                        </svg>
+                        280+ Products Delivered
+                      </div>
+                      <div class="dropdown__card">
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#users"></use>
+                        </svg>
+                        280+ Happy Clients
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown__right">
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Core Industries</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#heart"></use>
+                            </svg>
+                            Healthcare</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#dollar"></use>
+                            </svg>
+                            Fintech</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#shopping-bag"></use>
+                            </svg>
+                            E-commerce</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#school"></use>
+                            </svg>
+                            Education (EdTech)</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#building"></use>
+                            </svg>
+                            Real Estate</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#logistics"></use>
+                            </svg>
+                            Logistics &amp; Supply Chain</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Growth Segments</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#startup"></use>
+                            </svg>
+                            Startups &amp; SaaS</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#enterprise"></use>
+                            </svg>
+                            Enterprise Solutions</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#retail"></use>
+                            </svg>
+                            Retail &amp; Consumer Apps</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#travel"></use>
+                            </svg>
+                            Travel &amp; Hospitality</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#media"></use>
+                            </svg>
+                            Media &amp; Entertainment</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#automotive"></use>
+                            </svg>
+                            Automotive</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Specialized</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#bank"></use>
+                            </svg>
+                            Banking &amp; Insurance</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#manufacturing"></use>
+                            </svg>
+                            Manufacturing</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#construction"></use>
+                            </svg>
+                            Construction</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#workforce"></use>
+                            </svg>
+                            HR &amp; Workforce Management</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#marketing"></use>
+                            </svg>
+                            Marketing &amp; Martech</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#telecom"></use>
+                            </svg>
+                            Telecommunications</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-item">
+              <a class="header-link" href="../about.html"> About </a>
+              <div class="dropdown">
+                <div class="flex min-h-max">
+                  <div class="dropdown__left">
+                    <h5 class="mb-4">About <span class="text-brand-teal">.</span></h5>
+                    <p class="text-brand-gray mb-6.5">
+                      Learn more about KKEYDOS — our mission, team, and how we can help you succeed.
+                    </p>
+                  </div>
+
+                  <div class="dropdown__right">
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Company</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="../about.html">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#building"></use>
+                            </svg>
+                            About KKEYDOS</a
+                          >
+                        </div>
+                        <div>
+                          <a class="service-link" href="../contact-us.html">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#phone"></use>
+                            </svg>
+                            Contact Us</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Team &amp; Work</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="#">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#briefcase"></use>
+                            </svg>
+                            Careers</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="max-w-80 grow">
+                      <h6 class="dropdown__item-title">Support</h6>
+                      <div class="space-y-3">
+                        <div>
+                          <a class="service-link" href="../faq.html">
+                            <svg aria-hidden="true">
+                              <use href="../assets/images/icons.svg#help-circle"></use>
+                            </svg>
+                            FAQs</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="header-item">
+              <a class="header-link" href="../clients.html">Our Work</a>
+            </div>
+            <div class="header-item">
+              <a class="header-link" href="../blog.html">Blog</a>
+            </div>
+          </div>
+        </nav>
+
+        <a class="btn max-lg:hidden" href="../contact-us.html">Start Your Project</a>
+
+        <button
+          id="menu-button"
+          class="relative flex h-10 w-6 items-center justify-center lg:hidden"
+          aria-label="Open menu"
+        >
+          <span
+            class="bg-primary absolute h-0.5 w-6 -translate-y-2 transition-all group-data-[open=true]:translate-y-0 group-data-[open=true]:rotate-45"
+          ></span>
+          <span
+            class="bg-primary absolute h-0.5 w-6 transition-all group-data-[open=true]:opacity-0"
+          ></span>
+          <span
+            class="bg-primary absolute h-0.5 w-6 translate-y-2 transition-all group-data-[open=true]:translate-y-0 group-data-[open=true]:-rotate-45"
+          ></span>
+        </button>
+      </div>
+      <div
+        class="bg-bg pointer-events-none fixed inset-x-0 top-20.25 bottom-0 translate-x-full overflow-auto transition-transform group-data-[open=true]:pointer-events-auto group-data-[open=true]:translate-x-0"
+      >
+        <div data-accordions="one-active">
+          <div class="border-b-brand-border border-b p-5" data-accordion>
+            <button
+              class="flex w-full items-center justify-between font-medium"
+              data-accordion-trigger
+              aria-expanded="false"
+              aria-controls="menu-services"
+            >
+              Services
+              <svg aria-hidden="true" class="size-4">
+                <use href="../assets/images/icons.svg#chevron-bottom"></use>
+              </svg>
+            </button>
+            <div id="menu-services" data-accordion-content>
+              <div>
+                <div class="text-sm">
+                  <p class="border-brand-orange text-brand-gray my-3 border-l-2 py-2 pr-2 pl-4">
+                    We design and develop scalable digital solutions tailored to your business
+                    needs.
+                  </p>
+                  <div class="space-y-3">
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#sparkles"></use>
+                      </svg>
+                      AI Development
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#globe"></use>
+                      </svg>
+                      Web Development
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#mobile"></use>
+                      </svg>
+                      Mobile App Development
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#cloud"></use>
+                      </svg>
+                      SaaS Development
+                    </a>
+                  </div>
+
+                  <a class="arrow-btn text-brand-orange mt-6" href="#">
+                    View All Services
+                    <svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b-brand-border border-b p-5" data-accordion>
+            <button
+              class="flex w-full items-center justify-between font-medium"
+              data-accordion-trigger
+              aria-expanded="false"
+              aria-controls="menu-technologies"
+            >
+              Technologies
+              <svg aria-hidden="true" class="size-4">
+                <use href="../assets/images/icons.svg#chevron-bottom"></use>
+              </svg>
+            </button>
+            <div id="menu-technologies" data-accordion-content>
+              <div>
+                <div class="text-sm">
+                  <p class="border-brand-orange text-brand-gray my-3 border-l-2 py-2 pr-2 pl-4">
+                    The core technologies behind fast, scalable products.
+                  </p>
+                  <div class="space-y-3">
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#sparkles"></use>
+                      </svg>
+                      AI &amp; Machine Learning
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#code"></use>
+                      </svg>
+                      Web &amp; Mobile Technologies
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#cloud"></use>
+                      </svg>
+                      Cloud &amp; DevOps
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#link-chain"></use>
+                      </svg>
+                      API &amp; Integrations
+                    </a>
+                  </div>
+
+                  <a class="arrow-btn text-brand-orange mt-6" href="#">
+                    Explore all technologies
+                    <svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b-brand-border border-b p-5" data-accordion>
+            <button
+              class="flex w-full items-center justify-between font-medium"
+              data-accordion-trigger
+              aria-expanded="false"
+              aria-controls="menu-industries"
+            >
+              Industries
+              <svg aria-hidden="true" class="size-4">
+                <use href="../assets/images/icons.svg#chevron-bottom"></use>
+              </svg>
+            </button>
+            <div id="menu-industries" data-accordion-content>
+              <div>
+                <div class="text-sm">
+                  <p class="border-brand-orange text-brand-gray my-3 border-l-2 py-2 pr-2 pl-4">
+                    Proven digital solutions for industries that move fast.
+                  </p>
+                  <div class="space-y-3">
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#heart"></use>
+                      </svg>
+                      Healthcare
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#dollar"></use>
+                      </svg>
+                      Fintech
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#shopping-bag"></use>
+                      </svg>
+                      E-commerce
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#school"></use>
+                      </svg>
+                      Education &amp; EdTech
+                    </a>
+                  </div>
+
+                  <a class="arrow-btn text-brand-orange mt-6" href="#">
+                    Explore all industries
+                    <svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b-brand-border border-b p-5" data-accordion>
+            <button
+              class="flex w-full items-center justify-between font-medium"
+              data-accordion-trigger
+              aria-expanded="false"
+              aria-controls="menu-about"
+            >
+              About
+              <svg aria-hidden="true" class="size-4">
+                <use href="../assets/images/icons.svg#chevron-bottom"></use>
+              </svg>
+            </button>
+            <div id="menu-about" data-accordion-content>
+              <div>
+                <div class="text-sm">
+                  <p class="border-brand-orange text-brand-gray my-3 border-l-2 py-2 pr-2 pl-4">
+                    Meet KKEYDOS and discover how we work with our clients.
+                  </p>
+                  <div class="space-y-3">
+                    <a class="service-link text-primary" href="../about.html">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#building"></use>
+                      </svg>
+                      About KKEYDOS
+                    </a>
+
+                    <a class="service-link text-primary" href="../contact-us.html">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#phone"></use>
+                      </svg>
+                      Contact Us
+                    </a>
+
+                    <a class="service-link text-primary" href="#">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#briefcase"></use>
+                      </svg>
+                      Careers
+                    </a>
+
+                    <a class="service-link text-primary" href="../faq.html">
+                      <svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#help-circle"></use>
+                      </svg>
+                      FAQs
+                    </a>
+                  </div>
+
+                  <a class="arrow-btn text-brand-orange mt-6" href="../about.html">
+                    Explore more about us
+                    <svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="border-b-brand-border flex h-16 items-center border-b px-5 font-medium"
+            href="../clients.html"
+          >
+            Our Work
+          </a>
+          <a
+            class="border-b-brand-border flex h-16 items-center border-b px-5 font-medium"
+            href="../blog.html"
+            >Blog</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="overflow-clip">
+      <section class="bg-primary relative isolate text-white">
+        <img
+          class="absolute inset-0 -z-10 size-full object-cover object-top brightness-40"
+          src="../assets/images/pages/abra/hero.webp"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="page-container pt-10 pb-20">
+          <nav
+            class="max-middle:mb-8 mb-12 flex flex-wrap items-center gap-3 text-sm"
+            aria-label="Breadcrumb"
+          >
+            <a class="hover:text-brand-orange" href="../index.html">Home</a
+            ><span aria-hidden="true">/</span><a href="../clients.html">Our Clients</a
+            ><span aria-hidden="true">/</span><span aria-current="page">Abra</span>
+          </nav>
+          <p class="mb-4 pt-8 text-sm font-semibold text-white/70 uppercase">
+            Abra case study — Financial Services
+          </p>
+          <h1 class="max-middle:text-4xl max-w-6xl text-6xl">
+            Building a Secure, Bitcoin-Based Crypto Platform
+          </h1>
+          <div class="max-middle:mt-12 mt-24">
+            <div class="text-primary max-w-lg rounded-3xl bg-white p-6">
+              <p class="mb-4 text-xl">Get this case study in PDF to your inbox.</p>
+              <form class="flex gap-4 max-sm:flex-wrap" data-case-request>
+                <label class="sr-only" for="hero-email">Your email</label
+                ><input
+                  class="input min-w-0 flex-1 max-sm:basis-full"
+                  id="hero-email"
+                  name="email"
+                  type="email"
+                  placeholder="Your email"
+                  autocomplete="email"
+                  required
+                /><button class="btn" type="submit">Request PDF</button>
+                <p class="sr-only" role="status" data-case-status></p>
+              </form>
+              <a class="text-brand-teal mt-4 block underline" data-case-email hidden
+                >Open your email request</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-container py-16">
+        <div class="notebook:flex-row flex flex-col items-center justify-around gap-12">
+          <div class="text-center">
+            <p
+              class="border-brand-border outline-brand-border flex size-60 flex-col items-center justify-center rounded-full border-2 border-dashed outline-2 outline-offset-8 outline-dashed"
+            >
+              <span class="text-brand-orange text-6xl font-semibold">4</span
+              ><span class="text-3xl font-semibold">years</span>
+            </p>
+            <p class="text-brand-gray mt-8">Engagement length</p>
+          </div>
+          <div class="text-center">
+            <h2 class="mb-6 text-lg font-normal">Main technologies used</h2>
+            <ul class="flex flex-wrap justify-center gap-3">
+              <li class="bg-brand-light rounded-full px-6 py-3 text-xl">Android</li>
+              <li class="bg-brand-light rounded-full px-6 py-3 text-xl">Java</li>
+              <li class="bg-brand-light rounded-full px-6 py-3 text-xl">iOS</li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <h2 class="mb-6 text-lg font-normal">Engagement model</h2>
+            <span class="bg-brand-light rounded-full px-6 py-3 text-xl">Staff augmentation</span>
+          </div>
+        </div>
+      </section>
+      <section class="bg-brand-light py-8">
+        <figure class="page-container max-middle:flex-col flex items-center gap-8">
+          <img
+            class="max-middle:w-full max-middle:max-w-78 w-78 shrink-0"
+            src="../assets/images/pages/abra/team.webp"
+            alt="Software engineering team"
+            width="312"
+            height="222"
+            loading="lazy"
+          />
+          <div>
+            <blockquote class="max-w-3xl text-2xl">
+              “BairesDev has helped us develop a secure bitcoin-based cryptocurrency platform with
+              engineers that are qualified and versed in crypto. We are extremely satisfied with
+              their collaboration and achievement.”
+            </blockquote>
+            <figcaption class="text-brand-gray mt-4 text-lg">VP of Engineering, Abra</figcaption>
+          </div>
+        </figure>
+      </section>
+      <section class="bg-brand-light-alt max-middle:py-12 py-20">
+        <div class="page-container">
+          <div
+            class="max-middle:flex-col max-middle:gap-6 flex items-start gap-16 rounded-3xl bg-white p-8"
+          >
+            <h2 class="shrink-0 text-3xl font-medium">About Abra</h2>
+            <p class="text-brand-slate max-w-3xl">
+              Abra is committed to changing how the world moves money. It was the world's first
+              blockchain-based peer-to-peer money transfer network. Users can invest in, buy, sell,
+              or hold over 100 cryptocurrencies, send money, and manage their crypto portfolios.
+            </p>
+          </div>
+          <div class="border-brand-orange/30 middle:border-l-4 middle:pl-20 mt-20">
+            <h2>The challenge<span class="text-brand-orange">.</span></h2>
+            <div class="mt-8 flex flex-col-reverse gap-12 xl:flex-row">
+              <div class="text-brand-slate flex-1 space-y-6 text-lg">
+                <p>
+                  Abra wanted to streamline the trading experience on their crypto exchange and
+                  improve the experience for 2M users across 150 countries.
+                </p>
+                <p>
+                  The project required engineers with experience in secure financial platforms,
+                  mobile development, quality assurance, and cryptocurrency.
+                </p>
+                <p>
+                  Abra chose a staff augmentation engagement to bring that expertise into its team.
+                </p>
+              </div>
+              <p class="max-middle:text-2xl flex-1 text-3xl">
+                A better trading experience.<br />For
+                <strong class="text-brand-orange">2M users</strong> across
+                <strong class="text-brand-orange">150 countries.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-brand-orange max-middle:py-16 py-24 text-white">
+        <div class="page-container text-center">
+          <h2 class="mb-8">The solution.</h2>
+          <p class="max-middle:text-2xl mx-auto max-w-3xl text-3xl">
+            Abra chose a staff augmentation engagement model, bringing in software engineers with
+            Android, Java, Scala, and iOS expertise.
+          </p>
+          <div class="max-middle:my-12 my-20 border-t-4 border-white/30"></div>
+          <h2 class="mb-8">All technologies used.</h2>
+          <ul class="flex flex-wrap justify-center gap-3">
+            <li>
+              <a
+                class="hover:text-brand-orange block rounded-full border border-white px-5 py-2 text-xl font-semibold transition-colors hover:bg-white"
+                href="../technologies/technology.html"
+                >React</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-brand-orange block rounded-full border border-white px-5 py-2 text-xl font-semibold transition-colors hover:bg-white"
+                href="../technologies/technology.html"
+                >Android</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-brand-orange block rounded-full border border-white px-5 py-2 text-xl font-semibold transition-colors hover:bg-white"
+                href="../technologies/technology.html"
+                >Java</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-brand-orange block rounded-full border border-white px-5 py-2 text-xl font-semibold transition-colors hover:bg-white"
+                href="../technologies/technology.html"
+                >iOS</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-brand-orange block rounded-full border border-white px-5 py-2 text-xl font-semibold transition-colors hover:bg-white"
+                href="../technologies/technology.html"
+                >Kotlin</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="bg-brand-slate text-white">
+        <div class="page-container grid gap-12 xl:grid-cols-2">
+          <img
+            class="h-96 w-full object-cover xl:h-full"
+            src="../assets/images/pages/abra/outcome.webp"
+            alt="Abra mobile cryptocurrency platform"
+            width="1000"
+            height="1200"
+            loading="lazy"
+          />
+          <div class="py-20 max-xl:pt-0">
+            <h2 class="mb-8">The outcome<span class="text-brand-orange">.</span></h2>
+            <p class="mb-6 text-xl">Over the 4-year engagement, the team:</p>
+            <ul class="mb-16 list-disc space-y-4 pl-6 text-xl">
+              <li><strong>Improved test automation</strong> and coverage.</li>
+              <li><strong>Enhanced QA</strong> and user risk assessment processes.</li>
+              <li>
+                <strong>Built a US domestic wires and ACH module</strong> to enhance and maintain
+                liquidity options.
+              </li>
+              <li><strong>Developed an ETFs and stock trading module.</strong></li>
+            </ul>
+            <div class="text-primary max-w-lg rounded-3xl bg-white p-6">
+              <p class="mb-4 text-xl">Get this case study in PDF to your inbox.</p>
+              <form class="flex gap-4 max-sm:flex-wrap" data-case-request>
+                <label class="sr-only" for="outcome-email">Your email</label
+                ><input
+                  class="input min-w-0 flex-1 max-sm:basis-full"
+                  id="outcome-email"
+                  name="email"
+                  type="email"
+                  placeholder="Your email"
+                  autocomplete="email"
+                  required
+                /><button class="btn" type="submit">Request PDF</button>
+                <p class="sr-only" role="status" data-case-status></p>
+              </form>
+              <a class="text-brand-teal mt-4 block underline" data-case-email hidden
+                >Open your email request</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav class="bg-primary text-white" aria-label="More case studies">
+        <div class="page-container max-middle:flex-col flex justify-between gap-10 py-12">
+          <a
+            class="flex items-center gap-5"
+            href="https://www.bairesdev.com/case-studies/xtensifi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg class="size-12 rotate-180" aria-hidden="true">
+              <use href="../assets/images/icons.svg#arrow-right"></use></svg
+            ><span class="text-2xl"
+              >Read how we helped Xtensifi.<small class="mt-2 block text-base text-white/60"
+                >Previous case study</small
+              ></span
+            ></a
+          ><a
+            class="flex items-center gap-5 self-end text-right"
+            href="https://www.bairesdev.com/case-studies/acumen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="text-2xl"
+              >Read how we helped Acumen.<small class="mt-2 block text-base text-white/60"
+                >Next case study</small
+              ></span
+            ><svg class="size-12" aria-hidden="true">
+              <use href="../assets/images/icons.svg#arrow-right"></use></svg
+          ></a>
+        </div>
+      </nav>
+      <section class="bg-primary max-middle:py-12 py-16 text-white">
+        <div class="page-container max-notebook:flex-col-reverse flex items-center gap-14">
+          <div class="flex-1">
+            <h2 class="mb-8 font-medium">
+              Facing similar challenges to Abra?<br /><span class="text-brand-orange"
+                >See how we can help.</span
+              >
+            </h2>
+            <a class="btn" href="../contact-us.html"
+              >Start your project
+              <svg class="size-5" aria-hidden="true">
+                <use href="../assets/images/icons.svg#arrow-right"></use></svg
+            ></a>
+          </div>
+          <img
+            class="max-notebook:w-full max-notebook:max-w-xl w-1/2 object-contain"
+            src="../assets/images/pages/abra/cta.webp"
+            alt=""
+            width="1223"
+            height="894"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+    <footer class="overflow-hidden">
+      <div class="page-container flex max-xl:flex-col">
+        <div class="flex flex-1 gap-10 py-16 pr-10 max-xl:pr-0 max-sm:flex-col max-sm:py-10">
+          <a class="shrink-0 self-start" href="#" aria-label="KKEYDOS home">
+            <img
+              class="h-auto w-16"
+              src="../assets/images/logo.png"
+              alt="KKEYDOS logo"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+
+          <div class="flex-1">
+            <nav
+              class="relative isolate flex flex-wrap gap-x-24 gap-y-8"
+              aria-label="Footer navigation"
+            >
+              <img
+                class="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-auto w-full -translate-x-1/2 -translate-y-1/2 -rotate-12"
+                src="../assets/images/footer-watermark.png"
+                alt=""
+                width="1600"
+                height="842"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <div class="max-w-55 grow">
+                <h5 class="mb-6">Discover KKEYDOS<span class="text-brand-orange">.</span></h5>
+                <ul class="space-y-3 text-sm">
+                  <li><a class="hover:underline" href="../about.html">About Us</a></li>
+                  <li><a class="hover:underline" href="#">Methodologies</a></li>
+                  <li><a class="hover:underline" href="#">Technologies</a></li>
+                  <li><a class="hover:underline" href="#">Software Development Services</a></li>
+                  <li><a class="hover:underline" href="#">Software Development Solutions</a></li>
+                  <li>
+                    <a class="hover:underline" href="#">Dedicated Software Development Teams</a>
+                  </li>
+                  <li><a class="hover:underline" href="#">Software Development Outsourcing</a></li>
+                </ul>
+              </div>
+
+              <div class="max-w-55 grow">
+                <h5 class="mb-6">Resources<span class="text-brand-orange">.</span></h5>
+                <ul class="space-y-3 text-sm">
+                  <li><a class="hover:underline" href="#">Case Studies</a></li>
+                  <li><a class="hover:underline" href="#">AI Learning Hub</a></li>
+                  <li><a class="hover:underline" href="../blog.html">Blog</a></li>
+                  <li><a class="hover:underline" href="#">Press</a></li>
+                  <li><a class="hover:underline" href="#">Client Referral Program</a></li>
+                </ul>
+              </div>
+
+              <div class="max-w-55 grow">
+                <h5 class="mb-6">Careers<span class="text-brand-orange">.</span></h5>
+                <ul class="space-y-3 text-sm">
+                  <li><a class="hover:underline" href="#">Job Opportunities</a></li>
+                  <li><a class="hover:underline" href="#">Talent Referrals</a></li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="mt-10 text-xs">
+              <div class="flex flex-wrap items-center gap-2">
+                <a class="hover:underline" href="#">Privacy Policy</a>
+                <span aria-hidden="true">|</span>
+                <a class="hover:underline" href="../terms-conditions.html">Terms of Service</a>
+                <span aria-hidden="true">|</span>
+                <a class="hover:underline" href="#"> Do Not Sell My Personal Information </a>
+              </div>
+              <p class="text-brand-muted-gray mt-5">
+                KKEYDOS 2009&ndash;2026. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside
+          class="relative isolate w-105 shrink-0 px-8 py-16 max-xl:w-full max-xl:px-0 max-sm:py-10"
+        >
+          <div
+            class="bg-brand-light absolute inset-y-0 left-0 -z-10 w-screen max-xl:left-1/2 max-xl:-translate-x-1/2"
+            aria-hidden="true"
+          ></div>
+
+          <div class="border-brand-border border-b pb-8">
+            <h5 class="mb-6">Get in touch<span class="text-brand-orange">.</span></h5>
+            <div class="flex flex-wrap items-center gap-3">
+              <a class="btn-outline h-10" href="../contact-us.html">Contact Us</a>
+              <a class="btn h-10" href="../contact-us.html">Start Your Project</a>
+            </div>
+
+            <div class="mt-5 flex flex-col items-start gap-3">
+              <a class="flex items-center gap-2 hover:underline" href="tel:+919581083083">
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#contact-phone"></use>
+                </svg>
+                <span>+91-9581083083</span>
+              </a>
+              <a class="flex items-center gap-2 hover:underline" href="mailto:info@keydos.com">
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#contact-email"></use>
+                </svg>
+                <span>info@keydos.com</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="border-brand-border border-b py-8">
+            <p class="mb-4 text-sm font-semibold">
+              Get insights from the experts on building and scaling technology teams.
+            </p>
+            <form class="flex flex-wrap items-end gap-3">
+              <div class="max-w-50 grow max-xl:max-w-70">
+                <label class="text-brand-muted-gray mb-1 block text-sm" for="footer-email">
+                  Your e-mail address
+                </label>
+                <input
+                  class="input"
+                  id="footer-email"
+                  name="email"
+                  type="email"
+                  placeholder="name@email.com"
+                  autocomplete="email"
+                  maxlength="140"
+                  required
+                />
+              </div>
+
+              <button class="btn-outline h-11 shrink-0" type="submit">
+                Subscribe
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#contact-email"></use>
+                </svg>
+              </button>
+
+              <label class="flex w-full cursor-pointer items-start gap-3 text-xs">
+                <input
+                  class="accent-primary mt-0.5 size-4 shrink-0"
+                  type="checkbox"
+                  name="privacy_consent"
+                  value="1"
+                  required
+                />
+                <span>
+                  By subscribing I accept the
+                  <a class="underline underline-offset-2" href="#">Privacy Policy</a>.
+                </span>
+              </label>
+            </form>
+          </div>
+
+          <section class="pt-8">
+            <h5 class="mb-4">Follow us<span class="text-brand-orange">.</span></h5>
+            <div class="text-brand-muted-gray flex gap-4">
+              <a
+                class="hover:text-brand-orange flex size-8 items-center justify-center transition-colors"
+                href="#"
+                aria-label="KKEYDOS on LinkedIn"
+              >
+                <svg class="size-6 fill-current" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#social-linkedin"></use>
+                </svg>
+              </a>
+              <a
+                class="hover:text-brand-orange flex size-8 items-center justify-center transition-colors"
+                href="#"
+                aria-label="KKEYDOS on Facebook"
+              >
+                <svg class="size-6 fill-current" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#social-facebook"></use>
+                </svg>
+              </a>
+              <a
+                class="hover:text-brand-orange flex size-8 items-center justify-center transition-colors"
+                href="#"
+                aria-label="KKEYDOS on X"
+              >
+                <svg class="size-6 fill-current" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#social-x"></use>
+                </svg>
+              </a>
+              <a
+                class="hover:text-brand-orange flex size-8 items-center justify-center transition-colors"
+                href="#"
+                aria-label="KKEYDOS on Instagram"
+              >
+                <svg class="size-6 fill-current" aria-hidden="true">
+                  <use href="../assets/images/icons.svg#social-instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </footer>
+  </body>
+</html>

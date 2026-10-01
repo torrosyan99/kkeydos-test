@@ -1,0 +1,28 @@
+@layer components {
+  .project-field {
+    @apply relative block;
+
+    > span {
+      @apply mb-2 block text-sm font-semibold;
+    }
+
+    > svg {
+      @apply text-brand-gray pointer-events-none absolute bottom-3 left-3 size-5;
+    }
+  }
+
+  .service-option {
+    @apply border-brand-border flex cursor-pointer items-center gap-3 rounded-lg border p-3 text-sm;
+    @apply hover:border-brand-orange transition-colors;
+    @apply has-checked:border-brand-orange has-checked:bg-brand-orange/5;
+    @apply focus-within:ring-brand-orange/35 focus-within:ring-2;
+
+    svg {
+      @apply text-brand-teal size-7 shrink-0;
+    }
+
+    &:has(:checked) svg {
+      @apply text-brand-orange;
+    }
+  }
+}

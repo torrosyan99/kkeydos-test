@@ -1,0 +1,52 @@
+@layer components {
+  .blog-filter {
+    @apply text-brand-gray cursor-pointer text-sm font-semibold transition-colors;
+    @apply hover:text-brand-teal aria-pressed:text-brand-teal;
+  }
+
+  .blog-content {
+    @apply text-brand-slate space-y-6 text-lg max-md:text-base;
+
+    h2 {
+      @apply text-primary mt-12 scroll-mt-28 text-3xl max-md:text-2xl;
+    }
+
+    h3 {
+      @apply text-primary mt-8 text-2xl max-md:text-xl;
+    }
+
+    a {
+      @apply text-brand-teal hover:text-primary underline underline-offset-4;
+    }
+
+    ul,
+    ol {
+      @apply space-y-3 pl-6;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    blockquote {
+      @apply border-brand-orange bg-brand-light text-primary border-l-4 p-6 text-xl font-medium;
+    }
+
+    table {
+      @apply w-full min-w-150 border-collapse text-left text-base;
+    }
+
+    th,
+    td {
+      @apply border-brand-border border p-4 align-top;
+    }
+
+    th {
+      @apply bg-brand-light text-primary font-semibold;
+    }
+  }
+}
