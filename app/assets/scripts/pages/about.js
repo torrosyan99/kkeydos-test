@@ -100,9 +100,10 @@ if (page) {
     const text = document.createRange();
     text.selectNodeContents(introTitle);
     const lastLine = [...text.getClientRects()].filter((line) => line.width > 0).at(-1);
-    const startX = Math.min(width - 88, (lastLine?.right || rect.left) - rect.left + 16);
+    // The text reserves a right gutter so the circle and bend never overlap its last line.
+    const startX = (lastLine?.right || rect.left) - rect.left + 24;
     const startY = lastLine ? lastLine.bottom - rect.top - lastLine.height * 0.3 : 0;
-    const rightX = Math.min(width - 16, startX + 72);
+    const rightX = Math.min(width - 16, startX + 48);
     const turnY = endY * 0.48;
     const radius = Math.min(32, (rightX - startX) / 2, (rightX - endX) / 2);
     curve.setAttribute(
@@ -208,7 +209,8 @@ if (page) {
       mapCard.style.opacity = String(clamp(mapProgress / 0.2));
     } else {
       const remaining = (1 - mobileProgress) ** 3;
-      mapCard.style.transform = `translateX(${Math.min(220, mapReveal.clientWidth * 0.6) * remaining}px)`;
+      const entryDistance = window.innerWidth - mapReveal.getBoundingClientRect().left + 24;
+      mapCard.style.transform = `translateX(${entryDistance * remaining}px)`;
       mapCard.style.opacity = String(clamp(mobileProgress / 0.35));
     }
 
