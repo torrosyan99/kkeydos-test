@@ -1,5 +1,51 @@
 const search = document.querySelector('[data-blog-search]');
 const blogNav = document.querySelector('[data-blog-nav]');
+const searchToggle = document.querySelector('[data-blog-search-toggle]');
+const searchClose = document.querySelector('[data-blog-search-close]');
+const controls = document.querySelector('[data-blog-controls]');
+const menuToggle = document.querySelector('[data-blog-menu-toggle]');
+const links = document.querySelector('[data-blog-links]');
+const desktop = window.matchMedia('(min-width: 834px)');
+
+function setMenu(open) {
+  menuToggle.setAttribute('aria-expanded', String(open));
+  links.hidden = !desktop.matches && !open;
+}
+
+function setSearch(open, restoreFocus = true) {
+  if (open) setMenu(false);
+  search.hidden = !open;
+  controls.inert = open;
+  controls.setAttribute('aria-hidden', String(open));
+  searchToggle.setAttribute('aria-expanded', String(open));
+  blogNav.dataset.scrollHidden = 'false';
+  blogNav.inert = false;
+  if (open) search.querySelector('input').focus({ preventScroll: true });
+  else if (restoreFocus) searchToggle.focus({ preventScroll: true });
+}
+
+if (search && blogNav) {
+  setMenu(false);
+  desktop.addEventListener('change', () => setMenu(false));
+  menuToggle.addEventListener('click', () => {
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  searchToggle.addEventListener('click', () => setSearch(true));
+  searchClose.addEventListener('click', () => setSearch(false));
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (!search.hidden) setSearch(false);
+    else if (menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menuToggle.focus({ preventScroll: true });
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (blogNav.contains(event.target)) return;
+    if (!search.hidden) setSearch(false, false);
+    setMenu(false);
+  });
+}
 
 if (blogNav) {
   blogNav.dataset.stuck = String(window.scrollY > 16);
@@ -15,12 +61,16 @@ if (blogNav) {
         const currentScrollY = window.scrollY;
         const change = currentScrollY - previousScrollY;
         blogNav.dataset.stuck = String(currentScrollY > 16);
-        if (currentScrollY < 120 || change < -4) {
+        const interacting = !search.hidden || blogNav.matches(':focus-within');
+        if (currentScrollY < 120 || interacting || change < -6) {
           blogNav.dataset.scrollHidden = 'false';
-        } else if (change > 4) {
+          blogNav.inert = false;
+        } else if (change > 6) {
           blogNav.dataset.scrollHidden = 'true';
+          blogNav.inert = true;
+          setMenu(false);
         }
-        previousScrollY = currentScrollY;
+        if (Math.abs(change) > 6 || currentScrollY < 120) previousScrollY = currentScrollY;
         scheduled = false;
       });
     },
@@ -36,7 +86,7 @@ if (search) {
   const results = document.querySelector('[data-blog-results]');
   const resultList = document.querySelector('[data-blog-result-list]');
   const status = document.querySelector('[data-blog-status]');
-  const posts = [
+  const articles = [
     featured.querySelector('article'),
     ...featured.querySelectorAll('li'),
     ...document.querySelectorAll('[data-blog-card]'),
@@ -52,7 +102,17 @@ if (search) {
         article.closest('[data-blog-category]')?.dataset.blogCategory || 'software-development',
     };
   });
+  const posts = [...new Map(articles.map((post) => [post.href, post])).values()];
   let activeCategory = 'all';
+
+  function saveLocation() {
+    const url = new URL(window.location.href);
+    url.hash = activeCategory === 'all' ? '' : activeCategory;
+    const query = input.value.trim();
+    if (query) url.searchParams.set('q', query);
+    else url.searchParams.delete('q');
+    history.replaceState(null, '', url);
+  }
 
   function renderResult(post) {
     const article = document.createElement('article');
@@ -103,12 +163,12 @@ if (search) {
 
   function selectCategory(category) {
     blogNav.dataset.scrollHidden = 'false';
+    blogNav.inert = false;
+    setSearch(false, false);
+    setMenu(false);
     activeCategory = category;
     input.value = '';
-    const url = new URL(window.location.href);
-    url.hash = category === 'all' ? '' : category;
-    url.searchParams.delete('q');
-    history.replaceState(null, '', url);
+    saveLocation();
     update();
   }
 
@@ -127,8 +187,14 @@ if (search) {
   search.addEventListener('submit', (event) => {
     event.preventDefault();
     update();
+    saveLocation();
+    setSearch(false);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   });
-  input.addEventListener('input', update);
+  input.addEventListener('input', () => {
+    update();
+    saveLocation();
+  });
   function readLocation() {
     const category = window.location.hash.slice(1);
     activeCategory = categories.some((section) => section.dataset.blogCategory === category)
@@ -136,7 +202,9 @@ if (search) {
       : 'all';
     input.value = new URLSearchParams(window.location.search).get('q') || '';
     update();
+    if (input.value) setSearch(true);
   }
   window.addEventListener('hashchange', readLocation);
+  window.addEventListener('popstate', readLocation);
   readLocation();
 }

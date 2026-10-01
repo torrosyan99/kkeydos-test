@@ -1158,88 +1158,103 @@
     <main id="main-content" class="overflow-clip">
       <h1 class="sr-only">KKEYDOS Blog: Software, Teams &amp; Technology</h1>
       <section
-        class="blog-category-shell sticky top-20 z-40 pt-4 pb-10"
+        class="blog-category-shell group/blog sticky top-20 z-40 pt-4 pb-10"
         data-blog-nav=""
         data-scroll-hidden="false"
         data-stuck="false"
       >
         <div class="page-container-narrow">
           <nav
-            class="blog-category-nav flex flex-wrap items-center gap-6 rounded-lg px-8 py-3 max-sm:px-4"
+            class="bg-brand-light text-brand-gray group-data-[stuck=true]/blog:shadow-default relative rounded-lg transition-colors group-data-[stuck=true]/blog:bg-neutral-900 group-data-[stuck=true]/blog:text-white"
             aria-label="Blog categories"
           >
             <div
-              class="blog-category-nav__links flex min-w-0 flex-1 items-center overflow-x-auto py-1"
+              class="middle:px-8 flex h-14 items-center justify-between gap-4 px-4"
+              data-blog-controls=""
             >
               <button
-                class="blog-filter shrink-0"
+                class="middle:hidden flex items-center gap-2 py-3 font-semibold"
                 type="button"
-                data-blog-filter="all"
-                aria-pressed="true"
+                data-blog-menu-toggle=""
+                aria-controls="blog-category-links"
+                aria-expanded="false"
               >
-                Blog
-              </button>
-              <button
-                class="blog-filter shrink-0"
-                type="button"
-                data-blog-filter="software-development"
-                aria-pressed="false"
-              >
-                Software Development
-              </button>
-              <button
-                class="blog-filter shrink-0"
-                type="button"
-                data-blog-filter="biz-and-tech"
-                aria-pressed="false"
-              >
-                Biz &amp; Tech
-              </button>
-              <button
-                class="blog-filter shrink-0"
-                type="button"
-                data-blog-filter="talent"
-                aria-pressed="false"
-              >
-                Talent
-              </button>
-              <button
-                class="blog-filter shrink-0"
-                type="button"
-                data-blog-filter="technology"
-                aria-pressed="false"
-              >
-                Technology
-              </button>
-              <button
-                class="blog-filter shrink-0"
-                type="button"
-                data-blog-filter="insights"
-                aria-pressed="false"
-              >
-                Insights
-              </button>
-            </div>
-            <form
-              class="blog-category-nav__search flex items-center gap-2"
-              role="search"
-              data-blog-search=""
-            >
-              <label class="sr-only" for="blog-search">Search articles</label>
-              <input
-                class="border-brand-border h-9 min-w-0 flex-1 rounded-lg border bg-white px-3 text-sm outline-none"
-                id="blog-search"
-                name="q"
-                type="search"
-                placeholder="Search for articles"
-                autocomplete="off"
-              />
-              <button
-                class="blog-category-nav__search-button"
-                type="submit"
-                aria-label="Search articles"
-              >
+                <span data-blog-menu-label="">Blog categories</span>
                 <svg
+                  class="size-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div
+                class="blog-category-nav__links middle:flex middle:static middle:flex-row middle:bg-transparent middle:p-0 middle:shadow-none bg-brand-light shadow-default middle:group-data-[stuck=true]/blog:bg-transparent absolute inset-x-0 top-full z-10 flex min-w-0 flex-1 flex-col items-stretch rounded-b-lg px-4 py-3 group-data-[stuck=true]/blog:bg-neutral-900"
+                id="blog-category-links"
+                data-blog-links=""
+              >
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="all"
+                  aria-pressed="true"
+                >
+                  Blog
+                </button>
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="software-development"
+                  aria-pressed="false"
+                >
+                  Software Development
+                </button>
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="biz-and-tech"
+                  aria-pressed="false"
+                >
+                  Biz &amp; Tech
+                </button>
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="talent"
+                  aria-pressed="false"
+                >
+                  Talent
+                </button>
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="technology"
+                  aria-pressed="false"
+                >
+                  Technology
+                </button>
+                <button
+                  class="blog-filter shrink-0"
+                  type="button"
+                  data-blog-filter="insights"
+                  aria-pressed="false"
+                >
+                  Insights
+                </button>
+              </div>
+              <button
+                class="flex shrink-0 items-center gap-3 rounded-lg px-2 py-3 hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10"
+                type="button"
+                data-blog-search-toggle=""
+                aria-controls="blog-search-form"
+                aria-expanded="false"
+              >
+                <span>Search</span>
+                <svg
+                  class="size-6"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -1248,6 +1263,58 @@
                 >
                   <circle cx="10.5" cy="10.5" r="6.5"></circle>
                   <path d="m15.5 15.5 5 5"></path>
+                </svg>
+              </button>
+            </div>
+            <form
+              class="absolute inset-0 z-20 flex items-center gap-2 rounded-lg bg-inherit px-3"
+              role="search"
+              id="blog-search-form"
+              data-blog-search=""
+              hidden
+            >
+              <label class="sr-only" for="blog-search">Search articles</label>
+              <input
+                class="border-brand-border text-primary focus:border-brand-teal h-10 min-w-0 flex-1 rounded-lg border bg-white px-3 text-base"
+                id="blog-search"
+                name="q"
+                type="search"
+                placeholder="Search for articles"
+                autocomplete="off"
+                maxlength="120"
+              />
+              <button
+                class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-black text-white group-data-[stuck=true]/blog:bg-neutral-700 hover:bg-neutral-700 group-data-[stuck=true]/blog:hover:bg-neutral-600"
+                type="submit"
+                aria-label="Search articles"
+              >
+                <svg
+                  class="size-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <path d="m15.5 15.5 5 5"></path>
+                </svg>
+              </button>
+              <button
+                class="flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10"
+                type="button"
+                data-blog-search-close=""
+                aria-label="Close search"
+              >
+                <svg
+                  class="size-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="m6 6 12 12M6 18 18 6"></path>
                 </svg>
               </button>
             </form>
