@@ -187,7 +187,7 @@ if (selects.length > 0) {
         }
 
         if (valueElement) {
-          valueElement.textContent = value;
+          valueElement.textContent = option.dataset.selectLabel || value;
         }
       }
 
@@ -202,13 +202,44 @@ if (selects.length > 0) {
 
         if (hiddenInput) {
           hiddenInput.value = value;
+          hiddenInput.dispatchEvent(new Event('input', { bubbles: true }));
+          hiddenInput.dispatchEvent(new Event('change', { bubbles: true }));
         }
 
         if (valueElement) {
-          valueElement.textContent = value;
+          valueElement.textContent = option.dataset.selectLabel || value;
         }
 
         closeSelect();
+        button.focus({ preventScroll: true });
+      });
+    });
+
+    const options = [...dropdown.querySelectorAll('[data-select]')];
+    select.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && dropdown.dataset.open === 'true') {
+        event.preventDefault();
+        closeSelect();
+        button.focus({ preventScroll: true });
+        return;
+      }
+      if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      if (dropdown.dataset.open !== 'true') button.click();
+      const current = options.indexOf(document.activeElement);
+      const next =
+        event.key === 'Home'
+          ? 0
+          : event.key === 'End'
+            ? options.length - 1
+            : event.key === 'ArrowDown'
+              ? (current + 1) % options.length
+              : (current <= 0 ? options.length : current) - 1;
+      options[next].focus();
+    });
+    select.addEventListener('focusout', () => {
+      requestAnimationFrame(() => {
+        if (!select.contains(document.activeElement)) closeSelect();
       });
     });
     window.addEventListener('resize', () => {

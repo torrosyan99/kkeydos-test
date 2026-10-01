@@ -3,6 +3,7 @@ export default {
   title: 'AI Development Services',
   description:
     'Build AI agents, knowledge assistants, and intelligent workflows that work with your data and your existing products.',
+  intro: 'ai-development.intro.html',
   hero: {
     eyebrow: 'AI development services',
     heading:

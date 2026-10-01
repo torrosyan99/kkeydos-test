@@ -8,7 +8,7 @@ if (form) {
 
   function validateServices() {
     const valid = services.some((service) => service.checked);
-    services[0].setCustomValidity(valid ? '' : 'Select at least one service.');
+    services[0].setCustomValidity(valid ? '' : 'Select a service.');
     serviceError.hidden = valid;
     return valid;
   }
@@ -35,7 +35,7 @@ if (form) {
       `Name: ${data.get('name')}`,
       `Work email: ${data.get('email')}`,
       `Company: ${data.get('company') || 'Not specified'}`,
-      `Services: ${data.getAll('services').join(', ')}`,
+      `Service: ${data.get('services')}`,
       `Budget: ${data.get('budget') || 'To be discussed'}`,
       `Expected start: ${data.get('timeline') || 'To be discussed'}`,
       '',

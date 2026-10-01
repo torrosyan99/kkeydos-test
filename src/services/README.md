@@ -8,6 +8,7 @@ This project uses static HTML, Tailwind, and ES modules. Service pages keep that
 - `src/services/ai-development.html` — the actual section markup, in reading order.
 - `src/services/ai-development.mjs` — page metadata and Hero settings.
 - `src/services/ai-development.hero.html` — optional service-specific Hero visual.
+- `src/services/ai-development.intro.html` — service highlights, technologies, and reviews below the Hero, before navigation. Set the optional `intro` filename in the service metadata to add this area to another service.
 - `src/services/hero.html` and `layout.html` — shared Hero and document layout.
 
 Run `npm run build` after editing a service. It builds the HTML first, then Tailwind CSS. `npm run build:services` rebuilds only service HTML. Commit the generated HTML and CSS with the source changes, as with the rest of this static site.
@@ -32,13 +33,21 @@ The section body is not an array or schema. Each service owns its full compositi
 - `visual`: optional HTML fragment inside the text column.
 - `icon`, `formTitle`, `formDescription`, `formPlaceholder`, `formButton`: form context for the current service.
 
-Do not add another global breakpoint or typography scale for a service. Its scoped styles belong in `src/styles/pages/service.css`. The example reuses the project's teal/orange palette, `green-block`, `black-section`, icons, and existing AI product assets.
+Do not add another global breakpoint or typography scale for a service. Its scoped styles belong in `src/styles/pages/service.css`. The example reuses the project's teal/orange palette, `green-block`, icons, and existing AI product assets.
 
 ## Existing components
 
 `scripts/build-services.mjs` reads the site header, footer, and first inquiry form directly from `app/technologies/technology.html`. Service pages therefore reuse the existing form and country selector rather than introducing a different form. The build adds unique field names, labels, input types, and validation to the service copy; it does not edit Technology or Industry.
 
-Section navigation reuses `fixedBlock`; the FAQ and country selector use the existing handlers in `main.js`. `service.js` adds scroll tracking, keyboard operation for the country selector, and inquiry handling. Mobile section links stay in one scrollable row with 44px touch targets.
+Section navigation uses `navigation.html` and the existing `fixedBlock`, positioned beneath the 80px site header. Its compact trigger shows the current section, its number, and progress through the section list. The numbered panel works on desktop and mobile, closes on selection, Escape, outside click, or focus leaving the control, and scrolls internally on short screens. Arrow Down opens the panel and focuses the current section; Tab follows normal link order. Section selection preserves native anchor/history behavior and moves focus to the destination.
+
+`service.js` retains the existing requestAnimationFrame-throttled scroll tracking, with a ResizeObserver to account for content height changes. It handles manual scrolling, anchor navigation, viewport changes, and restored pages. Reduced-motion preferences disable the panel animation and smooth anchor scrolling. Use `scroll-mt-40` on section destinations to leave room for the header and compact navigation.
+
+The FAQ and country selector use the shared handlers in `main.js`, including keyboard operation and input/change events for selects. `service.js` adds inquiry handling.
+
+## Example composition
+
+The AI example uses a dark teal Hero with a connected-workflow graphic, asymmetric capability rows, a wide product illustration with an offset explanation, an engineering diagram, a vertical delivery process, the shared FAQ, and a closing `black-section` with text and CTA on the left and a team photo on the right. Product illustrations are explicitly labeled as concepts, not client case studies or measured results. Other services can replace all these sections and use their own Hero surface and visual.
 
 ## Form delivery
 

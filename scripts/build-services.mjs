@@ -132,6 +132,7 @@ for (const file of files.filter((file) => file.endsWith('.mjs'))) {
     header,
     footer,
     content,
+    intro: page.intro ? await read(page.intro) : '',
     navigation: navigation(content, page.name, navigationTemplate),
     hero: fill(heroTemplate, {
       name: escape(page.name),

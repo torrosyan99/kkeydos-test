@@ -79,6 +79,7 @@ if (navigation) {
     scheduleUpdate();
   });
   window.addEventListener('pageshow', scheduleUpdate);
+  new ResizeObserver(scheduleUpdate).observe(document.querySelector('main'));
   updateNavigation();
 }
 
@@ -87,10 +88,6 @@ const form = document.querySelector('[data-service-form]');
 if (form) {
   const status = form.querySelector('[data-inquiry-status]');
   const emailLink = form.querySelector('[data-inquiry-email]');
-  const select = form.querySelector('.select');
-  const selectButton = select.querySelector('.select__button');
-  const dropdown = select.querySelector('.select__dropdown');
-  const options = [...dropdown.querySelectorAll('[data-select]')];
 
   function resetInquiry() {
     status.hidden = true;
@@ -101,44 +98,6 @@ if (form) {
   form.addEventListener('input', (event) => {
     event.target.setCustomValidity?.('');
     resetInquiry();
-  });
-  options.forEach((option) => {
-    option.addEventListener('click', () => {
-      resetInquiry();
-      selectButton.focus();
-    });
-  });
-
-  // The shared select already handles pointer input in main.js.
-  // Add keyboard operation here without changing the existing pages.
-  select.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      if (selectButton.getAttribute('aria-expanded') === 'true') selectButton.click();
-      selectButton.focus();
-      return;
-    }
-    if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    if (selectButton.getAttribute('aria-expanded') !== 'true') selectButton.click();
-    const current = options.indexOf(document.activeElement);
-    const next =
-      event.key === 'Home'
-        ? 0
-        : event.key === 'End'
-          ? options.length - 1
-          : event.key === 'ArrowDown'
-            ? (current + 1) % options.length
-            : (current <= 0 ? options.length : current) - 1;
-    options[next].focus();
-  });
-  select.addEventListener('focusout', () => {
-    requestAnimationFrame(() => {
-      if (
-        !select.contains(document.activeElement) &&
-        selectButton.getAttribute('aria-expanded') === 'true'
-      )
-        selectButton.click();
-    });
   });
 
   form.addEventListener('submit', (event) => {

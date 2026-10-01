@@ -1,8 +1,8 @@
 ﻿@layer components {
   .service-navigation {
-    @apply border-brand-border relative inset-x-0 top-20 z-30 border-b bg-white py-2;
+    @apply border-brand-border relative z-30 border-b bg-white py-2;
     &[data-fixed='true'] {
-      @apply shadow-default fixed;
+      @apply shadow-default fixed inset-x-0 top-20;
     }
   }
 
@@ -74,8 +74,7 @@
     @apply outline-brand-teal outline-2 -outline-offset-2;
   }
 
-  .service-ai-hero,
-  .service-ai-cta {
+  .service-ai-hero {
     @apply relative isolate text-white;
     background-color: #132d31;
     background-image: url('../images/pages/services/ai-routes.svg');
@@ -86,10 +85,6 @@
   .service-ai-hero .service-hero-eyebrow {
     @apply text-brand-orange;
   }
-  .service-ai-hero .service-inquiry {
-    @apply border-brand-orange border-t-4;
-  }
-
   .service-ai-flow {
     @apply grid grid-cols-3 items-center gap-8 border-t border-white/20 pt-7 text-sm max-sm:gap-4;
   }
@@ -140,21 +135,6 @@
     @apply border-brand-border flex gap-6 border-t py-7;
     > span {
       @apply text-brand-teal shrink-0 text-3xl font-medium;
-    }
-  }
-
-  .service-ai-cta {
-    background-position: left center;
-  }
-
-  .service-cta-route {
-    @apply grid grid-cols-3 items-center gap-8 max-sm:gap-4;
-    > span {
-      @apply relative border-t border-white/30 pt-4 text-sm text-white/70;
-    }
-    > span::before {
-      content: '';
-      @apply bg-brand-orange absolute -top-1 left-0 size-2 rounded-full;
     }
   }
 

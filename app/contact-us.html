@@ -1245,10 +1245,11 @@
                 <label class="service-option">
                   <input
                     class="sr-only"
-                    type="checkbox"
+                    type="radio"
                     name="services"
                     value="SaaS Development"
                     checked=""
+                    required
                   />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#cloud"></use>
@@ -1256,54 +1257,49 @@
                   <span>SaaS Development</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="Web Application" />
+                  <input class="sr-only" type="radio" name="services" value="Web Application" />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#monitor"></use>
                   </svg>
                   <span>Web Application</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="Mobile App" />
+                  <input class="sr-only" type="radio" name="services" value="Mobile App" />
                   <svg class="size-5" aria-hidden="true">
                     <use href="assets/images/icons.svg#mobile"></use>
                   </svg>
                   <span>Mobile App</span>
                 </label>
                 <label class="service-option">
-                  <input
-                    class="sr-only"
-                    type="checkbox"
-                    name="services"
-                    value="AI &amp; Automation"
-                  />
+                  <input class="sr-only" type="radio" name="services" value="AI &amp; Automation" />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#sparkles"></use>
                   </svg>
                   <span>AI &amp; Automation</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="ERP / CRM" />
+                  <input class="sr-only" type="radio" name="services" value="ERP / CRM" />
                   <svg class="size-5" aria-hidden="true">
                     <use href="assets/images/icons.svg#database"></use>
                   </svg>
                   <span>ERP / CRM</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="E-commerce" />
+                  <input class="sr-only" type="radio" name="services" value="E-commerce" />
                   <svg class="size-5" aria-hidden="true">
                     <use href="assets/images/icons.svg#shopping-bag"></use>
                   </svg>
                   <span>E-commerce</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="UI/UX Design" />
+                  <input class="sr-only" type="radio" name="services" value="UI/UX Design" />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#pencil"></use>
                   </svg>
                   <span>UI/UX Design</span>
                 </label>
                 <label class="service-option">
-                  <input class="sr-only" type="checkbox" name="services" value="Custom Software" />
+                  <input class="sr-only" type="radio" name="services" value="Custom Software" />
                   <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#settings"></use>
                   </svg>
@@ -1311,7 +1307,7 @@
                 </label>
               </div>
               <p class="mt-2 text-sm text-red-700" id="services-error" hidden="">
-                Select at least one service.
+                Select a service.
               </p>
             </fieldset>
             <label class="col-span-2 max-sm:col-span-1">
@@ -1327,35 +1323,165 @@
                 required=""
               ></textarea>
             </label>
-            <label class="project-field">
-              <span>Budget Range</span>
-              <svg aria-hidden="true">
+            <div class="project-field select select-field">
+              <span id="project-budget-label">Budget Range</span>
+              <svg class="z-10" aria-hidden="true">
                 <use href="assets/images/icons.svg#dollar"></use>
               </svg>
-              <select class="input pl-10" name="budget">
-                <option value="">Select budget range</option>
-                <option>Under $10,000</option>
-                <option>$10,000 – $25,000</option>
-                <option>$25,000 – $50,000</option>
-                <option>$50,000 – $100,000</option>
-                <option>$100,000+</option>
-                <option>Let’s discuss</option>
-              </select>
-            </label>
-            <label class="project-field">
-              <span>Expected Start</span>
-              <svg aria-hidden="true">
+              <input type="hidden" name="budget" value="" />
+              <button
+                class="select__button pl-10"
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-controls="project-budget-options"
+                aria-labelledby="project-budget-label project-budget-value"
+              >
+                <span class="text-left" id="project-budget-value" data-select-button-value
+                  >Select budget range</span
+                >
+                <svg class="shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#chevron-bottom"></use>
+                </svg>
+              </button>
+              <div
+                class="select__dropdown"
+                id="project-budget-options"
+                role="listbox"
+                aria-labelledby="project-budget-label"
+                data-open="false"
+              >
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Under $10,000"
+                  aria-selected="false"
+                >
+                  Under $10,000
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="$10,000 – $25,000"
+                  aria-selected="false"
+                >
+                  $10,000 – $25,000
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="$25,000 – $50,000"
+                  aria-selected="false"
+                >
+                  $25,000 – $50,000
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="$50,000 – $100,000"
+                  aria-selected="false"
+                >
+                  $50,000 – $100,000
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="$100,000+"
+                  aria-selected="false"
+                >
+                  $100,000+
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Let’s discuss"
+                  aria-selected="false"
+                >
+                  Let’s discuss
+                </button>
+              </div>
+            </div>
+            <div class="project-field select select-field">
+              <span id="project-timeline-label">Expected Start</span>
+              <svg class="z-10" aria-hidden="true">
                 <use href="assets/images/icons.svg#product"></use>
               </svg>
-              <select class="input pl-10" name="timeline">
-                <option value="">Select timeline</option>
-                <option>As soon as possible</option>
-                <option>Within 1 month</option>
-                <option>Within 3 months</option>
-                <option>Within 6 months</option>
-                <option>Exploring options</option>
-              </select>
-            </label>
+              <input type="hidden" name="timeline" value="" />
+              <button
+                class="select__button pl-10"
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-controls="project-timeline-options"
+                aria-labelledby="project-timeline-label project-timeline-value"
+              >
+                <span class="text-left" id="project-timeline-value" data-select-button-value
+                  >Select timeline</span
+                >
+                <svg class="shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#chevron-bottom"></use>
+                </svg>
+              </button>
+              <div
+                class="select__dropdown"
+                id="project-timeline-options"
+                role="listbox"
+                aria-labelledby="project-timeline-label"
+                data-open="false"
+              >
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="As soon as possible"
+                  aria-selected="false"
+                >
+                  As soon as possible
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Within 1 month"
+                  aria-selected="false"
+                >
+                  Within 1 month
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Within 3 months"
+                  aria-selected="false"
+                >
+                  Within 3 months
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Within 6 months"
+                  aria-selected="false"
+                >
+                  Within 6 months
+                </button>
+                <button
+                  class="select__dropdown-button"
+                  type="button"
+                  role="option"
+                  data-select="Exploring options"
+                  aria-selected="false"
+                >
+                  Exploring options
+                </button>
+              </div>
+            </div>
             <button class="btn col-span-2 w-full max-sm:col-span-1" type="submit">
               Submit Project
               <svg class="size-4" aria-hidden="true">
