@@ -1,15 +1,19 @@
 const search = document.querySelector('[data-blog-search]');
 const blogNav = document.querySelector('[data-blog-nav]');
 const searchToggle = document.querySelector('[data-blog-search-toggle]');
-const searchClose = document.querySelector('[data-blog-search-close]');
 const controls = document.querySelector('[data-blog-controls]');
 const menuToggle = document.querySelector('[data-blog-menu-toggle]');
 const links = document.querySelector('[data-blog-links]');
 const desktop = window.matchMedia('(min-width: 834px)');
 
 function setMenu(open) {
+  open = !desktop.matches && open;
   menuToggle.setAttribute('aria-expanded', String(open));
   links.hidden = !desktop.matches && !open;
+  if (open) {
+    blogNav.dataset.scrollHidden = 'false';
+    blogNav.inert = false;
+  }
 }
 
 function setSearch(open, restoreFocus = true) {
@@ -26,12 +30,14 @@ function setSearch(open, restoreFocus = true) {
 
 if (search && blogNav) {
   setMenu(false);
-  desktop.addEventListener('change', () => setMenu(false));
+  desktop.addEventListener('change', () => {
+    setMenu(false);
+    setSearch(false, false);
+  });
   menuToggle.addEventListener('click', () => {
     setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
   });
   searchToggle.addEventListener('click', () => setSearch(true));
-  searchClose.addEventListener('click', () => setSearch(false));
   document.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
     if (!search.hidden) setSearch(false);
@@ -41,7 +47,7 @@ if (search && blogNav) {
     }
   });
   document.addEventListener('click', (event) => {
-    if (blogNav.contains(event.target)) return;
+    if (blogNav.contains(event.target) || menuToggle.contains(event.target)) return;
     if (!search.hidden) setSearch(false, false);
     setMenu(false);
   });
@@ -61,7 +67,7 @@ if (blogNav) {
         const currentScrollY = window.scrollY;
         const change = currentScrollY - previousScrollY;
         blogNav.dataset.stuck = String(currentScrollY > 16);
-        const interacting = !search.hidden || blogNav.matches(':focus-within');
+        const interacting = !search.hidden || menuToggle.getAttribute('aria-expanded') === 'true';
         if (currentScrollY < 120 || interacting || change < -6) {
           blogNav.dataset.scrollHidden = 'false';
           blogNav.inert = false;

@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto middle:[scrollbar-gutter:stable]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,9 +26,9 @@
       data-open="false"
     >
       <div class="page-container flex h-20 items-center gap-10">
-        <a class="mr-auto" href="index.html" aria-label="KKEYDOS home">
-          <img class="h-16 w-auto max-xl:h-14" src="assets/images/logo.png" alt="KKEYDOS logo" />
-        </a>
+          <a class="mr-auto" href="index.html" aria-label="KKEYDOS home">
+            <img class="h-16 w-auto max-xl:h-14" src="assets/images/logo.png" alt="KKEYDOS logo" />
+          </a>
 
         <nav class="h-full max-lg:hidden" aria-label="Primary navigation">
           <div class="flex h-full gap-14 max-xl:gap-10">
@@ -1158,41 +1158,24 @@
     <main id="main-content" class="overflow-clip">
       <h1 class="sr-only">KKEYDOS Blog: Software, Teams &amp; Technology</h1>
       <section
-        class="blog-category-shell group/blog sticky top-20 z-40 pt-4 pb-10"
+        class="blog-category-shell group/blog sticky top-20 z-40 pt-4 pb-12"
+        id="blog-category-panel"
         data-blog-nav=""
         data-scroll-hidden="false"
         data-stuck="false"
       >
-        <div class="page-container-narrow">
+        <div class="mx-4 middle:mx-6 notebook:mx-auto! notebook:max-w-304 lg:mx-8">
           <nav
-            class="bg-brand-light text-brand-gray group-data-[stuck=true]/blog:shadow-default relative rounded-lg transition-colors group-data-[stuck=true]/blog:bg-neutral-900 group-data-[stuck=true]/blog:text-white"
+            class="bg-brand-light text-brand-muted-gray-alt group-data-[stuck=true]/blog:shadow-default relative rounded-lg transition-colors group-data-[stuck=true]/blog:bg-[#111111] group-data-[stuck=true]/blog:text-white"
             aria-label="Blog categories"
           >
-            <div
-              class="middle:px-8 flex h-14 items-center justify-between gap-4 px-4"
-              data-blog-controls=""
-            >
-              <button
-                class="middle:hidden flex items-center gap-2 py-3 font-semibold"
-                type="button"
-                data-blog-menu-toggle=""
-                aria-controls="blog-category-links"
-                aria-expanded="false"
-              >
-                <span data-blog-menu-label="">Blog categories</span>
-                <svg
-                  class="size-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg>
+            <div class="h-14 flex items-center justify-between" data-blog-controls="">
+              <button class="middle:hidden flex items-center gap-2 px-4 py-3" type="button" data-blog-menu-toggle="" aria-controls="blog-category-links" aria-expanded="false">
+                Categories
+                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
               <div
-                class="blog-category-nav__links middle:flex middle:static middle:flex-row middle:bg-transparent middle:p-0 middle:shadow-none bg-brand-light shadow-default middle:group-data-[stuck=true]/blog:bg-transparent absolute inset-x-0 top-full z-10 flex min-w-0 flex-1 flex-col items-stretch rounded-b-lg px-4 py-3 group-data-[stuck=true]/blog:bg-neutral-900"
+                class="middle:flex-row middle:p-0 middle:static max-middle:absolute max-middle:inset-x-0 max-middle:top-full max-middle:rounded-b-lg max-middle:bg-inherit max-middle:shadow-default flex min-w-0 flex-1 flex-col items-stretch overflow-x-auto overscroll-x-contain py-3 [scrollbar-width:none]"
                 id="blog-category-links"
                 data-blog-links=""
               >
@@ -1246,13 +1229,14 @@
                 </button>
               </div>
               <button
-                class="flex shrink-0 items-center gap-3 rounded-lg px-2 py-3 hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10"
+                class="mx-4 flex shrink-0 items-center gap-4 rounded-lg p-1.5 hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10 lg:mr-3"
                 type="button"
                 data-blog-search-toggle=""
                 aria-controls="blog-search-form"
                 aria-expanded="false"
+                aria-label="Search articles"
               >
-                <span>Search</span>
+                <span class="max-lg:hidden">Search</span>
                 <svg
                   class="size-6"
                   viewBox="0 0 24 24"
@@ -1267,15 +1251,16 @@
               </button>
             </div>
             <form
-              class="absolute inset-0 z-20 flex items-center gap-2 rounded-lg bg-inherit px-3"
+              class="absolute inset-y-0 right-0 z-20 flex w-full max-w-full items-center gap-2 rounded-lg bg-inherit px-3 py-2.5 lg:w-131"
               role="search"
               id="blog-search-form"
               data-blog-search=""
               hidden
             >
               <label class="sr-only" for="blog-search">Search articles</label>
+              <div class="text-primary min-w-0 flex-1">
               <input
-                class="border-brand-border text-primary focus:border-brand-teal h-10 min-w-0 flex-1 rounded-lg border bg-white px-3 text-base"
+                class="input h-9"
                 id="blog-search"
                 name="q"
                 type="search"
@@ -1283,8 +1268,9 @@
                 autocomplete="off"
                 maxlength="120"
               />
+              </div>
               <button
-                class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-black text-white group-data-[stuck=true]/blog:bg-neutral-700 hover:bg-neutral-700 group-data-[stuck=true]/blog:hover:bg-neutral-600"
+                class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-black text-white group-data-[stuck=true]/blog:bg-neutral-700 hover:bg-neutral-700 group-data-[stuck=true]/blog:hover:bg-neutral-600"
                 type="submit"
                 aria-label="Search articles"
               >
@@ -1300,50 +1286,38 @@
                   <path d="m15.5 15.5 5 5"></path>
                 </svg>
               </button>
-              <button
-                class="flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10"
-                type="button"
-                data-blog-search-close=""
-                aria-label="Close search"
-              >
-                <svg
-                  class="size-5"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <path d="m6 6 12 12M6 18 18 6"></path>
-                </svg>
-              </button>
             </form>
           </nav>
         </div>
       </section>
-      <section class="pb-16 max-md:pb-10" data-blog-featured="">
-        <div class="page-container-narrow grid grid-cols-3 gap-8 max-lg:grid-cols-1">
-          <article class="col-span-2 max-lg:col-span-1">
+      <section class="pb-10" data-blog-featured="">
+        <div
+          class="middle:mx-6 notebook:mx-auto! notebook:max-w-304 mx-4 grid gap-8 lg:mx-8 lg:grid-cols-[minmax(0,1fr)_24rem]"
+        >
+          <article class="flex min-w-0 flex-col">
             <a
-              class="text-brand-gray hover:text-brand-teal mb-3 inline-block text-sm font-semibold uppercase"
+              class="text-brand-muted-gray block text-sm leading-5 font-bold tracking-[0.125rem] uppercase hover:underline"
               href="#software-development"
               >Software Development</a
             >
-            <h2 class="max-notebook:text-3xl mb-3 text-4xl">
+            <h2
+              class="middle:text-[32px] middle:leading-10 notebook:text-4xl notebook:leading-11 mb-2 text-[28px] leading-9 font-bold text-[#272e34]"
+            >
               <a class="hover:text-brand-teal" href="blog/how-to-train-an-llm-on-your-own-data.html"
                 >When to Train LLMs on Your Own Data: The Spectrum of Options</a
               >
             </h2>
-            <p class="text-brand-slate mb-6 text-xl max-sm:text-lg">
-              A practical guide to choosing between prompting, retrieval, fine-tuning, and training
-              a model for your business.
+            <p class="text-brand-muted-gray mb-6 text-xl leading-[30px]">
+              Decide when to use off-the-shelf LLMs, when RAG on your data is enough, and when fine-tuning
+              or full training is worth the cost, risk, and overhead.
             </p>
             <a
+              class="relative block min-h-0 flex-1"
               href="blog/how-to-train-an-llm-on-your-own-data.html"
               aria-label="Read When to Train LLMs on Your Own Data: The Spectrum of Options"
             >
               <img
-                class="aspect-video w-full object-cover"
+                class="aspect-video w-full object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
                 src="assets/images/pages/blog/llm-data.png"
                 alt="Layered datasets and connected information for a custom language model"
                 width="1280"
@@ -1352,109 +1326,134 @@
               />
             </a>
           </article>
-          <aside class="flex min-h-0 flex-col" aria-labelledby="latest-posts">
-            <h2 class="mb-6 text-sm font-semibold uppercase" id="latest-posts">Latest posts</h2>
-            <ul
-              class="grid gap-4 sm:grid-cols-2 lg:min-h-0 lg:flex-1 lg:grid-cols-1 lg:grid-rows-5"
+          <aside class="middle:max-lg:pb-4 min-w-0" aria-labelledby="latest-posts">
+            <h2
+              class="text-brand-muted-gray pb-6 text-sm leading-5 font-bold tracking-[0.125rem] uppercase"
+              id="latest-posts"
             >
-              <li class="min-h-24">
+              Latest posts
+            </h2>
+            <ul
+              class="middle:grid-cols-2 middle:gap-x-6 middle:gap-y-10 grid gap-y-4 lg:grid-cols-1 lg:gap-4"
+            >
+              <li class="middle:max-lg:last:hidden h-24">
                 <a
-                  class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
+                  class="group bg-brand-light flex h-24 items-center"
                   href="https://www.bairesdev.com/blog/ai-dlc-pilot/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="h-full w-24 shrink-0 object-cover"
+                    class="h-24 w-[141px] shrink-0 object-cover object-center"
                     src="assets/images/pages/blog/ai-dlc-pilot.jpg"
                     alt=""
-                    width="120"
-                    height="120"
+                    width="141"
+                    height="96"
                     loading="lazy"
                   />
-                  <h3 class="pr-3 text-base font-normal">
-                    Where AI saves development time — and where it does not
-                  </h3>
+                  <div class="min-w-0 flex-1 p-3">
+                    <h3
+                      class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
+                    >
+                      What Our AI-DLC Pilot Revealed About Where the Time Actually Goes
+                    </h3>
+                  </div>
                 </a>
               </li>
-              <li class="min-h-24">
+              <li class="middle:max-lg:last:hidden h-24">
                 <a
-                  class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
+                  class="group bg-brand-light flex h-24 items-center"
                   href="https://www.bairesdev.com/blog/javascript-design-patterns/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="h-full w-24 shrink-0 object-cover"
+                    class="h-24 w-[141px] shrink-0 object-cover object-center"
                     src="assets/images/pages/blog/javascript-design-patterns.png"
                     alt=""
-                    width="120"
-                    height="120"
+                    width="141"
+                    height="96"
                     loading="lazy"
                   />
-                  <h3 class="pr-3 text-base font-normal">
-                    Choosing JavaScript patterns for a TypeScript codebase
-                  </h3>
+                  <div class="min-w-0 flex-1 p-3">
+                    <h3
+                      class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
+                    >
+                      JavaScript Design Patterns: A Tour of Eight, and What TypeScript Adds
+                    </h3>
+                  </div>
                 </a>
               </li>
-              <li class="min-h-24">
+              <li class="middle:max-lg:last:hidden h-24">
                 <a
-                  class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
+                  class="group bg-brand-light flex h-24 items-center"
                   href="https://www.bairesdev.com/blog/staff-augmentation-risks/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="h-full w-24 shrink-0 object-cover"
+                    class="h-24 w-[141px] shrink-0 object-cover object-center"
                     src="assets/images/pages/blog/staff-augmentation-risks.jpg"
                     alt=""
-                    width="120"
-                    height="120"
+                    width="141"
+                    height="96"
                     loading="lazy"
                   />
-                  <h3 class="pr-3 text-base font-normal">
-                    Building stronger controls into your extended engineering team
-                  </h3>
+                  <div class="min-w-0 flex-1 p-3">
+                    <h3
+                      class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
+                    >
+                      Staff Augmentation Risks: The Five Failure Modes and the Controls That Contain Them
+                    </h3>
+                  </div>
                 </a>
               </li>
-              <li class="min-h-24">
+              <li class="middle:max-lg:last:hidden h-24">
                 <a
-                  class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
+                  class="group bg-brand-light flex h-24 items-center"
                   href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="h-full w-24 shrink-0 object-cover"
+                    class="h-24 w-[141px] shrink-0 object-cover object-center"
                     src="assets/images/pages/blog/how-to-build-a-rag-application.jpg"
                     alt=""
-                    width="120"
-                    height="120"
+                    width="141"
+                    height="96"
                     loading="lazy"
                   />
-                  <h3 class="pr-3 text-base font-normal">
-                    From retrieval to evaluation: putting a RAG application together
-                  </h3>
+                  <div class="min-w-0 flex-1 p-3">
+                    <h3
+                      class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
+                    >
+                      How to Build a RAG Application: Architecture and Evaluation
+                    </h3>
+                  </div>
                 </a>
               </li>
-              <li class="min-h-24">
+              <li class="middle:max-lg:last:hidden h-24">
                 <a
-                  class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
+                  class="group bg-brand-light flex h-24 items-center"
                   href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="h-full w-24 shrink-0 object-cover"
+                    class="h-24 w-[141px] shrink-0 object-cover object-center"
                     src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
                     alt=""
-                    width="120"
-                    height="120"
+                    width="141"
+                    height="96"
                     loading="lazy"
                   />
-                  <h3 class="pr-3 text-base font-normal">
-                    Getting an AI pilot past the adoption barrier
-                  </h3>
+                  <div class="min-w-0 flex-1 p-3">
+                    <h3
+                      class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
+                    >
+                      Common Barriers to AI Adoption: Why Pilots Stall
+                    </h3>
+                  </div>
                 </a>
               </li>
             </ul>

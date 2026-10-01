@@ -15,13 +15,10 @@
   }
 
   .blog-filter {
-    @apply cursor-pointer text-left text-base font-semibold transition-colors underline-offset-4;
-    @apply hover:underline aria-pressed:underline;
-    @apply max-middle:px-2 max-middle:py-2;
-  }
-
-  .blog-category-nav__links {
-    gap: clamp(0.75rem, 2.2vw, 2rem);
+    @apply cursor-pointer text-left text-base font-normal lg:font-bold transition-colors;
+    @apply hover:bg-black/5;
+    @apply middle:h-14 middle:px-4 lg:px-8;
+    @apply max-middle:px-4 max-middle:py-3 max-middle:text-lg max-middle:leading-7 max-middle:font-medium;
   }
 
   .blog-content {
