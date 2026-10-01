@@ -36,6 +36,7 @@ if (form) {
       `Name: ${data.get('name')}`,
       `Work email: ${data.get('email')}`,
       `Company: ${data.get('company') || 'Not specified'}`,
+      `Phone: ${data.get('phone') ? `${data.get('countryCode')} ${data.get('phone')}` : 'Not specified'}`,
       `Service: ${data.get('services')}`,
       `Budget: ${data.get('budget') || 'To be discussed'}`,
       `Expected start: ${data.get('timeline') || 'To be discussed'}`,

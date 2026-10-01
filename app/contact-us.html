@@ -1156,24 +1156,25 @@
       </div>
     </header>
     <main id="main-content" class="overflow-clip">
-      <section class="bg-brand-light pt-12 max-sm:pt-10">
-        <div
-          class="page-container middle:h-112 middle:grid-cols-2 middle:gap-20 grid items-center gap-8 max-sm:px-0"
-        >
-          <div class="max-sm:px-5">
-            <p class="text-brand-gray mb-5 text-sm font-semibold uppercase">Contact us</p>
-            <h1 class="max-notebook:text-6xl max-middle:text-5xl font-medium">
+      <section class="relative isolate pt-12 pb-10 middle:pt-2">
+        <div class="bg-brand-light absolute inset-0 -z-10 middle:bottom-10" aria-hidden="true"></div>
+        <div class="page-container middle:grid-cols-2 middle:gap-20 grid items-start gap-8">
+          <div class="middle:mt-10 middle:flex middle:h-100 middle:flex-col middle:justify-center lg:pl-32 xl:pl-47 2xl:pl-0">
+            <p class="text-brand-gray mb-1 text-sm font-semibold tracking-[0.25rem] uppercase">Contact us</p>
+            <h1 class="middle:mb-8   font-medium">
               How Can We <span class="text-brand-orange">Help?</span>
             </h1>
           </div>
-          <img
-            class="middle:h-110  middle:object-left h-56 w-full object-cover object-center max-sm:h-48 sm:rounded-2xl"
-            src="assets/images/pages/contact/hero-editorial.jpg"
-            alt="Abstract speech bubbles meeting around an orange spark"
-            width="1536"
-            height="1024"
-            fetchpriority="high"
-          />
+          <div class="middle:h-110 middle:transform-[translateY(40px)] h-56 min-w-0 overflow-hidden rounded-2xl shadow-default">
+            <img
+              class="size-full object-cover object-center middle:object-left"
+              src="assets/images/pages/contact/hero-team.jpg"
+              alt="Software team collaborating around computers in a bright office"
+              width="1774"
+              height="887"
+              fetchpriority="high"
+            />
+          </div>
         </div>
       </section>
       <section class="scroll-mt-20 py-20 max-md:py-12" id="project">
@@ -1220,7 +1221,7 @@
                 maxlength="254"
               />
             </label>
-            <label class="project-field col-span-2 max-sm:col-span-1">
+            <label class="project-field min-w-0">
               <span>Company Name</span>
               <svg aria-hidden="true">
                 <use href="assets/images/icons.svg#building"></use>
@@ -1234,6 +1235,333 @@
                 maxlength="120"
               />
             </label>
+            <div class="project-field min-w-0">
+              <label for="project-phone" class="mb-2 block text-sm font-semibold"
+                >Mobile Number</label
+              >
+              <div class="select-field flex min-w-0 gap-2">
+                <div class="select">
+                  <button
+                    class="select__button min-w-27"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-controls="project-country-options"
+                    aria-label="Country calling code"
+                    type="button"
+                  >
+                    <span class="whitespace-nowrap" data-select-button-value>IN +91</span>
+                    <svg aria-hidden="true">
+                      <use href="assets/images/icons.svg#chevron-bottom"></use>
+                    </svg>
+                  </button>
+
+                  <div
+                    class="select__dropdown"
+                    id="project-country-options"
+                    data-open="false"
+                    role="listbox"
+                    aria-label="Country calling code"
+                  >
+                    <button
+                      class="select__dropdown-button"
+                      data-select="US +1"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        US
+                      </span>
+                      <span>United States</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums">+1</span>
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="UK +44"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        UK
+                      </span>
+                      <span>United Kingdom</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+44</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="AM +374"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        AM
+                      </span>
+                      <span>Armenia</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+374</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="DE +49"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        DE
+                      </span>
+                      <span>Germany</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+49</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="FR +33"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        FR
+                      </span>
+                      <span>France</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+33</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="ES +34"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        ES
+                      </span>
+                      <span>Spain</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+34</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="IT +39"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        IT
+                      </span>
+                      <span>Italy</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+39</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="NL +31"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        NL
+                      </span>
+                      <span>Netherlands</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+31</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="AU +61"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        AU
+                      </span>
+                      <span>Australia</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+61</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="IN +91"
+                      aria-selected="true"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        IN
+                      </span>
+                      <span>India</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+91</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="AE +971"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        AE
+                      </span>
+                      <span>United Arab Emirates</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+971</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="IL +972"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        IL
+                      </span>
+                      <span>Israel</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+972</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="BR +55"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        BR
+                      </span>
+                      <span>Brazil</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+55</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="MX +52"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        MX
+                      </span>
+                      <span>Mexico</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+52</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="AR +54"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        AR
+                      </span>
+                      <span>Argentina</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+54</span
+                      >
+                    </button>
+
+                    <button
+                      class="select__dropdown-button"
+                      data-select="CO +57"
+                      aria-selected="false"
+                      role="option"
+                      type="button"
+                    >
+                      <span
+                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
+                      >
+                        CO
+                      </span>
+                      <span>Colombia</span>
+                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
+                        >+57</span
+                      >
+                    </button>
+                  </div>
+
+                  <input type="hidden" name="countryCode" value="IN +91" />
+                </div>
+                <input
+                  class="input min-w-0"
+                  id="project-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Mobile number"
+                  autocomplete="tel-national"
+                  maxlength="40"
+                />
+              </div>
+            </div>
             <fieldset class="col-span-2 max-sm:col-span-1" aria-describedby="services-error">
               <legend class="mb-3 text-sm font-semibold">
                 What do you need? <span class="text-brand-orange">*</span>
@@ -1515,29 +1843,56 @@
           </div>
         </div>
       </section>
-	    <section class="section-margin black-section" data-cta-glow>
-		    <div class="page-container flex items-center gap-12 max-lg:flex-col">
-			    <div
-					    class="flex-1 max-lg:order-1 max-lg:mx-auto max-lg:w-full max-lg:max-w-140 max-lg:text-center"
-			    >
-				    <h2>
-					    Bring your next<br />big idea to life.
-				    </h2>
-				    <a href="#" class="btn mt-8">Start Your Project</a>
-			    </div>
-			    <div class="flex-1 max-lg:w-full">
-				    <img
-						    class="size-full object-contain max-lg:mx-auto max-lg:max-w-140"
-						    src="assets/images/pages/contact/cta-3d.png"
-                  alt=""
-						    width="1469"
-						    height="1071"
-						    loading="lazy"
-				    />
-
-			    </div>
-		    </div>
-	    </section>
+      <section class="section-margin black-section" data-cta-glow>
+        <div class="page-container grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div class="max-lg:mx-auto max-lg:max-w-xl max-lg:text-center">
+            <p class="text-brand-orange mb-5 text-sm font-semibold tracking-widest uppercase">Our office</p>
+            <h2 class="max-w-xl text-5xl leading-tight max-md:text-4xl">
+              Find us in <span class="text-brand-orange">Hyderabad.</span>
+            </h2>
+            <p class="mt-6 max-w-lg text-lg leading-relaxed text-white/75 max-lg:mx-auto">
+              Meet the KKEYDOS team at Manjeera Trinity Corporate, in the heart of Kukatpally.
+            </p>
+            <address class="mt-6 text-base leading-relaxed text-white/80 not-italic">
+              AlienWorkHub, 4th Floor, Unit 406<br />
+              Manjeera Trinity Corporate, KPHB Phase 3<br />
+              Kukatpally, Hyderabad, Telangana 500072
+            </address>
+            <a
+              class="btn mt-8"
+              href="https://www.google.com/maps/dir/?api=1&amp;destination=17.48916%2C78.39278"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get directions</a>
+          </div>
+          <div class="relative overflow-hidden rounded-2xl border border-white/15 bg-white shadow-2xl">
+            <img
+              class="aspect-[4/3] w-full object-cover"
+              src="assets/images/pages/contact/hyderabad-office-map.png"
+              alt="Street map centered on Manjeera Trinity Corporate in Kukatpally, Hyderabad"
+              width="1024"
+              height="768"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="absolute top-4 left-4 rounded-full bg-white px-4 py-2 text-xs font-semibold tracking-wide text-[#14242a] shadow-lg">
+              KKEYDOS &middot; HYDERABAD
+            </span>
+            <span class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full drop-shadow-lg" aria-hidden="true">
+              <svg width="48" height="60" viewBox="0 0 48 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 58C24 58 45 34.5 45 23C45 11.4 35.6 2 24 2S3 11.4 3 23C3 34.5 24 58 24 58Z" fill="#F36B21" stroke="white" stroke-width="3" />
+                <circle cx="24" cy="23" r="8" fill="white" />
+              </svg>
+            </span>
+            <a
+              class="absolute right-3 bottom-3 rounded bg-white/95 px-2 py-1 text-[10px] font-medium text-[#263d45] hover:underline"
+              href="https://www.openstreetmap.org/copyright"
+              target="_blank"
+              rel="noopener noreferrer"
+            >&copy; OpenStreetMap contributors</a>
+          </div>
+        </div>
+      </section>
 
     </main>
     <footer class="overflow-hidden">

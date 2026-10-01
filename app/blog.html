@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
   <head>
     <meta charset="UTF-8" />
@@ -1157,13 +1157,20 @@
     </header>
     <main id="main-content" class="overflow-clip">
       <h1 class="sr-only">KKEYDOS Blog: Software, Teams &amp; Technology</h1>
-      <section class="pt-8 pb-10">
-        <div class="page-container">
+      <section
+        class="blog-category-shell sticky top-20 z-40 pt-4 pb-10"
+        data-blog-nav=""
+        data-scroll-hidden="false"
+        data-stuck="false"
+      >
+        <div class="page-container-narrow">
           <nav
-            class="bg-brand-light flex flex-wrap items-center gap-6 rounded-xl px-4 py-4"
+            class="blog-category-nav flex flex-wrap items-center gap-6 rounded-lg px-8 py-3 max-sm:px-4"
             aria-label="Blog categories"
           >
-            <div class="flex min-w-0 flex-1 items-center gap-6 overflow-x-auto py-1">
+            <div
+              class="blog-category-nav__links flex min-w-0 flex-1 items-center overflow-x-auto py-1"
+            >
               <button
                 class="blog-filter shrink-0"
                 type="button"
@@ -1214,28 +1221,41 @@
               </button>
             </div>
             <form
-              class="border-brand-gray/40 flex w-56 items-center gap-2 border-b pb-1 max-xl:w-full"
+              class="blog-category-nav__search flex items-center gap-2"
               role="search"
               data-blog-search=""
             >
-              <svg class="size-5" aria-hidden="true">
-                <use href="assets/images/icons.svg#file-search"></use>
-              </svg>
               <label class="sr-only" for="blog-search">Search articles</label>
               <input
-                class="w-full min-w-0 bg-transparent text-sm outline-none"
+                class="border-brand-border h-9 min-w-0 flex-1 rounded-lg border bg-white px-3 text-sm outline-none"
                 id="blog-search"
                 name="q"
                 type="search"
-                placeholder="Search articles"
+                placeholder="Search for articles"
                 autocomplete="off"
               />
+              <button
+                class="blog-category-nav__search-button"
+                type="submit"
+                aria-label="Search articles"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5"></circle>
+                  <path d="m15.5 15.5 5 5"></path>
+                </svg>
+              </button>
             </form>
           </nav>
         </div>
       </section>
       <section class="pb-16 max-md:pb-10" data-blog-featured="">
-        <div class="page-container grid grid-cols-3 gap-8 max-lg:grid-cols-1">
+        <div class="page-container-narrow grid grid-cols-3 gap-8 max-lg:grid-cols-1">
           <article class="col-span-2 max-lg:col-span-1">
             <a
               class="text-brand-gray hover:text-brand-teal mb-3 inline-block text-sm font-semibold uppercase"
@@ -1265,10 +1285,12 @@
               />
             </a>
           </article>
-          <aside aria-labelledby="latest-posts">
+          <aside class="flex min-h-0 flex-col" aria-labelledby="latest-posts">
             <h2 class="mb-6 text-sm font-semibold uppercase" id="latest-posts">Latest posts</h2>
-            <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-              <li>
+            <ul
+              class="grid gap-4 sm:grid-cols-2 lg:min-h-0 lg:flex-1 lg:grid-cols-1 lg:grid-rows-5"
+            >
+              <li class="min-h-24">
                 <a
                   class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
                   href="https://www.bairesdev.com/blog/ai-dlc-pilot/"
@@ -1276,7 +1298,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="aspect-square w-28 shrink-0 object-cover max-sm:w-24"
+                    class="h-full w-24 shrink-0 object-cover"
                     src="assets/images/pages/blog/ai-dlc-pilot.jpg"
                     alt=""
                     width="120"
@@ -1288,7 +1310,7 @@
                   </h3>
                 </a>
               </li>
-              <li>
+              <li class="min-h-24">
                 <a
                   class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
                   href="https://www.bairesdev.com/blog/javascript-design-patterns/"
@@ -1296,7 +1318,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="aspect-square w-28 shrink-0 object-cover max-sm:w-24"
+                    class="h-full w-24 shrink-0 object-cover"
                     src="assets/images/pages/blog/javascript-design-patterns.png"
                     alt=""
                     width="120"
@@ -1308,7 +1330,7 @@
                   </h3>
                 </a>
               </li>
-              <li>
+              <li class="min-h-24">
                 <a
                   class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
                   href="https://www.bairesdev.com/blog/staff-augmentation-risks/"
@@ -1316,7 +1338,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="aspect-square w-28 shrink-0 object-cover max-sm:w-24"
+                    class="h-full w-24 shrink-0 object-cover"
                     src="assets/images/pages/blog/staff-augmentation-risks.jpg"
                     alt=""
                     width="120"
@@ -1328,7 +1350,7 @@
                   </h3>
                 </a>
               </li>
-              <li>
+              <li class="min-h-24">
                 <a
                   class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
                   href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
@@ -1336,7 +1358,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="aspect-square w-28 shrink-0 object-cover max-sm:w-24"
+                    class="h-full w-24 shrink-0 object-cover"
                     src="assets/images/pages/blog/how-to-build-a-rag-application.jpg"
                     alt=""
                     width="120"
@@ -1348,7 +1370,7 @@
                   </h3>
                 </a>
               </li>
-              <li class="">
+              <li class="min-h-24">
                 <a
                   class="bg-brand-light hover:bg-brand-light-alt flex h-full items-center gap-3"
                   href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
@@ -1356,7 +1378,7 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    class="aspect-square w-28 shrink-0 object-cover max-sm:w-24"
+                    class="h-full w-24 shrink-0 object-cover"
                     src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
                     alt=""
                     width="120"
@@ -1373,7 +1395,7 @@
         </div>
       </section>
       <section class="bg-brand-light py-16 max-md:py-10" data-blog-results="" hidden="">
-        <div class="page-container">
+        <div class="page-container-narrow">
           <h2 class="mb-3 text-3xl">Search results</h2>
           <p class="text-brand-gray mb-8" data-blog-status="" role="status"></p>
           <div
@@ -1386,26 +1408,29 @@
         </div>
       </section>
       <section
-        class="py-12 max-md:py-8"
+        class="bg-brand-light py-20 max-md:py-10"
         id="software-development"
         data-blog-category="software-development"
       >
-        <div class="page-container">
-          <div class="mb-8 flex items-center justify-between gap-4 max-sm:items-start">
+        <div class="page-container-narrow">
+          <div
+            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+          >
             <h2 class="text-lg font-semibold uppercase max-sm:text-base">Software Development</h2>
             <button
-              class="arrow-btn text-sm max-sm:text-xs"
+              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
               type="button"
               data-blog-filter="software-development"
             >
-              All Software Development articles
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+              <span
+                >All Software Development articles
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></span>
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/inside-echo-harbors-claude-engine/"
@@ -1420,20 +1445,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Connecting AI analysis to the evidence behind it
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-01.jpg"
+                    alt="Richard Modad"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Richard Modad</span>
+                </div>
+                <span class="text-brand-gray shrink-0">3 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/how-to-write-maintainable-code/"
@@ -1448,20 +1480,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Making code easier to change as your product grows
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-02.jpg"
+                    alt="Carlos Moreira"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Carlos Moreira</span>
+                </div>
+                <span class="text-brand-gray shrink-0">15 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/software-testing-strategies/"
@@ -1476,39 +1515,53 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   A practical approach to testing your next software release
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-03.jpg"
+                    alt="Michelle Bowman"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Michelle Bowman</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
-      <section class="py-12 max-md:py-8" id="biz-and-tech" data-blog-category="biz-and-tech">
-        <div class="page-container">
-          <div class="mb-8 flex items-center justify-between gap-4 max-sm:items-start">
+      <section
+        class="bg-brand-light py-20 max-md:py-10"
+        id="biz-and-tech"
+        data-blog-category="biz-and-tech"
+      >
+        <div class="page-container-narrow">
+          <div
+            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+          >
             <h2 class="text-lg font-semibold uppercase max-sm:text-base">Biz &amp; Tech</h2>
             <button
-              class="arrow-btn text-sm max-sm:text-xs"
+              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
               type="button"
               data-blog-filter="biz-and-tech"
             >
-              All Biz &amp; Tech articles
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+              <span
+                >All Biz &amp; Tech articles
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></span>
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/your-ai-agent-identity-model-isnt-ready/"
@@ -1523,20 +1576,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Giving autonomous agents the right access and identity
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-04.jpg"
+                    alt="Bob Leibholz"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Bob Leibholz</span>
+                </div>
+                <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/the-autonomy-gap-pilot-and-production/"
@@ -1551,20 +1611,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Taking AI from a promising prototype to a production service
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-05.jpg"
+                    alt="Bob Leibholz"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Bob Leibholz</span>
+                </div>
+                <span class="text-brand-gray shrink-0">9 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/how-to-vet-a-software-development-outsourcing-partner/"
@@ -1579,39 +1646,49 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Questions to ask your next software delivery partner
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-06.jpg"
+                    alt="Tomislav Bacinger"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Tomislav Bacinger</span>
+                </div>
+                <span class="text-brand-gray shrink-0">15 min read</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
-      <section class="py-12 max-md:py-8" id="talent" data-blog-category="talent">
-        <div class="page-container">
-          <div class="mb-8 flex items-center justify-between gap-4 max-sm:items-start">
+      <section class="bg-brand-light py-20 max-md:py-10" id="talent" data-blog-category="talent">
+        <div class="page-container-narrow">
+          <div
+            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+          >
             <h2 class="text-lg font-semibold uppercase max-sm:text-base">Talent</h2>
             <button
-              class="arrow-btn text-sm max-sm:text-xs"
+              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
               type="button"
               data-blog-filter="talent"
             >
-              All Talent articles
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+              <span
+                >All Talent articles
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></span>
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/medical-device-software-engineer/"
@@ -1626,20 +1703,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   The engineering skills behind reliable medical software
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-07.jpg"
+                    alt="Nermin Salkic"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Nermin Salkic</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/what-is-resource-augmentation/"
@@ -1654,20 +1738,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Adding specialist capacity without losing team continuity
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-08.jpg"
+                    alt="Guillermo Casagrande"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Guillermo Casagrande</span>
+                </div>
+                <span class="text-brand-gray shrink-0">15 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/dev-barometer-q3-2026-devs-answering-for-code/"
@@ -1682,39 +1773,53 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   How AI is changing the everyday work of developers
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-09.png"
+                    alt="Rodrigo Outumuro"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Rodrigo Outumuro</span>
+                </div>
+                <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
-      <section class="py-12 max-md:py-8" id="technology" data-blog-category="technology">
-        <div class="page-container">
-          <div class="mb-8 flex items-center justify-between gap-4 max-sm:items-start">
+      <section
+        class="bg-brand-light py-20 max-md:py-10"
+        id="technology"
+        data-blog-category="technology"
+      >
+        <div class="page-container-narrow">
+          <div
+            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+          >
             <h2 class="text-lg font-semibold uppercase max-sm:text-base">Technology</h2>
             <button
-              class="arrow-btn text-sm max-sm:text-xs"
+              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
               type="button"
               data-blog-filter="technology"
             >
-              All Technology articles
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+              <span
+                >All Technology articles
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></span>
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/agile-sdlc/"
@@ -1729,20 +1834,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Keeping an agile delivery process useful as teams grow
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-10.jpg"
+                    alt="Christian Fernandes"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Christian Fernandes</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/data-science/"
@@ -1757,20 +1869,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Measuring the impact of a data science team
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-11.jpg"
+                    alt="Oscar Heredia"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Oscar Heredia</span>
+                </div>
+                <span class="text-brand-gray shrink-0">14 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/enterprise-application-integration/"
@@ -1785,39 +1904,53 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Planning integrations around the way your business works
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-12.jpg"
+                    alt="Fernando Ugarte"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Fernando Ugarte</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
-      <section class="py-12 max-md:py-8" id="insights" data-blog-category="insights">
-        <div class="page-container">
-          <div class="mb-8 flex items-center justify-between gap-4 max-sm:items-start">
+      <section
+        class="bg-brand-light pt-20 pb-0 max-md:pt-10"
+        id="insights"
+        data-blog-category="insights"
+      >
+        <div class="page-container-narrow">
+          <div
+            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+          >
             <h2 class="text-lg font-semibold uppercase max-sm:text-base">Insights</h2>
             <button
-              class="arrow-btn text-sm max-sm:text-xs"
+              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
               type="button"
               data-blog-filter="insights"
             >
-              All Insights articles
-              <svg class="size-4" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
+              <span
+                >All Insights articles
+                <svg class="size-4 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></span>
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/the-vanishing-preparation-window/"
@@ -1832,20 +1965,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Preparing operations for a faster development cycle
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-13.jpg"
+                    alt="Jeff Townes"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Jeff Townes</span>
+                </div>
+                <span class="text-brand-gray shrink-0">14 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/scaling-ai-in-the-enterprise/"
@@ -1860,20 +2000,27 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Making enterprise AI part of everyday delivery
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-14.jpg"
+                    alt="Saurabh Gupta"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Saurabh Gupta</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
             </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
                 href="https://www.bairesdev.com/blog/the-specification-architect/"
@@ -1888,24 +2035,31 @@
                   height="450"
                   loading="lazy"
                 />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
                   Turning business judgment into clear AI requirements
                 </h3>
               </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
               >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/blog/authors/author-15.jpg"
+                    alt="Raghu Punnamraju"
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By Raghu Punnamraju</span>
+                </div>
+                <span class="text-brand-gray shrink-0">9 min read</span>
+              </div>
             </article>
           </div>
         </div>
       </section>
-      <section class="bg-brand-light pt-4 pb-20 max-md:pb-12">
-        <div class="page-container flex justify-center">
+      <section class="bg-brand-light pt-12 pb-20 max-md:pb-12">
+        <div class="page-container-narrow flex justify-center">
           <button class="btn-outline" type="button" data-blog-reset="">
             See all articles
             <svg class="size-4" aria-hidden="true">

@@ -1,4 +1,32 @@
 const search = document.querySelector('[data-blog-search]');
+const blogNav = document.querySelector('[data-blog-nav]');
+
+if (blogNav) {
+  blogNav.dataset.stuck = String(window.scrollY > 16);
+  let previousScrollY = window.scrollY;
+  let scheduled = false;
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const change = currentScrollY - previousScrollY;
+        blogNav.dataset.stuck = String(currentScrollY > 16);
+        if (currentScrollY < 120 || change < -4) {
+          blogNav.dataset.scrollHidden = 'false';
+        } else if (change > 4) {
+          blogNav.dataset.scrollHidden = 'true';
+        }
+        previousScrollY = currentScrollY;
+        scheduled = false;
+      });
+    },
+    { passive: true },
+  );
+}
 
 if (search) {
   const input = search.querySelector('input');
@@ -74,6 +102,7 @@ if (search) {
   }
 
   function selectCategory(category) {
+    blogNav.dataset.scrollHidden = 'false';
     activeCategory = category;
     input.value = '';
     const url = new URL(window.location.href);
@@ -86,13 +115,13 @@ if (search) {
   filters.forEach((button) =>
     button.addEventListener('click', () => {
       selectCategory(button.dataset.blogFilter);
-      search.scrollIntoView({ block: 'center', behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }),
   );
   document.querySelectorAll('[data-blog-reset]').forEach((button) =>
     button.addEventListener('click', () => {
       selectCategory('all');
-      search.scrollIntoView({ block: 'center', behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }),
   );
   search.addEventListener('submit', (event) => {
