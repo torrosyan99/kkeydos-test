@@ -8,7 +8,7 @@ This project uses static HTML, Tailwind, and ES modules. Service pages keep that
 - `src/services/ai-development.html` — the actual section markup, in reading order.
 - `src/services/ai-development.mjs` — page metadata and Hero settings.
 - `src/services/ai-development.hero.html` — optional service-specific Hero visual.
-- `src/services/ai-development.intro.html` — service highlights, technologies, and reviews below the Hero, before navigation. Set the optional `intro` filename in the service metadata to add this area to another service.
+- `src/services/ai-development.intro.html` — delivery commitments and Google reviews below the Hero, before navigation. Set the optional `intro` filename in the service metadata to add this area to another service.
 - `src/services/hero.html` and `layout.html` — shared Hero and document layout.
 
 Run `npm run build` after editing a service. It builds the HTML first, then Tailwind CSS. `npm run build:services` rebuilds only service HTML. Commit the generated HTML and CSS with the source changes, as with the rest of this static site.
