@@ -31,6 +31,8 @@ if (page) {
   const wash = page.querySelector('[data-giveback-wash]');
   let curveLength = 0;
   let introProgress = 0;
+  let introBallProgress = reducedMotion.matches || location.hash || window.scrollY > 0 ? 1 : 0;
+  let introBallStarted = null;
   let introStart = 0;
   let introEnd = 0;
   let firstRevealed = false;
@@ -109,7 +111,7 @@ if (page) {
     );
     curveLength = curve.getTotalLength();
     curve.style.strokeDasharray = String(curveLength);
-    // Start earlier and use the taller intro track to give both phases more scroll room.
+    // The line follows scroll independently of the circle's entrance animation.
     introStart = Math.max(0, rect.top + window.scrollY + startY - window.innerHeight * 0.72);
     introEnd = marker.top + window.scrollY + marker.height / 2 - window.innerHeight * 0.52;
 
@@ -123,10 +125,9 @@ if (page) {
   };
 
   const drawIntro = () => {
-    // The circle completes its descent before the line follows it.
-    // Both phases scrub with native scroll, including when scrolling back up.
-    const ballProgress = clamp(introProgress / 0.55);
-    const lineProgress = clamp((introProgress - 0.55) / 0.45);
+    // Fast scrolling can advance the circle, but never leave it behind the line.
+    const ballProgress = Math.max(introBallProgress, introProgress);
+    const lineProgress = introProgress;
     curve.style.strokeDashoffset = String(curveLength * (1 - lineProgress));
     curve.style.opacity = lineProgress > 0 ? '1' : '0';
     const point = curve.getPointAtLength(curveLength * ballProgress);
@@ -141,10 +142,21 @@ if (page) {
     });
   };
 
-  const update = () => {
+  const update = (time) => {
     frame = 0;
     const viewport = window.innerHeight;
-    introProgress = clamp((window.scrollY - introStart) / Math.max(1, introEnd - introStart));
+    if (reducedMotion.matches) introBallProgress = 1;
+    if (introBallProgress < 1) {
+      introBallStarted ??= time;
+      const progress = clamp((time - introBallStarted - 250) / 1800);
+      introBallProgress =
+        progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      if (introBallProgress < 1) schedule();
+    }
+    introProgress =
+      window.scrollY > 0
+        ? clamp((window.scrollY - introStart) / Math.max(1, introEnd - introStart))
+        : 0;
     firstRevealed ||= introProgress === 1;
     steps[0].toggleAttribute('data-reached', introProgress === 1);
     steps[0].dataset.visible = String(firstRevealed);
