@@ -1175,10 +1175,10 @@
             <span class="font-semibold" aria-current="page">AI Development</span>
           </nav>
           <div
-            class="grid items-center gap-16 pt-8 pb-16 max-lg:gap-10 max-md:pt-4 max-md:pb-10 lg:grid-cols-5"
+            class="grid items-center gap-16 pt-10 pb-20 max-lg:gap-10 max-md:pt-6 max-md:pb-12 lg:grid-cols-5"
           >
             <div class="min-w-0 lg:col-span-3">
-              <span class="eyebrow mb-4">AI development services</span>
+              <span class="eyebrow service-hero-eyebrow mb-4">AI development services</span>
               <h1 class="mb-6 max-w-180" id="service-title">
                 Practical AI.<br />Built around
                 <span class="text-brand-orange">your business.</span>
@@ -1187,34 +1187,39 @@
                 Turn the work that slows your team down into your next advantage. We design and
                 build AI products that connect your data, tools, and people.
               </p>
-              <div class="mt-10 max-w-150">
-                <p class="mb-4 text-sm font-medium">
-                  Your knowledge. Your systems. One connected workflow.
-                </p>
-                <ol class="border-brand-teal/25 grid grid-cols-3 gap-4 border-t pt-5 max-sm:gap-2">
-                  <li>
-                    <svg class="text-brand-teal mb-3 size-6" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#database"></use>
-                    </svg>
-                    <span class="text-sm">Business data</span>
-                  </li>
-                  <li>
-                    <svg class="text-brand-teal mb-3 size-6" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#ai-chip"></use>
-                    </svg>
-                    <span class="text-sm">AI intelligence</span>
-                  </li>
-                  <li>
-                    <svg class="text-brand-teal mb-3 size-6" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#shield"></use>
-                    </svg>
-                    <span class="text-sm">Human control</span>
-                  </li>
-                </ol>
-              </div>
+              ﻿
+              <figure
+                class="service-ai-flow mt-10 max-w-170"
+                aria-label="Your business knowledge and tools connect to an AI layer, with people approving the next action."
+              >
+                <div class="service-ai-flow__sources">
+                  <span
+                    ><svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#database"></use></svg
+                    >Your knowledge</span
+                  >
+                  <span
+                    ><svg aria-hidden="true">
+                      <use href="../assets/images/icons.svg#stack"></use></svg
+                    >Your systems</span
+                  >
+                </div>
+                <div class="service-ai-flow__core">
+                  <svg aria-hidden="true"><use href="../assets/images/icons.svg#ai-chip"></use></svg
+                  ><span>AI layer</span>
+                </div>
+                <div class="service-ai-flow__result">
+                  <span class="mb-2 block text-xs text-white/60">The next step</span
+                  ><span
+                    >Useful action.<br /><span class="text-brand-orange"
+                      >Human approved.</span
+                    ></span
+                  >
+                </div>
+              </figure>
             </div>
             <div
-              class="shadow-default text-primary w-full scroll-mt-40 rounded-2xl bg-white p-6 lg:col-span-2 lg:max-w-120 lg:justify-self-end"
+              class="service-inquiry shadow-default text-primary w-full scroll-mt-40 rounded-2xl bg-white p-6 lg:col-span-2 lg:max-w-120 lg:justify-self-end"
               id="service-inquiry"
             >
               <div class="flex gap-3">
@@ -1621,114 +1626,116 @@
         </div>
       </section>
       <div data-fixed>
-        <nav
-          class="border-brand-border data-[fixed=true]:shadow-default inset-x-0 top-20 z-30 border-b bg-white py-3 data-[fixed=true]:fixed"
-          data-fixed-content
-          aria-label="Service sections"
-        >
-          <div class="page-container flex items-center gap-6">
-            <div class="flex min-w-0 flex-1 gap-1 overflow-x-auto" data-service-links>
-              <a class="service-nav-link" href="#overview">Overview</a
-              ><a class="service-nav-link" href="#workflow">In practice</a
-              ><a class="service-nav-link" href="#capabilities">Capabilities</a
-              ><a class="service-nav-link" href="#engineering">Engineering</a
-              ><a class="service-nav-link" href="#approach">Our approach</a
-              ><a class="service-nav-link" href="#faq">FAQ</a>
+        <nav class="service-navigation" data-fixed-content aria-label="Service sections">
+          <div class="page-container flex items-center justify-between gap-6">
+            <p class="text-sm max-md:hidden">
+              <span class="text-brand-gray">Explore /</span> AI Development
+            </p>
+            <div class="service-navigation__control" data-service-navigation>
+              <button
+                class="service-navigation__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-controls="service-navigation-panel"
+                data-service-nav-trigger
+              >
+                <span class="service-navigation__count"
+                  ><span data-service-current-number>01</span
+                  ><span class="text-brand-gray"> / 06</span></span
+                >
+                <span class="flex-1 text-left"
+                  ><span class="text-brand-gray block text-xs font-normal">On this page</span
+                  ><span data-service-current-label>Overview</span></span
+                >
+                <span class="service-navigation__plus" aria-hidden="true"></span>
+                <span class="service-navigation__progress" aria-hidden="true"
+                  ><span data-service-progress></span
+                ></span>
+              </button>
+              <div class="service-navigation__panel" id="service-navigation-panel" hidden>
+                <p class="text-brand-gray border-brand-border border-b px-5 py-4 text-xs uppercase">
+                  Explore this service
+                </p>
+                <ol class="p-2" data-service-links>
+                  <li>
+                    <a class="service-nav-link" href="#overview"
+                      ><span class="service-nav-link__number">01</span><span>Overview</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="service-nav-link" href="#capabilities"
+                      ><span class="service-nav-link__number">02</span><span>Capabilities</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="service-nav-link" href="#workflow"
+                      ><span class="service-nav-link__number">03</span><span>In practice</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="service-nav-link" href="#engineering"
+                      ><span class="service-nav-link__number">04</span><span>Engineering</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="service-nav-link" href="#approach"
+                      ><span class="service-nav-link__number">05</span><span>Our approach</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="service-nav-link" href="#faq"
+                      ><span class="service-nav-link__number">06</span><span>FAQ</span
+                      ><svg aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </li>
+                </ol>
+                <a
+                  class="arrow-btn border-brand-border text-brand-teal border-t px-5 py-4 text-sm"
+                  href="#service-inquiry"
+                  >Discuss your project<svg aria-hidden="true">
+                    <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                ></a>
+              </div>
             </div>
-            <a class="arrow-btn text-brand-teal shrink-0 max-xl:hidden" href="#service-inquiry"
-              >Let’s talk<svg aria-hidden="true">
-                <use href="../assets/images/icons.svg#arrow-right"></use></svg
-            ></a>
           </div>
         </nav>
       </div>
       <section class="section-padding scroll-mt-40" id="overview" data-service-section="Overview">
-        <div class="page-container grid grid-cols-2 gap-16 max-lg:grid-cols-1 max-lg:gap-8">
-          <div>
-            <span class="eyebrow mb-3">From possibility to everyday use</span>
-            <h2>
-              Give your team more time for the work that matters<span class="text-brand-orange"
+        <div class="page-container grid grid-cols-12 gap-12 max-lg:gap-8">
+          <div class="col-span-7 max-lg:col-span-12">
+            <span class="eyebrow mb-4">Less busywork. More possibility.</span>
+            <h2 class="max-w-190">
+              Your people have better things to do than work around their software<span
+                class="text-brand-orange"
                 >.</span
               >
             </h2>
           </div>
-          <div class="text-brand-slate space-y-5 text-lg">
-            <p>
-              Searching through documents. Moving information between systems. Reviewing the same
-              request again. These small tasks add up.
+          <div class="col-span-4 col-start-9 pt-8 text-lg max-lg:col-span-12 max-lg:pt-0">
+            <p class="text-brand-gray">
+              Searching through documents. Moving data between tools. Reviewing the same request
+              again. The small tasks add up.
             </p>
-            <p>
-              We start with the workflow, then build the AI around it. Your team gets a useful
-              product connected to the tools they already use, with clear boundaries and people in
-              control.
+            <p class="mt-5">
+              We turn those friction points into useful AI products, built around your workflow and
+              connected to the systems you already use.
             </p>
-            <a class="arrow-btn text-brand-teal pt-3" href="#workflow"
-              >See how it comes together<svg aria-hidden="true">
+            <a class="arrow-btn text-brand-teal mt-6 text-base" href="#workflow"
+              >See AI in practice<svg aria-hidden="true">
                 <use href="../assets/images/icons.svg#arrow-right"></use></svg
             ></a>
           </div>
-        </div>
-      </section>
-
-      <section
-        class="section-padding scroll-mt-40"
-        id="workflow"
-        data-service-section="In practice"
-      >
-        <div class="page-container">
-          <div
-            class="mb-10 flex items-end justify-between gap-8 max-lg:flex-col max-lg:items-start"
-          >
-            <div>
-              <span class="eyebrow mb-3">AI in the flow of work</span>
-              <h2>
-                From incoming lead<br />to a useful next step<span class="text-brand-orange"
-                  >.</span
-                >
-              </h2>
-            </div>
-            <p class="text-brand-gray max-w-100 text-lg">
-              An example of how connected data and AI can support a sales team, with a person making
-              the final call.
-            </p>
-          </div>
-          <figure>
-            <img
-              class="aspect-video w-full rounded-2xl object-cover"
-              src="../assets/images/pages/technologies/cards/lead-qualification.png"
-              alt="Product illustration of an AI lead qualification workspace with a sales funnel and customer records"
-              width="1448"
-              height="1086"
-              loading="lazy"
-            />
-            <figcaption
-              class="shadow-default relative mx-8 -mt-20 grid grid-cols-3 gap-8 rounded-2xl bg-white p-8 max-lg:mx-4 max-lg:-mt-10 max-md:mx-0 max-md:mt-5 max-md:grid-cols-1 max-md:gap-6 max-md:p-6"
-            >
-              <div>
-                <span class="text-brand-teal mb-2 block text-sm font-semibold"
-                  >01 / UNDERSTAND</span
-                >
-                <h3 class="mb-2 text-xl">Bring the context together</h3>
-                <p class="text-brand-gray">
-                  Connect CRM records, conversations, and product information.
-                </p>
-              </div>
-              <div>
-                <span class="text-brand-teal mb-2 block text-sm font-semibold">02 / ASSIST</span>
-                <h3 class="mb-2 text-xl">Make the next step clearer</h3>
-                <p class="text-brand-gray">
-                  Surface relevant details and draft a useful recommendation.
-                </p>
-              </div>
-              <div>
-                <span class="text-brand-teal mb-2 block text-sm font-semibold">03 / ACT</span>
-                <h3 class="mb-2 text-xl">Keep your team in control</h3>
-                <p class="text-brand-gray">
-                  Review the suggestion, approve the action, and record the outcome.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
         </div>
       </section>
 
@@ -1737,65 +1744,133 @@
         id="capabilities"
         data-service-section="Capabilities"
       >
-        <div class="page-container">
-          <span class="eyebrow mb-3">What we build</span>
-          <h2 class="max-w-200">
-            The right intelligence.<br />In the right place<span class="text-brand-orange">.</span>
-          </h2>
-          <div class="mt-12 grid grid-cols-2 gap-8 max-md:grid-cols-1 max-md:gap-5">
-            <article class="bg-brand-light rounded-2xl p-8 max-md:p-6">
-              <svg class="icon-purple mb-6 size-10" aria-hidden="true">
-                <use href="../assets/images/icons.svg#ai-agents"></use>
-              </svg>
-              <h3 class="mb-4 text-2xl">AI agents &amp; assistants</h3>
-              <p class="text-brand-gray">
-                Purpose-built assistants that work across your tools, handle defined tasks, and ask
-                for approval when it matters.
-              </p>
-              <p class="border-brand-border mt-6 border-t pt-4 text-sm">
-                Operations · Internal support · Customer service
-              </p>
+        <div class="page-container grid grid-cols-12 gap-16 max-lg:gap-8">
+          <div class="col-span-5 max-lg:col-span-12">
+            <span class="eyebrow mb-4">What we build</span>
+            <h2>
+              The right intelligence.<br />In the right place<span class="text-brand-orange"
+                >.</span
+              >
+            </h2>
+            <figure class="mt-8">
+              <img
+                class="aspect-video w-full rounded-xl object-cover"
+                src="../assets/images/pages/technologies/cards/recruitment-platform.png"
+                alt="Illustrative recruitment workspace bringing candidate information and AI assistance together"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <figcaption class="text-brand-gray mt-3 flex justify-between gap-4 text-xs">
+                <span>From scattered information to a shared view.</span
+                ><span class="shrink-0">Product concept / AI</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-span-6 col-start-7 max-lg:col-span-12">
+            <article class="service-capability">
+              <span>01</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Agents that move work forward</h3>
+                <p class="text-brand-gray text-lg">
+                  Purpose-built assistants that handle defined tasks across your tools, prepare the
+                  next step, and ask for approval when it matters.
+                </p>
+                <p class="text-brand-teal mt-4 text-sm">
+                  AI agents &amp; assistants · Workflow automation
+                </p>
+              </div>
             </article>
-            <article class="bg-brand-light rounded-2xl p-8 max-md:p-6">
-              <svg class="icon-orange mb-6 size-10" aria-hidden="true">
-                <use href="../assets/images/icons.svg#file-search"></use>
-              </svg>
-              <h3 class="mb-4 text-2xl">Knowledge &amp; search</h3>
-              <p class="text-brand-gray">
-                Help people find answers in your documents and business systems, with access
-                controls and links back to the source.
-              </p>
-              <p class="border-brand-border mt-6 border-t pt-4 text-sm">
-                Enterprise search · RAG · Document understanding
-              </p>
+            <article class="service-capability">
+              <span>02</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Knowledge your team can use</h3>
+                <p class="text-brand-gray text-lg">
+                  Answers grounded in your documents and business data, with access controls and a
+                  clear path back to the source.
+                </p>
+                <p class="text-brand-teal mt-4 text-sm">
+                  Enterprise search · RAG · Document understanding
+                </p>
+              </div>
             </article>
-            <article class="bg-brand-light rounded-2xl p-8 max-md:p-6">
-              <svg class="icon-green mb-6 size-10" aria-hidden="true">
-                <use href="../assets/images/icons.svg#settings"></use>
-              </svg>
-              <h3 class="mb-4 text-2xl">Intelligent automation</h3>
-              <p class="text-brand-gray">
-                Turn repetitive handoffs into connected workflows. Extract information, route
-                requests, and update systems with fewer manual steps.
-              </p>
-              <p class="border-brand-border mt-6 border-t pt-4 text-sm">
-                Document processing · CRM integration · Workflow automation
-              </p>
-            </article>
-            <article class="bg-brand-light rounded-2xl p-8 max-md:p-6">
-              <svg class="icon-purple mb-6 size-10" aria-hidden="true">
-                <use href="../assets/images/icons.svg#sparkles"></use>
-              </svg>
-              <h3 class="mb-4 text-2xl">AI-powered products</h3>
-              <p class="text-brand-gray">
-                Add useful AI features to your application, from content assistance and
-                recommendations to conversational interfaces.
-              </p>
-              <p class="border-brand-border mt-6 border-t pt-4 text-sm">
-                Generative AI · Personalization · Product engineering
-              </p>
+            <article class="service-capability">
+              <span>03</span>
+              <div>
+                <h3 class="mb-3 text-2xl">AI at the heart of your product</h3>
+                <p class="text-brand-gray text-lg">
+                  Give customers a more useful experience with conversational interfaces, content
+                  assistance, and relevant recommendations.
+                </p>
+                <p class="text-brand-teal mt-4 text-sm">
+                  Generative AI · Personalization · Product engineering
+                </p>
+              </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section
+        class="service-workflow section-margin scroll-mt-40"
+        id="workflow"
+        data-service-section="In practice"
+      >
+        <div class="page-container">
+          <div
+            class="mb-12 flex items-end justify-between gap-8 max-lg:flex-col max-lg:items-start"
+          >
+            <div>
+              <span class="eyebrow text-brand-orange mb-4">AI in the flow of work</span>
+              <h2>Less chasing context.<br />More moving forward.</h2>
+            </div>
+            <p class="max-w-80 text-white/60">
+              An example workflow for sales teams.<br /><span class="mt-2 block text-sm"
+                >Illustrative product concept</span
+              >
+            </p>
+          </div>
+          <figure class="grid grid-cols-12 items-center max-lg:gap-0">
+            <img
+              class="col-span-9 aspect-video w-full rounded-xl object-cover max-lg:col-span-12"
+              src="../assets/images/pages/technologies/cards/lead-qualification.png"
+              alt="AI lead qualification product concept showing customer context, a sales funnel, and recommended next steps"
+              width="1448"
+              height="1086"
+              loading="lazy"
+            />
+            <figcaption
+              class="text-primary relative col-span-4 col-start-9 row-start-1 -ml-8 rounded-xl bg-white p-8 max-lg:col-span-10 max-lg:col-start-2 max-lg:row-start-2 max-lg:-mt-12 max-lg:ml-0 max-md:col-span-12 max-md:mt-5 max-md:p-6"
+            >
+              <span class="text-brand-teal mb-6 block text-xs font-semibold uppercase"
+                >From first signal to next step</span
+              >
+              <h3 class="text-3xl">A lead comes in.<br />Your team gets context.</h3>
+              <p class="text-brand-gray mt-5">
+                CRM records, conversations, and product knowledge come together in one place. The AI
+                drafts a recommendation. Your team decides what happens next.
+              </p>
+              <div class="border-brand-border mt-8 border-t pt-5">
+                <span class="text-brand-gray block text-xs">Human checkpoint</span>
+                <p class="mt-2 flex items-center gap-2 font-medium">
+                  <svg class="text-brand-teal size-5" aria-hidden="true">
+                    <use href="../assets/images/icons.svg#shield"></use></svg
+                  >Ready for your review
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+          <ol class="mt-10 grid grid-cols-3 gap-8 max-md:grid-cols-1 max-md:gap-5">
+            <li class="border-t border-white/20 pt-4">
+              <span class="text-brand-orange mr-3 text-sm">01</span>Bring the context together
+            </li>
+            <li class="border-t border-white/20 pt-4">
+              <span class="text-brand-orange mr-3 text-sm">02</span>Make the next step clearer
+            </li>
+            <li class="border-t border-white/20 pt-4">
+              <span class="text-brand-orange mr-3 text-sm">03</span>Keep your team in control
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -1804,48 +1879,115 @@
         id="engineering"
         data-service-section="Engineering"
       >
-        <div
-          class="page-container grid grid-cols-2 items-center gap-16 max-lg:grid-cols-1 max-lg:gap-8"
-        >
-          <div class="green-block p-8 max-sm:p-4">
-            <img
-              class="w-full"
-              src="../assets/images/pages/technologies/engineering-workflow.svg"
-              alt="AI engineering workflow connecting data, model processing, and results"
-              width="600"
-              height="350"
-              loading="lazy"
-            />
-            <p class="text-brand-slate mt-6 text-center text-sm">
-              Connected to your systems. Designed for your team.
-            </p>
+        <div class="page-container">
+          <div class="grid grid-cols-12 items-center gap-16 max-lg:gap-8">
+            <div class="col-span-6 max-lg:col-span-12">
+              <span class="eyebrow mb-4">Built beyond the demo</span>
+              <h2>Good AI needs<br />good engineering<span class="text-brand-orange">.</span></h2>
+              <figure class="green-block mt-8 p-8 max-md:p-4">
+                <img
+                  class="w-full"
+                  src="../assets/images/pages/technologies/engineering-workflow.svg"
+                  alt="AI engineering architecture connecting your data, business apps, AI models, automation, and results"
+                  width="600"
+                  height="350"
+                  loading="lazy"
+                />
+                <figcaption class="text-brand-slate mt-4 text-center text-sm">
+                  Connected to your systems. Designed for your team.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-span-5 col-start-8 max-lg:col-span-12">
+              <p class="text-brand-gray mb-8 text-xl">
+                The interface is only the beginning. What sits behind it makes the difference.
+              </p>
+              <ul class="space-y-6">
+                <li class="border-brand-border border-b pb-6">
+                  <h3 class="mb-2 text-xl">Your data stays within its boundaries</h3>
+                  <p class="text-brand-gray">
+                    Permissions, retrieval, and data handling are designed around who should have
+                    access and what the system needs to do.
+                  </p>
+                </li>
+                <li class="border-brand-border border-b pb-6">
+                  <h3 class="mb-2 text-xl">Quality is something you can measure</h3>
+                  <p class="text-brand-gray">
+                    Real workflow tests help you evaluate accuracy, response times, and running
+                    costs before expanding.
+                  </p>
+                </li>
+                <li>
+                  <h3 class="mb-2 text-xl">There is a plan for the unexpected</h3>
+                  <p class="text-brand-gray">
+                    Human review, monitoring, and clear fallbacks help your team handle uncertain
+                    answers and failed actions.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <span class="eyebrow mb-3">Built beyond the demo</span>
-            <h2 class="mb-8">
-              Good AI needs<br />good engineering<span class="text-brand-orange">.</span>
-            </h2>
-            <ul class="space-y-6">
-              <li class="border-brand-border border-b pb-6">
-                <h3 class="mb-2 text-xl">Your data stays within its boundaries</h3>
-                <p class="text-brand-gray">
-                  We design permissions, retrieval, and data handling around who should have access
-                  and what the system needs to do.
-                </p>
-              </li>
-              <li class="border-brand-border border-b pb-6">
-                <h3 class="mb-2 text-xl">Quality is something you can measure</h3>
-                <p class="text-brand-gray">
-                  Test cases and real workflow feedback help you evaluate accuracy, response times,
-                  and running costs before expanding.
-                </p>
+          <div
+            class="border-brand-border mt-12 flex items-center justify-between gap-8 border-y py-6 max-lg:flex-col max-lg:items-start"
+          >
+            <p class="text-brand-gray text-sm">
+              The right tools for your use case.<br /><span class="text-primary"
+                >Selected around your architecture.</span
+              >
+            </p>
+            <ul
+              class="flex flex-wrap items-center gap-10 max-md:gap-6"
+              aria-label="AI development technologies"
+            >
+              <li>
+                <img
+                  class="h-7 w-24 object-contain"
+                  src="../assets/images/brands/openai.svg"
+                  alt="OpenAI"
+                  width="96"
+                  height="28"
+                  loading="lazy"
+                />
               </li>
               <li>
-                <h3 class="mb-2 text-xl">There is a plan for the unexpected</h3>
-                <p class="text-brand-gray">
-                  Human review, monitoring, and clear fallbacks give your team a practical way to
-                  handle uncertain answers and failed actions.
-                </p>
+                <img
+                  class="h-7 w-24 object-contain"
+                  src="../assets/images/brands/anthropic.svg"
+                  alt="Anthropic"
+                  width="96"
+                  height="28"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <img
+                  class="h-7 w-24 object-contain"
+                  src="../assets/images/brands/langchain.svg"
+                  alt="LangChain"
+                  width="96"
+                  height="28"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <img
+                  class="h-7 w-20 object-contain"
+                  src="../assets/images/brands/python.svg"
+                  alt="Python"
+                  width="80"
+                  height="28"
+                  loading="lazy"
+                />
+              </li>
+              <li>
+                <img
+                  class="h-7 w-16 object-contain"
+                  src="../assets/images/brands/aws.svg"
+                  alt="AWS"
+                  width="64"
+                  height="28"
+                  loading="lazy"
+                />
               </li>
             </ul>
           </div>
@@ -1857,85 +1999,90 @@
         id="approach"
         data-service-section="Our approach"
       >
-        <div class="page-container">
-          <div
-            class="mb-12 flex items-end justify-between gap-8 max-lg:flex-col max-lg:items-start"
-          >
-            <div>
-              <span class="eyebrow mb-3">A clear path to production</span>
-              <h2>
-                Start focused.<br />Build with confidence<span class="text-brand-orange">.</span>
-              </h2>
-            </div>
-            <p class="text-brand-gray max-w-120 text-lg">
-              Small, testable steps keep the work grounded in what your business actually needs.
+        <div class="page-container grid grid-cols-12 gap-16 max-lg:gap-8">
+          <div class="col-span-5 max-lg:col-span-12">
+            <span class="eyebrow mb-4">A clear path to production</span>
+            <h2>Small starts.<br />Serious engineering<span class="text-brand-orange">.</span></h2>
+            <p class="text-brand-gray mt-6 text-lg">
+              One connected team, from the first conversation to the first real users. Every step
+              leaves you with something you can evaluate.
             </p>
+            <figure class="mt-10">
+              <img
+                class="aspect-video w-full rounded-xl object-cover"
+                src="../assets/images/team-flow/services-team.webp"
+                alt="Product and engineering specialists working together on a software project"
+                width="1240"
+                height="516"
+                loading="lazy"
+              />
+              <figcaption class="text-brand-gray mt-4 text-sm">
+                Product thinking. AI expertise. Shared ownership.
+              </figcaption>
+            </figure>
+            <a class="arrow-btn text-brand-teal mt-6" href="../about.html"
+              >Meet KKEYDOS<svg aria-hidden="true">
+                <use href="../assets/images/icons.svg#arrow-right"></use></svg
+            ></a>
           </div>
-          <ol class="grid grid-cols-4 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <li class="border-brand-orange border-t-2 pt-6">
-              <span class="text-brand-orange text-4xl">01</span>
-              <h3 class="mt-6 mb-3 text-2xl">Define the opportunity</h3>
-              <p class="text-brand-gray">
-                Choose one workflow, understand the people involved, and agree on what a better
-                result looks like.
-              </p>
+          <ol class="col-span-6 col-start-7 max-lg:col-span-12">
+            <li class="service-process-step">
+              <span>01</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Find the useful starting point</h3>
+                <p class="text-brand-gray">
+                  Choose a workflow, understand the people involved, and agree on what a better
+                  result looks like.
+                </p>
+                <p class="mt-4 text-sm">
+                  <span class="text-brand-teal">You leave with /</span> A focused brief and success
+                  criteria
+                </p>
+              </div>
             </li>
-            <li class="border-brand-border border-t-2 pt-6">
-              <span class="text-brand-orange text-4xl">02</span>
-              <h3 class="mt-6 mb-3 text-2xl">Prove the approach</h3>
-              <p class="text-brand-gray">
-                Explore your data and test the smallest useful version with representative examples.
-              </p>
+            <li class="service-process-step">
+              <span>02</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Make it real. Then test it.</h3>
+                <p class="text-brand-gray">
+                  Explore your data and put a small, useful prototype in front of the people who
+                  will use it.
+                </p>
+                <p class="mt-4 text-sm">
+                  <span class="text-brand-teal">You leave with /</span> A tested prototype and
+                  delivery plan
+                </p>
+              </div>
             </li>
-            <li class="border-brand-border border-t-2 pt-6">
-              <span class="text-brand-orange text-4xl">03</span>
-              <h3 class="mt-6 mb-3 text-2xl">Build &amp; integrate</h3>
-              <p class="text-brand-gray">
-                Connect the product to your systems, add safeguards, and prepare the team for
-                launch.
-              </p>
+            <li class="service-process-step">
+              <span>03</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Build it into the business</h3>
+                <p class="text-brand-gray">
+                  Connect your systems, add safeguards, and prepare your team for launch.
+                </p>
+                <p class="mt-4 text-sm">
+                  <span class="text-brand-teal">You leave with /</span> An integrated product, ready
+                  for real use
+                </p>
+              </div>
             </li>
-            <li class="border-brand-border border-t-2 pt-6">
-              <span class="text-brand-orange text-4xl">04</span>
-              <h3 class="mt-6 mb-3 text-2xl">Learn &amp; improve</h3>
-              <p class="text-brand-gray">
-                Monitor real use, review outcomes, and expand only where the evidence supports it.
-              </p>
+            <li class="service-process-step">
+              <span>04</span>
+              <div>
+                <h3 class="mb-3 text-2xl">Learn from every interaction</h3>
+                <p class="text-brand-gray">
+                  Monitor real use, review outcomes, and expand where the evidence supports it.
+                </p>
+                <p class="mt-4 text-sm">
+                  <span class="text-brand-teal">You leave with /</span> A clear picture of what to
+                  improve next
+                </p>
+              </div>
             </li>
           </ol>
         </div>
       </section>
-
-      <section class="section-padding">
-        <div class="page-container">
-          <div
-            class="bg-brand-light grid grid-cols-2 overflow-hidden rounded-2xl max-lg:grid-cols-1"
-          >
-            <img
-              class="h-full w-full object-cover max-lg:aspect-video"
-              src="../assets/images/team-flow/services-team.webp"
-              alt="Engineering team collaborating on a software project"
-              width="1240"
-              height="516"
-              loading="lazy"
-            />
-            <div class="p-12 max-md:p-6">
-              <span class="eyebrow mb-4">One connected delivery team</span>
-              <h2 class="mb-6">AI expertise.<br />Product thinking.</h2>
-              <p class="text-brand-gray text-lg">
-                Designers, engineers, and delivery specialists work together from the first
-                conversation. The result is an AI feature that fits the product and a product that
-                fits the people using it.
-              </p>
-              <a class="arrow-btn text-brand-teal mt-8" href="../about.html"
-                >Meet KKEYDOS<svg aria-hidden="true">
-                  <use href="../assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section
         class="section-padding section-margin bg-brand-light scroll-mt-40 pb-20 max-md:pb-12"
         id="faq"
@@ -2051,45 +2198,42 @@
         </div>
       </section>
 
-      <section class="black-section service-ai-cta" aria-labelledby="service-cta-title">
+      <section class="service-ai-cta py-20 max-md:py-16" aria-labelledby="service-cta-title">
         <div class="page-container">
-          <span class="eyebrow text-brand-gray-alt mb-6"
-            >Your data. Your people. Your next move.</span
-          >
-          <h2 class="max-w-240" id="service-cta-title">
-            Your next AI project starts with<br /><span class="text-brand-orange"
-              >one useful workflow.</span
-            >
+          <div class="mb-12 flex items-center justify-between gap-6 border-b border-white/20 pb-6">
+            <span class="eyebrow text-brand-orange">From possibility to your next move</span>
+            <svg class="size-8 shrink-0 text-white/50" aria-hidden="true">
+              <use href="../assets/images/icons.svg#ai-chip"></use>
+            </svg>
+          </div>
+          <h2 class="max-w-240 text-6xl max-2xl:text-5xl max-md:text-4xl" id="service-cta-title">
+            Make room for<br /><span class="text-brand-orange">your next big idea.</span>
           </h2>
-          <div
-            class="mt-12 flex items-end justify-between gap-12 max-lg:flex-col max-lg:items-start"
-          >
-            <p class="max-w-140 text-xl text-white/70">
-              Bring us the process you want to improve. We’ll help you turn it into a clear,
-              achievable plan.
-            </p>
-            <div>
+          <div class="mt-12 grid grid-cols-12 items-end gap-12 max-lg:gap-10">
+            <div class="col-span-6 max-lg:col-span-12">
+              <p class="max-w-140 text-xl text-white/75">
+                Start with the work you wish was easier. Together, we’ll find the first useful thing
+                to build.
+              </p>
+              <div class="service-cta-route mt-12" aria-hidden="true">
+                <span>Your knowledge</span><span>Applied intelligence</span
+                ><span>Your next move</span>
+              </div>
+            </div>
+            <div
+              class="col-span-4 col-start-9 border-l border-white/20 pl-8 max-lg:col-span-12 max-lg:border-l-0 max-lg:pl-0"
+            >
+              <p class="mb-6 text-white/70">A conversation.<br />A practical starting point.</p>
               <a class="btn" href="#service-inquiry"
                 >Let’s Build Something Useful<svg class="size-4" aria-hidden="true">
-                  <use href="../assets/images/icons.svg#arrow-right"></use></svg></a
-              ><a
-                class="mt-4 block text-sm text-white/70 hover:text-white"
+                  <use href="../assets/images/icons.svg#arrow-right"></use></svg
+              ></a>
+              <a
+                class="mt-5 block text-sm text-white/70 hover:text-white"
                 href="mailto:info@keydos.com"
                 >Or email info@keydos.com</a
               >
             </div>
-          </div>
-          <div
-            class="mt-16 flex flex-wrap items-center gap-4 border-t border-white/20 pt-6 text-sm text-white/60"
-            aria-hidden="true"
-          >
-            <span>Business data</span
-            ><svg class="text-brand-orange size-4">
-              <use href="../assets/images/icons.svg#arrow-right"></use></svg
-            ><span>AI intelligence</span
-            ><svg class="text-brand-orange size-4">
-              <use href="../assets/images/icons.svg#arrow-right"></use></svg
-            ><span>Human control</span>
           </div>
         </div>
       </section>

@@ -1,0 +1,43 @@
+<div data-fixed>
+  <nav class="service-navigation" data-fixed-content aria-label="Service sections">
+    <div class="page-container flex items-center justify-between gap-6">
+      <p class="text-sm max-md:hidden"><span class="text-brand-gray">Explore /</span> {{name}}</p>
+      <div class="service-navigation__control" data-service-navigation>
+        <button
+          class="service-navigation__trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="service-navigation-panel"
+          data-service-nav-trigger
+        >
+          <span class="service-navigation__count"
+            ><span data-service-current-number>01</span
+            ><span class="text-brand-gray"> / {{count}}</span></span
+          >
+          <span class="flex-1 text-left"
+            ><span class="text-brand-gray block text-xs font-normal">On this page</span
+            ><span data-service-current-label>{{firstLabel}}</span></span
+          >
+          <span class="service-navigation__plus" aria-hidden="true"></span>
+          <span class="service-navigation__progress" aria-hidden="true"
+            ><span data-service-progress></span
+          ></span>
+        </button>
+        <div class="service-navigation__panel" id="service-navigation-panel" hidden>
+          <p class="text-brand-gray border-brand-border border-b px-5 py-4 text-xs uppercase">
+            Explore this service
+          </p>
+          <ol class="p-2" data-service-links>
+            {{links}}
+          </ol>
+          <a
+            class="arrow-btn border-brand-border text-brand-teal border-t px-5 py-4 text-sm"
+            href="#service-inquiry"
+            >Discuss your project<svg aria-hidden="true">
+              <use href="../assets/images/icons.svg#arrow-right"></use></svg
+          ></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

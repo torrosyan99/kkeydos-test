@@ -1,14 +1,54 @@
 import { fixedBlock } from '../../libs/fixedBlock/fixedBlock.js';
 
-const navigation = document.querySelector('[data-service-links]');
+const navigation = document.querySelector('[data-service-navigation]');
 
 if (navigation) {
   fixedBlock('[data-fixed]', '[data-fixed-content]');
-  const links = [...navigation.querySelectorAll('a')];
+  const trigger = navigation.querySelector('[data-service-nav-trigger]');
+  const panel = navigation.querySelector('#service-navigation-panel');
+  const links = [...navigation.querySelectorAll('[data-service-links] a')];
   const sections = links.map((link) => document.getElementById(link.hash.slice(1)));
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const currentNumber = navigation.querySelector('[data-service-current-number]');
+  const currentLabel = navigation.querySelector('[data-service-current-label]');
+  const progress = navigation.querySelector('[data-service-progress]');
   let active;
   let scheduled = false;
+
+  function setOpen(open, restoreFocus = false) {
+    trigger.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    if (restoreFocus) trigger.focus({ preventScroll: true });
+  }
+
+  trigger.addEventListener('click', () => setOpen(panel.hidden));
+  navigation.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !panel.hidden) {
+      event.preventDefault();
+      setOpen(false, true);
+    }
+    if (event.key === 'ArrowDown' && event.target === trigger) {
+      event.preventDefault();
+      setOpen(true);
+      links[active ?? 0].focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (!navigation.contains(event.target)) setOpen(false);
+  });
+  navigation.addEventListener('focusout', () => {
+    requestAnimationFrame(() => {
+      if (!navigation.contains(document.activeElement)) setOpen(false);
+    });
+  });
+  panel.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    setOpen(false);
+    // Preserve native anchor/history behavior and move keyboard focus out of the closed panel.
+    const target = document.getElementById(link.hash.slice(1));
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  });
 
   function updateNavigation() {
     scheduled = false;
@@ -22,17 +62,9 @@ if (navigation) {
       if (index === active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
-    const link = links[active];
-    const left = link.offsetLeft - navigation.offsetLeft;
-    if (
-      left < navigation.scrollLeft ||
-      left + link.offsetWidth > navigation.scrollLeft + navigation.clientWidth
-    ) {
-      navigation.scrollTo({
-        left: left - (navigation.clientWidth - link.offsetWidth) / 2,
-        behavior: reducedMotion.matches ? 'instant' : 'smooth',
-      });
-    }
+    currentNumber.textContent = String(active + 1).padStart(2, '0');
+    currentLabel.textContent = sections[active].dataset.serviceSection;
+    progress.style.transform = `scaleX(${(active + 1) / links.length})`;
   }
 
   function scheduleUpdate() {

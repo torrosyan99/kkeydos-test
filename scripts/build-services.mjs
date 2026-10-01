@@ -82,7 +82,7 @@ function form(hero) {
   return html;
 }
 
-function navigation(content) {
+function navigation(content, name, template) {
   const sections = [...content.matchAll(/<section\b[^>]*>/g)].flatMap(([tag]) => {
     const label = tag.match(/data-service-section="([^"]+)"/)?.[1];
     if (!label) return [];
@@ -93,14 +93,25 @@ function navigation(content) {
   const ids = [...content.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   if (new Set(ids).size !== ids.length) throw new Error('Duplicate section or element id.');
   if (!sections.length) return '';
-  return `<div data-fixed><nav class="border-brand-border inset-x-0 top-20 z-30 border-b bg-white py-3 data-[fixed=true]:fixed data-[fixed=true]:shadow-default" data-fixed-content aria-label="Service sections"><div class="page-container flex items-center gap-6"><div class="flex min-w-0 flex-1 gap-1 overflow-x-auto" data-service-links>${sections.map(({ id, label }) => `<a class="service-nav-link" href="#${escape(id)}">${escape(label)}</a>`).join('')}</div><a class="arrow-btn shrink-0 text-brand-teal max-xl:hidden" href="#service-inquiry">Let’s talk<svg aria-hidden="true"><use href="../assets/images/icons.svg#arrow-right"></use></svg></a></div></nav></div>`;
+  return fill(template, {
+    name: escape(name),
+    count: String(sections.length).padStart(2, '0'),
+    firstLabel: escape(sections[0].label),
+    links: sections
+      .map(
+        ({ id, label }, index) =>
+          `<li><a class="service-nav-link" href="#${escape(id)}"><span class="service-nav-link__number">${String(index + 1).padStart(2, '0')}</span><span>${escape(label)}</span><svg aria-hidden="true"><use href="../assets/images/icons.svg#arrow-right"></use></svg></a></li>`,
+      )
+      .join(''),
+  });
 }
 
 await fs.mkdir(output, { recursive: true });
 const options = await prettier.resolveConfig(path.join(root, '.prettierrc'));
-const [layout, heroTemplate, files] = await Promise.all([
+const [layout, heroTemplate, navigationTemplate, files] = await Promise.all([
   read('layout.html'),
   read('hero.html'),
+  read('navigation.html'),
   fs.readdir(source),
 ]);
 for (const file of files.filter((file) => file.endsWith('.mjs'))) {
@@ -121,7 +132,7 @@ for (const file of files.filter((file) => file.endsWith('.mjs'))) {
     header,
     footer,
     content,
-    navigation: navigation(content),
+    navigation: navigation(content, page.name, navigationTemplate),
     hero: fill(heroTemplate, {
       name: escape(page.name),
       surface: escape(hero.surface || 'bg-brand-light'),
