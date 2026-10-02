@@ -243,6 +243,11 @@
       line-height: 27px;
     }
 
+    .saas-cost-table {
+      min-width: 0;
+      width: 100%;
+    }
+
     th,
     td {
       border: 0;

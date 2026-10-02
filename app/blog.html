@@ -1,13 +1,12 @@
 ﻿<!doctype html>
-<html lang="en" class="scroll-smooth motion-reduce:scroll-auto middle:[scrollbar-gutter:stable]">
+<html lang="en" class="middle:[scrollbar-gutter:stable] scroll-smooth motion-reduce:scroll-auto">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog — Ideas for Better Software | KKEYDOS</title>
     <meta
       name="description"
-      content=
-		      "Explore software development, AI, engineering teams, and practical technology insights on the KKEYDOS blog."
+      content="Explore software development, AI, engineering teams, and practical technology insights on the KKEYDOS blog."
     />
     <link rel="canonical" href="https://www.kkeydos.com/blog/" />
     <meta property="og:title" content="Blog — Ideas for Better Software | KKEYDOS" />
@@ -27,9 +26,9 @@
       data-open="false"
     >
       <div class="page-container flex h-20 items-center gap-10">
-          <a class="mr-auto" href="index.html" aria-label="KKEYDOS home">
-            <img class="h-16 w-auto max-xl:h-14" src="assets/images/logo.png" alt="KKEYDOS logo" />
-          </a>
+        <a class="mr-auto" href="index.html" aria-label="KKEYDOS home">
+          <img class="h-16 w-auto max-xl:h-14" src="assets/images/logo.png" alt="KKEYDOS logo" />
+        </a>
 
         <nav class="h-full max-lg:hidden" aria-label="Primary navigation">
           <div class="flex h-full gap-14 max-xl:gap-10">
@@ -1165,18 +1164,33 @@
         data-scroll-hidden="false"
         data-stuck="false"
       >
-        <div class="mx-4 middle:mx-6 notebook:mx-auto! notebook:max-w-304 lg:mx-8">
+        <div class="middle:mx-6 notebook:mx-auto! notebook:max-w-304 mx-4 lg:mx-8">
           <nav
             class="bg-brand-light text-brand-muted-gray-alt group-data-[stuck=true]/blog:shadow-default relative rounded-lg transition-colors group-data-[stuck=true]/blog:bg-[#111111] group-data-[stuck=true]/blog:text-white"
             aria-label="Blog categories"
           >
-            <div class="h-14 flex items-center justify-between" data-blog-controls="">
-              <button class="middle:hidden flex items-center gap-2 px-4 py-3" type="button" data-blog-menu-toggle="" aria-controls="blog-category-links" aria-expanded="false">
+            <div class="flex h-14 items-center justify-between" data-blog-controls="">
+              <button
+                class="middle:hidden flex items-center gap-2 px-4 py-3"
+                type="button"
+                data-blog-menu-toggle=""
+                aria-controls="blog-category-links"
+                aria-expanded="false"
+              >
                 Categories
-                <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                <svg
+                  class="size-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
               </button>
               <div
-                class="middle:flex-row middle:p-0 middle:static max-middle:absolute max-middle:inset-x-0 max-middle:top-full max-middle:rounded-b-lg max-middle:bg-inherit max-middle:shadow-default flex min-w-0 flex-1 flex-col items-stretch overflow-x-auto overscroll-x-contain py-3 [scrollbar-width:none]"
+                class="middle:flex-row middle:p-0 middle:static max-middle:absolute max-middle:inset-x-0 max-middle:top-full max-middle:rounded-b-lg max-middle:bg-inherit max-middle:shadow-default flex min-w-0 flex-1 [scrollbar-width:none] flex-col items-stretch overflow-x-auto overscroll-x-contain py-3"
                 id="blog-category-links"
                 data-blog-links=""
               >
@@ -1260,15 +1274,15 @@
             >
               <label class="sr-only" for="blog-search">Search articles</label>
               <div class="text-primary min-w-0 flex-1">
-              <input
-                class="input h-9"
-                id="blog-search"
-                name="q"
-                type="search"
-                placeholder="Search for articles"
-                autocomplete="off"
-                maxlength="120"
-              />
+                <input
+                  class="input h-9"
+                  id="blog-search"
+                  name="q"
+                  type="search"
+                  placeholder="Search for articles"
+                  autocomplete="off"
+                  maxlength="120"
+                />
               </div>
               <button
                 class="flex size-9 shrink-0 items-center justify-center rounded-lg bg-black text-white group-data-[stuck=true]/blog:bg-neutral-700 hover:bg-neutral-700 group-data-[stuck=true]/blog:hover:bg-neutral-600"
@@ -1304,25 +1318,25 @@
             <h2
               class="middle:text-[32px] middle:leading-10 notebook:text-4xl notebook:leading-11 mb-2 text-[28px] leading-9 font-bold text-[#272e34]"
             >
-              <a class="hover:text-brand-teal" href="blog/how-to-train-an-llm-on-your-own-data.html"
-                >When to Train LLMs on Your Own Data: The Spectrum of Options</a
+              <a class="hover:text-brand-teal" href="blog/saas-development-cost-2026.html"
+                >How Much Does It Cost to Build a SaaS Product in 2026?</a
               >
             </h2>
             <p class="text-brand-muted-gray mb-6 text-xl leading-[30px]">
-              Decide when to use off-the-shelf LLMs, when RAG on your data is enough, and when fine-tuning
-              or full training is worth the cost, risk, and overhead.
+              Explore MVP pricing, development timelines and the factors that shape your SaaS
+              budget.
             </p>
             <a
               class="relative block min-h-0 flex-1"
-              href="blog/how-to-train-an-llm-on-your-own-data.html"
-              aria-label="Read When to Train LLMs on Your Own Data: The Spectrum of Options"
+              href="blog/saas-development-cost-2026.html"
+              aria-label="Read How Much Does It Cost to Build a SaaS Product in 2026?"
             >
               <img
                 class="aspect-video w-full object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-                src="assets/images/pages/blog/llm-data.png"
-                alt="Layered datasets and connected information for a custom language model"
-                width="1280"
-                height="720"
+                src="assets/images/pages/blog/saas-development-cost-2026.webp"
+                alt="SaaS cloud platform with billing, integrations, analytics, AI and responsive applications"
+                width="1774"
+                height="887"
                 fetchpriority="high"
               />
             </a>
@@ -1404,7 +1418,8 @@
                     <h3
                       class="line-clamp-3 text-base leading-6 font-normal text-[#3d4751] group-hover:underline"
                     >
-                      Staff Augmentation Risks: The Five Failure Modes and the Controls That Contain Them
+                      Staff Augmentation Risks: The Five Failure Modes and the Controls That Contain
+                      Them
                     </h3>
                   </div>
                 </a>
@@ -1497,6 +1512,66 @@
             </button>
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a class="group block" href="blog/saas-development-cost-2026.html"
+                ><img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/saas-development-cost-2026.webp"
+                  alt="SaaS cloud platform with billing, integrations, analytics, AI and responsive applications"
+                  width="1774"
+                  height="887"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  How Much Does It Cost to Build a SaaS Product in 2026?
+                </h3></a
+              >
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
+              >
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-contain"
+                    src="assets/images/logo.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By KKEYDOS Engineering</span>
+                </div>
+                <span class="text-brand-gray shrink-0">6 min read</span>
+              </div>
+            </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a class="group block" href="blog/how-to-train-an-llm-on-your-own-data.html"
+                ><img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/llm-data.png"
+                  alt="Layered datasets for a custom language model"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  When to Train LLMs on Your Own Data: The Spectrum of Options
+                </h3></a
+              >
+              <div
+                class="blog-card__meta mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm"
+              >
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-contain"
+                    src="assets/images/logo.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  /><span>By KKEYDOS Engineering</span>
+                </div>
+                <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
+            </article>
             <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
               <a
                 class="group block"
@@ -1600,6 +1675,29 @@
                   /><span>By Michelle Bowman</span>
                 </div>
                 <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a
+                class="group block"
+                href="https://www.bairesdev.com/blog/javascript-design-patterns/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/javascript-design-patterns.png"
+                  alt=""
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  JavaScript design patterns and what TypeScript adds
+                </h3>
+              </a>
+              <div class="blog-card__meta text-brand-gray mt-auto px-6 pb-6 text-sm">
+                BairesDev blog
               </div>
             </article>
           </div>
@@ -1733,6 +1831,29 @@
                 <span class="text-brand-gray shrink-0">15 min read</span>
               </div>
             </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a
+                class="group block"
+                href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
+                  alt=""
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  Why AI pilots stall before wider adoption
+                </h3>
+              </a>
+              <div class="blog-card__meta text-brand-gray mt-auto px-6 pb-6 text-sm">
+                BairesDev blog
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1858,6 +1979,29 @@
                   /><span>By Rodrigo Outumuro</span>
                 </div>
                 <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
+            </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a
+                class="group block"
+                href="https://www.bairesdev.com/blog/staff-augmentation-risks/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/staff-augmentation-risks.jpg"
+                  alt=""
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  Five staff augmentation risks and ways to contain them
+                </h3>
+              </a>
+              <div class="blog-card__meta text-brand-gray mt-auto px-6 pb-6 text-sm">
+                BairesDev blog
               </div>
             </article>
           </div>
@@ -1991,6 +2135,29 @@
                 <span class="text-brand-gray shrink-0">11 min read</span>
               </div>
             </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a
+                class="group block"
+                href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/how-to-build-a-rag-application.jpg"
+                  alt=""
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  Building a RAG application with a sound architecture
+                </h3>
+              </a>
+              <div class="blog-card__meta text-brand-gray mt-auto px-6 pb-6 text-sm">
+                BairesDev blog
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -2120,6 +2287,29 @@
                   /><span>By Raghu Punnamraju</span>
                 </div>
                 <span class="text-brand-gray shrink-0">9 min read</span>
+              </div>
+            </article>
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+              <a
+                class="group block"
+                href="https://www.bairesdev.com/blog/ai-dlc-pilot/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="aspect-video w-full object-cover"
+                  src="assets/images/pages/blog/ai-dlc-pilot.jpg"
+                  alt=""
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                />
+                <h3 class="group-hover:text-brand-teal px-6 pt-6 pb-8 text-xl font-bold">
+                  What an AI-assisted delivery pilot revealed about time
+                </h3>
+              </a>
+              <div class="blog-card__meta text-brand-gray mt-auto px-6 pb-6 text-sm">
+                BairesDev blog
               </div>
             </article>
           </div>
