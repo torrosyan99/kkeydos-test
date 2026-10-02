@@ -14,16 +14,30 @@ if (form) {
     return valid;
   }
 
-  form.addEventListener('input', (event) => {
+  function clearPreparedEmail() {
     status.hidden = true;
     emailLink.hidden = true;
+    emailLink.removeAttribute('href');
+  }
+
+  form.addEventListener('input', (event) => {
+    clearPreparedEmail();
     if (event.target.name === 'services') validateServices();
     else event.target.setCustomValidity('');
   });
 
+  form.addEventListener('reset', () => {
+    clearPreparedEmail();
+    serviceError.hidden = true;
+    for (const field of form.elements) {
+      if (typeof field.setCustomValidity === 'function') field.setCustomValidity('');
+    }
+  });
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    for (const name of ['name', 'description']) {
+    clearPreparedEmail();
+    for (const name of ['name', 'email', 'description']) {
       const field = form.elements.namedItem(name);
       field.value = field.value.trim();
       field.setCustomValidity(field.value ? '' : 'Please fill out this field.');

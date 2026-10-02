@@ -6,28 +6,57 @@ copyButton?.addEventListener('click', async () => {
   url.hash = '';
   try {
     await navigator.clipboard.writeText(url.href);
-    status.textContent = 'Link copied';
+    if (status) status.textContent = 'Link copied';
   } catch {
-    status.textContent = 'Copy the page address from your browser to share this article.';
+    if (status)
+      status.textContent = 'Copy the page address from your browser to share this article.';
   }
 });
 
-const links = [...document.querySelectorAll('[data-toc-link]')];
-const targets = links
-  .map((link) => document.querySelector(link.getAttribute('href')))
+const contents = document.querySelector('[data-article-contents]');
+const sectionInput = contents?.querySelector('input');
+const options = [...(contents?.querySelectorAll('[data-select]') || [])];
+const targets = options
+  .map((option) => document.getElementById(option.dataset.select))
   .filter(Boolean);
+const progress = document.querySelector('[data-reading-progress]');
+const reading = document.querySelector('.article-reading');
+
+// main.js owns opening, keyboard navigation, selection, and closing of the select.
+sectionInput?.addEventListener('change', () => {
+  const target = document.getElementById(sectionInput.value);
+  if (!target) return;
+  const url = new URL(window.location.href);
+  url.hash = target.id;
+  history.replaceState(null, '', url);
+  requestAnimationFrame(() => {
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'instant'
+        : 'smooth',
+      block: 'start',
+    });
+  });
+});
 
 if (targets.length) {
   let frame = 0;
   const update = () => {
     frame = 0;
+    if (progress && reading) {
+      const rect = reading.getBoundingClientRect();
+      const distance = Math.max(1, rect.height - window.innerHeight + 112);
+      const fraction = Math.max(0, Math.min(1, (112 - rect.top) / distance));
+      progress.style.setProperty('--reading-progress', String(fraction));
+    }
     const current =
       targets.findLast((target) => target.getBoundingClientRect().top <= 160) || targets[0];
-    links.forEach((link) => {
-      const active = link.hash === `#${current.id}`;
-      if (active) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-      link.classList.toggle('text-brand-teal', active);
+    options.forEach((option) => {
+      const active = option.dataset.select === current.id;
+      if (active) option.setAttribute('aria-current', 'location');
+      else option.removeAttribute('aria-current');
     });
   };
   window.addEventListener(
@@ -37,5 +66,7 @@ if (targets.length) {
     },
     { passive: true },
   );
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
   update();
 }

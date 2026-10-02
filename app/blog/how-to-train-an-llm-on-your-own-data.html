@@ -1161,58 +1161,81 @@
         </div>
       </div>
     </header>
-    <main id="main-content" class="overflow-clip">
-      <section class="py-10 max-md:py-6">
-        <div class="page-container">
-          <nav
-            class="text-brand-gray mb-12 flex flex-wrap items-center gap-3 text-sm max-md:mb-8"
-            aria-label="Breadcrumb"
-          >
-            <a class="hover:text-brand-teal" href="../index.html">Home</a>
-            <span aria-hidden="true">/</span>
+    <main id="main-content" class="article-page overflow-clip">
+      <div class="article-progress" aria-hidden="true"><div data-reading-progress=""></div></div>
+      <section class="article-section">
+        <div class="page-container article-container">
+          <nav class="article-breadcrumb" aria-label="Breadcrumb">
+            <a class="hover:text-brand-teal" href="../index.html" aria-label="Home"
+              ><svg class="" aria-hidden="true">
+                <use href="../assets/images/icons.svg#breadcrumbs-home"></use></svg
+            ></a>
+            <span aria-hidden="true"
+              ><svg class="" aria-hidden="true">
+                <use href="../assets/images/icons.svg#chevron-right"></use></svg
+            ></span>
             <a class="hover:text-brand-teal" href="../blog.html">Blog</a>
-            <span aria-hidden="true">/</span>
+            <span aria-hidden="true"
+              ><svg class="" aria-hidden="true">
+                <use href="../assets/images/icons.svg#chevron-right"></use></svg
+            ></span>
             <a class="hover:text-brand-teal" href="../blog.html#software-development"
               >Software Development</a
             >
-            <span aria-hidden="true">/</span>
-            <span class="text-primary" aria-current="page">Training LLMs</span>
+            <span aria-hidden="true"
+              ><svg class="" aria-hidden="true">
+                <use href="../assets/images/icons.svg#chevron-right"></use></svg
+            ></span>
+            <span class="text-primary" aria-current="page"
+              >When to Train LLMs on Your Own Data: The Spectrum of Options</span
+            >
           </nav>
-          <div class="grid grid-cols-4 items-start gap-12 max-xl:gap-8 max-lg:grid-cols-1">
-            <article class="col-span-3 min-w-0 max-lg:col-span-1">
-              <h1 class="max-notebook:text-4xl max-middle:text-3xl text-5xl font-medium">
+          <div class="article-layout">
+            <article class="article-column">
+              <h1 class="article-title">
                 When to Train LLMs on Your Own Data: The Spectrum of Options
               </h1>
-              <p class="text-brand-gray mt-6 text-xl max-md:text-lg">
+              <p class="article-deck">
                 A practical guide to choosing between prompting, retrieval, fine-tuning, and
                 training a model for your business.
               </p>
-              <p class="text-brand-gray mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm">
-                <span>Updated <time datetime="2026-10-01">October 1, 2026</time> </span>
+              <p class="article-meta">
+                <span
+                  ><svg class="" aria-hidden="true">
+                    <use href="../assets/images/icons.svg#article-calendar"></use></svg
+                  >Updated <time datetime="2026-10-01">October 1, 2026</time>
+                </span>
                 <a class="hover:text-brand-teal" href="../blog.html#software-development"
+                  ><svg class="" aria-hidden="true">
+                    <use href="../assets/images/icons.svg#article-folder"></use></svg
                   >Software Development</a
                 >
-                <span>8 min read</span>
+                <span
+                  ><svg class="" aria-hidden="true">
+                    <use href="../assets/images/icons.svg#article-clock"></use></svg
+                  >8 min read</span
+                >
               </p>
-              <div class="bg-brand-light my-8 rounded-xl p-6">
-                <div class="mb-5 flex items-center gap-4">
+              <div class="article-author">
+                <div class="article-author-heading">
                   <img
-                    class="size-16 rounded-full bg-white object-contain p-2"
+                    class="article-author-image"
                     src="../assets/images/logo.png"
                     alt=""
-                    width="64"
-                    height="64"
+                    width="112"
+                    height="112"
                   />
                   <div>
-                    <p class="text-xl font-semibold">KKEYDOS Engineering</p>
+                    <p class="article-author-name">KKEYDOS Engineering</p>
                     <p class="text-brand-gray text-sm">AI &amp; Software Development</p>
                   </div>
                 </div>
-                <p class="text-brand-gray">
+                <p class="article-author-bio">
                   Practical perspectives from our team on building, integrating, and maintaining
                   software that solves real business problems.
                 </p>
-                <p class="mt-5 flex flex-wrap gap-2 text-xs">
+                <p class="article-expertise">
+                  <span class="article-expertise-label">Expertise</span>
                   <span class="border-brand-border rounded border bg-white px-3 py-1">LLM</span>
                   <span class="border-brand-border rounded border bg-white px-3 py-1"
                     >AI Engineering</span
@@ -1221,512 +1244,980 @@
                 </p>
               </div>
               <img
-                class="mb-8 aspect-video w-full object-cover"
+                class="article-cover"
                 src="../assets/images/pages/blog/llm-data.png"
                 alt="Data layers and connected knowledge for training a language model"
                 width="1280"
                 height="720"
                 fetchpriority="high"
               />
-              <div
-                class="border-brand-border mb-10 flex flex-wrap items-center gap-4 border-y py-4 text-sm"
-              >
-                <span class="font-semibold">Share this article</span>
-                <button class="arrow-btn" type="button" data-copy-link="">
-                  Copy link
-                  <svg class="size-4" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#open-link"></use>
-                  </svg>
-                </button>
-                <a
-                  class="hover:text-brand-teal"
-                  href="mailto:?subject=When%20to%20Train%20LLMs%20on%20Your%20Own%20Data%3A%20The%20Spectrum%20of%20Options&amp;body=https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
-                  aria-label="Share article by email"
-                  >Email
-                  <svg class="inline size-4" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#contact-email"></use>
-                  </svg>
-                </a>
-                <span class="text-brand-teal" data-copy-status="" role="status"> </span>
-              </div>
-              <details class="border-brand-border mb-10 rounded-xl border p-5 lg:hidden">
-                <summary class="cursor-pointer font-semibold">In this article</summary>
-                <nav class="mt-4 space-y-3 text-sm" aria-label="Article contents">
-                  <a class="hover:text-brand-teal block" href="#choose-your-approach"
-                    >Choose the right approach</a
-                  >
-                  <a class="hover:text-brand-teal block" href="#prepare-your-data"
-                    >Prepare your data</a
-                  >
-                  <a class="hover:text-brand-teal block" href="#compare-options"
-                    >Compare the options</a
-                  >
-                  <a class="hover:text-brand-teal block" href="#build-your-workflow"
-                    >Build a repeatable workflow</a
-                  >
-                  <a class="hover:text-brand-teal block" href="#run-a-pilot"
-                    >Start with a focused pilot</a
-                  >
-                  <a class="hover:text-brand-teal block" href="#next-steps">Plan your next step</a>
-                  <a class="hover:text-brand-teal block" href="#questions">Common questions</a>
-                </nav>
-              </details>
-              <div class="blog-content">
-                <p>
-                  A language model does not automatically understand how your business works.
-                  Product documentation, internal terminology, and the steps behind a customer
-                  request all live outside its original training. Connecting that knowledge to an
-                  application starts with a clear question: what should the system do better?
-                </p>
-                <p>
-                  Sometimes the answer is a more precise instruction. Sometimes it is access to the
-                  right document. And sometimes you need to adjust the model itself. These are
-                  different engineering problems, with different maintenance costs. Establishing
-                  that distinction early makes the rest of the project easier to scope.
-                </p>
-                <h2 id="choose-your-approach">Choose the right approach</h2>
-                <p>
-                  Build the simplest version of the workflow first. Give a capable model a
-                  representative input, a clear instruction, and an example of an acceptable answer.
-                  Record what it gets wrong. The pattern in those errors will tell you more than a
-                  general request for a smarter model.
-                </p>
-                <h3>Start with instructions and examples</h3>
-                <p>
-                  For tasks such as summarizing a meeting or extracting fields from a document, a
-                  well-defined prompt may be enough. Specify the output structure, explain ambiguous
-                  terms, and show how to handle missing information. Keep these instructions
-                  versioned so changes can be reviewed and tested.
-                </p>
-                <h3>Bring relevant knowledge into the request</h3>
-                <p>
-                  Retrieval-augmented generation connects a model to an external knowledge
-                  collection. The application finds useful passages and supplies them as context.
-                  This is a practical fit for information that changes: product specifications,
-                  operating procedures, or a support knowledge base.
-                </p>
-                <p>
-                  The retrieval layer needs its own engineering attention. A correct answer depends
-                  on finding the correct material, respecting the user’s permissions, and preserving
-                  enough context for the model to interpret it. A polished response cannot
-                  compensate for the wrong source document.
-                </p>
-                <h3>Tune behavior when the task is stable</h3>
-                <p>
-                  Fine-tuning adapts a model using examples of the behavior you want. Consider it
-                  when a repeated task still produces inconsistent results after you have improved
-                  the prompt. Suitable examples might include a specialized classification scheme or
-                  a response format that must remain consistent across many requests.
-                </p>
-                <p>
-                  Keep knowledge freshness separate from behavioral consistency. Updating a
-                  retrieval collection and retraining a model are different operations. An
-                  application may use both, but each should have a measurable purpose.
-                </p>
-                <h3>Treat full training as a separate investment</h3>
-                <p>
-                  Building a model from scratch involves more than running a training job. It
-                  requires data preparation, experimentation, infrastructure, evaluation, and an
-                  ongoing serving strategy. It makes sense to investigate this path only when
-                  existing models cannot meet a clearly demonstrated requirement.
-                </p>
-                <figure>
-                  <img
-                    class="w-full rounded-xl"
-                    src="../assets/images/pages/blog/llm-options.png"
-                    alt="Four approaches to customizing an LLM, from prompting through retrieval and fine-tuning to full training"
-                    width="1536"
-                    height="1024"
-                    loading="lazy"
-                  />
-                  <figcaption class="text-brand-gray mt-3 text-sm">
-                    Each step adds control, along with more responsibility for data and operations.
-                  </figcaption>
-                </figure>
-                <h2 id="prepare-your-data">Prepare your data</h2>
-                <p>
-                  A useful dataset represents the situations the application will encounter. Begin
-                  with a documented inventory: where the material comes from, who owns it, when it
-                  changes, and which users may access it. Remove duplicate records and resolve
-                  conflicting versions before creating training examples or a search index.
-                </p>
-                <h3>Review the examples, not just the file count</h3>
-                <ul>
-                  <li>Include ordinary requests and difficult edge cases.</li>
-                  <li>Use one consistent definition of an acceptable answer.</li>
-                  <li>Remove unnecessary personal or confidential information.</li>
-                  <li>Keep source references so an example can be traced and corrected.</li>
-                  <li>Set aside evaluation data before making training changes.</li>
-                </ul>
-                <p>
-                  Separate data by the underlying document, customer, or time period where
-                  appropriate. Randomly splitting near-identical examples can make a model appear
-                  better than it will be on new inputs. Review the evaluation set with the people
-                  who know the task.
-                </p>
-                <h3>Make corrections part of the workflow</h3>
-                <p>
-                  Production feedback should have a route back to the dataset. Record the input, the
-                  result, and the reason it was accepted or rejected. Review changes before
-                  incorporating them, especially when a user’s preferred wording is not the same as
-                  a factually correct answer.
-                </p>
-                <h2 id="compare-options">Compare the options</h2>
-                <p>
-                  Choose an approach by matching the limitation you have observed to the part of the
-                  system that can address it. This comparison can help structure an initial
-                  engineering discussion.
-                </p>
-                <div
-                  class="overflow-x-auto"
-                  tabindex="0"
-                  role="region"
-                  aria-label="LLM approach comparison"
-                >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th scope="col">Approach</th>
-                        <th scope="col">Best starting point</th>
-                        <th scope="col">What you maintain</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">Prompting</th>
-                        <td>The model can do the task but needs clearer instructions.</td>
-                        <td>Prompts, examples, and evaluation cases.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Retrieval</th>
-                        <td>Answers depend on private or changing documents.</td>
-                        <td>Data ingestion, permissions, search quality, and citations.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Fine-tuning</th>
-                        <td>A stable task requires more consistent model behavior.</td>
-                        <td>Reviewed examples, training runs, and model versions.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Full training</th>
-                        <td>A proven requirement cannot be served by available models.</td>
-                        <td>The complete data, training, evaluation, and serving stack.</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="article-reading">
+                <div class="article-tools">
+                  <div class="select select-field article-summary">
+                    <button
+                      class="select__button"
+                      type="button"
+                      aria-expanded="false"
+                      aria-haspopup="listbox"
+                      aria-controls="article-ai-options"
+                      aria-label="Summarize with AI"
+                    >
+                      <svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#sparkles"></use></svg
+                      ><span>Summarize with AI</span
+                      ><svg class="article-summary-chevron" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                      </svg>
+                    </button>
+                    <div class="select__dropdown" id="article-ai-options" data-open="false">
+                      <nav aria-label="AI summary services" role="listbox">
+                        <a
+                          href="https://chat.openai.com/?q=Summarize%20this%20article%20and%20its%20key%20takeaways%3A%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-select="ChatGPT"
+                          role="option"
+                          aria-selected="false"
+                          ><svg class="" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#article-chatgpt"></use></svg
+                          >ChatGPT</a
+                        ><a
+                          href="https://x.com/i/grok?text=Summarize%20this%20article%20and%20its%20key%20takeaways%3A%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-select="Grok"
+                          role="option"
+                          aria-selected="false"
+                          ><svg class="" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#article-grok"></use></svg
+                          >Grok</a
+                        ><a
+                          href="https://www.perplexity.ai/search?q=Summarize%20this%20article%20and%20its%20key%20takeaways%3A%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-select="Perplexity"
+                          role="option"
+                          aria-selected="false"
+                          ><svg class="" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#article-perplexity"></use></svg
+                          >Perplexity</a
+                        ><a
+                          href="https://www.google.com/search?udm=50&amp;q=Summarize%20this%20article%20and%20its%20key%20takeaways%3A%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-select="Google Gemini"
+                          role="option"
+                          aria-selected="false"
+                          ><svg class="" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#article-gemini"></use></svg
+                          >Google Gemini</a
+                        ><a
+                          href="https://claude.ai/new?q=Summarize%20this%20article%20and%20its%20key%20takeaways%3A%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-select="Claude"
+                          role="option"
+                          aria-selected="false"
+                          ><svg class="" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#article-claude"></use></svg
+                          >Claude</a
+                        >
+                      </nav>
+                    </div>
+                  </div>
+                  <div class="article-share">
+                    <a
+                      class="article-share-icon"
+                      href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                      aria-label="Share on Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#social-facebook"></use></svg></a
+                    ><a
+                      class="article-share-icon"
+                      href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                      aria-label="Share on LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#social-linkedin"></use></svg></a
+                    ><a
+                      class="article-share-icon"
+                      href="https://x.com/intent/tweet?text=When%20to%20Train%20LLMs%20on%20Your%20Own%20Data%3A%20The%20Spectrum%20of%20Options&amp;url=https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                      aria-label="Share on X"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#social-x"></use></svg></a
+                    ><a
+                      class="article-share-icon"
+                      href="https://api.whatsapp.com/send?text=When%20to%20Train%20LLMs%20on%20Your%20Own%20Data%3A%20The%20Spectrum%20of%20Options%20https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                      aria-label="Share on WhatsApp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#article-whatsapp"></use></svg
+                    ></a>
+
+                    <button
+                      class="arrow-btn"
+                      type="button"
+                      data-copy-link=""
+                      aria-label="Copy article link"
+                    >
+                      <span class="sr-only">Copy link</span
+                      ><svg class="size-4" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#open-link"></use>
+                      </svg>
+                    </button>
+                    <a
+                      class="article-share-icon"
+                      href="mailto:?subject=When%20to%20Train%20LLMs%20on%20Your%20Own%20Data%3A%20The%20Spectrum%20of%20Options&amp;body=https%3A%2F%2Fwww.kkeydos.com%2Fblog%2Fhow-to-train-an-llm-on-your-own-data%2F"
+                      aria-label="Share article by email"
+                      ><svg class="" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#contact-email"></use></svg
+                    ></a>
+                    <span class="text-brand-teal" data-copy-status="" role="status"> </span>
+                  </div>
                 </div>
-                <p>
-                  Evaluate total ownership, including the work required when an input changes or a
-                  model provider releases an update. The smallest training bill does not necessarily
-                  produce the least expensive application to maintain.
-                </p>
-                <h2 id="build-your-workflow">Build a repeatable workflow</h2>
-                <p>
-                  Assign an owner to each part of the system. Data engineering maintains ingestion
-                  and quality. Application engineers connect the model to product workflows. The
-                  people closest to the business task define success and review representative
-                  results.
-                </p>
-                <h3>Measure the outcome that matters</h3>
-                <p>
-                  For a support assistant, test whether answers are correct, grounded in accessible
-                  sources, and useful to the person asking. For extraction, measure field-level
-                  accuracy and handling of missing values. Include latency, cost per completed task,
-                  and the rate of human intervention alongside model quality.
-                </p>
-                <h3>Version and release deliberately</h3>
-                <p>
-                  Save the model identifier, dataset version, prompt, and retrieval configuration
-                  used for each release. Compare a proposed change against the same evaluation set
-                  as the current version. Introduce changes to a small audience first and keep a
-                  clear rollback path.
-                </p>
-                <blockquote>
-                  A successful model experiment becomes a useful product only when the team can
-                  repeat, monitor, and support the result.
-                </blockquote>
-                <h2 id="run-a-pilot">Start with a focused pilot</h2>
-                <p>
-                  Choose one workflow with a recognizable owner and a clear completion condition.
-                  For example, an internal documentation assistant can answer a defined set of
-                  onboarding questions. Limit the initial document collection and make it easy for
-                  users to inspect the sources.
-                </p>
-                <ol>
-                  <li>Collect representative requests and agree on acceptance criteria.</li>
-                  <li>Build a baseline with an existing model and clear instructions.</li>
-                  <li>Add retrieval if the baseline lacks relevant information.</li>
-                  <li>Review failures before deciding whether fine-tuning is justified.</li>
-                  <li>
-                    Release to a small user group and use feedback to plan the next iteration.
-                  </li>
-                </ol>
-                <p>
-                  A pilot should answer a decision, not simply demonstrate that an interface can
-                  call a model. By the end, you should know which errors remain, what it costs to
-                  serve a request, and what additional work a wider release requires.
-                </p>
-                <h2 id="next-steps">Plan your next step</h2>
-                <p>
-                  Start by defining the application’s job, then improve the weakest part of the
-                  system. Better source material, a narrower task, or a stronger evaluation process
-                  can be more valuable than another training run. Add complexity only when the
-                  evidence supports it.
-                </p>
-                <p>
-                  If you are exploring an AI application,
-                  <a href="../contact-us.html#project">talk with our engineering team</a> about your
-                  data, users, and delivery goals. A clear starting point makes the next technical
-                  decision much easier.
-                </p>
-              </div>
-              <div
-                class="bg-brand-light my-12 scroll-mt-28 rounded-xl p-8 max-md:p-5"
-                id="questions"
-              >
-                <h2 class="mb-6 text-3xl max-md:text-2xl">Common questions</h2>
-                <details class="border-brand-border border-t py-5">
-                  <summary class="cursor-pointer pr-4 text-lg font-medium">
-                    Do I need to train a model to use internal documents?
-                  </summary>
-                  <p class="text-brand-gray mt-4">
-                    Usually you can start with retrieval. It selects relevant material and includes
-                    it with the question so the model has the context it needs. Training is a
-                    separate decision about changing model behavior.
+
+                <div class="select select-field article-contents" data-article-contents="">
+                  <input type="hidden" name="article-section" value="" /><button
+                    class="select__button"
+                    type="button"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-controls="article-contents-options"
+                    aria-label="Article contents"
+                  >
+                    <span data-select-button-value="">Article Contents</span
+                    ><svg class="shrink-0" aria-hidden="true">
+                      <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                    </svg>
+                  </button>
+                  <div
+                    class="select__dropdown"
+                    id="article-contents-options"
+                    role="listbox"
+                    aria-label="Article contents"
+                    data-open="false"
+                  >
+                    <button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="choose-your-approach"
+                      aria-selected="false"
+                      data-select-label="Choose the right approach"
+                    >
+                      Choose the right approach</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="prepare-your-data"
+                      aria-selected="false"
+                      data-select-label="Prepare your data"
+                    >
+                      Prepare your data</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="compare-options"
+                      aria-selected="false"
+                      data-select-label="Compare the options"
+                    >
+                      Compare the options</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="build-your-workflow"
+                      aria-selected="false"
+                      data-select-label="Build a repeatable workflow"
+                    >
+                      Build a repeatable workflow</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="run-a-pilot"
+                      aria-selected="false"
+                      data-select-label="Start with a focused pilot"
+                    >
+                      Start with a focused pilot</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="next-steps"
+                      aria-selected="false"
+                      data-select-label="Plan your next step"
+                    >
+                      Plan your next step</button
+                    ><button
+                      class="select__dropdown-button"
+                      type="button"
+                      role="option"
+                      data-select="questions"
+                      aria-selected="false"
+                      data-select-label="Common questions"
+                    >
+                      Common questions
+                    </button>
+                  </div>
+                </div>
+                <div class="blog-content article-body">
+                  <p>
+                    A language model does not automatically understand how your business works.
+                    Product documentation, internal terminology, and the steps behind a customer
+                    request all live outside its original training. Connecting that knowledge to an
+                    application starts with a clear question: what should the system do better?
                   </p>
-                </details>
-                <details class="border-brand-border border-t py-5">
-                  <summary class="cursor-pointer pr-4 text-lg font-medium">
-                    How much training data should I collect?
-                  </summary>
-                  <p class="text-brand-gray mt-4">
-                    Start by defining the task and the variety of cases it must handle. A smaller,
-                    carefully reviewed set can be more useful than a large, inconsistent collection.
-                    Keep an independent evaluation set to check whether additional examples improve
+                  <p>
+                    Sometimes the answer is a more precise instruction. Sometimes it is access to
+                    the right document. And sometimes you need to adjust the model itself. These are
+                    different engineering problems, with different maintenance costs. Establishing
+                    that distinction early makes the rest of the project easier to scope.
+                  </p>
+                  <h2 id="choose-your-approach">Choose the right approach</h2>
+                  <p>
+                    Build the simplest version of the workflow first. Give a capable model a
+                    representative input, a clear instruction, and an example of an acceptable
+                    answer. Record what it gets wrong. The pattern in those errors will tell you
+                    more than a general request for a smarter model.
+                  </p>
+                  <figure>
+                    <img
+                      class="w-full rounded-xl"
+                      src="../assets/images/pages/blog/llm-options.png"
+                      alt="Four approaches to customizing an LLM, from prompting through retrieval and fine-tuning to full training"
+                      width="1536"
+                      height="1024"
+                      loading="lazy"
+                    />
+                    <figcaption class="text-brand-gray mt-3 text-sm">
+                      Each step adds control, along with more responsibility for data and
+                      operations.
+                    </figcaption>
+                  </figure>
+                  <h3>Start with instructions and examples</h3>
+                  <p>
+                    For tasks such as summarizing a meeting or extracting fields from a document, a
+                    well-defined prompt may be enough. Specify the output structure, explain
+                    ambiguous terms, and show how to handle missing information. Keep these
+                    instructions versioned so changes can be reviewed and tested.
+                  </p>
+                  <h3>Bring relevant knowledge into the request</h3>
+                  <p>
+                    Retrieval-augmented generation connects a model to an external knowledge
+                    collection. The application finds useful passages and supplies them as context.
+                    This is a practical fit for information that changes: product specifications,
+                    operating procedures, or a support knowledge base.
+                  </p>
+                  <p>
+                    The retrieval layer needs its own engineering attention. A correct answer
+                    depends on finding the correct material, respecting the user’s permissions, and
+                    preserving enough context for the model to interpret it. A polished response
+                    cannot compensate for the wrong source document.
+                  </p>
+                  <h3>Tune behavior when the task is stable</h3>
+                  <p>
+                    Fine-tuning adapts a model using examples of the behavior you want. Consider it
+                    when a repeated task still produces inconsistent results after you have improved
+                    the prompt. Suitable examples might include a specialized classification scheme
+                    or a response format that must remain consistent across many requests.
+                  </p>
+                  <p>
+                    Keep knowledge freshness separate from behavioral consistency. Updating a
+                    retrieval collection and retraining a model are different operations. An
+                    application may use both, but each should have a measurable purpose.
+                  </p>
+                  <h3>Treat full training as a separate investment</h3>
+                  <p>
+                    Building a model from scratch involves more than running a training job. It
+                    requires data preparation, experimentation, infrastructure, evaluation, and an
+                    ongoing serving strategy. It makes sense to investigate this path only when
+                    existing models cannot meet a clearly demonstrated requirement.
+                  </p>
+
+                  <h2 id="prepare-your-data">Prepare your data</h2>
+                  <p>
+                    A useful dataset represents the situations the application will encounter. Begin
+                    with a documented inventory: where the material comes from, who owns it, when it
+                    changes, and which users may access it. Remove duplicate records and resolve
+                    conflicting versions before creating training examples or a search index.
+                  </p>
+                  <h3>Review the examples, not just the file count</h3>
+                  <ul>
+                    <li>Include ordinary requests and difficult edge cases.</li>
+                    <li>Use one consistent definition of an acceptable answer.</li>
+                    <li>Remove unnecessary personal or confidential information.</li>
+                    <li>Keep source references so an example can be traced and corrected.</li>
+                    <li>Set aside evaluation data before making training changes.</li>
+                  </ul>
+                  <p>
+                    Separate data by the underlying document, customer, or time period where
+                    appropriate. Randomly splitting near-identical examples can make a model appear
+                    better than it will be on new inputs. Review the evaluation set with the people
+                    who know the task.
+                  </p>
+                  <h3>Data ownership and access</h3>
+                  <p>
+                    Assign an owner to each source and document which users can retrieve it. Apply
+                    permissions before material reaches the model, remove unnecessary sensitive
+                    fields, and keep an audit trail of dataset changes. Review retention and
+                    deletion rules alongside your ingestion process.
+                  </p>
+                  <h3>Make corrections part of the workflow</h3>
+                  <p>
+                    Production feedback should have a route back to the dataset. Record the input,
+                    the result, and the reason it was accepted or rejected. Review changes before
+                    incorporating them, especially when a user’s preferred wording is not the same
+                    as a factually correct answer.
+                  </p>
+                  <h2 id="compare-options">Compare the options</h2>
+                  <p>
+                    Choose an approach by matching the limitation you have observed to the part of
+                    the system that can address it. This comparison can help structure an initial
+                    engineering discussion.
+                  </p>
+                  <h3>Compare delivery and maintenance requirements</h3>
+                  <div
+                    class="overflow-x-auto"
+                    tabindex="0"
+                    role="region"
+                    aria-label="LLM approach comparison"
+                  >
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">Approach</th>
+                          <th scope="col">Best starting point</th>
+                          <th scope="col">What you maintain</th>
+                          <th scope="col">Data needed</th>
+                          <th scope="col">Infrastructure</th>
+                          <th scope="col">Main limitation</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Prompting</th>
+                          <td>The model can do the task but needs clearer instructions.</td>
+                          <td>Prompts, examples, and evaluation cases.</td>
+                          <td>Representative prompts and evaluation examples</td>
+                          <td>Model provider and application integration</td>
+                          <td>Limited control over the underlying model</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Retrieval</th>
+                          <td>Answers depend on private or changing documents.</td>
+                          <td>Data ingestion, permissions, search quality, and citations.</td>
+                          <td>Reviewed, searchable source documents</td>
+                          <td>Search index, ingestion, and access controls</td>
+                          <td>Missing or irrelevant retrieved context</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Fine-tuning</th>
+                          <td>A stable task requires more consistent model behavior.</td>
+                          <td>Reviewed examples, training runs, and model versions.</td>
+                          <td>Labeled examples for a clearly defined task</td>
+                          <td>Training jobs and versioned model serving</td>
+                          <td>Overfitting and behavior drift</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Full training</th>
+                          <td>A proven requirement cannot be served by available models.</td>
+                          <td>The complete data, training, evaluation, and serving stack.</td>
+                          <td>Large, licensed, well-governed datasets</td>
+                          <td>Dedicated training and serving infrastructure</td>
+                          <td>High operational and maintenance demands</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>
+                    Evaluate total ownership, including the work required when an input changes or a
+                    model provider releases an update. The smallest training bill does not
+                    necessarily produce the least expensive application to maintain.
+                  </p>
+                  <h3>Choose a practical starting point</h3>
+                  <div
+                    class="overflow-x-auto"
+                    tabindex="0"
+                    role="region"
+                    aria-label="LLM starting point matrix"
+                  >
+                    <table>
+                      <thead>
+                        <tr>
+                          <th scope="col">Data maturity</th>
+                          <th scope="col">Task</th>
+                          <th scope="col">Initial approach</th>
+                          <th scope="col">Next checkpoint</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Reliable source documents</th>
+                          <td>Questions about changing information</td>
+                          <td>Retrieval with an existing model</td>
+                          <td>Evaluate source coverage and answer grounding.</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Reviewed task examples</th>
+                          <td>Repeated, narrowly defined output</td>
+                          <td>Prompt baseline, then targeted fine-tuning</td>
+                          <td>Compare consistency on held-out cases.</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Incomplete or inconsistent records</th>
+                          <td>Early product exploration</td>
+                          <td>Constrained prototype and data cleanup</td>
+                          <td>Agree on a dataset owner and quality criteria.</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Extensive proprietary corpus</th>
+                          <td>Requirements beyond existing models</td>
+                          <td>Investigate continued pre-training</td>
+                          <td>Validate feasibility and lifecycle ownership.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h2 id="build-your-workflow">Build a repeatable workflow</h2>
+                  <p>
+                    Assign an owner to each part of the system. Data engineering maintains ingestion
+                    and quality. Application engineers connect the model to product workflows. The
+                    people closest to the business task define success and review representative
                     results.
                   </p>
-                </details>
-                <details class="border-brand-border border-t py-5">
-                  <summary class="cursor-pointer pr-4 text-lg font-medium">
-                    Can retrieval and fine-tuning work together?
-                  </summary>
-                  <p class="text-brand-gray mt-4">
-                    Yes. Retrieval can supply current facts while a fine-tuned model follows a more
-                    consistent response format or task-specific workflow. Test each addition
-                    separately so you know which part improves the result.
+                  <h3>Measure the outcome that matters</h3>
+                  <p>
+                    For a support assistant, test whether answers are correct, grounded in
+                    accessible sources, and useful to the person asking. For extraction, measure
+                    field-level accuracy and handling of missing values. Include latency, cost per
+                    completed task, and the rate of human intervention alongside model quality.
                   </p>
-                </details>
-                <details class="border-brand-border border-t py-5">
-                  <summary class="cursor-pointer pr-4 text-lg font-medium">
-                    How do I protect sensitive information?
-                  </summary>
-                  <p class="text-brand-gray mt-4">
-                    Limit the data included in each request, apply access controls before retrieval,
-                    and remove information the task does not require. Review the model provider’s
-                    data handling terms and your own retention requirements before connecting
-                    production data.
+                  <h3>Version and release deliberately</h3>
+                  <p>
+                    Save the model identifier, dataset version, prompt, and retrieval configuration
+                    used for each release. Compare a proposed change against the same evaluation set
+                    as the current version. Introduce changes to a small audience first and keep a
+                    clear rollback path.
                   </p>
-                </details>
-              </div>
-              <div
-                class="border-brand-border flex flex-wrap items-center justify-between gap-4 border-t py-6"
-              >
-                <a class="arrow-btn" href="../blog.html">
-                  <svg class="size-4 rotate-180" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#arrow-right"></use>
-                  </svg>
-                  Back to the blog</a
+                  <blockquote>
+                    A successful model experiment becomes a useful product only when the team can
+                    repeat, monitor, and support the result.
+                  </blockquote>
+                  <h2 id="run-a-pilot">Start with a focused pilot</h2>
+                  <p>
+                    Choose one workflow with a recognizable owner and a clear completion condition.
+                    For example, an internal documentation assistant can answer a defined set of
+                    onboarding questions. Limit the initial document collection and make it easy for
+                    users to inspect the sources.
+                  </p>
+                  <ol>
+                    <li>Collect representative requests and agree on acceptance criteria.</li>
+                    <li>Build a baseline with an existing model and clear instructions.</li>
+                    <li>Add retrieval if the baseline lacks relevant information.</li>
+                    <li>Review failures before deciding whether fine-tuning is justified.</li>
+                    <li>
+                      Release to a small user group and use feedback to plan the next iteration.
+                    </li>
+                  </ol>
+                  <p>
+                    A pilot should answer a decision, not simply demonstrate that an interface can
+                    call a model. By the end, you should know which errors remain, what it costs to
+                    serve a request, and what additional work a wider release requires.
+                  </p>
+                  <h2 id="next-steps">Plan your next step</h2>
+                  <p>
+                    Start by defining the application’s job, then improve the weakest part of the
+                    system. Better source material, a narrower task, or a stronger evaluation
+                    process can be more valuable than another training run. Add complexity only when
+                    the evidence supports it.
+                  </p>
+                  <p>
+                    If you are exploring an AI application,
+                    <a href="../contact-us.html#project">talk with our engineering team</a> about
+                    your data, users, and delivery goals. A clear starting point makes the next
+                    technical decision much easier.
+                  </p>
+                </div>
+                <div class="article-faq" id="questions" data-accordions="one-active">
+                  <h2 class="mb-6 text-3xl max-md:text-2xl">Frequently Asked Questions</h2>
+                  <div class="faq-item" data-accordion="" data-open="false">
+                    <h3>
+                      <button
+                        class="faq-item__button gap-6 text-left font-normal"
+                        type="button"
+                        data-accordion-trigger=""
+                        aria-expanded="false"
+                        aria-controls="article-faq-answer-0"
+                        id="article-faq-question-0"
+                      >
+                        Do I need to train a model to use internal documents?<svg
+                          class="shrink-0"
+                          aria-hidden="true"
+                        >
+                          <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      id="article-faq-answer-0"
+                      data-accordion-content=""
+                      role="region"
+                      aria-labelledby="article-faq-question-0"
+                    >
+                      <div>
+                        <p class="pr-10 pb-6 font-normal">
+                          Usually you can start with retrieval. It selects relevant material and
+                          includes it with the question so the model has the context it needs.
+                          Training is a separate decision about changing model behavior.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item" data-accordion="" data-open="false">
+                    <h3>
+                      <button
+                        class="faq-item__button gap-6 text-left font-normal"
+                        type="button"
+                        data-accordion-trigger=""
+                        aria-expanded="false"
+                        aria-controls="article-faq-answer-1"
+                        id="article-faq-question-1"
+                      >
+                        How much training data should I collect?<svg
+                          class="shrink-0"
+                          aria-hidden="true"
+                        >
+                          <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      id="article-faq-answer-1"
+                      data-accordion-content=""
+                      role="region"
+                      aria-labelledby="article-faq-question-1"
+                    >
+                      <div>
+                        <p class="pr-10 pb-6 font-normal">
+                          Start by defining the task and the variety of cases it must handle. A
+                          smaller, carefully reviewed set can be more useful than a large,
+                          inconsistent collection. Keep an independent evaluation set to check
+                          whether additional examples improve results.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item" data-accordion="" data-open="false">
+                    <h3>
+                      <button
+                        class="faq-item__button gap-6 text-left font-normal"
+                        type="button"
+                        data-accordion-trigger=""
+                        aria-expanded="false"
+                        aria-controls="article-faq-answer-2"
+                        id="article-faq-question-2"
+                      >
+                        Can retrieval and fine-tuning work together?<svg
+                          class="shrink-0"
+                          aria-hidden="true"
+                        >
+                          <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      id="article-faq-answer-2"
+                      data-accordion-content=""
+                      role="region"
+                      aria-labelledby="article-faq-question-2"
+                    >
+                      <div>
+                        <p class="pr-10 pb-6 font-normal">
+                          Yes. Retrieval can supply current facts while a fine-tuned model follows a
+                          more consistent response format or task-specific workflow. Test each
+                          addition separately so you know which part improves the result.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item" data-accordion="" data-open="false">
+                    <h3>
+                      <button
+                        class="faq-item__button gap-6 text-left font-normal"
+                        type="button"
+                        data-accordion-trigger=""
+                        aria-expanded="false"
+                        aria-controls="article-faq-answer-3"
+                        id="article-faq-question-3"
+                      >
+                        How do I protect sensitive information?<svg
+                          class="shrink-0"
+                          aria-hidden="true"
+                        >
+                          <use href="../assets/images/icons.svg#chevron-bottom"></use>
+                        </svg>
+                      </button>
+                    </h3>
+                    <div
+                      id="article-faq-answer-3"
+                      data-accordion-content=""
+                      role="region"
+                      aria-labelledby="article-faq-question-3"
+                    >
+                      <div>
+                        <p class="pr-10 pb-6 font-normal">
+                          Limit the data included in each request, apply access controls before
+                          retrieval, and remove information the task does not require. Review the
+                          model provider’s data handling terms and your own retention requirements
+                          before connecting production data.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-author article-author-end">
+                  <div class="article-author-heading">
+                    <img
+                      class="article-author-image"
+                      src="../assets/images/logo.png"
+                      alt=""
+                      width="112"
+                      height="112"
+                    />
+                    <div>
+                      <p class="article-author-name">KKEYDOS Engineering</p>
+                      <p class="text-brand-gray text-sm">AI &amp; Software Development</p>
+                    </div>
+                  </div>
+                  <p class="article-author-bio">
+                    Practical perspectives from our team on building, integrating, and maintaining
+                    software that solves real business problems.
+                  </p>
+                  <p class="article-expertise">
+                    <span class="article-expertise-label">Expertise</span>
+                    <span class="border-brand-border rounded border bg-white px-3 py-1">LLM</span>
+                    <span class="border-brand-border rounded border bg-white px-3 py-1"
+                      >AI Engineering</span
+                    >
+                    <span class="border-brand-border rounded border bg-white px-3 py-1">Data</span>
+                  </p>
+                </div>
+                <div
+                  class="border-brand-border article-endnav flex flex-wrap items-center justify-between gap-4 border-t py-6"
                 >
-                <a class="arrow-btn text-brand-teal" href="../contact-us.html"
-                  >Discuss your AI project
-                  <svg class="size-4" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
+                  <a class="arrow-btn" href="../blog.html">
+                    <svg class="size-4 rotate-180" aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                    Back to the blog</a
+                  >
+                  <a class="arrow-btn text-brand-teal" href="../contact-us.html"
+                    >Discuss your AI project
+                    <svg class="size-4" aria-hidden="true">
+                      <use href="../assets/images/icons.svg#arrow-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <section class="article-related">
+                  <div>
+                    <h2 class="mb-8 text-3xl">Related articles</h2>
+                    <div class="article-related-grid">
+                      <article class="article-related-card" data-blog-card="">
+                        <a
+                          class="group block"
+                          href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            class="aspect-video w-full object-cover"
+                            src="../assets/images/pages/blog/how-to-build-a-rag-application.jpg"
+                            alt=""
+                            width="800"
+                            height="450"
+                            loading="lazy"
+                          />
+                          <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                            From retrieval to evaluation: putting a RAG application together
+                          </h3>
+                        </a>
+                        <p
+                          class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+                        >
+                          <span>BairesDev Insights</span>
+                          <svg class="size-4" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#open-link"></use>
+                          </svg>
+                        </p>
+                      </article>
+                      <article class="article-related-card" data-blog-card="">
+                        <a
+                          class="group block"
+                          href="https://www.bairesdev.com/blog/the-autonomy-gap-pilot-and-production/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            class="aspect-video w-full object-cover"
+                            src="../assets/images/pages/blog/the-autonomy-gap-pilot-and-production.png"
+                            alt=""
+                            width="800"
+                            height="450"
+                            loading="lazy"
+                          />
+                          <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                            Taking AI from a promising prototype to a production service
+                          </h3>
+                        </a>
+                        <p
+                          class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+                        >
+                          <span>BairesDev Insights</span>
+                          <svg class="size-4" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#open-link"></use>
+                          </svg>
+                        </p>
+                      </article>
+                      <article class="article-related-card" data-blog-card="">
+                        <a
+                          class="group block"
+                          href="https://www.bairesdev.com/blog/scaling-ai-in-the-enterprise/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            class="aspect-video w-full object-cover"
+                            src="../assets/images/pages/blog/scaling-ai-in-the-enterprise.jpg"
+                            alt=""
+                            width="800"
+                            height="450"
+                            loading="lazy"
+                          />
+                          <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
+                            Making enterprise AI part of everyday delivery
+                          </h3>
+                        </a>
+                        <p
+                          class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
+                        >
+                          <span>BairesDev Insights</span>
+                          <svg class="size-4" aria-hidden="true">
+                            <use href="../assets/images/icons.svg#open-link"></use>
+                          </svg>
+                        </p>
+                      </article>
+                    </div>
+                  </div>
+                </section>
               </div>
             </article>
-            <aside class="space-y-8 max-lg:hidden" aria-label="Related information">
-              <div class="border-brand-teal/20 bg-brand-teal/5 rounded-xl border p-6">
-                <h2 class="mb-4 text-2xl font-medium">Building your AI team?</h2>
-                <p class="text-brand-gray mb-6">
-                  Bring the right engineering expertise to your next product, from data foundations
-                  to production delivery.
-                </p>
-                <ul class="mb-6 space-y-3 text-sm">
-                  <li class="flex gap-2">
-                    <svg class="text-brand-teal size-5 shrink-0" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#circle-check"></use>
-                    </svg>
-                    AI &amp; ML engineers
-                  </li>
-                  <li class="flex gap-2">
-                    <svg class="text-brand-teal size-5 shrink-0" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#circle-check"></use>
-                    </svg>
-                    Data specialists
-                  </li>
-                  <li class="flex gap-2">
-                    <svg class="text-brand-teal size-5 shrink-0" aria-hidden="true">
-                      <use href="../assets/images/icons.svg#circle-check"></use>
-                    </svg>
-                    Product development teams
-                  </li>
-                </ul>
-                <a class="btn w-full" href="../contact-us.html"
-                  >Let’s talk
-                  <svg class="size-4" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
-                <a class="mt-5 block text-sm underline" href="../about.html">Get to know KKEYDOS</a>
+            <aside class="article-sidebar" aria-label="Related information">
+              <div class="article-hiring">
+                <h2>Hiring engineers?</h2>
+                <div class="article-hiring-body">
+                  <p>
+                    Build your next product with experienced engineers. KKEYDOS supports your team
+                    from the first release through ongoing development.
+                  </p>
+                  <ul class="article-talent-list">
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-alejandro.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Alejandro D.<span>Sr. Full-stack Dev.</span></span>
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-gustavo.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Gustavo A.<span>Sr. QA Engineer</span></span>
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-fiorella.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Fiorella G.<span>Sr. Data Scientist</span></span>
+                    </li>
+                  </ul>
+                  <nav aria-label="Explore KKEYDOS">
+                    <a href="../about.html">About Us</a
+                    ><a href="../services/ai-development.html">Software Development Services</a
+                    ><a href="../clients.html">Our Clients</a>
+                  </nav>
+                </div>
               </div>
-              <nav class="border-brand-border border-t pt-6" aria-label="Table of contents">
-                <h2 class="mb-5 text-lg">In this article</h2>
-                <ol class="text-brand-gray space-y-4 text-sm">
-                  <li>
-                    <a class="hover:text-brand-teal" href="#choose-your-approach" data-toc-link=""
-                      >Choose the right approach</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#prepare-your-data" data-toc-link=""
-                      >Prepare your data</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#compare-options" data-toc-link=""
-                      >Compare the options</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#build-your-workflow" data-toc-link=""
-                      >Build a repeatable workflow</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#run-a-pilot" data-toc-link=""
-                      >Start with a focused pilot</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#next-steps" data-toc-link=""
-                      >Plan your next step</a
-                    >
-                  </li>
-                  <li>
-                    <a class="hover:text-brand-teal" href="#questions" data-toc-link=""
-                      >Common questions</a
-                    >
-                  </li>
-                </ol>
-              </nav>
-              <div class="bg-brand-light rounded-xl p-6">
-                <p class="text-brand-teal mb-3 text-sm font-semibold uppercase">
-                  From idea to production
-                </p>
-                <p class="mb-5 text-xl">Build a practical roadmap for your next AI application.</p>
-                <a class="arrow-btn text-sm" href="../technologies/technology.html"
-                  >Explore our expertise
-                  <svg class="size-4" aria-hidden="true">
-                    <use href="../assets/images/icons.svg#arrow-right"></use>
-                  </svg>
-                </a>
+              <div class="article-sidebar-track">
+                <div class="article-sticky-slot">
+                  <figure class="article-testimonial">
+                    <svg class="article-quote" aria-hidden="true">
+                      <use href="../assets/images/icons.svg#article-quote"></use>
+                    </svg>
+                    <blockquote>
+                      BairesDev assembled a dream team for us and in just a few months our digital
+                      offering was completely transformed.
+                    </blockquote>
+                    <figcaption>
+                      <span class="article-client-mark"
+                        ><img
+                          src="../assets/images/pages/clients/rollssmall_zf24j6.png"
+                          alt="Rolls-Royce"
+                          width="24"
+                          height="32"
+                          loading="lazy" /></span
+                      ><span>VP Product Manager<span>Rolls-Royce</span></span>
+                    </figcaption>
+                    <a
+                      class="btn w-full"
+                      href="https://www.bairesdev.com/case-studies/rolls-royce/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Read Case Study
+                      <svg class="size-4" aria-hidden="true">
+                        <use href="../assets/images/icons.svg#arrow-right"></use></svg
+                    ></a>
+                  </figure>
+                </div>
+                <div class="article-sticky-slot">
+                  <section class="article-sidebar-related" aria-labelledby="article-related-title">
+                    <h2 id="article-related-title">Related articles</h2>
+                    <ul>
+                      <li>
+                        <svg class="" aria-hidden="true">
+                          <use href="../assets/images/icons.svg#document"></use></svg
+                        ><a
+                          href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >From retrieval to evaluation: putting a RAG application together</a
+                        >
+                      </li>
+                      <li>
+                        <svg class="" aria-hidden="true">
+                          <use href="../assets/images/icons.svg#document"></use></svg
+                        ><a
+                          href="https://www.bairesdev.com/blog/the-autonomy-gap-pilot-and-production/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Taking AI from a promising prototype to a production service</a
+                        >
+                      </li>
+                      <li>
+                        <svg class="" aria-hidden="true">
+                          <use href="../assets/images/icons.svg#document"></use></svg
+                        ><a
+                          href="https://www.bairesdev.com/blog/scaling-ai-in-the-enterprise/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Making enterprise AI part of everyday delivery</a
+                        >
+                      </li>
+                      <li>
+                        <svg class="" aria-hidden="true">
+                          <use href="../assets/images/icons.svg#document"></use></svg
+                        ><a
+                          href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Common Barriers to AI Adoption: Why Pilots Stall</a
+                        >
+                      </li>
+                      <li>
+                        <svg aria-hidden="true">
+                          <use href="../assets/images/icons.svg#document"></use></svg
+                        ><a
+                          href="https://www.bairesdev.com/blog/what-is-an-llm/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Understand large language models and their architecture</a
+                        >
+                      </li>
+                    </ul>
+                  </section>
+                </div>
               </div>
             </aside>
           </div>
         </div>
       </section>
-      <section class="bg-brand-light py-16 max-md:py-10">
-        <div class="page-container">
-          <h2 class="mb-8 text-3xl">Continue exploring</h2>
-          <div class="grid grid-cols-2 gap-6">
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="../assets/images/pages/blog/how-to-build-a-rag-application.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
-                  From retrieval to evaluation: putting a RAG application together
-                </h3>
-              </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
-              >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="../assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
-            </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/the-autonomy-gap-pilot-and-production/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="../assets/images/pages/blog/the-autonomy-gap-pilot-and-production.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
-                  Taking AI from a promising prototype to a production service
-                </h3>
-              </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
-              >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="../assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
-            </article>
-            <article class="flex flex-col overflow-hidden rounded-xl bg-white" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/scaling-ai-in-the-enterprise/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="../assets/images/pages/blog/scaling-ai-in-the-enterprise.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <h3 class="group-hover:text-brand-teal px-6 pt-6 text-2xl max-md:text-xl">
-                  Making enterprise AI part of everyday delivery
-                </h3>
-              </a>
-              <p
-                class="text-brand-gray mt-auto flex items-center justify-between gap-4 p-6 text-sm"
-              >
-                <span>BairesDev Insights</span>
-                <svg class="size-4" aria-hidden="true">
-                  <use href="../assets/images/icons.svg#open-link"></use>
-                </svg>
-              </p>
-            </article>
+      <div class="article-mobile-hiring" data-accordions="one-active">
+        <div data-accordion="" data-open="false">
+          <button
+            type="button"
+            class="article-mobile-hiring-trigger"
+            data-accordion-trigger=""
+            aria-expanded="false"
+            aria-controls="article-mobile-hiring-content"
+          >
+            Hiring engineers?<svg class="" aria-hidden="true">
+              <use href="../assets/images/icons.svg#chevron-bottom"></use>
+            </svg>
+          </button>
+          <div data-accordion-content="" id="article-mobile-hiring-content">
+            <div>
+              <div class="article-hiring">
+                <div class="article-hiring-body">
+                  <p>
+                    Build your next product with experienced engineers. KKEYDOS supports your team
+                    from the first release through ongoing development.
+                  </p>
+                  <ul class="article-talent-list">
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-alejandro.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Alejandro D.<span>Sr. Full-stack Dev.</span></span>
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-gustavo.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Gustavo A.<span>Sr. QA Engineer</span></span>
+                    </li>
+                    <li>
+                      <img
+                        src="../assets/images/pages/blog/talent-fiorella.webp"
+                        alt=""
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                      /><span>Fiorella G.<span>Sr. Data Scientist</span></span>
+                    </li>
+                  </ul>
+                  <nav aria-label="Explore KKEYDOS">
+                    <a href="../about.html">About Us</a
+                    ><a href="../services/ai-development.html">Software Development Services</a
+                    ><a href="../clients.html">Our Clients</a>
+                  </nav>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer class="overflow-hidden">
       <div class="page-container flex max-xl:flex-col">

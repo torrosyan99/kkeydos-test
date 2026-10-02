@@ -181,6 +181,7 @@ if (search) {
   filters.forEach((button) =>
     button.addEventListener('click', () => {
       selectCategory(button.dataset.blogFilter);
+      if (!desktop.matches) menuToggle.focus({ preventScroll: true });
       window.scrollTo({ top: 0, behavior: 'instant' });
     }),
   );
@@ -208,7 +209,7 @@ if (search) {
       : 'all';
     input.value = new URLSearchParams(window.location.search).get('q') || '';
     update();
-    if (input.value) setSearch(true);
+    setSearch(Boolean(input.value), false);
   }
   window.addEventListener('hashchange', readLocation);
   window.addEventListener('popstate', readLocation);
