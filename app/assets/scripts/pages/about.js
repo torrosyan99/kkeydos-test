@@ -8,12 +8,10 @@ if (page) {
   const reveals = [...page.querySelectorAll('[data-about-reveal]')];
   const mapReveal = page.querySelector('[data-map-reveal]');
   const mapCard = mapReveal.querySelector('[data-map-card]');
-  const mapScene = page.querySelector('[data-map-scene]');
-  const mapPin = mapScene.querySelector('[data-map-pin]');
-  const mapTimeline = mapPin.querySelector('[data-map-timeline]');
+  const mapPin = page.querySelector('[data-map-pin]');
   const mapExitGap = page.querySelector('[data-map-exit-gap]');
-  const mapFollowing = page.querySelector('[data-map-following]');
   const desktopMap = window.matchMedia('(min-width: 1024px)');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const projectsPhoto = page.querySelector('[data-projects-photo]');
   const projectsImage = projectsPhoto.querySelector('img');
   const intro = page.querySelector('[data-intro-path]');
@@ -27,6 +25,7 @@ if (page) {
   const givebackLine = page.querySelector('[data-giveback-line]');
   const givebackBall = page.querySelector('[data-giveback-ball]');
   const givebackStop = page.querySelector('[data-giveback-stop]');
+  const givebackTitle = giveback.querySelector('h2');
   const wash = page.querySelector('[data-giveback-wash]');
   let curveLength = 0;
   let introProgress = 0;
@@ -38,11 +37,8 @@ if (page) {
   let introStart = 0;
   let introEnd = 0;
   let firstRevealed = false;
-  let mapStart = 0;
-  let mapDistance = 1;
-  let mapPinEnd = 0;
+  let mapProgress = null;
   let mapTravel = 0;
-  let mapAnimated = false;
   let frame = 0;
   const clamp = (value) => Math.min(1, Math.max(0, value));
 
@@ -66,34 +62,18 @@ if (page) {
     .forEach((element) => revealObserver.observe(element));
 
   const measure = () => {
-    mapAnimated = desktopMap.matches;
-    const pinHeight = mapPin.offsetHeight;
-    // Short screens can scroll past the copy before pinning the map in view.
-    const pinTop = Math.min(128, window.innerHeight - pinHeight - 32);
-    mapDistance = mapAnimated ? Math.max(340, window.innerHeight * 0.55) : 0;
-    const settleDistance = mapAnimated ? Math.max(120, window.innerHeight * 0.18) : 0;
-    mapPin.style.position = mapAnimated ? 'sticky' : 'relative';
-    mapPin.style.top = mapAnimated ? `${pinTop}px` : '0px';
-    mapScene.style.height = mapAnimated ? `${pinHeight + mapDistance + settleDistance}px` : 'auto';
-    mapStart = mapScene.getBoundingClientRect().top + window.scrollY - pinTop;
-    mapPinEnd = mapStart + mapDistance + settleDistance;
-    // Let the settled card remain in view, then bring the next block in from
-    // below the viewport rather than revealing its background under the pin.
-    const sceneMargin = parseFloat(getComputedStyle(mapScene).marginBottom);
-    mapExitGap.style.height = mapAnimated
-      ? `${Math.max(0, window.innerHeight - pinTop - pinHeight - sceneMargin + 48)}px`
-      : '0px';
-    // This rail belongs to the native sticky layer. No scroll compensation or
-    // per-frame transforms are needed while the map is descending.
-    mapTimeline.style.left = `${mapPin.querySelector('[data-story-stop]').offsetLeft + 10}px`;
-    mapTimeline.style.top = `${-window.innerHeight * 2}px`;
-    mapTimeline.style.height = `${window.innerHeight * 2.52 - pinTop}px`;
-    const mapOffset = mapReveal.getBoundingClientRect().top - mapPin.getBoundingClientRect().top;
-    mapTravel = Math.max(
-      window.innerHeight * 0.75,
-      pinTop + mapOffset + mapCard.offsetHeight + 100,
-    );
-
+    mapExitGap.style.height = desktopMap.matches ? '120px' : '64px';
+    // Align the endpoint with the heading's first line, not the taller image row.
+    // Layout offsets exclude the text's entrance transform.
+    let titleTop = 0;
+    for (let element = givebackTitle; element && element !== givebackStop.offsetParent; element = element.offsetParent) {
+      titleTop += element.offsetTop;
+    }
+    const titleStyle = getComputedStyle(givebackTitle);
+    const titleLineHeight = parseFloat(titleStyle.lineHeight) || parseFloat(titleStyle.fontSize) * 1.2;
+    givebackStop.style.top = `${titleTop + titleLineHeight / 2 - givebackStop.offsetHeight / 2}px`;
+    // Start above the viewport; opacity reveals the card later in its descent.
+    mapTravel = window.innerHeight * 0.9 + mapCard.offsetHeight + 48;
     const rect = intro.getBoundingClientRect();
     const marker = steps[0].querySelector('[data-story-stop]').getBoundingClientRect();
     const endX = marker.left + marker.width / 2 - rect.left;
@@ -180,9 +160,6 @@ if (page) {
     steps[0].querySelectorAll('[data-about-reveal]').forEach((element) => {
       element.dataset.visible = String(firstRevealed);
     });
-    const mapPinned = storyActive && mapAnimated && window.scrollY >= mapStart && window.scrollY <= mapPinEnd;
-    storyTrack.style.visibility = mapPinned ? 'hidden' : 'visible';
-    mapTimeline.hidden = !mapPinned;
     const track = storyTrack.getBoundingClientRect();
     const trackLength = track.height;
     const lineHead = viewport * 0.52;
@@ -201,35 +178,38 @@ if (page) {
     const givebackTop = givebackTrack.getBoundingClientRect().top;
     const stopRect = givebackStop.getBoundingClientRect();
     const givebackLength = stopRect.top + stopRect.height / 2 - givebackTop;
-    const givebackTarget = storyActive && introTarget === 1
+    // Start the white segment only after the orange head reaches this section.
+    // Clear it immediately on exit so smoothing cannot leave a white flash behind.
+    const givebackActive = storyActive && introTarget === 1
+      && progress === trackLength && lineHead > givebackTop;
+    const givebackTarget = givebackActive
       ? Math.min(givebackLength, Math.max(0, lineHead - givebackTop))
       : 0;
-    givebackProgress = approach(givebackProgress, givebackTarget, 0.1);
+    givebackProgress = givebackActive ? approach(givebackProgress, givebackTarget, 0.1) : 0;
     givebackLine.style.height = `${givebackProgress}px`;
     givebackBall.style.transform = `translateY(${givebackProgress - 16}px)`;
     givebackBall.hidden = givebackProgress === 0 || givebackProgress === givebackLength;
-    givebackStop.dataset.reached = String(givebackProgress === givebackLength);
+    givebackStop.dataset.reached = String(givebackActive && givebackProgress === givebackLength);
 
     drawIntro();
 
-    // Sticky holds the block while this scroll interval lowers and straightens the map.
-    // Deriving progress directly from scroll position makes the entire scene reversible.
-    const mapProgress = clamp((window.scrollY - mapStart) / Math.max(1, mapDistance));
-    const mobileProgress = clamp(
-      (viewport * 0.94 - mapReveal.getBoundingClientRect().top) / (viewport * 0.35),
-    );
-    const mapRemaining = 1 - mapProgress;
-    mapFollowing.style.visibility =
-      !mapAnimated || window.scrollY > mapPinEnd ? 'visible' : 'hidden';
-    if (mapAnimated) {
-      mapCard.style.transform = `translateY(${-mapTravel * mapRemaining}px) rotate(${7 * mapRemaining}deg)`;
-      mapCard.style.opacity = String(clamp(mapProgress / 0.2));
+    // Track the untransformed slot so the card's movement cannot affect progress.
+    const mapRect = mapReveal.getBoundingClientRect();
+    const mapTarget = reducedMotion.matches
+      ? 1
+      : clamp((viewport * 0.82 - mapRect.top) / (viewport * (desktopMap.matches ? 0.45 : 0.35)));
+    mapProgress = mapProgress === null || reducedMotion.matches
+      ? mapTarget
+      : approach(mapProgress, mapTarget, 0.0001);
+    const mapRemaining = (1 - mapProgress) ** 2;
+    if (desktopMap.matches) {
+      mapCard.style.transform = `translate3d(0, ${-mapTravel * mapRemaining}px, 0)`;
     } else {
-      const remaining = (1 - mobileProgress) ** 3;
-      const entryDistance = window.innerWidth - mapReveal.getBoundingClientRect().left + 24;
-      mapCard.style.transform = `translateX(${entryDistance * remaining}px)`;
-      mapCard.style.opacity = String(clamp(mobileProgress / 0.35));
+      const entryDistance = window.innerWidth - mapRect.left + 24;
+      mapCard.style.transform = `translate3d(${entryDistance * mapRemaining}px, 0, 0)`;
     }
+    const mapOpacity = clamp((mapProgress - 0.4) / 0.5);
+    mapCard.style.opacity = String(mapOpacity * mapOpacity * (3 - 2 * mapOpacity));
 
     const photoRect = projectsPhoto.getBoundingClientRect();
     const photoTravel = Math.max(0, projectsImage.offsetWidth - projectsPhoto.clientWidth);
@@ -257,6 +237,7 @@ if (page) {
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', measure, { passive: true });
   desktopMap.addEventListener('change', measure);
+  reducedMotion.addEventListener('change', schedule);
   projectsImage.addEventListener('load', schedule);
   new ResizeObserver(measure).observe(page);
   new ResizeObserver(measure).observe(mapPin);
