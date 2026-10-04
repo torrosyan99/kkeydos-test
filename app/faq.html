@@ -1149,25 +1149,29 @@
         </div>
       </div>
     </header>
-    <main id="main-content" class="overflow-clip">
+    <main id="main-content">
       <section class="bg-brand-light">
         <div
-          class="page-container flex items-center justify-between gap-10 py-12 max-sm:flex-col max-sm:text-center"
+          class="page-container flex items-center justify-between gap-10 pt-10 pb-14 max-lg:pb-10 max-md:flex-col max-md:gap-6 max-md:pt-6 max-md:pb-8"
         >
-          <div>
-            <nav
-              class="max-middle:mb-8 mb-12 flex flex-wrap items-center gap-3 text-sm"
-              aria-label="Breadcrumb"
-            >
-              <a class="hover:text-brand-orange" href="index.html">Home</a
-              ><span aria-hidden="true">/</span><span aria-current="page">FAQ</span>
-            </nav>
-            <h1 class="max-middle:text-4xl max-w-lg text-5xl font-medium">
-              Frequently Asked Questions
-            </h1>
+          <div class="max-w-150 space-y-6 max-md:text-center">
+            <div class="max-md:flex max-md:justify-center">
+              <nav aria-label="Breadcrumb" class="flex items-center gap-3 py-4 text-sm">
+                <a href="/" aria-label="Home">
+                  <svg class="size-5" aria-hidden="true">
+                    <use href="assets/images/icons.svg#breadcrumbs-home"></use>
+                  </svg>
+                </a>
+                <svg class="size-3" aria-hidden="true">
+                  <use href="assets/images/icons.svg#chevron-right"></use>
+                </svg>
+                <span class="font-semibold" aria-current="page">FAQ</span>
+              </nav>
+            </div>
+            <h1>Frequently Asked Questions</h1>
           </div>
           <img
-            class="w-80 object-contain max-sm:w-full max-sm:max-w-80 lg:w-100 xl:w-130"
+            class="w-130 shrink-0 object-contain max-xl:w-100 max-lg:w-80 max-md:max-w-full"
             src="assets/images/pages/faq/hero.webp"
             alt="Questions and answers about working with our team"
             width="528"
@@ -1176,266 +1180,266 @@
           />
         </div>
       </section>
-      <section class="page-container max-middle:py-12 py-24">
-        <div class="space-y-24 lg:max-w-3xl">
-          <section aria-labelledby="faq-category-0" data-accordions="one-active">
-            <h2 class="mb-10 text-3xl font-medium" id="faq-category-0">General</h2>
-            <div class="faq-item border-t-0" data-accordion="" data-open="true">
-              <h3>
+      <section
+        class="page-container pt-24 pb-32 max-lg:pt-20 max-lg:pb-24 max-md:pt-12 max-md:pb-16"
+      >
+        <div class="max-w-192 space-y-24 max-lg:max-w-full">
+          <section class="space-y-10" aria-labelledby="faq-category-0" data-accordions="one-active">
+            <h2 id="faq-category-0">General</h2>
+            <ul class="space-y-6">
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="true">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="true"
                   aria-controls="faq-answer-0-0"
                 >
-                  What does KKEYDOS do?<svg class="size-5" aria-hidden="true">
+                  What does KKEYDOS do?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-0-0" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    KKEYDOS designs and develops digital products for businesses, from web and
-                    mobile applications to AI solutions, SaaS platforms, and enterprise systems. Our
-                    teams support discovery, design, engineering, quality assurance, deployment, and
-                    ongoing improvement.
-                  </p>
+                <div id="faq-answer-0-0" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      KKEYDOS designs and develops digital products for businesses, from web and
+                      mobile applications to AI solutions, SaaS platforms, and enterprise systems.
+                      Our teams support discovery, design, engineering, quality assurance,
+                      deployment, and ongoing improvement.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-0-1"
                 >
-                  How does KKEYDOS help companies scale engineering teams?<svg
-                    class="size-5"
-                    aria-hidden="true"
-                  >
+                  How does KKEYDOS help companies scale engineering teams?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-0-1" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    We help you add the skills your roadmap needs, build a dedicated delivery team,
-                    or outsource a complete project. We agree on the scope, the required expertise,
-                    and how our engineers will work with your existing team before getting started.
-                  </p>
+                <div id="faq-answer-0-1" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      We help you add the skills your roadmap needs, build a dedicated delivery
+                      team, or outsource a complete project. We agree on the scope, the required
+                      expertise, and how our engineers will work with your existing team before
+                      getting started.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-0-2"
                 >
-                  Why do companies choose nearshore developers?<svg
-                    class="size-5"
-                    aria-hidden="true"
-                  >
+                  Why do companies choose nearshore developers?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-0-2" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Working with an extended engineering team gives you access to specialist skills
-                    and additional delivery capacity. Clear communication, agreed working hours, and
-                    shared delivery processes help the team collaborate effectively.
-                  </p>
+                <div id="faq-answer-0-2" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Working with an extended engineering team gives you access to specialist
+                      skills and additional delivery capacity. Clear communication, agreed working
+                      hours, and shared delivery processes help the team collaborate effectively.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-0-3"
                 >
-                  What software development services does KKEYDOS provide?<svg
-                    class="size-5"
-                    aria-hidden="true"
-                  >
+                  What software development services does KKEYDOS provide?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-0-3" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Our services include custom software development, web and mobile applications,
-                    AI and automation, SaaS development, cloud and DevOps, API integrations, UX/UI
-                    design, and quality assurance.
-                  </p>
+                <div id="faq-answer-0-3" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Our services include custom software development, web and mobile applications,
+                      AI and automation, SaaS development, cloud and DevOps, API integrations, UX/UI
+                      design, and quality assurance.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
-          <section aria-labelledby="faq-category-1" data-accordions="one-active">
-            <h2 class="mb-10 text-3xl font-medium" id="faq-category-1">Industries</h2>
-            <div class="faq-item border-t-0" data-accordion="" data-open="true">
-              <h3>
+
+          <section class="space-y-10" aria-labelledby="faq-category-1" data-accordions="one-active">
+            <h2 id="faq-category-1">Industries</h2>
+            <ul class="space-y-6">
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="true">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="true"
                   aria-controls="faq-answer-1-0"
                 >
-                  What industries does KKEYDOS work with?<svg class="size-5" aria-hidden="true">
+                  What industries does KKEYDOS work with?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-1-0" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    We build software for healthcare, fintech, e-commerce, education, logistics,
-                    real estate, and other industries. We align each solution with the workflows,
-                    integrations, and security requirements of the business.
-                  </p>
+                <div id="faq-answer-1-0" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      We build software for healthcare, fintech, e-commerce, education, logistics,
+                      real estate, and other industries. We align each solution with the workflows,
+                      integrations, and security requirements of the business.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
-          <section aria-labelledby="faq-category-2" data-accordions="one-active">
-            <h2 class="mb-10 text-3xl font-medium" id="faq-category-2">Engagement Models</h2>
-            <div class="faq-item border-t-0" data-accordion="" data-open="true">
-              <h3>
+
+          <section class="space-y-10" aria-labelledby="faq-category-2" data-accordions="one-active">
+            <h2 id="faq-category-2">Engagement Models</h2>
+            <ul class="space-y-6">
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="true">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="true"
                   aria-controls="faq-answer-2-0"
                 >
                   What’s the difference between staff augmentation, dedicated teams, and
-                  outsourcing?<svg class="size-5" aria-hidden="true">
+                  outsourcing?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-2-0" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Staff augmentation adds engineers to your team under your direction. A dedicated
-                    team provides an ongoing group of specialists working on your roadmap. Project
-                    outsourcing gives us responsibility for an agreed scope and delivery plan, with
-                    regular reviews and progress updates.
-                  </p>
+                <div id="faq-answer-2-0" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Staff augmentation adds engineers to your team under your direction. A
+                      dedicated team provides an ongoing group of specialists working on your
+                      roadmap. Project outsourcing gives us responsibility for an agreed scope and
+                      delivery plan, with regular reviews and progress updates.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
-          <section aria-labelledby="faq-category-3" data-accordions="one-active">
-            <h2 class="mb-10 text-3xl font-medium" id="faq-category-3">Technologies / Solutions</h2>
-            <div class="faq-item border-t-0" data-accordion="" data-open="true">
-              <h3>
+
+          <section class="space-y-10" aria-labelledby="faq-category-3" data-accordions="one-active">
+            <h2 id="faq-category-3">Technologies / Solutions</h2>
+            <ul class="space-y-6">
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="true">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="true"
                   aria-controls="faq-answer-3-0"
                 >
-                  What roles can KKEYDOS fill?<svg class="size-5" aria-hidden="true">
+                  What roles can KKEYDOS fill?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-3-0" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Depending on your project, we can provide frontend, backend, full-stack, mobile,
-                    cloud, AI, data, and QA expertise, alongside designers and delivery specialists.
-                  </p>
+                <div id="faq-answer-3-0" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Depending on your project, we can provide frontend, backend, full-stack,
+                      mobile, cloud, AI, data, and QA expertise, alongside designers and delivery
+                      specialists.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-3-1"
                 >
-                  Does KKEYDOS integrate with our existing tools and workflows?<svg
-                    class="size-5"
-                    aria-hidden="true"
-                  >
+                  Does KKEYDOS integrate with our existing tools and workflows?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-3-1" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Yes. We agree on communication channels, development tools, sprint planning,
-                    coding standards, and security practices with your team so that collaboration
-                    fits your existing workflow.
-                  </p>
+                <div id="faq-answer-3-1" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Yes. We agree on communication channels, development tools, sprint planning,
+                      coding standards, and security practices with your team so that collaboration
+                      fits your existing workflow.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-3-2"
                 >
-                  How does KKEYDOS ensure engineer quality?<svg class="size-5" aria-hidden="true">
+                  How does KKEYDOS ensure engineer quality?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-3-2" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    We match technical expertise to the project and use code reviews, testing, and
-                    regular delivery reviews to maintain quality. Your feedback helps us refine the
-                    collaboration as the work progresses.
-                  </p>
+                <div id="faq-answer-3-2" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      We match technical expertise to the project and use code reviews, testing, and
+                      regular delivery reviews to maintain quality. Your feedback helps us refine
+                      the collaboration as the work progresses.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="faq-item" data-accordion="" data-open="false">
-              <h3>
+              </li>
+              <li class="border-brand-gray-alt border-b pb-6" data-accordion data-open="false">
                 <button
-                  class="faq-item__button gap-6 text-left font-normal"
-                  data-accordion-trigger=""
+                  class="faq-item__button gap-4 py-0 text-left font-normal"
+                  type="button"
+                  data-accordion-trigger
                   aria-expanded="false"
                   aria-controls="faq-answer-3-3"
                 >
-                  How much does nearshore engineering cost compared to local hiring?<svg
-                    class="size-5"
-                    aria-hidden="true"
-                  >
+                  How much does nearshore engineering cost compared to local hiring?
+                  <svg aria-hidden="true">
                     <use href="assets/images/icons.svg#chevron-bottom"></use>
                   </svg>
                 </button>
-              </h3>
-              <div id="faq-answer-3-3" data-accordion-content="">
-                <div>
-                  <p class="text-brand-gray pr-10 pb-6 font-normal">
-                    Costs depend on the skills, scope, team size, and duration of the engagement.
-                    Contact us with your requirements so we can discuss a suitable delivery model
-                    and estimate.
-                  </p>
+                <div id="faq-answer-3-3" data-accordion-content>
+                  <div>
+                    <p class="text-brand-muted-gray pt-6 pr-10">
+                      Costs depend on the skills, scope, team size, and duration of the engagement.
+                      Contact us with your requirements so we can discuss a suitable delivery model
+                      and estimate.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
         </div>
       </section>
