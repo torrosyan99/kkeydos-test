@@ -21,7 +21,7 @@
   }
 
   .select__dropdown {
-    @apply border-brand-border shadow-default invisible absolute inset-x-0 top-full z-20 max-h-60 translate-y-2 overflow-auto rounded-2xl border bg-white p-1.5 opacity-0 transition-opacity data-[position=top]:top-auto data-[position=top]:bottom-full data-[position=top]:-translate-y-2;
+    @apply border-brand-border shadow-default bg-white invisible absolute inset-x-0 top-full z-20 max-h-60 translate-y-2 overflow-auto rounded-2xl border bg-white p-1.5 opacity-0 transition-opacity data-[position=top]:top-auto data-[position=top]:bottom-full data-[position=top]:-translate-y-2;
   }
 
   .select__dropdown-button {
