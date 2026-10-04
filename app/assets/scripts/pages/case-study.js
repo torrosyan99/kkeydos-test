@@ -6,8 +6,8 @@ document.querySelectorAll('[data-case-request]').forEach((form) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const email = new FormData(form).get('email').trim();
-    const subject = 'Abra case study PDF request';
-    const body = `Hello KKEYDOS,\n\nPlease send me the Abra case study PDF.\nMy email: ${email}\n\nThank you.`;
+    const subject = 'Consumer Affairs case study PDF request';
+    const body = `Hello KKEYDOS,\n\nPlease send me the Consumer Affairs case study PDF.\nMy email: ${email}\n\nThank you.`;
     link.href = `mailto:info@keydos.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     link.hidden = false;
     status.textContent =

@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/styles/main.css" />
     <script src="assets/scripts/main.js" type="module"></script>
-    <script src="assets/scripts/pages/clients.js" type="module"></script>
   </head>
   <body>
     <header
@@ -1150,1479 +1149,1578 @@
         </div>
       </div>
     </header>
-    <main id="main-content" class="overflow-clip">
-      <section class="page-container max-middle:pt-6 pt-10 pb-16">
-        <nav
-          class="max-middle:mb-8 mb-12 flex flex-wrap items-center gap-3 text-sm"
-          aria-label="Breadcrumb"
-        >
-          <a class="hover:text-brand-orange" href="index.html">Home</a
-          ><span aria-hidden="true">/</span><span aria-current="page">Our Clients</span>
+    <main id="main-content">
+      <section class="page-container relative z-1 pt-10 max-md:pt-6">
+        <nav class="mb-12 flex items-center gap-3 text-sm max-md:mb-8" aria-label="Breadcrumb">
+          <a class="hover:text-brand-teal" href="index.html" aria-label="Home"
+            ><svg class="size-6" aria-hidden="true">
+              <use href="assets/images/icons.svg#breadcrumbs-home"></use></svg
+          ></a>
+          <svg class="size-4" aria-hidden="true">
+            <use href="assets/images/icons.svg#chevron-right"></use>
+          </svg>
+          <span class="font-semibold" aria-current="page">Our Clients</span>
         </nav>
-        <div class="notebook:grid notebook:grid-cols-2 notebook:gap-8">
+        <div class="grid grid-cols-2 gap-8 max-2xl:block">
           <div>
-            <p class="text-brand-gray mb-2 text-sm font-semibold uppercase">Our clients</p>
-            <h1 class="font-medium">
-              Over 10 Years of<br />Over Delivering<span class="text-brand-orange">.</span>
-            </h1>
-            <p class="text-brand-gray max-middle:text-2xl mt-6 text-3xl">
-              Long-term partnerships, ambitious products, and software that creates lasting value
-              across every engagement.
+            <p class="text-brand-muted-gray mb-1 text-sm font-semibold uppercase">Our clients</p>
+            <h1>Over 10 Years of<br />Over Delivering<span class="text-brand-orange">.</span></h1>
+            <p class="text-brand-gray mt-6 text-3xl max-md:mb-14">
+              500+ active clients and a 96% retention rate, earned through AI-augmented delivery
+              that compounds value across every engagement.
             </p>
           </div>
           <ul
-            class="max-middle:hidden notebook:mt-0 notebook:grid-cols-2 notebook:gap-8 mt-6 grid grid-cols-3 items-end gap-6"
+            class="grid grid-cols-2 items-end gap-8 max-2xl:mt-6 max-2xl:grid-cols-3 max-2xl:gap-6 max-md:hidden"
           >
-            <li>
+            <li class="h-110 max-2xl:aspect-[100/81] max-2xl:h-auto">
               <a
-                class="group shadow-default relative block overflow-hidden rounded-2xl text-white"
+                class="group shadow-default relative block h-full overflow-hidden rounded-2xl text-white"
                 href="https://www.bairesdev.com/case-studies/google/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Google case study"
-                ><img
-                  class="notebook:h-88 aspect-square w-full object-cover transition-transform group-hover:scale-105"
+              >
+                <img
+                  class="h-full w-full object-cover transition-transform group-hover:scale-105 motion-reduce:transform-none"
                   src="assets/images/pages/clients/google_i0edsb.png"
-                  alt="Google"
+                  alt=""
                   width="640"
-                  height="640" /><span
-                  class="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-linear-to-t from-black/70 px-4 pt-12 pb-4 font-medium"
+                  height="640"
+                />
+                <img
+                  class="absolute bottom-13 left-4 w-33"
+                  src="assets/images/pages/clients/google-white.svg"
+                  alt="Google"
+                />
+                <span class="arrow-btn absolute bottom-4 left-4"
                   >Case study
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#arrow-right"></use></svg></span
-              ></a>
+                  <svg class="size-5 shrink-0" aria-hidden="true">
+                    <use href="assets/images/icons.svg#arrow-right"></use></svg
+                ></span>
+              </a>
             </li>
-            <li>
+            <li class="h-80 max-2xl:aspect-[100/81] max-2xl:h-auto">
               <a
-                class="group shadow-default relative block overflow-hidden rounded-2xl text-white"
+                class="group shadow-default relative block h-full overflow-hidden rounded-2xl text-white"
                 href="https://www.bairesdev.com/case-studies/rolls-royce/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rolls-Royce case study"
-                ><img
-                  class="notebook:h-64 aspect-square w-full object-cover transition-transform group-hover:scale-105"
+              >
+                <img
+                  class="h-full w-full object-cover transition-transform group-hover:scale-105 motion-reduce:transform-none"
                   src="assets/images/pages/clients/rollssmall_zf24j6.png"
-                  alt="Rolls-Royce"
+                  alt=""
                   width="640"
-                  height="640" /><span
-                  class="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-linear-to-t from-black/70 px-4 pt-12 pb-4 font-medium"
+                  height="640"
+                />
+                <img
+                  class="absolute bottom-13 left-4 w-9.5"
+                  src="assets/images/pages/clients/rolls-royce-white.svg"
+                  alt="Rolls-Royce"
+                />
+                <span class="arrow-btn absolute bottom-4 left-4"
                   >Case study
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#arrow-right"></use></svg></span
-              ></a>
+                  <svg class="size-5 shrink-0" aria-hidden="true">
+                    <use href="assets/images/icons.svg#arrow-right"></use></svg
+                ></span>
+              </a>
             </li>
-            <li class="notebook:col-span-2 notebook:mx-auto notebook:w-3/4">
+            <li
+              class="col-span-2 mx-auto h-62.5 w-120 max-2xl:col-span-1 max-2xl:aspect-[100/81] max-2xl:h-auto max-2xl:w-full"
+            >
               <a
-                class="group shadow-default relative block overflow-hidden rounded-2xl text-white"
+                class="group shadow-default relative block h-full overflow-hidden rounded-2xl text-white"
                 href="https://www.bairesdev.com/case-studies/urban-outfitters/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Urban Outfitters case study"
-                ><img
-                  class="notebook:h-56 aspect-square w-full object-cover transition-transform group-hover:scale-105"
+              >
+                <img
+                  class="h-full w-full object-cover transition-transform group-hover:scale-105 motion-reduce:transform-none"
                   src="assets/images/pages/clients/urban-outfitters_1761320585.png"
-                  alt="Urban Outfitters"
+                  alt=""
                   width="640"
-                  height="640" /><span
-                  class="absolute inset-x-0 bottom-0 flex items-center gap-2 bg-linear-to-t from-black/70 px-4 pt-12 pb-4 font-medium"
+                  height="640"
+                />
+                <img
+                  class="absolute bottom-13 left-4 w-36"
+                  src="assets/images/pages/clients/urban-outfitters-white.svg"
+                  alt="Urban Outfitters"
+                />
+                <span class="arrow-btn absolute bottom-4 left-4"
                   >Case study
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#arrow-right"></use></svg></span
-              ></a>
+                  <svg class="size-5 shrink-0" aria-hidden="true">
+                    <use href="assets/images/icons.svg#arrow-right"></use></svg
+                ></span>
+              </a>
             </li>
           </ul>
         </div>
       </section>
-      <section class="bg-brand-light py-12">
+
+      <section
+        class="bg-brand-light -mt-24 pt-36 pb-40 max-md:mt-0 max-md:pt-12"
+        aria-label="Our clients and their stories"
+      >
         <div class="page-container">
-          <label class="sr-only" for="client-industry">Filter clients by industry</label
-          ><select class="input middle:w-1/2 mb-12 w-full" id="client-industry" data-client-filter>
-            <option value="all">All industries</option>
-            <option>Business Services</option>
-            <option>Education</option>
-            <option>Financial Services</option>
-            <option>Healthcare</option>
-            <option>Internet &amp; Technology</option>
-            <option>Manufacturing</option>
-            <option>Media &amp; Entertainment</option>
-            <option>Non-profit Organization Management</option>
-            <option>Real Estate</option>
-            <option>Travel, Hospitality &amp; Leisure</option>
-          </select>
-          <p class="sr-only" data-client-status role="status"></p>
-          <div class="middle:grid-cols-3 grid grid-cols-1 gap-8" data-client-grid>
+          <div class="grid grid-cols-3 gap-x-6 gap-y-8 max-md:grid-cols-1">
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/abbott_hy3b63.svg"
                 alt="Abbott"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/abbvie_zguh3o.svg"
                 alt="AbbVie"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/abra/"
+              aria-label="Abra case study"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/abra_bfjobk.svg"
                 alt="Abra"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ We are extremely satisfied with their collaboration and achievement. We are happy
-                to have given BairesDev a chance to earn our trust. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> We are extremely satisfied with their
+                collaboration and achievement. We are happy to have given BairesDev a chance to earn
+                our trust. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a class="arrow-btn text-brand-teal mt-8" href="case-studies/abra.html"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Acklands_Grainger_zurgpn.svg"
                 alt="Acklands-Grainger"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/acumen/"
+              aria-label="Acumen case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Acumen_iwijve.svg"
                 alt="Acumen"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/acumen/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/arlo/"
+              aria-label="Arlo case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/arlo_einst6.svg"
                 alt="Arlo"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/arlo/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/associated-press/"
+              aria-label="Associated Press case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/associated-press_ki8ugn.svg"
                 alt="Associated Press"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ From our very first meeting with the team at BairesDev, we were confident that
-                we’d selected the best partner. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> From our very first meeting with the
+                team at BairesDev, we were confident that we’d selected the best partner.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/associated-press/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/autodesk/"
+              aria-label="Autodesk case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/autodesk_xeonns.svg"
                 alt="Autodesk"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ Creating a new product is the fun part of programming, and the BairesDev team was
-                great at it, but what wowed me was the curiosity and determination that drove their
-                approach to QA. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> Creating a new product is the fun
+                part of programming, and the BairesDev team was great at it, but what wowed me was
+                the curiosity and determination that drove their approach to QA.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/autodesk/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/avigilon-motorola/"
+              aria-label="Avigilon case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/avigilon_jlogpx.svg"
                 alt="Avigilon"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/avigilon-motorola/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/azlo/"
+              aria-label="Azlo case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/azlo_umjgog.svg"
                 alt="Azlo"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev has been a great business partner, providing quality development
-                resources to augment a High-performing and fast-moving development team. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev has been a great business
+                partner, providing quality development resources to augment a High-performing and
+                fast-moving development team. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/azlo/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/bbva_l7d6el.svg"
                 alt="BBVA"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Education"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/blackboard/"
+              aria-label="Blackboard case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Blackboard_chcpik.svg"
                 alt="Blackboard"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/blackboard/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Travel, Hospitality &amp; Leisure"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/burger-king_ilkjim.svg"
                 alt="Burger King"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/care-com_prq6ii.svg"
                 alt="Care.com"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/chime_lcxkym.svg"
                 alt="Chime"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="case-studies/consumeraffairs.html"
+              aria-label="ConsumerAffairs case study"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/consumer-affairs_tkax7p.svg"
                 alt="ConsumerAffairs"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ By working with BairesDev we were able to quickly augment our internal staff and
-                find exactly what talent we were looking for. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> By working with BairesDev we were
+                able to quickly augment our internal staff and find exactly what talent we were
+                looking for. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/consumeraffairs/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/croptrak/"
+              aria-label="CropTrak case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Croptrak_yfiqcz.svg"
                 alt="CropTrak"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/croptrak/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/eBay_hcomrd.svg"
                 alt="eBay"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/enigma-technologies/"
+              aria-label="Enigma Technologies case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Enigma_1781805616.svg"
                 alt="Enigma Technologies"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/enigma-technologies/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/ernst-young_fpef18.svg"
                 alt="Ernst &amp; Young"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/fresenius_cpapnu.svg"
                 alt="Fresenius"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/forcepoint/"
+              aria-label="Forcepoint case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/forcepoint_prceil.svg"
                 alt="Forcepoint"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev proved to be efficient in hitting every milestone in their challenging
-                roadmap. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev proved to be efficient in
+                hitting every milestone in their challenging roadmap.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/forcepoint/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/gennev/"
+              aria-label="Gennev case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/gennev_h1csgg.svg"
                 alt="Gennev"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/gennev/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/globalstar_color_stcnkk.svg"
                 alt="Globalstar"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/google/"
+              aria-label="Google case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/google_xozzle.svg"
                 alt="Google"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/google/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Travel, Hospitality &amp; Leisure"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/great-wolf-lodge/"
+              aria-label="Great Wolf Lodge case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Great_Wolf_Lodge_eljspt.svg"
                 alt="Great Wolf Lodge"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ The company aimed to offer an experience as stylish as the one they offer across
-                their multiple locations. Fortunately, BairesDev has the expertise and the talent to
-                deliver through our Delivery Teams service. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> The company aimed to offer an
+                experience as stylish as the one they offer across their multiple locations.
+                Fortunately, BairesDev has the expertise and the talent to deliver through our
+                Delivery Teams service. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/great-wolf-lodge/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/groupon/"
+              aria-label="Groupon case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/groupon_w4xjlo.svg"
                 alt="Groupon"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/groupon/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/hp_g5pqxc.svg"
                 alt="Hewllet-Packard"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/HomeAdvisor_tfb3ij.svg"
                 alt="HomeAdvisor"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/ibm_m8dbui.svg"
                 alt="IBM"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Education"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/instructure/"
+              aria-label="Instructure case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/instructure_uooigd.svg"
                 alt="Instructure"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev is a trustworthy, knowledgeable, and adaptable development partner,
-                their cultural fit with US clients is a major plus. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev is a trustworthy,
+                knowledgeable, and adaptable development partner, their cultural fit with US clients
+                is a major plus. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/instructure/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/ipg-mediabrands_nzcusw.svg"
                 alt="IPG Mediabrands"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/iqvia/"
+              aria-label="IQVIA case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/iqvia_rp3op1.svg"
                 alt="IQVIA"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev provides amazing development and design resourcing, along with best in
-                class account management support. We were able to speed up product design and
-                delivery while reducing our costs. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev provides amazing
+                development and design resourcing, along with best in class account management
+                support. We were able to speed up product design and delivery while reducing our
+                costs. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/iqvia/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/iseatz/"
+              aria-label="iSeatz case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/iSeatz_jz0pbm.svg"
                 alt="iSeatz"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev’s developers are extremely responsive, proactive, they communicate up
-                and are creative thinkers. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev’s developers are extremely
+                responsive, proactive, they communicate up and are creative thinkers.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/iseatz/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/iwave/"
+              aria-label="iWave case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/iwave_rbv0cv.svg"
                 alt="iWave"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/iwave/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/johnson-johnson_a81kdw.svg"
                 alt="Johnson &amp; Johnson"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/kapsch-group/"
+              aria-label="Kapsch case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/kapsch_j6dcfi.svg"
                 alt="Kapsch"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ Because BairesDev engineers have that vision and understanding, we are able to
-                help our clients’ communities flourish. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> Because BairesDev engineers have that
+                vision and understanding, we are able to help our clients’ communities flourish.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/kapsch-group/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/keller-williams_py5pd0.svg"
                 alt="Keller Williams"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/kinesso/"
+              aria-label="Kinesso case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Kinesso_fmakiq.svg"
                 alt="Kinesso"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/kinesso/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/limeade/"
+              aria-label="Limeade case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/limeade_ka3be6.svg"
                 alt="Limeade"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/limeade/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Real Estate"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/mitsubishi-electric-trane-us/"
+              aria-label="Mitsubishi Electric Trane US case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Mitsubishi-Electric_1781805618.svg"
                 alt="Mitsubishi Electric Trane US"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/mitsubishi-electric-trane-us/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/netgear/"
+              aria-label="Netgear case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/netgear_xyj6r2.svg"
                 alt="Netgear"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/netgear/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Education"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/newsela_qaldu9.svg"
                 alt="Newsela"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/nextroll/"
+              aria-label="NextRoll case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/next-roll_iddcqa.svg"
                 alt="NextRoll"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/nextroll/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Non-profit Organization Management"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/omatic/"
+              aria-label="Omatic case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Omatic_1781805621.svg"
                 alt="Omatic"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/omatic/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/panasonic_ttl2s8.svg"
                 alt="Panasonic"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/paramount-global/"
+              aria-label="Paramount case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/paramount_eihu7o.svg"
                 alt="Paramount"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/paramount-global/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/patra/"
+              aria-label="Patra Company case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/patra-company_vzdkuu.svg"
                 alt="Patra Company"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev has been incredibly accommodating of the project’s broad and often
-                unclear attributes. They produces the highest-quality work. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev has been incredibly
+                accommodating of the project’s broad and often unclear attributes. They produces the
+                highest-quality work. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/patra/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/pinterest/"
+              aria-label="Pinterest case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/pinterest_hktnyl.svg"
                 alt="Pinterest"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/pinterest/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/rga/"
+              aria-label="R/GA case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/rga_krgqkr.svg"
                 alt="R/GA"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/rga/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Healthcare"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/regeneron_oflnz0.svg"
                 alt="Regeneron"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/repay/"
+              aria-label="Repay case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Repay_kfgptx.svg"
                 alt="Repay"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/repay/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Manufacturing"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/rolls-royce/"
+              aria-label="Rolls-Royce case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/rolls-royce-horizontal-black_ef0cq7.svg"
                 alt="Rolls-Royce"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ BairesDev assembled a dream team for us and in just a few months our digital
-                offering was completely transformed. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> BairesDev assembled a dream team for
+                us and in just a few months our digital offering was completely transformed.
+                <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/rolls-royce/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/salesforce_rct0vt.svg"
                 alt="Salesforce"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/sana-sano/"
+              aria-label="Sana Sano Consulting case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Sana_Sano_Consulting_a2hfpt.svg"
                 alt="Sana Sano Consulting"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/sana-sano/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/sap_h4gdvd.svg"
                 alt="SAP"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/siriusxm/"
+              aria-label="SiriusXM case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/about/siriusxm_cv5sjc.svg"
                 alt="SiriusXM"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/siriusxm/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/swordpoint/"
+              aria-label="Swordpoint case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/swordpoint_zzwt3w.svg"
                 alt="Swordpoint"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/swordpoint/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/thomson-reuters/"
+              aria-label="Thomson Reuters case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/thomson-reuters_nro4b2.svg"
                 alt="Thomson Reuters"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/thomson-reuters/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/ticket-galaxy/"
+              aria-label="Ticket Galaxy case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/ticket-galaxy_lplpl7.svg"
                 alt="Ticket Galaxy"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/ticket-galaxy/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="middle:row-span-2 flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Business Services"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative row-span-2 flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 max-md:row-span-1"
+              href="https://www.bairesdev.com/case-studies/trone-brand-energy/"
+              aria-label="Trone Brand Energy case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/trone-brand-energy_vrjbyt.svg"
                 alt="Trone Brand Energy"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
-              <blockquote class="text-brand-gray mt-8 text-lg">
-                “ Their support has kept various web development projects on track. BairesDev is a
-                capable partner and they’re accountable for a largely self-directed workflow. They
-                stand out for their expertise and customer service. ”
+              <blockquote class="text-brand-muted-gray my-4 px-6 text-lg">
+                <span class="text-brand-orange">&ldquo;</span> Their support has kept various web
+                development projects on track. BairesDev is a capable partner and they’re
+                accountable for a largely self-directed workflow. They stand out for their expertise
+                and customer service. <span class="text-brand-orange">&rdquo;</span>
               </blockquote>
-              <a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/trone-brand-energy/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/turner_oawfuh.svg"
                 alt="Turner"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Education"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/udemy_isu2fo.svg"
                 alt="Udemy"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Education"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/university-of-california-riverside/"
+              aria-label="University of California Riverside case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/UCR_1781805624.svg"
                 alt="University of California Riverside"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/university-of-california-riverside/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Media &amp; Entertainment"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/univision/"
+              aria-label="Univision case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/univision_cc1dsv.svg"
                 alt="Univision"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/univision/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Internet &amp; Technology"
+              ></span>
+            </a>
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/urban-outfitters/"
+              aria-label="Urban Outfitters case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/urban_bu0htl.svg"
                 alt="Urban Outfitters"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/urban-outfitters/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/verisk_uifrtu.svg"
                 alt="Verisk"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Manufacturing"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/volkswagen_xegtx5.svg"
                 alt="Volkswagen"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Manufacturing"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/volvo_so5lyv.svg"
                 alt="Volvo"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
             <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Manufacturing"
+              class="relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/whirlpool_mvv2u6.svg"
                 alt="Whirlpool"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
               />
             </article>
-            <article
-              class="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-8 text-center"
-              data-client-industry="Financial Services"
+            <a
+              class="group focus-visible:outline-brand-teal relative flex flex-col justify-center rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4"
+              href="https://www.bairesdev.com/case-studies/xtensifi/"
+              aria-label="Xtensifi case study"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
-                class="h-16 w-44 object-contain grayscale"
+                class="mx-auto my-6 h-16 w-50 max-w-full object-contain grayscale"
                 src="assets/images/pages/clients/Xtensifi_u9brhy.svg"
                 alt="Xtensifi"
-                width="176"
+                width="200"
                 height="64"
                 loading="lazy"
-              /><a
-                class="arrow-btn text-brand-teal mt-8"
-                href="https://www.bairesdev.com/case-studies/xtensifi/"
-                target="_blank"
-                rel="noopener noreferrer"
+              />
+
+              <span
+                class="arrow-btn text-brand-muted-gray group-hover:text-brand-teal absolute top-6 right-8 text-sm"
                 >See case study
-                <svg class="size-5" aria-hidden="true">
+                <svg class="size-5 shrink-0" aria-hidden="true">
                   <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></a>
-            </article>
+              ></span>
+            </a>
           </div>
         </div>
       </section>
-      <section class="page-container py-16">
-        <a
-          class="shadow-default flex items-center justify-between gap-5 rounded-2xl bg-white p-8 max-sm:flex-col"
-          href="https://clutch.co/profile/bairesdev"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><span class="text-2xl font-medium">Read our reviews on Clutch</span
-          ><span class="text-brand-orange text-2xl" aria-label="5 out of 5 stars">★★★★★</span
-          ><svg class="size-5" aria-hidden="true">
-            <use href="assets/images/icons.svg#arrow-right"></use></svg
-        ></a>
-      </section>
-      <section class="bg-primary max-middle:py-12 py-16 text-white">
-        <div class="page-container max-notebook:flex-col-reverse flex items-center gap-14">
-          <div class="flex-1">
-            <h2 class="mb-8 font-medium">
-              Your next success story<br /><span class="text-brand-orange">starts here.</span>
-            </h2>
-            <a class="btn" href="contact-us.html"
-              >Start your project
-              <svg class="size-5" aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use></svg
+
+      <section
+        class="page-container relative -mt-24 mb-24 max-2xl:mb-32"
+        aria-label="Client reviews"
+      >
+        <div class="mx-auto flex max-w-5xl gap-8 max-md:block">
+          <div class="relative mb-24 w-1/2 max-md:mb-36 max-md:w-full">
+            <img
+              class="shadow-default aspect-video w-full rounded-2xl object-cover"
+              src="assets/images/pages/clients/clutch_ggh2er.png"
+              alt="Read our reviews on Clutch"
+              width="640"
+              height="359"
+              loading="lazy"
+            />
+            <div class="absolute -bottom-14 flex w-full justify-center max-md:-bottom-24">
+              <div
+                class="shadow-default flex h-32 w-80 max-w-full items-center justify-center gap-5 rounded-2xl bg-white px-8"
+              >
+                <img
+                  class="w-28 brightness-0"
+                  src="assets/images/brands/clutch.png"
+                  alt="Clutch"
+                  width="1600"
+                  height="893"
+                  loading="lazy"
+                />
+                <span class="text-brand-orange text-2xl" aria-label="5 out of 5 stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto pb-24 max-md:pb-14">
+            <a
+              class="sliding-btn text-brand-orange w-90 max-w-full border-current text-2xl max-md:text-xl"
+              href="https://clutch.co/profile/bairesdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                >Read our reviews on Clutch
+                <svg class="size-5 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg></span
             ></a>
           </div>
+        </div>
+      </section>
+
+      <section class="bg-black text-white" aria-label="Start your project">
+        <div
+          class="page-container flex flex-row-reverse items-start gap-14 pt-16 pb-14 max-2xl:flex-col max-2xl:items-center max-2xl:gap-12 max-2xl:pt-0 max-md:pb-12"
+        >
           <img
-            class="max-notebook:w-full max-notebook:max-w-xl w-1/2 object-contain"
-            src="assets/images/pages/contact/cta-3d.png"
+            class="-mt-32 w-1/2 object-contain max-2xl:-mt-16 max-2xl:w-full max-2xl:max-w-xl max-md:-mt-14"
+            src="assets/images/pages/clients/bottom_cta_1_rnejgz.png"
             alt=""
-            width="1469"
-            height="1071"
+            width="1200"
+            height="752"
             loading="lazy"
           />
+          <div class="w-1/2 pt-10 max-2xl:w-full max-2xl:max-w-xl max-2xl:pt-0">
+            <p class="text-3xl">
+              Brands like <span class="text-brand-orange">Google</span> already accelerate their
+              roadmaps with us. Discover if we're a good fit for you.
+            </p>
+            <div class="mt-10 max-2xl:text-center">
+              <a class="btn" href="contact-us.html"
+                >Book a Discovery Call
+                <svg class="size-5 shrink-0" aria-hidden="true">
+                  <use href="assets/images/icons.svg#arrow-right"></use></svg
+              ></a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
