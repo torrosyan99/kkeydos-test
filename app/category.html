@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog — Ideas for Better Software | KKEYDOS</title>
+    <title>Technology Articles | KKEYDOS Blog</title>
     <meta
       name="description"
-      content="Explore software development, AI, engineering teams, and practical technology insights on the KKEYDOS blog."
+      content="Explore Technology articles covering AI, data, software architecture, and engineering practices."
     />
-    <link rel="canonical" href="https://www.kkeydos.com/blog/" />
-    <meta property="og:title" content="Blog — Ideas for Better Software | KKEYDOS" />
+    <link rel="canonical" href="https://www.kkeydos.com/category.html" />
+    <meta property="og:title" content="Technology Articles | KKEYDOS Blog" />
     <meta
       property="og:description"
-      content="Explore software development, AI, engineering teams, and practical technology insights on the KKEYDOS blog."
+      content="Explore Technology articles covering AI, data, software architecture, and engineering practices."
     />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/styles/main.css" />
     <script src="assets/scripts/main.js" type="module"></script>
-    <script src="assets/scripts/pages/blog.js" type="module"></script>
+    <script src="assets/scripts/pages/category.js" type="module"></script>
   </head>
   <body>
     <header
@@ -1155,8 +1155,8 @@
         </div>
       </div>
     </header>
+
     <main id="main-content" class="overflow-clip">
-      <div class="sr-only"><h1>KKEYDOS Blog: Software, Teams &amp; Technology</h1></div>
       <section
         class="group/blog sticky top-20 z-40 pt-4 pb-12 transition-transform duration-200 data-[scroll-hidden=true]:pointer-events-none data-[scroll-hidden=true]:-translate-y-[calc(100%+5rem)] motion-reduce:transition-none"
         id="blog-category-panel"
@@ -1194,54 +1194,43 @@
                 id="blog-category-links"
                 data-blog-links=""
               >
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="all"
-                  aria-pressed="true"
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="blog.html"
                 >
                   Blog
-                </button>
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="software-development"
-                  aria-pressed="false"
+                </a>
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="blog.html#software-development"
                 >
                   Software Development
-                </button>
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="biz-and-tech"
-                  aria-pressed="false"
+                </a>
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="blog.html#biz-and-tech"
                 >
                   Biz &amp; Tech
-                </button>
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="talent"
-                  aria-pressed="false"
+                </a>
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="blog.html#talent"
                 >
                   Talent
-                </button>
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="technology"
-                  aria-pressed="false"
+                </a>
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="category.html"
+                  aria-current="page"
                 >
                   Technology
-                </button>
-                <button
-                  class="h-14 shrink-0 cursor-pointer px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-pressed:bg-black aria-pressed:text-white group-data-[stuck=true]/blog:aria-pressed:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
-                  type="button"
-                  data-blog-filter="insights"
-                  aria-pressed="false"
+                </a>
+                <a
+                  class="flex h-14 shrink-0 cursor-pointer items-center px-8 text-left font-bold transition-colors hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-black group-data-[stuck=true]/blog:hover:text-white aria-[current=page]:bg-black aria-[current=page]:text-white group-data-[stuck=true]/blog:aria-[current=page]:bg-neutral-700 max-xl:px-4 max-lg:text-sm max-lg:font-normal max-md:h-auto max-md:py-3 max-md:text-lg max-md:font-medium"
+                  href="blog.html#insights"
                 >
                   Insights
-                </button>
+                </a>
               </div>
               <button
                 class="mr-3 ml-4 flex shrink-0 items-center gap-4 rounded-lg p-1.5 hover:bg-black/5 group-data-[stuck=true]/blog:hover:bg-white/10 max-lg:mr-4"
@@ -1270,7 +1259,8 @@
               role="search"
               id="blog-search-form"
               data-blog-search=""
-              hidden
+              hidden=""
+              action="category.html"
             >
               <label class="sr-only" for="blog-search">Search articles</label>
               <div class="text-primary min-w-0 flex-1">
@@ -1305,983 +1295,1151 @@
           </nav>
         </div>
       </section>
-      <section class="pb-10" data-blog-featured="">
-        <div class="page-container flex gap-8 max-lg:flex-col">
-          <article class="flex min-w-0 flex-1 flex-col">
-            <a
-              class="text-brand-muted-gray mb-2 block text-sm font-bold uppercase hover:underline"
-              href="#software-development"
-              >Software Development</a
-            >
-            <div class="mb-2">
-              <h2 data-blog-title>
-                <a class="hover:text-brand-teal" href="blog/saas-development-cost-2026.html"
-                  >How Much Does It Cost to Build a SaaS Product in 2026?</a
-                >
-              </h2>
-            </div>
-            <p class="text-brand-muted-gray mb-6 text-xl">
-              Explore MVP pricing, development timelines and the factors that shape your SaaS
-              budget.
-            </p>
-            <a
-              class="relative block min-h-0 flex-1"
-              href="blog/saas-development-cost-2026.html"
-              aria-label="Read How Much Does It Cost to Build a SaaS Product in 2026?"
-            >
-              <img
-                class="absolute inset-0 h-full w-full object-cover max-lg:static max-lg:aspect-video max-lg:h-auto"
-                src="assets/images/pages/blog/saas-development-cost-2026.webp"
-                alt="SaaS cloud platform with billing, integrations, analytics, AI and responsive applications"
-                width="1774"
-                height="887"
-                fetchpriority="high"
-              />
-            </a>
-          </article>
-          <aside class="w-96 shrink-0 max-lg:w-full" aria-labelledby="latest-posts">
-            <p class="text-brand-muted-gray pb-6 text-sm font-bold uppercase" id="latest-posts">
-              Latest posts
-            </p>
-            <ul class="grid gap-4 max-lg:grid-cols-2 max-md:grid-cols-1">
-              <li class="h-24 max-lg:last:hidden max-md:last:block">
-                <a
-                  class="group bg-brand-light flex h-24 items-center"
-                  href="https://www.bairesdev.com/blog/ai-dlc-pilot/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="h-24 w-2/5 shrink-0 object-cover"
-                    src="assets/images/pages/blog/ai-dlc-pilot.jpg"
-                    alt=""
-                    width="141"
-                    height="96"
-                    loading="lazy"
-                  />
-                  <div class="min-w-0 flex-1 p-3">
-                    <p
-                      class="text-brand-slate line-clamp-3 text-base group-hover:underline"
-                      data-blog-title
-                    >
-                      What Our AI-DLC Pilot Revealed About Where the Time Actually Goes
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="h-24 max-lg:last:hidden max-md:last:block">
-                <a
-                  class="group bg-brand-light flex h-24 items-center"
-                  href="https://www.bairesdev.com/blog/javascript-design-patterns/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="h-24 w-2/5 shrink-0 object-cover"
-                    src="assets/images/pages/blog/javascript-design-patterns.png"
-                    alt=""
-                    width="141"
-                    height="96"
-                    loading="lazy"
-                  />
-                  <div class="min-w-0 flex-1 p-3">
-                    <p
-                      class="text-brand-slate line-clamp-3 text-base group-hover:underline"
-                      data-blog-title
-                    >
-                      JavaScript Design Patterns: A Tour of Eight, and What TypeScript Adds
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="h-24 max-lg:last:hidden max-md:last:block">
-                <a
-                  class="group bg-brand-light flex h-24 items-center"
-                  href="https://www.bairesdev.com/blog/staff-augmentation-risks/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="h-24 w-2/5 shrink-0 object-cover"
-                    src="assets/images/pages/blog/staff-augmentation-risks.jpg"
-                    alt=""
-                    width="141"
-                    height="96"
-                    loading="lazy"
-                  />
-                  <div class="min-w-0 flex-1 p-3">
-                    <p
-                      class="text-brand-slate line-clamp-3 text-base group-hover:underline"
-                      data-blog-title
-                    >
-                      Staff Augmentation Risks: The Five Failure Modes and the Controls That Contain
-                      Them
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="h-24 max-lg:last:hidden max-md:last:block">
-                <a
-                  class="group bg-brand-light flex h-24 items-center"
-                  href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="h-24 w-2/5 shrink-0 object-cover"
-                    src="assets/images/pages/blog/how-to-build-a-rag-application.jpg"
-                    alt=""
-                    width="141"
-                    height="96"
-                    loading="lazy"
-                  />
-                  <div class="min-w-0 flex-1 p-3">
-                    <p
-                      class="text-brand-slate line-clamp-3 text-base group-hover:underline"
-                      data-blog-title
-                    >
-                      How to Build a RAG Application: Architecture and Evaluation
-                    </p>
-                  </div>
-                </a>
-              </li>
-              <li class="h-24 max-lg:last:hidden max-md:last:block">
-                <a
-                  class="group bg-brand-light flex h-24 items-center"
-                  href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    class="h-24 w-2/5 shrink-0 object-cover"
-                    src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
-                    alt=""
-                    width="141"
-                    height="96"
-                    loading="lazy"
-                  />
-                  <div class="min-w-0 flex-1 p-3">
-                    <p
-                      class="text-brand-slate line-clamp-3 text-base group-hover:underline"
-                      data-blog-title
-                    >
-                      Common Barriers to AI Adoption: Why Pilots Stall
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </div>
+      <section class="page-container pb-8">
+        <nav class="mb-10 flex flex-wrap items-center gap-3 text-sm" aria-label="Breadcrumb">
+          <a class="hover:underline" href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a class="hover:underline" href="blog.html">Blog</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Technology</span>
+        </nav>
+        <h1>
+          <span class="text-brand-gray">Category:</span> Technology
+          <span class="text-brand-gray">(<span data-category-count>30</span>)</span>
+        </h1>
       </section>
-      <section class="bg-brand-light py-16 max-md:py-10" data-blog-results="" hidden="">
-        <div class="page-container">
-          <div class="mb-3"><h2>Search results</h2></div>
-          <p class="text-brand-gray mb-8" data-blog-status="" role="status"></p>
+      <section class="bg-brand-light relative pb-20 max-md:pb-12" aria-label="Technology articles">
+        <div
+          class="pointer-events-none absolute inset-x-0 top-0 h-56 bg-white"
+          aria-hidden="true"
+        ></div>
+        <div class="page-container relative">
+          <p class="sr-only" data-category-status role="status" aria-live="polite"></p>
           <div
             class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1"
-            data-blog-result-list=""
-          ></div>
-          <button class="btn-outline mt-8" type="button" data-blog-reset="">
-            Show all articles
-          </button>
-        </div>
-      </section>
-      <section
-        class="bg-brand-light py-20 max-md:py-10"
-        id="software-development"
-        data-blog-category="software-development"
-      >
-        <div class="page-container">
-          <div
-            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
+            data-category-list
           >
-            <h2>Software Development</h2>
-            <button
-              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
-              type="button"
-              data-blog-filter="software-development"
-            >
-              <span
-                >All Software Development articles
-                <svg class="size-4 shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></span>
-            </button>
-          </div>
-          <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a class="group block" href="blog/saas-development-cost-2026.html"
-                ><img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/saas-development-cost-2026.webp"
-                  alt="SaaS cloud platform with billing, integrations, analytics, AI and responsive applications"
-                  width="1774"
-                  height="887"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>How Much Does It Cost to Build a SaaS Product in 2026?</h5>
-                </div></a
-              >
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-contain"
-                    src="assets/images/logo.png"
-                    alt=""
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By KKEYDOS Engineering</span>
-                </div>
-                <span class="text-brand-gray shrink-0">6 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a class="group block" href="https://www.bairesdev.com/blog/how-to-train-an-llm-on-your-own-data/" target="_blank" rel="noopener noreferrer"
-                ><img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/llm-data.png"
-                  alt="Layered datasets for a custom language model"
-                  width="1280"
-                  height="720"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>
-                    When to Train LLMs on Your Own Data: The Spectrum of Options
-                  </h5>
-                </div></a
-              >
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-contain"
-                    src="assets/images/logo.png"
-                    alt=""
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By KKEYDOS Engineering</span>
-                </div>
-                <span class="text-brand-gray shrink-0">8 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
+                alt="Common Barriers to AI Adoption: Why Pilots Stall"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/inside-echo-harbors-claude-engine/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/inside-echo-harbors-claude-engine.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Connecting AI analysis to the evidence behind it</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-01.jpg"
-                    alt="Richard Modad"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Richard Modad</span>
-                </div>
-                <span class="text-brand-gray shrink-0">3 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/how-to-write-maintainable-code/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/how-to-write-maintainable-code.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Making code easier to change as your product grows</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-02.jpg"
-                    alt="Carlos Moreira"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Carlos Moreira</span>
-                </div>
-                <span class="text-brand-gray shrink-0">15 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/software-testing-strategies/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/software-testing-strategies.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>
-                    A practical approach to testing your next software release
-                  </h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-03.jpg"
-                    alt="Michelle Bowman"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Michelle Bowman</span>
-                </div>
-                <span class="text-brand-gray shrink-0">13 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/javascript-design-patterns/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/javascript-design-patterns.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>JavaScript design patterns and what TypeScript adds</h5>
-                </div>
-              </a>
-              <div class="text-brand-gray mt-auto px-6 pb-6 text-sm">BairesDev blog</div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        class="bg-brand-light py-20 max-md:py-10"
-        id="biz-and-tech"
-        data-blog-category="biz-and-tech"
-      >
-        <div class="page-container">
-          <div
-            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
-          >
-            <h2>Biz &amp; Tech</h2>
-            <button
-              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
-              type="button"
-              data-blog-filter="biz-and-tech"
-            >
-              <span
-                >All Biz &amp; Tech articles
-                <svg class="size-4 shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></span>
-            </button>
-          </div>
-          <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/your-ai-agent-identity-model-isnt-ready/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/your-ai-agent-identity-model-isnt-ready.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Giving autonomous agents the right access and identity</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-04.jpg"
-                    alt="Bob Leibholz"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Bob Leibholz</span>
-                </div>
-                <span class="text-brand-gray shrink-0">8 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/the-autonomy-gap-pilot-and-production/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/the-autonomy-gap-pilot-and-production.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>
-                    Taking AI from a promising prototype to a production service
-                  </h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-05.jpg"
-                    alt="Bob Leibholz"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Bob Leibholz</span>
-                </div>
-                <span class="text-brand-gray shrink-0">9 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/how-to-vet-a-software-development-outsourcing-partner/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/how-to-vet-a-software-development-outsourcing-partner.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Questions to ask your next software delivery partner</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-06.jpg"
-                    alt="Tomislav Bacinger"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Tomislav Bacinger</span>
-                </div>
-                <span class="text-brand-gray shrink-0">15 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
+                class="px-6 pt-6 pb-8 hover:underline"
                 href="https://www.bairesdev.com/blog/common-barriers-to-ai-adoption/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/common-barriers-to-ai-adoption.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Why AI pilots stall before wider adoption</h5>
-                </div>
-              </a>
-              <div class="text-brand-gray mt-auto px-6 pb-6 text-sm">BairesDev blog</div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="bg-brand-light py-20 max-md:py-10" id="talent" data-blog-category="talent">
-        <div class="page-container">
-          <div
-            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
-          >
-            <h2>Talent</h2>
-            <button
-              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
-              type="button"
-              data-blog-filter="talent"
-            >
-              <span
-                >All Talent articles
-                <svg class="size-4 shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></span>
-            </button>
-          </div>
-          <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/medical-device-software-engineer/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/medical-device-software-engineer.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>The engineering skills behind reliable medical software</h5>
-                </div>
+                <h5>Common Barriers to AI Adoption: Why Pilots Stall</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-07.jpg"
-                    alt="Nermin Salkic"
+                    src="assets/images/pages/category/authors/federico-schwarzbock.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Nermin Salkic</span>
+                  />
+                  <span>By Federico Schwarzbock</span>
                 </div>
-                <span class="text-brand-gray shrink-0">13 min read</span>
+                <span class="text-brand-gray shrink-0">12 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/blog/agile-sdlc.png"
+                alt="Agile SDLC: How It Actually Works (and Where It Breaks)"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/what-is-resource-augmentation/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/what-is-resource-augmentation.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Adding specialist capacity without losing team continuity</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-08.jpg"
-                    alt="Guillermo Casagrande"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Guillermo Casagrande</span>
-                </div>
-                <span class="text-brand-gray shrink-0">15 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/dev-barometer-q3-2026-devs-answering-for-code/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/dev-barometer-q3-2026-devs-answering-for-code.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>How AI is changing the everyday work of developers</h5>
-                </div>
-              </a>
-              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
-                <div class="flex min-w-0 items-center gap-3">
-                  <img
-                    class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-09.png"
-                    alt="Rodrigo Outumuro"
-                    width="56"
-                    height="56"
-                    loading="lazy"
-                  /><span>By Rodrigo Outumuro</span>
-                </div>
-                <span class="text-brand-gray shrink-0">8 min read</span>
-              </div>
-            </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/staff-augmentation-risks/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/staff-augmentation-risks.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Five staff augmentation risks and ways to contain them</h5>
-                </div>
-              </a>
-              <div class="text-brand-gray mt-auto px-6 pb-6 text-sm">BairesDev blog</div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        class="bg-brand-light py-20 max-md:py-10"
-        id="technology"
-        data-blog-category="technology"
-      >
-        <div class="page-container">
-          <div
-            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
-          >
-            <h2>Technology</h2>
-            <a
-              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
-              href="category.html"
-            >
-              <span
-                >All Technology articles
-                <svg class="size-4 shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></span>
-            </a>
-          </div>
-          <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
+                class="px-6 pt-6 pb-8 hover:underline"
                 href="https://www.bairesdev.com/blog/agile-sdlc/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/agile-sdlc.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Keeping an agile delivery process useful as teams grow</h5>
-                </div>
+                <h5>Agile SDLC: How It Actually Works (and Where It Breaks)</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-10.jpg"
-                    alt="Christian Fernandes"
+                    src="assets/images/pages/category/authors/christian-fernandes.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Christian Fernandes</span>
+                  />
+                  <span>By Christian Fernandes</span>
                 </div>
                 <span class="text-brand-gray shrink-0">13 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/blog/data-science.jpg"
+                alt="Data Science: How to Evaluate Teams and Outcomes"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
+                class="px-6 pt-6 pb-8 hover:underline"
                 href="https://www.bairesdev.com/blog/data-science/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/data-science.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Measuring the impact of a data science team</h5>
-                </div>
+                <h5>Data Science: How to Evaluate Teams and Outcomes</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-11.jpg"
-                    alt="Oscar Heredia"
+                    src="assets/images/pages/category/authors/oscar-heredia.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Oscar Heredia</span>
+                  />
+                  <span>By Oscar Heredia</span>
                 </div>
                 <span class="text-brand-gray shrink-0">14 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/blog/enterprise-application-integration.jpg"
+                alt="Enterprise Application Integration Is a Decision, Not a Platform"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
+                class="px-6 pt-6 pb-8 hover:underline"
                 href="https://www.bairesdev.com/blog/enterprise-application-integration/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/enterprise-application-integration.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Planning integrations around the way your business works</h5>
-                </div>
+                <h5>Enterprise Application Integration Is a Decision, Not a Platform</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-12.jpg"
-                    alt="Fernando Ugarte"
+                    src="assets/images/pages/category/authors/fernando-ugarte.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Fernando Ugarte</span>
+                  />
+                  <span>By Fernando Ugarte</span>
                 </div>
                 <span class="text-brand-gray shrink-0">11 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/sap-s4hana-migration.webp"
+                alt="SAP S/4HANA Migration Without the Vendor Theater"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/how-to-build-a-rag-application/"
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/sap-s4hana-migration/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/how-to-build-a-rag-application.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Building a RAG application with a sound architecture</h5>
-                </div>
-              </a>
-              <div class="text-brand-gray mt-auto px-6 pb-6 text-sm">BairesDev blog</div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        class="bg-brand-light pt-20 pb-0 max-md:pt-10"
-        id="insights"
-        data-blog-category="insights"
-      >
-        <div class="page-container">
-          <div
-            class="mb-8 flex items-center justify-between gap-4 max-sm:flex-col max-sm:items-start"
-          >
-            <h2>Insights</h2>
-            <button
-              class="sliding-btn text-brand-slate border-b-brand-slate w-76 max-sm:max-w-full"
-              type="button"
-              data-blog-filter="insights"
-            >
-              <span
-                >All Insights articles
-                <svg class="size-4 shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#arrow-right"></use></svg
-              ></span>
-            </button>
-          </div>
-          <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
-              <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/the-vanishing-preparation-window/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/the-vanishing-preparation-window.png"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Preparing operations for a faster development cycle</h5>
-                </div>
+                <h5>SAP S/4HANA Migration Without the Vendor Theater</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-13.jpg"
-                    alt="Jeff Townes"
+                    src="assets/images/pages/category/authors/fernando-ugarte.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Jeff Townes</span>
+                  />
+                  <span>By Fernando Ugarte</span>
                 </div>
                 <span class="text-brand-gray shrink-0">14 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/iot-scalability-challenges.webp"
+                alt="IoT Scalability Challenges: What Breaks in Fleets"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/scaling-ai-in-the-enterprise/"
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/iot-scalability-challenges/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/scaling-ai-in-the-enterprise.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Making enterprise AI part of everyday delivery</h5>
-                </div>
+                <h5>IoT Scalability Challenges: What Breaks in Fleets</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-14.jpg"
-                    alt="Saurabh Gupta"
+                    src="assets/images/pages/category/authors/richard-modad.webp"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Saurabh Gupta</span>
+                  />
+                  <span>By Richard Modad</span>
+                </div>
+                <span class="text-brand-gray shrink-0">10 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/enterprise-iot-architecture-from-connected-devices-to-operational-control.webp"
+                alt="Enterprise IoT Architecture: From Connected Devices to Operational Control"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/enterprise-iot-architecture-from-connected-devices-to-operational-control/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>Enterprise IoT Architecture: From Connected Devices to Operational Control</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/richard-modad.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Richard Modad</span>
+                </div>
+                <span class="text-brand-gray shrink-0">10 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/clinical-trial-data-platform.webp"
+                alt="Build, Buy, or Augment? A Clinical Trial Data Platform Decision Framework for Engineering Leaders"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/clinical-trial-data-platform/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Build, Buy, or Augment? A Clinical Trial Data Platform Decision Framework for
+                  Engineering Leaders
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/nermin-salkic.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Nermin Salkic</span>
+                </div>
+                <span class="text-brand-gray shrink-0">19 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-clinical-decision-report.webp"
+                alt="Why Most AI-Powered Clinical Decision Support Systems Fail and What Works Instead"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-clinical-decision-report/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Why Most AI-Powered Clinical Decision Support Systems Fail and What Works Instead
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/nermin-salkic.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Nermin Salkic</span>
+                </div>
+                <span class="text-brand-gray shrink-0">18 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-generated-code-security-risks.webp"
+                alt="AI-Generated Code Security Risks: What Your Tools Aren’t Telling You About Vulnerable Code"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-generated-code-security-risks/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  AI-Generated Code Security Risks: What Your Tools Aren’t Telling You About
+                  Vulnerable Code
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/izcoatl-estanol.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Izcóatl Estañol</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-agent-orchestration.webp"
+                alt="AI Agent Orchestration: When a Multi-Agent Approach Actually Makes Sense"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-agent-orchestration/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>AI Agent Orchestration: When a Multi-Agent Approach Actually Makes Sense</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/sean-wang.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Sean Wang</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-coding-mistakes.webp"
+                alt="AI Coding Mistakes: Where AI-Generated Code Fails in Real Engineering Work"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-coding-mistakes/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>AI Coding Mistakes: Where AI-Generated Code Fails in Real Engineering Work</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/izcoatl-estanol.png"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Izcóatl Estañol</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/wordpress-security-risks.webp"
+                alt="WordPress Security Risks Are (Mostly) a Governance Problem"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/wordpress-security-risks/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>WordPress Security Risks Are (Mostly) a Governance Problem</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/james-booth.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By James Booth</span>
                 </div>
                 <span class="text-brand-gray shrink-0">11 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-coding-best-practices.webp"
+                alt="AI Coding Best Practices: How to Use LLMs Without Lowering Standards"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/the-specification-architect/"
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-coding-best-practices/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/the-specification-architect.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>Turning business judgment into clear AI requirements</h5>
-                </div>
+                <h5>AI Coding Best Practices: How to Use LLMs Without Lowering Standards</h5>
               </a>
               <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
                 <div class="flex min-w-0 items-center gap-3">
                   <img
                     class="size-14 shrink-0 rounded-full object-cover"
-                    src="assets/images/pages/blog/authors/author-15.jpg"
-                    alt="Raghu Punnamraju"
+                    src="assets/images/pages/category/authors/izcoatl-estanol.png"
+                    alt=""
                     width="56"
                     height="56"
                     loading="lazy"
-                  /><span>By Raghu Punnamraju</span>
+                  />
+                  <span>By Izcóatl Estañol</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
+            </article>
+
+            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-category-card>
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-in-data-analytics.webp"
+                alt="AI in Data Analytics: What It Changes, Where It Breaks, and How to Ship Safely"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-in-data-analytics/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  AI in Data Analytics: What It Changes, Where It Breaks, and How to Ship Safely
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/agustin-achille.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Agustín Achille</span>
+                </div>
+                <span class="text-brand-gray shrink-0">14 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/tableau-performance-issues.webp"
+                alt="Tableau Performance Issues: A Diagnostic Guide to Finding the Real Bottleneck"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/tableau-performance-issues/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Tableau Performance Issues: A Diagnostic Guide to Finding the Real Bottleneck
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/oscar-rincon-toro.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Oscar Rincón Toro</span>
+                </div>
+                <span class="text-brand-gray shrink-0">12 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/graphql-performance-issues.webp"
+                alt="GraphQL Performance Issues: A Diagnostic Guide to Finding the Real Bottleneck"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/graphql-performance-issues/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  GraphQL Performance Issues: A Diagnostic Guide to Finding the Real Bottleneck
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/jimmy-e-bonilla.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Jimmy E. Bonilla</span>
+                </div>
+                <span class="text-brand-gray shrink-0">12 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/scala-use-cases.webp"
+                alt="Scala Use Cases: Where It Fits, Why Teams Choose It, and What to Plan For"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/scala-use-cases/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>Scala Use Cases: Where It Fits, Why Teams Choose It, and What to Plan For</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/marcos-brandao.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Marcos Brandão</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/wordpress-performance-issues.webp"
+                alt="WordPress Performance Issues: A Layered Diagnostic Framework"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/wordpress-performance-issues/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>WordPress Performance Issues: A Layered Diagnostic Framework</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/marcos-loureiro.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Marcos Loureiro</span>
+                </div>
+                <span class="text-brand-gray shrink-0">10 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/microservices-use-cases.webp"
+                alt="Microservices Use Cases: When They’re Worth the Operational Cost (And When They’re Not)"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/microservices-use-cases/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Microservices Use Cases: When They’re Worth the Operational Cost (And When They’re
+                  Not)
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/valfrid-silva.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Valfrid Silva</span>
+                </div>
+                <span class="text-brand-gray shrink-0">18 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/scala-disadvantages.webp"
+                alt="Scala Disadvantages in Enterprise: The Risks That Actually Slow Delivery"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/scala-disadvantages/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>Scala Disadvantages in Enterprise: The Risks That Actually Slow Delivery</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/glesio-paiva.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Glesio Paiva</span>
+                </div>
+                <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/is-scala-functional-or-object-oriented.webp"
+                alt="Is Scala Functional or Object-Oriented? The Practical Answer for Enterprise Teams"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/is-scala-functional-or-object-oriented/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Is Scala Functional or Object-Oriented? The Practical Answer for Enterprise Teams
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/fernando-ugarte.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Fernando Ugarte</span>
                 </div>
                 <span class="text-brand-gray shrink-0">9 min read</span>
               </div>
             </article>
-            <article class="flex flex-col overflow-hidden bg-white shadow-lg" data-blog-card="">
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/what-is-scala.webp"
+                alt="What Is Scala? An Enterprise Guide to Fit, Risk, and Where It Wins"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
               <a
-                class="group block"
-                href="https://www.bairesdev.com/blog/ai-dlc-pilot/"
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/what-is-scala/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  class="aspect-video w-full object-cover"
-                  src="assets/images/pages/blog/ai-dlc-pilot.jpg"
-                  alt=""
-                  width="800"
-                  height="450"
-                  loading="lazy"
-                />
-                <div class="group-hover:text-brand-teal px-6 pt-6 pb-8">
-                  <h5 data-blog-title>What an AI-assisted delivery pilot revealed about time</h5>
-                </div>
+                <h5>What Is Scala? An Enterprise Guide to Fit, Risk, and Where It Wins</h5>
               </a>
-              <div class="text-brand-gray mt-auto px-6 pb-6 text-sm">BairesDev blog</div>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/carlos-moreira.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Carlos Moreira</span>
+                </div>
+                <span class="text-brand-gray shrink-0">8 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/graphql-vs-rest-api.webp"
+                alt="GraphQL vs REST API: A Decision Framework for Engineering Leaders"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/graphql-vs-rest-api/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>GraphQL vs REST API: A Decision Framework for Engineering Leaders</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/pablo-bassil.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Pablo Bassil</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-oversight-failure-modes-ai-systems.webp"
+                alt="AI Oversight: 4 Failure Modes That Are Quietly Undermining Your AI Systems"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-oversight-failure-modes-ai-systems/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>AI Oversight: 4 Failure Modes That Are Quietly Undermining Your AI Systems</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/james-booth.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By James Booth</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/product-manager-vs-project-manager.webp"
+                alt="Product Manager vs. Project Manager: Decision Rights, Not Job Descriptions"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/product-manager-vs-project-manager/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>Product Manager vs. Project Manager: Decision Rights, Not Job Descriptions</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/renata-matos.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Renata Matos</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/ai-use-cases-in-enterprise-software.webp"
+                alt="AI Use Cases That Make It to Production: A Portfolio and Capability-Pattern Guide"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/ai-use-cases-in-enterprise-software/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  AI Use Cases That Make It to Production: A Portfolio and Capability-Pattern Guide
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/daniel-avila.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Daniel Avila</span>
+                </div>
+                <span class="text-brand-gray shrink-0">11 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/machine-learning-vs-artificial-intelligence.webp"
+                alt="Machine Learning vs. Artificial Intelligence: What you’re Actually Building and When to Buy vs Build"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/machine-learning-vs-artificial-intelligence/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>
+                  Machine Learning vs. Artificial Intelligence: What you’re Actually Building and
+                  When to Buy vs Build
+                </h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/agustin-achille.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Agustín Achille</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/what-is-an-llm.webp"
+                alt="What Is an LLM? A Systems-Level Primer for Engineering Leaders"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/what-is-an-llm/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>What Is an LLM? A Systems-Level Primer for Engineering Leaders</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/alejandro-cordova.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Alejandro Cordova</span>
+                </div>
+                <span class="text-brand-gray shrink-0">13 min read</span>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col overflow-hidden bg-white shadow-lg"
+              data-category-card
+              hidden
+            >
+              <img
+                class="aspect-video w-full object-cover"
+                src="assets/images/pages/category/web-design-trends.webp"
+                alt="Web Design Trends: What to Adopt, What to Pilot, What to Ignore"
+                width="800"
+                height="450"
+                loading="lazy"
+              />
+              <a
+                class="px-6 pt-6 pb-8 hover:underline"
+                href="https://www.bairesdev.com/blog/web-design-trends/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h5>Web Design Trends: What to Adopt, What to Pilot, What to Ignore</h5>
+              </a>
+              <div class="mt-auto flex items-center justify-between gap-3 px-6 pb-6 text-sm">
+                <div class="flex min-w-0 items-center gap-3">
+                  <img
+                    class="size-14 shrink-0 rounded-full object-cover"
+                    src="assets/images/pages/category/authors/juan-carlos-caicedo.webp"
+                    alt=""
+                    width="56"
+                    height="56"
+                    loading="lazy"
+                  />
+                  <span>By Juan Carlos Caicedo</span>
+                </div>
+                <span class="text-brand-gray shrink-0">12 min read</span>
+              </div>
             </article>
           </div>
-        </div>
-      </section>
-      <section class="bg-brand-light pt-12 pb-20 max-md:pb-12">
-        <div class="page-container flex justify-center">
-          <button class="btn-outline" type="button" data-blog-reset="">
-            See all articles
-            <svg class="size-4" aria-hidden="true">
-              <use href="assets/images/icons.svg#arrow-right"></use>
-            </svg>
-          </button>
+          <div class="py-20 text-center" data-category-empty hidden>
+            <div class="mb-4"><h3>No articles found.</h3></div>
+            <p class="text-brand-gray mb-8">Try another keyword or view all Technology articles.</p>
+            <button class="btn-outline" type="button" data-category-reset>Show all articles</button>
+          </div>
+          <nav
+            class="mt-20 flex justify-center gap-2 max-md:mt-10"
+            aria-label="Article pages"
+            data-category-pagination
+          >
+            <button
+              class="btn-outline size-10 p-0 disabled:pointer-events-none disabled:opacity-35"
+              type="button"
+              data-category-step="-1"
+              aria-label="Previous page"
+              disabled
+            >
+              <svg class="size-4 rotate-180" aria-hidden="true">
+                <use href="assets/images/icons.svg#arrow-right"></use>
+              </svg>
+            </button>
+            <div class="flex gap-2" data-category-pages>
+              <a
+                class="btn-outline aria-[current=page]:bg-primary size-10 p-0 aria-[current=page]:text-white"
+                href="category.html"
+                aria-label="Page 1"
+                aria-current="page"
+                >1</a
+              >
+              <a
+                class="btn-outline aria-[current=page]:bg-primary size-10 p-0 aria-[current=page]:text-white"
+                href="category.html?page=2"
+                aria-label="Page 2"
+                >2</a
+              >
+            </div>
+            <button
+              class="btn-outline size-10 p-0 disabled:pointer-events-none disabled:opacity-35"
+              type="button"
+              data-category-step="1"
+              aria-label="Next page"
+            >
+              <svg class="size-4" aria-hidden="true">
+                <use href="assets/images/icons.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </nav>
         </div>
       </section>
     </main>

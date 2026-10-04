@@ -1,26 +1,4 @@
 @layer components {
-  .blog-category-shell {
-    transition: transform 220ms ease;
-  }
-
-  .blog-category-shell[data-scroll-hidden='true'] {
-    transform: translateY(calc(-100% - 5rem));
-    pointer-events: none;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .blog-category-shell {
-      transition: none;
-    }
-  }
-
-  .blog-filter {
-    @apply cursor-pointer text-left text-base font-normal lg:font-bold transition-colors;
-    @apply hover:bg-black/5;
-    @apply middle:h-14 middle:px-4 lg:px-8;
-    @apply max-middle:px-4 max-middle:py-3 max-middle:text-lg max-middle:leading-7 max-middle:font-medium;
-  }
-
   .blog-content {
     @apply text-brand-slate space-y-6 text-lg max-md:text-base;
 
