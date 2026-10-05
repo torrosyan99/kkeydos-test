@@ -1,4 +1,52 @@
 import { fixedBlock } from '../../libs/fixedBlock/fixedBlock.js';
+import { Swiper } from '../../libs/swiper/swiper.min.js';
+
+document.querySelectorAll('[data-service-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('[data-carousel-track]');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const slider = new Swiper(track, {
+    speed: reducedMotion.matches ? 0 : 450,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grabCursor: true,
+    watchOverflow: true,
+    navigation: {
+      prevEl: carousel.querySelector('[data-carousel-prev]'),
+      nextEl: carousel.querySelector('[data-carousel-next]'),
+    },
+    pagination: {
+      el: carousel.querySelector('[data-carousel-pagination]'),
+      clickable: true,
+    },
+    a11y: {
+      containerRoleDescriptionMessage: 'carousel',
+      itemRoleDescriptionMessage: 'slide',
+      slideLabelMessage: '{{index}} of {{slidesLength}}',
+    },
+    breakpoints: {
+      768: { slidesPerView: 2, spaceBetween: 24 },
+      1024: { slidesPerView: 3, spaceBetween: 32 },
+    },
+  });
+
+  reducedMotion.addEventListener('change', (event) => {
+    slider.params.speed = event.matches ? 0 : 450;
+  });
+
+  // Keep arrow keys local to the focused carousel so they don't hijack page scrolling.
+  track.addEventListener('keydown', (event) => {
+    if (event.target !== track) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      if (event.key === 'ArrowLeft') slider.slidePrev();
+      else slider.slideNext();
+    }
+    if (event.key === 'Home' || event.key === 'End') {
+      event.preventDefault();
+      slider.slideTo(event.key === 'Home' ? 0 : slider.slides.length - 1);
+    }
+  });
+});
 
 const navigation = document.querySelector('[data-service-navigation]');
 
@@ -99,6 +147,8 @@ if (form) {
     event.target.setCustomValidity?.('');
     resetInquiry();
   });
+
+  form.addEventListener('reset', resetInquiry);
 
   form.addEventListener('submit', (event) => {
     for (const name of ['name', 'description']) {

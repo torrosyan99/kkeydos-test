@@ -1,4 +1,34 @@
 ﻿@layer components {
+  .service-reviews .swiper-wrapper {
+    @apply items-start;
+  }
+
+  .service-reviews article {
+    @apply min-h-112 max-md:min-h-104;
+  }
+
+  @media (min-width: 1024px) {
+    .service-reviews-heading {
+      @apply absolute top-0 left-5 z-2 w-3/10;
+    }
+
+    .service-reviews .swiper-slide {
+      @apply pt-0 transition-[padding-top] duration-450 motion-reduce:transition-none;
+    }
+
+    .service-reviews .swiper-slide-active {
+      @apply pt-64;
+    }
+
+    .service-reviews .swiper-slide-next {
+      @apply pt-32;
+    }
+
+    .service-reviews-controls {
+      @apply absolute right-5 bottom-8 z-2 w-3/10 flex-wrap;
+    }
+  }
+
   .service-navigation {
     @apply border-brand-border relative z-30 border-b bg-white py-2;
     &[data-fixed='true'] {
