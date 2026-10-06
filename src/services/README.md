@@ -33,7 +33,7 @@ The section body is not an array or schema. Each service owns its full compositi
 - `visual`: optional HTML fragment inside the text column.
 - `icon`, `formTitle`, `formDescription`, `formPlaceholder`, `formButton`: form context for the current service.
 
-Do not add another global breakpoint or typography scale for a service. Its scoped styles belong in `src/styles/pages/service.css`. The example reuses the project's teal/orange palette, `green-block`, icons, and existing AI product assets.
+Do not add another global breakpoint or typography scale for a service. Generated page styles belong in `src/styles/pages/service-generated.css`. The example reuses the project's teal/orange palette, `green-block`, icons, and existing AI product assets.
 
 ## Existing components
 
@@ -41,7 +41,7 @@ Do not add another global breakpoint or typography scale for a service. Its scop
 
 Section navigation uses `navigation.html` and the existing `fixedBlock`, positioned beneath the 80px site header. Its compact trigger shows the current section, its number, and progress through the section list. The numbered panel works on desktop and mobile, closes on selection, Escape, outside click, or focus leaving the control, and scrolls internally on short screens. Arrow Down opens the panel and focuses the current section; Tab follows normal link order. Section selection preserves native anchor/history behavior and moves focus to the destination.
 
-`service.js` retains the existing requestAnimationFrame-throttled scroll tracking, with a ResizeObserver to account for content height changes. It handles manual scrolling, anchor navigation, viewport changes, and restored pages. Reduced-motion preferences disable the panel animation and smooth anchor scrolling. Use `scroll-mt-40` on section destinations to leave room for the header and compact navigation.
+`service-navigation.js` handles requestAnimationFrame-throttled scroll tracking, with a ResizeObserver to account for content height changes. The generated layout loads it separately from `service.js`. It handles manual scrolling, anchor navigation, viewport changes, and restored pages. Reduced-motion preferences disable the panel animation and smooth anchor scrolling. Use `scroll-mt-40` on section destinations to leave room for the header and compact navigation.
 
 The FAQ and country selector use the shared handlers in `main.js`, including keyboard operation and input/change events for selects. `service.js` adds inquiry handling.
 

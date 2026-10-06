@@ -1151,9 +1151,12 @@
       </div>
     </header>
     <main id="main-content" class="overflow-clip">
-      <section class="page-container pt-10 max-md:pt-6">
-        <div class="mb-12 max-md:mb-8">
-          <nav aria-label="Breadcrumb" class="flex items-center gap-3 py-4 text-sm">
+      <section class="pt-10 pb-10 max-md:pt-6">
+        <div class="page-container">
+          <nav
+            aria-label="Breadcrumb"
+            class="mb-12 flex items-center gap-3 py-4 text-sm max-md:mb-8"
+          >
             <a href="/" aria-label="Home">
               <svg class="size-5" aria-hidden="true">
                 <use href="assets/images/icons.svg#breadcrumbs-home"></use>
@@ -1164,60 +1167,28 @@
             </svg>
             <span class="font-semibold" aria-current="page">Terms and Conditions</span>
           </nav>
+          <p class="text-brand-gray mb-2 text-sm font-semibold uppercase">
+            Our terms and conditions
+          </p>
+          <h1>Terms of Services<span class="text-brand-orange">.</span></h1>
+          <p class="bg-brand-light mt-16 rounded-lg px-3 py-4 text-lg">
+            The following Terms and Conditions govern the use of www.kkeydos.com, the information
+            and services offered on this website, and related links (collectively, our “Sites”).
+            Please read these Terms and Conditions carefully.
+          </p>
         </div>
-        <p class="text-brand-gray mb-2 text-sm font-semibold uppercase">Our terms and conditions</p>
-        <h1>Terms of Services<span class="text-brand-orange">.</span></h1>
-        <p class="bg-brand-light mt-16 mb-10 rounded-lg px-3 py-4 text-lg">
-          The following Terms and Conditions govern the use of www.kkeydos.com, the information and
-          services offered on this website, and related links (collectively, our “Sites”). Please
-          read these Terms and Conditions carefully.
-        </p>
       </section>
-      <div
-        class="page-container mb-56 flex items-start gap-12 max-lg:gap-6 max-md:mb-40 max-md:block"
-      >
-        <nav
-          class="sticky top-28 w-70 shrink-0 max-lg:w-60 max-md:hidden"
-          aria-label="Terms and conditions sections"
+      <section class="mb-56 max-md:mb-40">
+        <div
+          class="page-container flex items-start gap-12 max-lg:gap-6 max-md:flex-col max-md:items-stretch max-md:gap-8"
         >
-          <a
-            class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
-            data-terms-link
-            href="#copyright"
-            aria-current="location"
-            >Copyright and trademark notice</a
-          >
-          <a
-            class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
-            data-terms-link
-            href="#liability"
-            >General legal notice and liability disclaimer</a
-          >
-          <a
-            class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
-            data-terms-link
-            href="#severability"
-            >Severability</a
-          >
-        </nav>
-        <div class="min-w-0 flex-1">
-          <div class="mb-8 space-y-8 text-lg">
-            <p>
-              By using our Sites, you agree to these Terms and Conditions and all applicable laws
-              and regulations governing their use.
-            </p>
-            <p>
-              We reserve the right to update these Terms and Conditions by posting changes on this
-              website. If you violate these Terms and Conditions, we may restrict your use of the
-              Sites.
-            </p>
-          </div>
           <details
-            class="group sticky top-20 z-10 -mx-5 mb-8 hidden bg-black text-white max-md:block"
+            class="group sticky top-28 w-70 shrink-0 max-lg:w-60 max-md:top-20 max-md:z-10 max-md:-mx-5 max-md:w-auto max-md:bg-black max-md:text-white"
             data-terms-menu
+            open
           >
             <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold [&::-webkit-details-marker]:hidden"
+              class="hidden cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold max-md:flex [&::-webkit-details-marker]:hidden"
             >
               <span data-terms-current>Copyright and trademark notice</span>
               <svg
@@ -1228,38 +1199,49 @@
               </svg>
             </summary>
             <nav
-              class="shadow-default absolute inset-x-0 top-full bg-white py-2"
+              class="max-md:shadow-default flex flex-col max-md:absolute max-md:inset-x-0 max-md:top-full max-md:bg-white max-md:py-2"
               aria-label="Terms and conditions sections"
             >
               <a
-                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
+                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary border-l-2 border-transparent py-3 pr-2 pl-3"
                 data-terms-link
                 href="#copyright"
                 aria-current="location"
                 >Copyright and trademark notice</a
               >
               <a
-                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
+                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary border-l-2 border-transparent py-3 pr-2 pl-3"
                 data-terms-link
                 href="#liability"
                 >General legal notice and liability disclaimer</a
               >
               <a
-                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary block border-l-2 border-transparent py-3 pr-2 pl-3"
+                class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary border-l-2 border-transparent py-3 pr-2 pl-3"
                 data-terms-link
                 href="#severability"
                 >Severability</a
               >
             </nav>
           </details>
-          <div class="space-y-8">
-            <section
-              class="scroll-mt-28 space-y-8 max-md:scroll-mt-48"
-              id="copyright"
-              data-terms-section
-            >
-              <h3>COPYRIGHT AND TRADEMARK NOTICE</h3>
-              <div class="space-y-8 text-lg">
+          <div class="flex min-w-0 flex-1 flex-col gap-8 max-md:contents">
+            <div class="flex flex-col gap-8 text-lg max-md:order-first">
+              <p>
+                By using our Sites, you agree to these Terms and Conditions and all applicable laws
+                and regulations governing their use.
+              </p>
+              <p>
+                We reserve the right to update these Terms and Conditions by posting changes on this
+                website. If you violate these Terms and Conditions, we may restrict your use of the
+                Sites.
+              </p>
+            </div>
+            <div class="flex flex-col gap-8">
+              <div
+                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                id="copyright"
+                data-terms-section
+              >
+                <h3>COPYRIGHT AND TRADEMARK NOTICE</h3>
                 <p>
                   The contents of all material available on our Sites are copyrighted by KKEYDOS
                   unless otherwise indicated. All rights are reserved and content may not be
@@ -1282,34 +1264,33 @@
                   authorized by us to do so.
                 </p>
               </div>
-            </section>
-            <section
-              class="scroll-mt-28 space-y-8 max-md:scroll-mt-48"
-              id="liability"
-              data-terms-section
-            >
-              <h3>GENERAL LEGAL NOTICE AND LIABILITY DISCLAIMER</h3>
-              <div class="space-y-8 text-lg">
+
+              <div
+                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                id="liability"
+                data-terms-section
+              >
+                <h3>GENERAL LEGAL NOTICE AND LIABILITY DISCLAIMER</h3>
                 <p>
-                  We make available our Sites and the information and services contained herein
-                  &quot;as is&quot;, While KKEYDOS makes every effort to present accurate and
-                  reliable information on our Sites, KKEYDOS does not endorse, approve or certify
-                  such information, nor does it guarantee the accuracy, completeness, efficacy, or
-                  timeliness of such information. Use of such information is voluntary, and reliance
-                  on it should only be undertaken after an independent review by qualified experts.
+                  We make available our Sites and the information and services contained herein "as
+                  is", While KKEYDOS makes every effort to present accurate and reliable information
+                  on our Sites, KKEYDOS does not endorse, approve or certify such information, nor
+                  does it guarantee the accuracy, completeness, efficacy, or timeliness of such
+                  information. Use of such information is voluntary, and reliance on it should only
+                  be undertaken after an independent review by qualified experts.
                 </p>
                 <p>
                   Reference herein to any specific commercial product, process or service does not
                   constitute or imply endorsement, recommendation or favoring by KKEYDOS.
                 </p>
                 <p>
-                  At certain places on this site, live &quot;links&quot; to other Web sites can be
-                  accessed. Such external sites contain information created, published, maintained,
-                  or otherwise posted by institutions or organizations independent of KKEYDOS.
-                  KKEYDOS does not endorse, approve, certify, or control these external sites and
-                  does not guarantee the accuracy, completeness, efficacy, or timeliness of
-                  information located at such sites. Use of any information obtained from such sites
-                  is voluntary, and reliance on it should only be undertaken after an independent
+                  At certain places on this site, live "links" to other Web sites can be accessed.
+                  Such external sites contain information created, published, maintained, or
+                  otherwise posted by institutions or organizations independent of KKEYDOS. KKEYDOS
+                  does not endorse, approve, certify, or control these external sites and does not
+                  guarantee the accuracy, completeness, efficacy, or timeliness of information
+                  located at such sites. Use of any information obtained from such sites is
+                  voluntary, and reliance on it should only be undertaken after an independent
                   review by qualified experts.
                 </p>
                 <p>
@@ -1320,14 +1301,13 @@
                   arising out of use, reference to, reliance on, or performance of such information.
                 </p>
               </div>
-            </section>
-            <section
-              class="scroll-mt-28 space-y-8 max-md:scroll-mt-48"
-              id="severability"
-              data-terms-section
-            >
-              <h3>SEVERABILITY</h3>
-              <div class="space-y-8 text-lg">
+
+              <div
+                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                id="severability"
+                data-terms-section
+              >
+                <h3>SEVERABILITY</h3>
                 <p>
                   The invalidity or unenforceability of any particular provision of this Policy
                   shall not affect the remaining provisions hereof, and this Policy shall be
@@ -1335,15 +1315,13 @@
                   omitted.
                 </p>
               </div>
-            </section>
+            </div>
           </div>
         </div>
-      </div>
-      <section class="bg-black text-white">
-        <div
-          class="page-container flex items-center gap-14 pt-16 pb-14 max-lg:flex-col-reverse max-lg:gap-12 max-lg:pt-0 max-md:pb-12"
-        >
-          <div class="flex-1 space-y-10 max-lg:max-w-xl">
+      </section>
+      <section class="bg-black pt-16 pb-14 text-white max-lg:pt-0 max-md:pb-12">
+        <div class="page-container flex items-center gap-14 max-lg:flex-col-reverse max-lg:gap-12">
+          <div class="flex flex-1 flex-col items-start gap-10 max-lg:max-w-xl">
             <h2>
               Accelerate your next project.<br /><span class="text-brand-orange"
                 >See how we can help.</span

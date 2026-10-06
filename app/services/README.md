@@ -4,8 +4,8 @@
 Edit the HTML directly, as with `technologies/technology.html` and `industries/industry.html`.
 
 - Section layout follows the backend development reference, with the site's light theme.
-- Reuse `page-container`, the existing buttons, and global heading styles.
-- Put layout classes on the tags and use standard Tailwind `max-*` breakpoints.
+- Use `section > .page-container`, flex layouts, the existing buttons, and global heading styles.
+- Put layout classes on the tags and use standard Tailwind `max-*` breakpoints. Keep only Swiper state styles in `src/styles/pages/service.css`.
 - The bottom inquiry form uses the compact Technology/Industry layout and the existing `main.js` and `service.js` handlers.
 - The form prepares an email request; it does not send submissions to a server.
 
