@@ -1182,26 +1182,11 @@
         <div
           class="page-container flex items-start gap-12 max-lg:gap-6 max-md:flex-col max-md:items-stretch max-md:gap-8"
         >
-          <details
-            class="group sticky top-28 w-70 shrink-0 max-lg:w-60 max-md:top-20 max-md:z-10 max-md:-mx-5 max-md:w-auto max-md:bg-black max-md:text-white"
+          <div
+            class="sticky top-28 w-70 shrink-0 max-lg:w-60 max-md:top-20 max-md:z-10 max-md:-mx-5 max-md:w-auto"
             data-terms-menu
-            open
           >
-            <summary
-              class="hidden cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-semibold max-md:flex [&::-webkit-details-marker]:hidden"
-            >
-              <span data-terms-current>Copyright and trademark notice</span>
-              <svg
-                class="size-6 shrink-0 transition-transform group-open:rotate-180"
-                aria-hidden="true"
-              >
-                <use href="assets/images/icons.svg#chevron-bottom"></use>
-              </svg>
-            </summary>
-            <nav
-              class="max-md:shadow-default flex flex-col max-md:absolute max-md:inset-x-0 max-md:top-full max-md:bg-white max-md:py-2"
-              aria-label="Terms and conditions sections"
-            >
+            <nav class="flex flex-col max-md:hidden" aria-label="Terms and conditions sections">
               <a
                 class="text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary border-l-2 border-transparent py-3 pr-2 pl-3"
                 data-terms-link
@@ -1222,9 +1207,54 @@
                 >Severability</a
               >
             </nav>
-          </details>
-          <div class="flex min-w-0 flex-1 flex-col gap-8 max-md:contents">
-            <div class="flex flex-col gap-8 text-lg max-md:order-first">
+            <div class="select select-field hidden max-md:block" data-terms-select>
+              <button
+                class="select__button h-auto min-h-20 gap-4 rounded-none border-0 bg-black px-5 py-4 text-left font-semibold text-white focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white aria-expanded:ring-0"
+                type="button"
+                aria-expanded="false"
+                aria-controls="terms-section-options"
+              >
+                <span data-select-button-value>Copyright and trademark notice</span>
+                <svg class="size-6 shrink-0 text-white" aria-hidden="true">
+                  <use href="assets/images/icons.svg#chevron-bottom"></use>
+                </svg>
+              </button>
+              <nav
+                class="select__dropdown translate-y-0 rounded-none border-0 px-0 py-2 data-[position=top]:translate-y-0"
+                id="terms-section-options"
+                data-open="false"
+                aria-label="Terms and conditions sections"
+              >
+                <a
+                  class="select__dropdown-button text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary rounded-none border-l-2 border-transparent p-3 text-base hover:bg-transparent"
+                  href="#copyright"
+                  aria-current="location"
+                  data-select
+                  data-terms-link
+                >
+                  Copyright and trademark notice
+                </a>
+                <a
+                  class="select__dropdown-button text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary rounded-none border-l-2 border-transparent p-3 text-base hover:bg-transparent"
+                  href="#liability"
+                  data-select
+                  data-terms-link
+                >
+                  General legal notice and liability disclaimer
+                </a>
+                <a
+                  class="select__dropdown-button text-brand-gray hover:text-primary aria-[current=location]:border-primary aria-[current=location]:text-primary rounded-none border-l-2 border-transparent p-3 text-base hover:bg-transparent"
+                  href="#severability"
+                  data-select
+                  data-terms-link
+                >
+                  Severability
+                </a>
+              </nav>
+            </div>
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col gap-8 text-lg max-md:contents">
+            <div class="flex flex-col gap-8 max-md:order-first">
               <p>
                 By using our Sites, you agree to these Terms and Conditions and all applicable laws
                 and regulations governing their use.
@@ -1237,7 +1267,7 @@
             </div>
             <div class="flex flex-col gap-8">
               <div
-                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                class="flex scroll-mt-28 flex-col gap-8 max-md:scroll-mt-48"
                 id="copyright"
                 data-terms-section
               >
@@ -1266,7 +1296,7 @@
               </div>
 
               <div
-                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                class="flex scroll-mt-28 flex-col gap-8 max-md:scroll-mt-48"
                 id="liability"
                 data-terms-section
               >
@@ -1303,7 +1333,7 @@
               </div>
 
               <div
-                class="flex scroll-mt-28 flex-col gap-8 text-lg max-md:scroll-mt-48"
+                class="flex scroll-mt-28 flex-col gap-8 max-md:scroll-mt-48"
                 id="severability"
                 data-terms-section
               >

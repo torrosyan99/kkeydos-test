@@ -192,6 +192,12 @@ if (selects.length > 0) {
       }
 
       option.addEventListener('click', () => {
+        if (option.matches('a[href]')) {
+          closeSelect();
+          button.focus({ preventScroll: true });
+          return;
+        }
+
         const value = option.dataset.select;
 
         dropdown.querySelectorAll('[data-select]').forEach((item) => {
