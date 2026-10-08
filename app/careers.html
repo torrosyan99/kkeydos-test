@@ -3,21 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | KKEYDOS</title>
+    <title>Careers | KKEYDOS</title>
     <meta
       name="description"
-      content="Tell KKEYDOS about your next software project. Discuss web, mobile, AI, SaaS, and custom development with our team."
+      content="Explore career opportunities at KKEYDOS. Find your next role in software development or design and apply by email."
     />
-    <link rel="canonical" href="https://www.kkeydos.com/contact-us/" />
-    <meta property="og:title" content="Contact Us | KKEYDOS" />
+    <link rel="canonical" href="https://www.kkeydos.com/careers/" />
+    <meta property="og:title" content="Careers | KKEYDOS" />
     <meta
       property="og:description"
-      content="Tell KKEYDOS about your next software project. Discuss web, mobile, AI, SaaS, and custom development with our team."
+      content="Explore career opportunities at KKEYDOS. Find your next role in software development or design and apply by email."
     />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="assets/styles/main.css" />
     <script src="assets/scripts/main.js" type="module"></script>
-    <script src="assets/scripts/pages/contact.js" type="module"></script>
   </head>
   <body>
     <header
@@ -1155,731 +1154,128 @@
         </div>
       </div>
     </header>
-    <main id="main-content" class="overflow-clip">
-      <section class="relative isolate pt-12 pb-10 middle:pt-2">
-        <div class="bg-brand-light absolute inset-0 -z-10 middle:bottom-10" aria-hidden="true"></div>
-        <div class="page-container middle:grid-cols-2 middle:gap-20 grid items-start gap-8">
-          <div class="middle:mt-10 middle:flex middle:h-100 middle:flex-col middle:justify-center lg:pl-32 xl:pl-47 2xl:pl-0">
-            <p class="text-brand-gray mb-1 text-sm font-semibold tracking-[0.25rem] uppercase">Contact us</p>
-            <h1 class="middle:mb-8   font-medium">
-              How Can We <span class="text-brand-orange">Help?</span>
-            </h1>
-          </div>
-          <div class="middle:h-110 middle:transform-[translateY(40px)] h-56 min-w-0 overflow-hidden rounded-2xl shadow-default">
+    <main id="main-content">
+      <section class="bg-brand-light py-16 max-md:py-10">
+        <div class="page-container">
+          <nav class="mb-10 flex items-center gap-3 text-sm" aria-label="Breadcrumb">
+            <a href="index.html" aria-label="Home"
+              ><svg class="size-5" aria-hidden="true">
+                <use href="assets/images/icons.svg#breadcrumbs-home"></use></svg
+            ></a>
+            <svg class="size-3" aria-hidden="true">
+              <use href="assets/images/icons.svg#chevron-right"></use>
+            </svg>
+            <span aria-current="page">Careers</span>
+          </nav>
+          <div class="grid grid-cols-2 items-center gap-16 max-lg:gap-8 max-md:grid-cols-1">
+            <div>
+              <p class="eyebrow mb-4">Careers at KKEYDOS</p>
+              <h1>
+                Great work.<br />Great people.<br /><span class="text-brand-teal"
+                  >Your next chapter.</span
+                >
+              </h1>
+              <p class="text-brand-gray mt-6 max-w-120 text-lg">
+                Bring your curiosity, your ideas, and your craft. Join us in building digital
+                products that make a difference.
+              </p>
+              <a class="btn mt-8" href="#open-positions">Explore open roles</a>
+            </div>
             <img
-              class="size-full object-cover object-center middle:object-left"
-              src="assets/images/pages/contact/hero-team.jpg"
-              alt="Software team collaborating around computers in a bright office"
-              width="1774"
-              height="887"
+              class="aspect-video w-full rounded-2xl object-cover"
+              src="assets/images/pages/about/coding-mentorship.webp"
+              alt="Developers working together on a web application in the office"
+              width="1536"
+              height="1024"
               fetchpriority="high"
             />
           </div>
         </div>
       </section>
-      <section class="scroll-mt-20 py-20 max-md:py-12" id="project">
+
+      <section
+        class="section-padding scroll-mt-20 pb-16 max-md:pb-10"
+        id="open-positions"
+        aria-labelledby="positions-title"
+      >
         <div class="page-container">
-          <form
-            class="border-brand-border shadow-default mx-auto grid max-w-4xl grid-cols-2 gap-6 rounded-2xl border bg-white p-10 max-sm:grid-cols-1 max-sm:gap-5 max-sm:p-5"
-            data-project-form=""
+          <div
+            class="mb-12 flex items-end justify-between gap-8 max-md:flex-col max-md:items-start max-md:gap-4"
           >
-            <div class="col-span-2 max-sm:col-span-1">
-              <h2 class="mb-3 text-4xl max-md:text-3xl">
-                Tell us about <span class="text-brand-orange">your project</span>
+            <div>
+              <p class="eyebrow mb-4">Find your opportunity</p>
+              <h2 id="positions-title">
+                Build your future with us<span class="text-brand-orange">.</span>
               </h2>
-              <p class="text-brand-gray">
-                Share a few details and we’ll get back to you within 1 business day.
-              </p>
             </div>
-            <label class="project-field">
-              <span>Your Name <span class="text-brand-orange">*</span> </span>
-              <svg aria-hidden="true">
-                <use href="assets/images/icons.svg#users"></use>
-              </svg>
-              <input
-                class="input pl-10"
-                name="name"
-                type="text"
-                placeholder="John Smith"
-                required=""
-                autocomplete="name"
-                maxlength="120"
-              />
-            </label>
-            <label class="project-field">
-              <span>Work Email <span class="text-brand-orange">*</span> </span>
-              <svg aria-hidden="true">
-                <use href="assets/images/icons.svg#contact-email"></use>
-              </svg>
-              <input
-                class="input pl-10"
-                name="email"
-                type="email"
-                placeholder="john@company.com"
-                required=""
-                autocomplete="email"
-                maxlength="254"
-              />
-            </label>
-            <label class="project-field min-w-0">
-              <span>Company Name</span>
-              <svg aria-hidden="true">
-                <use href="assets/images/icons.svg#building"></use>
-              </svg>
-              <input
-                class="input pl-10"
-                name="company"
-                type="text"
-                placeholder="Company / Startup"
-                autocomplete="organization"
-                maxlength="120"
-              />
-            </label>
-            <div class="project-field min-w-0">
-              <label for="project-phone" class="mb-2 block text-sm font-semibold"
-                >Mobile Number</label
-              >
-              <div class="select-field flex min-w-0 gap-2">
-                <div class="select">
-                  <button
-                    class="select__button min-w-27"
-                    aria-expanded="false"
-                    aria-haspopup="listbox"
-                    aria-controls="project-country-options"
-                    aria-label="Country calling code"
-                    type="button"
-                  >
-                    <span class="whitespace-nowrap" data-select-button-value>IN +91</span>
-                    <svg aria-hidden="true">
-                      <use href="assets/images/icons.svg#chevron-bottom"></use>
-                    </svg>
-                  </button>
-
-                  <div
-                    class="select__dropdown"
-                    id="project-country-options"
-                    data-open="false"
-                    role="listbox"
-                    aria-label="Country calling code"
-                  >
-                    <button
-                      class="select__dropdown-button"
-                      data-select="US +1"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        US
-                      </span>
-                      <span>United States</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums">+1</span>
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="UK +44"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        UK
-                      </span>
-                      <span>United Kingdom</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+44</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="AM +374"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        AM
-                      </span>
-                      <span>Armenia</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+374</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="DE +49"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        DE
-                      </span>
-                      <span>Germany</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+49</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="FR +33"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        FR
-                      </span>
-                      <span>France</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+33</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="ES +34"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        ES
-                      </span>
-                      <span>Spain</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+34</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="IT +39"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        IT
-                      </span>
-                      <span>Italy</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+39</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="NL +31"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        NL
-                      </span>
-                      <span>Netherlands</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+31</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="AU +61"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        AU
-                      </span>
-                      <span>Australia</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+61</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="IN +91"
-                      aria-selected="true"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        IN
-                      </span>
-                      <span>India</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+91</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="AE +971"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        AE
-                      </span>
-                      <span>United Arab Emirates</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+971</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="IL +972"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        IL
-                      </span>
-                      <span>Israel</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+972</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="BR +55"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        BR
-                      </span>
-                      <span>Brazil</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+55</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="MX +52"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        MX
-                      </span>
-                      <span>Mexico</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+52</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="AR +54"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        AR
-                      </span>
-                      <span>Argentina</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+54</span
-                      >
-                    </button>
-
-                    <button
-                      class="select__dropdown-button"
-                      data-select="CO +57"
-                      aria-selected="false"
-                      role="option"
-                      type="button"
-                    >
-                      <span
-                        class="border-brand-border text-brand-muted-gray grid size-7 place-items-center rounded-md border bg-white text-[10px] font-semibold"
-                      >
-                        CO
-                      </span>
-                      <span>Colombia</span>
-                      <span class="text-brand-muted-gray-alt ml-auto text-xs tabular-nums"
-                        >+57</span
-                      >
-                    </button>
-                  </div>
-
-                  <input type="hidden" name="countryCode" value="IN +91" />
-                </div>
-                <input
-                  class="input min-w-0"
-                  id="project-phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="Mobile number"
-                  autocomplete="tel-national"
-                  maxlength="40"
-                />
-              </div>
-            </div>
-            <fieldset class="col-span-2 max-sm:col-span-1" aria-describedby="services-error">
-              <legend class="mb-3 text-sm font-semibold">
-                What do you need? <span class="text-brand-orange">*</span>
-              </legend>
-              <div class="grid grid-cols-4 gap-3 max-md:grid-cols-2">
-                <label class="service-option">
-                  <input
-                    class="sr-only"
-                    type="radio"
-                    name="services"
-                    value="SaaS Development"
-                    checked=""
-                    required
-                  />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#cloud"></use>
-                  </svg>
-                  <span>SaaS Development</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="Web Application" />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#monitor"></use>
-                  </svg>
-                  <span>Web Application</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="Mobile App" />
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#mobile"></use>
-                  </svg>
-                  <span>Mobile App</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="AI &amp; Automation" />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#sparkles"></use>
-                  </svg>
-                  <span>AI &amp; Automation</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="ERP / CRM" />
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#database"></use>
-                  </svg>
-                  <span>ERP / CRM</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="E-commerce" />
-                  <svg class="size-5" aria-hidden="true">
-                    <use href="assets/images/icons.svg#shopping-bag"></use>
-                  </svg>
-                  <span>E-commerce</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="Custom Software" />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#settings"></use>
-                  </svg>
-                  <span>Custom Software</span>
-                </label>
-                <label class="service-option">
-                  <input class="sr-only" type="radio" name="services" value="Other" />
-                  <svg aria-hidden="true">
-                    <use href="assets/images/icons.svg#message"></use>
-                  </svg>
-                  <span>Other</span>
-                </label>
-              </div>
-              <p class="mt-2 text-sm text-red-700" id="services-error" hidden="">
-                Select a service.
-              </p>
-            </fieldset>
-            <label class="col-span-2 max-sm:col-span-1">
-              <span class="mb-2 block text-sm font-semibold"
-                >Tell us about your project <span class="text-brand-orange">*</span>
-              </span>
-              <textarea
-                class="textarea min-h-32 p-3"
-                name="description"
-                placeholder="What are you looking to build? Goals, features, timeline, etc."
-                rows="4"
-                maxlength="5000"
-                required=""
-              ></textarea>
-            </label>
-            <div class="project-field select select-field">
-              <span id="project-budget-label">Budget Range</span>
-              <svg class="z-10" aria-hidden="true">
-                <use href="assets/images/icons.svg#dollar"></use>
-              </svg>
-              <input type="hidden" name="budget" value="" />
-              <button
-                class="select__button pl-10"
-                type="button"
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-controls="project-budget-options"
-                aria-labelledby="project-budget-label project-budget-value"
-              >
-                <span class="text-left" id="project-budget-value" data-select-button-value
-                  >Select budget range</span
-                >
-                <svg class="shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#chevron-bottom"></use>
-                </svg>
-              </button>
-              <div
-                class="select__dropdown"
-                id="project-budget-options"
-                role="listbox"
-                aria-labelledby="project-budget-label"
-                data-open="false"
-              >
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Under $10,000"
-                  aria-selected="false"
-                >
-                  Under $10,000
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="$10,000 – $25,000"
-                  aria-selected="false"
-                >
-                  $10,000 – $25,000
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="$25,000 – $50,000"
-                  aria-selected="false"
-                >
-                  $25,000 – $50,000
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="$50,000 – $100,000"
-                  aria-selected="false"
-                >
-                  $50,000 – $100,000
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="$100,000+"
-                  aria-selected="false"
-                >
-                  $100,000+
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Let’s discuss"
-                  aria-selected="false"
-                >
-                  Let’s discuss
-                </button>
-              </div>
-            </div>
-            <div class="project-field select select-field">
-              <span id="project-timeline-label">Expected Start</span>
-              <svg class="z-10" aria-hidden="true">
-                <use href="assets/images/icons.svg#product"></use>
-              </svg>
-              <input type="hidden" name="timeline" value="" />
-              <button
-                class="select__button pl-10"
-                type="button"
-                aria-expanded="false"
-                aria-haspopup="listbox"
-                aria-controls="project-timeline-options"
-                aria-labelledby="project-timeline-label project-timeline-value"
-              >
-                <span class="text-left" id="project-timeline-value" data-select-button-value
-                  >Select timeline</span
-                >
-                <svg class="shrink-0" aria-hidden="true">
-                  <use href="assets/images/icons.svg#chevron-bottom"></use>
-                </svg>
-              </button>
-              <div
-                class="select__dropdown"
-                id="project-timeline-options"
-                role="listbox"
-                aria-labelledby="project-timeline-label"
-                data-open="false"
-              >
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="As soon as possible"
-                  aria-selected="false"
-                >
-                  As soon as possible
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Within 1 month"
-                  aria-selected="false"
-                >
-                  Within 1 month
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Within 3 months"
-                  aria-selected="false"
-                >
-                  Within 3 months
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Within 6 months"
-                  aria-selected="false"
-                >
-                  Within 6 months
-                </button>
-                <button
-                  class="select__dropdown-button"
-                  type="button"
-                  role="option"
-                  data-select="Exploring options"
-                  aria-selected="false"
-                >
-                  Exploring options
-                </button>
-              </div>
-            </div>
-            <button class="btn col-span-2 w-full max-w-80 mx-auto max-sm:col-span-1" type="submit" disabled>
-              Prepare Project Email
-            </button>
-            <p
-              class="text-brand-gray col-span-2 text-sm max-sm:col-span-1"
-              data-project-status=""
-              role="status"
-              hidden=""
-            ></p>
-            <a
-              class="text-brand-teal col-span-2 w-fit mx-auto arrow-btn max-sm:col-span-1"
-              data-project-email=""
-              hidden=""
-              >Open your project email
-              <svg aria-hidden="true">
-                <use href="assets/images/icons.svg#arrow-right"></use>
-              </svg>
-            </a
-            >
-          </form>
-          <div class="mt-12 flex flex-wrap justify-center gap-x-16 gap-y-6">
-            <div>
-              <h3 class="mb-3 text-lg">Call us</h3>
-              <a class="text-brand-gray hover:text-brand-teal" href="tel:+919581083083"
-                >+91-9581083083</a
-              >
-            </div>
-            <div>
-              <h3 class="mb-3 text-lg">Email us</h3>
-              <a class="text-brand-gray hover:text-brand-teal" href="mailto:info@kkeydos.com"
-                >info@kkeydos.com</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-margin black-section" data-cta-glow>
-        <div class="page-container grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div class="max-lg:mx-auto max-lg:max-w-xl max-lg:text-center">
-            <p class="text-brand-orange mb-5 text-sm font-semibold tracking-widest uppercase">Our office</p>
-            <h2 class="max-w-xl text-5xl leading-tight max-md:text-4xl">
-              Find us in <span class="text-brand-orange">Hyderabad.</span>
-            </h2>
-            <p class="mt-6 max-w-lg text-lg leading-relaxed text-white/75 max-lg:mx-auto">
-              Meet the KKEYDOS team at Manjeera Trinity Corporate, in the heart of Kukatpally.
+            <p class="text-brand-gray max-w-90">
+              Find a role that feels like you. To apply, email your resume with the job title in the
+              subject line.
             </p>
-            <address class="mt-6 text-base leading-relaxed text-white/80 not-italic">
-              AlienWorkHub, 4th Floor, Unit 406<br />
-              Manjeera Trinity Corporate, KPHB Phase 3<br />
-              Kukatpally, Hyderabad, Telangana 500072
-            </address>
-            <a
-              class="btn mt-8"
-              href="https://www.google.com/maps/dir/?api=1&amp;destination=17.48916%2C78.39278"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Get directions</a>
           </div>
-          <div class="relative overflow-hidden rounded-2xl border border-white/15 bg-white shadow-2xl">
-            <iframe
-              class="block aspect-[4/3] w-full border-0"
-              src="https://maps.google.com/maps?q=17.48916%2C78.39278&amp;z=16&amp;output=embed"
-              title="KKEYDOS office — Manjeera Trinity Corporate, Kukatpally, Hyderabad"
-              width="600"
-              height="500"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
+          <!-- Sample vacancies: replace the title, description, and email subject with confirmed openings before publishing. Duplicate an article to add a job. -->
+          <div class="border-brand-border divide-brand-border divide-y border-y">
+            <article
+              class="flex items-center justify-between gap-10 py-10 max-md:flex-col max-md:items-start max-md:gap-6"
+            >
+              <div class="max-w-200">
+                <p class="text-brand-teal mb-3 text-sm font-semibold">Engineering</p>
+                <h3>Frontend Developer</h3>
+                <p class="text-brand-gray mt-4">
+                  Build responsive web experiences with React and modern JavaScript. Work with
+                  designers and developers to turn product ideas into intuitive, accessible
+                  interfaces.
+                </p>
+              </div>
+              <a
+                class="text-brand-teal shrink-0 py-3 font-semibold hover:underline"
+                href="mailto:info@kkeydos.com?subject=Application%3A%20Frontend%20Developer"
+                aria-label="Apply by email for Frontend Developer"
+                >Apply by email</a
+              >
+            </article>
+            <article
+              class="flex items-center justify-between gap-10 py-10 max-md:flex-col max-md:items-start max-md:gap-6"
+            >
+              <div class="max-w-200">
+                <p class="text-brand-teal mb-3 text-sm font-semibold">Engineering</p>
+                <h3>Backend Developer</h3>
+                <p class="text-brand-gray mt-4">
+                  Develop reliable APIs and services that power web and mobile products. Help our
+                  team build secure, maintainable software that grows with our clients.
+                </p>
+              </div>
+              <a
+                class="text-brand-teal shrink-0 py-3 font-semibold hover:underline"
+                href="mailto:info@kkeydos.com?subject=Application%3A%20Backend%20Developer"
+                aria-label="Apply by email for Backend Developer"
+                >Apply by email</a
+              >
+            </article>
+            <article
+              class="flex items-center justify-between gap-10 py-10 max-md:flex-col max-md:items-start max-md:gap-6"
+            >
+              <div class="max-w-200">
+                <p class="text-brand-teal mb-3 text-sm font-semibold">Design</p>
+                <h3>UI/UX Designer</h3>
+                <p class="text-brand-gray mt-4">
+                  Turn complex requirements into clear, thoughtful digital experiences. Create user
+                  flows, wireframes, and interfaces in collaboration with our development team.
+                </p>
+              </div>
+              <a
+                class="text-brand-teal shrink-0 py-3 font-semibold hover:underline"
+                href="mailto:info@kkeydos.com?subject=Application%3A%20UI%2FUX%20Designer"
+                aria-label="Apply by email for UI/UX Designer"
+                >Apply by email</a
+              >
+            </article>
           </div>
+          <p class="text-brand-gray mt-6 text-sm">
+            Attach your resume and, if relevant, a link to your portfolio or GitHub profile.
+          </p>
         </div>
       </section>
-
     </main>
     <footer class="overflow-hidden">
       <div class="page-container flex max-xl:flex-col">
@@ -1938,7 +1334,11 @@
               <div class="max-w-55 grow">
                 <h5 class="mb-6">Careers<span class="text-brand-orange">.</span></h5>
                 <ul class="space-y-3 text-sm">
-                  <li><a class="hover:underline" href="careers.html#open-positions">Job Opportunities</a></li>
+                  <li>
+                    <a class="hover:underline" href="careers.html#open-positions"
+                      >Job Opportunities</a
+                    >
+                  </li>
                   <li><a class="hover:underline" href="#">Talent Referrals</a></li>
                 </ul>
               </div>
